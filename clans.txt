@@ -1,0 +1,4 @@
+## TEMPLATE CLANS DATA FILE - TO BE GENERATED ON SERVER
+#tag	clanid	clanname	clantag	isofficial	rank	clanlevel	clanxp	members	isfreeforall	topachievement	leaders	
+CLAN	19	All Stars	AS	0	5	10	18020	14	1	1	hampa Dranix sir	
+CLAN	1	Fish	Fish	1	152	8	9730	4	0	0	Fish	

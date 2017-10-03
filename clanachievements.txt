@@ -1,0 +1,3 @@
+## TEMPLATE CLAN ACHIEVEMENTS FILE
+#tag	achid	achname	achdesc	
+ACHIEVEMENT	1	Legendary	Get one of your clan mates reach legendhood.	
