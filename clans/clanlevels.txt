@@ -1,4 +1,3 @@
-## TEMPLATE CLAN LEVEL FILE 
 #tag	level	xp	
 LEVEL	1	0	
 LEVEL	2	1000	

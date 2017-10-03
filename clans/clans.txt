@@ -1,4 +1,3 @@
-## TEMPLATE CLANS DATA FILE - TO BE GENERATED ON SERVER
-#tag	clanid	clanname	clantag	isofficial	rank	clanlevel	clanxp	members	isfreeforall	topachievement	leaders	
-CLAN	19	All Stars	AS	0	5	10	18020	14	1	1	hampa Dranix sir	
-CLAN	1	Fish	Fish	1	152	8	9730	4	0	0	Fish	
+#tag	clanid	clanname	clantag	isofficial	rank	clanlevel	clanxp	memberstotal	isfreeforall	topachievement	members	leaders	
+CLAN	19	All Stars	AS	0	5	10	18020	14	1	1	Ph1l1 Deprived ConCon Icebear8 Juan Rust Morals Sparkaris Hunter0566 Legendexpe RealVortex LastHour Kukman Zalf TheGumball Karmaaa Aedam SidTheEpic Sunther Mishima12 Incandous Perfect Joltna Sexy Goku Envy Stonda2b RobbiX EvilTorified Vernaux DomDoDm60 Daeyyn Reaperos ElitePaladian	Trestet Charism Zwar krisis13	
+CLAN	1	Fish	Fish	1	152	8	9730	4	0	0	Fish	Fish	

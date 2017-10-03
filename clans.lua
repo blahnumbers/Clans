@@ -2,7 +2,7 @@
 -- made by sir
 
 CLANVIEWLASTPOS = CLANVIEWLASTPOS or nil
-FREEJOINENABLED = true
+FREEJOINENABLED = false
 
 dofile("clans/clandatamanager.lua")
 dofile("clans/uielement.lua")
@@ -16,7 +16,7 @@ Clan:getAchievementData()
 Clan:showMain()
 
 if (clan.clanid) then
-	Clan:showData(clan.clanid)
+	Clan:showClan(clan.clanid)
 end
 
 add_hook("draw2d", "clanVisual", function() Clan:drawVisuals() end)

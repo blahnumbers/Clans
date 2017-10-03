@@ -115,6 +115,7 @@ do
 	end
 	
 	function UIElement:display()
+		if (self.parent) then self:updateChildPos() end
 		if (not self.customDisplayTrue) then
 			if (self.hoverState == BTN_HVR and self.hoverColor) then
 				set_color(unpack(self.hoverColor))
@@ -123,7 +124,6 @@ do
 			else
 				set_color(unpack(self.bgColor))
 			end
-			if (self.parent) then self:updateChildPos() end
 			if (self.shapeType == ROUNDED) then
 				draw_disk(self.pos.x + self.rounded, self.pos.y + self.rounded, 0, self.rounded, 500, 1, -180, 90, 0)
 				draw_disk(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded, 0, self.rounded, 500, 1, -90, 90, 0)
@@ -138,7 +138,7 @@ do
 			if (self.bgImage) then
 				draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h, self.bgImage)
 			end
-		end	
+		end
 		self.customDisplay()
 	end
 	
@@ -241,6 +241,8 @@ do
 			font_mod = 4.5
 		elseif (font == 4) then
 			font_mod = 2.4
+		elseif (font == FONTS.SMALL) then
+			font_mod = 1.5
 		end
 	
 		str = textAdapt(str, font, scale, self.size.w)
@@ -274,12 +276,26 @@ do
 		end
 	end
 	
+	function UIElement:setButtonColor()
+		if (self.hoverState == BTN_DN) then
+			set_color(unpack(self.pressedColor))
+		elseif (self.hoverState == BTN_HVR) then
+			set_color(unpack(self.hoverColor))
+		else
+			set_color(unpack(self.bgColor))
+		end
+	end
+	
 	function textAdapt(str, font, scale, maxWidth)
 		local destStr = {}
 		
 		while ((get_string_length(str, font) * scale) > maxWidth) do
 			local newStr = string.match(str, "[^%s]+[%s]*")
 			str = str:gsub(strEsc(newStr), "")
+			if (str == "") then
+				table.insert(destStr, newStr)
+				return destStr
+			end
 			str = addWord(destStr, str, newStr, font, scale, maxWidth)
 		end
 		table.insert(destStr, str)
