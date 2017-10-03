@@ -157,7 +157,7 @@ do
 		if (self.interactive) then
 			for i,v in pairs(UIMouseHandler) do
 				if (self == v) then
-					num = if
+					num = i
 					break
 				end
 			end
@@ -247,26 +247,28 @@ do
 		
 		for i = 1, #str do
 			if (align == CENTER) then
-				x = x + self.size.w / 2 - get_string_length(str[i], font) * scale / 2 
+				xPos = x + self.size.w / 2 - get_string_length(str[i], font) * scale / 2 
 			elseif (align == RIGHT) then
-				x = x + self.size.w - get_string_length(str[i], font) * scale
+				xPos = x + self.size.w - get_string_length(str[i], font) * scale
+			else
+				xPos = x
 			end
 			if (self.size.h > (pos + 1) * font_mod * 10 * scale + font_mod * 10) then
-				draw_text_angle_scale(str[i], x, y + (pos * font_mod * 10 * scale), angle, scale, font)
+				draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
 				if (font == FONTS.BIG or font == FONTS.MEDIUM) then
-					draw_text_angle_scale(str[i], x, y + (pos * font_mod * 10 * scale), angle, scale, font)
+					draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
 				end
 				pos = pos + 1
 			elseif (i ~= #str) then
-				draw_text_angle_scale(str[i]:gsub(".$", "..."), x, y + (pos * font_mod * 10 * scale), angle, scale, font)
+				draw_text_angle_scale(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
 				if (font == FONTS.BIG or font == FONTS.MEDIUM) then
-					draw_text_angle_scale(str[i]:gsub(".$", "..."), x, y + (pos * font_mod * 10 * scale), angle, scale, font)
+					draw_text_angle_scale(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
 				end
 				break		
 			else
-				draw_text_angle_scale(str[i], x, y + (pos * font_mod * 10 * scale), angle, scale, font)
+				draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
 				if (font == FONTS.BIG or font == FONTS.MEDIUM) then
-					draw_text_angle_scale(str[i], x, y + (pos * font_mod * 10 * scale), angle, scale, font)
+					draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
 				end
 			end			
 		end

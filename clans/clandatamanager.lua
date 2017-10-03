@@ -106,16 +106,13 @@ do
 		return entries
 	end
 	
-	-- Displays single clan data
-	function Clan:showData(clanid)
-		local clanLevelValue = ClanData[clanid].clanlevel
-		local clanTopAch = ClanData[clanid].clantopach
-		local clanViewBG = UIElement:new( {	pos = CLANVIEWLASTPOS or {WIN_W/4, WIN_H/4},
-											size = {800, 450},
-											bgColor = {.1,.1,.1,0.8},
-											interactive = true,
-											shapeType = ROUNDED,
-											rounded = 10 } )
+	function Clan:showMain()
+		clanViewBG = UIElement:new( {	pos = CLANVIEWLASTPOS or {WIN_W/4, WIN_H/4},
+										size = {800, 450},
+										bgColor = {.1,.1,.1,0.9},
+										interactive = true,
+										shapeType = ROUNDED,
+										rounded = 10 } )
 		clanViewBG:addMouseHandlers(
 			function(s,x,y)
 				clanViewBG.pressedPos.x = clanViewBG.pos.x - x
@@ -129,21 +126,30 @@ do
 					CLANVIEWLASTPOS = { clanViewBG.pos.x, clanViewBG.pos.y }
 				end
 			end)
-		local clanView = UIElement:new( {	parent = clanViewBG,
+		clanView = UIElement:new( {	parent = clanViewBG,
 											pos = {4,4},
-											bgColor = {1,1,1,.6},
+											bgColor = {1,1,1,0.6},
 											size = {clanViewBG.size.w - 8, clanViewBG.size.h - 8},
 											shapeType = clanViewBG.shapeType,
 											rounded = clanViewBG.rounded / 3 * 2 } )
-		local clanViewQuitButton = UIElement:new( {	parent = clanView,
-													pos = {-45, 10},
-													size = {35, 35},
-													bgColor = {0.5,0.5,0.5,1},
-													interactive = true,
-													hoverColor = {0.6,0.4,0.4,1},
-													pressedColor = {1,0.3,0.3,1},
-													shapeType = ROUNDED,
-													rounded = 10 } )
+		clanTopBar = UIElement:new( {	parent = clanView,
+											pos = {0,0},
+											bgColor = {0.2,0.2,0.2,1},
+											size = {clanView.size.w, 50},
+											shapeType = clanView.shapeType,
+											rounded = clanView.rounded } )
+		clanTopBar:addCustomDisplay(false, function()
+				draw_quad(clanTopBar.pos.x, clanTopBar.pos.y + clanTopBar.size.h - 10, clanTopBar.size.w, 10)
+			end)
+		clanViewQuitButton = UIElement:new( {	parent = clanTopBar,
+												pos = {-45, 5},
+												size = {35, 35},
+												bgColor = {0.5,0.5,0.5,1},
+												interactive = true,
+												hoverColor = {0.6,0.4,0.4,1},
+												pressedColor = {1,0.3,0.3,1},
+												shapeType = ROUNDED,
+												rounded = 10 } )
 		clanViewQuitButton:addMouseHandlers(nil,
 			function()
 				remove_hooks("clanVisual")
@@ -162,22 +168,31 @@ do
 			draw_line(clanViewQuitButton.pos.x + indent, clanViewQuitButton.pos.y + indent, clanViewQuitButton.pos.x + clanViewQuitButton.size.w - indent, clanViewQuitButton.pos.y + clanViewQuitButton.size.h - indent, weight)
 			draw_line(clanViewQuitButton.pos.x + clanViewQuitButton.size.w - indent, clanViewQuitButton.pos.y + indent, clanViewQuitButton.pos.x + indent, clanViewQuitButton.pos.y + clanViewQuitButton.size.h - indent, weight)
 		end)
-		local clanName = UIElement:new( {	parent = clanView,
-											pos = {10,10},
-											size = {clanView.size.w - clanViewQuitButton.size.w - 25, 45} } )
-		clanName:addCustomDisplay(false, function()
+		tabName = UIElement:new( {	parent = clanTopBar,
+									pos = {10,2},
+									size = {clanView.size.w - clanViewQuitButton.size.w - 25, 45} } )
+	end
+	
+	-- Displays single clan data
+	function Clan:showData(clanid)
+		local clanLevelValue = ClanData[clanid].clanlevel
+		local clanTopAch = ClanData[clanid].clantopach
+		local xpBarProgress = (ClanData[clanid].clanxp - LevelData[clanLevelValue]) / (LevelData[clanLevelValue + 1] - LevelData[clanLevelValue])
+		
+		tabName:addCustomDisplay(false, function()
 			local clanNameStr = nil
 			if (ClanData[clanid].isofficial == 1) then
 				clanNameStr = "[" .. ClanData[clanid].clantag .. "] " .. ClanData[clanid].clanname
 			else
 				clanNameStr = "(" .. ClanData[clanid].clantag .. ") " .. ClanData[clanid].clanname
 			end
-			set_color(0.1,0.1,0.1,1)
-			clanName:uiText(clanNameStr, clanName.pos.x, clanName.pos.y, FONTS.BIG, CENTER, 0.7)
+			set_color(1,1,1,1)
+			tabName:uiText(clanNameStr, tabName.pos.x, tabName.pos.y, FONTS.BIG, CENTER, 0.7)
 			end)
+		
 		local clanInfoView = UIElement:new( {	parent = clanView,
-												pos = { 10, clanName.size.h + 15 },
-												size = { clanView.size.w - 275, clanView.size.h - clanName.size.h - 25},
+												pos = { 10, clanTopBar.size.h + 10 },
+												size = { clanView.size.w - 275, clanView.size.h - clanTopBar.size.h - 20},
 												bgColor = {0,0,0,0.1},
 												shapeType = ROUNDED,
 												rounded = 10 } )
@@ -200,7 +215,6 @@ do
 											bgColor = {1,1,1,0.3},
 											shapeType = clanXpBarOutline.shapeType,
 											rounded = clanXpBarOutline.rounded / 5 * 4 } )
-		local xpBarProgress = (ClanData[clanid].clanxp - LevelData[clanLevelValue]) / (LevelData[clanLevelValue + 1] - LevelData[clanLevelValue])
 		local clanXpBarProgress = UIElement:new( {	parent = clanXpBar,
 													pos = {0, 0},
 													size = {clanXpBar.size.w * xpBarProgress, clanXpBar.size.h},
@@ -293,26 +307,40 @@ do
 													bgColor = {1,1,1,0.5},
 													shapeType = clanTopAchievementOutline.shapeType,
 													rounded = clanTopAchievementOutline.rounded / 5 * 4 } )
-		local clanTopAchIcon = UIElement:new( {	parent = clanTopAchievement,
-												pos = {10, 8},
-												size = {80,80},
-												bgImage = "/clans/aid"..clanTopAch..".tga" } )
-		local clanTopAchName = UIElement:new( {	parent = clanTopAchievement,
-												pos = {100, 5},
-												size = {clanTopAchievement.size.w - 110, 20} } )
+	local clanTopAchIcon
+	local clanTopAchName
+	local clanTopAchDesc
+	if (clanTopAch ~= 0) then
+		clanTopAchIcon = UIElement:new( {	parent = clanTopAchievement,
+											pos = {10, 8},
+											size = {80,80},
+											bgImage = "/clans/aid"..clanTopAch..".tga" } )
+		 clanTopAchName = UIElement:new( {	parent = clanTopAchievement,
+											pos = {100, 5},
+											size = {clanTopAchievement.size.w - 110, 20} } )
 		clanTopAchName:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
 			clanTopAchName:uiText(AchievementData[clanTopAch].achname, clanTopAchName.pos.x, clanTopAchName.pos.y, FONTS.MEDIUM, CENTER)
 		end)
-		local clanTopAchDesc = UIElement:new( {	parent = clanTopAchievement,
+		clanTopAchDesc = UIElement:new( {	parent = clanTopAchievement,
 												pos = {100, 30},
 												size = {clanTopAchievement.size.w - 110, 66} } )
 		clanTopAchDesc:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
 			clanTopAchDesc:uiText(AchievementData[clanTopAch].achdesc, clanTopAchDesc.pos.x, clanTopAchDesc.pos.y, FONTS.SMALL, CENTER)
 		end)
+	else
+		clanTopAchDesc = UIElement:new( {	parent = clanTopAchievement,
+											pos = {50, 25},
+											size = {clanTopAchievement.size.w - 100, 50} } )
+		clanTopAchDesc:addCustomDisplay(false,
+			function()
+				set_color(1,1,1,1)
+				clanTopAchDesc:uiText("This clan hasnt chosen an achievement to display", clanTopAchDesc.pos.x, clanTopAchDesc.pos.y, FONTS.MEDIUM, CENTER)
+			end)
+	end
 		local clanRank = UIElement:new( {	parent = clanView,
-											pos = { -260, clanName.size.h + 15 },
+											pos = { -260, clanTopBar.size.h + 10 },
 											size = { 250, 50 },
 											bgColor = {0,0,0,0.1},
 											shapeType = ROUNDED,
@@ -322,14 +350,14 @@ do
 			clanRank:uiText("Rank "..ClanData[clanid].rank, clanRank.pos.x, clanRank.pos.y + 5, FONTS.BIG, CENTER, 0.6)
 		end)
 		local clanLogo = UIElement:new( {	parent = clanView,
-											pos = { -260, clanName.size.h + clanRank.size.h + 20 },
+											pos = { -260, clanTopBar.size.h + clanRank.size.h + 15 },
 											size = { 250, 250 },
 											bgColor = {0,0,0,0.1},
 											bgImage = "/clans/cid"..clanid.."logo.tga",
 											shapeType = ROUNDED,
 											rounded = 10 } )
 		local clanJoin = UIElement:new( {	parent = clanView,
-											pos = { -260, clanName.size.h + clanRank.size.h + clanLogo.size.h + 25 },
+											pos = { -260, clanTopBar.size.h + clanRank.size.h + clanLogo.size.h + 20 },
 											size = { 250, 60 },
 											bgColor = {0,0,0,0.1},
 											shapeType = ROUNDED,
