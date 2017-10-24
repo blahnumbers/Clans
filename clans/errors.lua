@@ -13,13 +13,13 @@ do
 	function err(str)
 		local errors = false
 		echo(str)
-		add_hook("console", "error", function(s, i)
+		--[[add_hook("console", "error", function(s, i)
 			if (s:match("^Error")) then
 				errors = true
 				return 1
 			elseif (errors) then
 				remove_hooks("errors")
 			end
-		end)
+		end)--]]
 	end
 end

@@ -12,7 +12,10 @@ RIGHT = 2
 BTN_DN = 1
 BTN_HVR = 2
 
+DEFAULTITEXTURE = "torishop/icons/defaulticon.tga"
+
 do
+	UIElementManager = {}
 	UIVisualManager = {}
 	UIMouseHandler = {}
 	
@@ -21,7 +24,6 @@ do
 	
 	
 	-- Spawns new UI Element
-	-- Display is enabled by default, comment out line 60 to disable and use show() method instead
 	function UIElement:new(o)
 		local elem = {	parent = nil,
 						child = {},
@@ -55,7 +57,15 @@ do
 			if (o.bgColor) then
 				elem.bgColor = o.bgColor
 			end
-			if (o.bgImage) then elem.bgImage = load_texture(o.bgImage) end
+			if (o.bgImage) then 
+				local tempicon = io.open(o.bgImage)
+				if (tempicon == nil) then
+					elem.bgImage = load_texture(DEFAULTITEXTURE)
+				else
+					elem.bgImage = load_texture(o.bgImage)
+					io.close(tempicon)
+				end
+			end
 			if (o.shapeType) then 
 				elem.shapeType = o.shapeType
 				if (o.rounded * 2 > elem.size.w or o.rounded * 2 > elem.size.h) then
@@ -70,6 +80,7 @@ do
 			end
 			if (o.interactive) then 
 				elem.interactive = o.interactive
+				elem.scrollEnabled = o.scrollEnabled or nil
 				elem.hoverColor = o.hoverColor or nil
 				elem.pressedColor = o.pressedColor or nil
 				elem.hoverState = false
@@ -81,7 +92,8 @@ do
 			end
 		end
 		
-		table.insert(UIVisualManager, elem)
+		table.insert(UIElementManager, elem)
+		table.insert(UIVisualManager, elem) -- Display is enabled by default, comment this line out to disable
 		return elem
 	end
 	
@@ -95,6 +107,122 @@ do
 		if (btnHover) then
 			self.btnHover = btnHover
 		end
+	end
+	
+	function UIElement:addScrollFor(list, listElements, topBorder, botBorder, shiftPosList, shiftPosScroll, speed)
+		local shiftPosList = shiftPosList or 0
+		local shiftPosScroll = shiftPosScroll or 0
+		local speed = speed or 1
+		local elHeight = listElements[1].size.h
+		local scrollMin = self.shift.y
+		local scrollMax = self.parent.size.h - scrollMin - self.size.h
+		local minHeight = list.shift.y
+		local maxHeight = #listElements * elHeight
+		local enabled = nil
+		if (shiftPosList ~= 0) then
+			enabled = list:getEnabled(listElements, -shiftPosList + minHeight)
+		else
+			enabled = list:getEnabled(listElements, 0)
+		end
+		
+		self:addMouseHandlers(
+			function(s, x, y)
+				if (s < 4) then
+					self.pressedPos = self:getLocalPos(x,y)
+					self.hoverState = BTN_DN
+				else
+					self:mouseScroll(list, elHeight, scrollMin, scrollMax, minHeight, maxHeight, y * speed)
+					enabled = self:scrollElements(listElements, topBorder, botBorder, enabled)
+				end
+			end, nil,
+			function(x, y)
+				if (self.hoverState == BTN_DN) then
+					local lPos = self:getLocalPos(x,y)
+					local posY = lPos.y - self.pressedPos.y + self.shift.y
+					
+					self:barScroll(list, elHeight, scrollMin, scrollMax, minHeight, maxHeight, posY)
+					enabled = self:scrollElements(listElements, topBorder, botBorder, enabled)
+				end
+			end)
+		if (shiftPosScroll ~= 0 and shiftPosList ~= 0) then
+			self:moveTo(nil, shiftPosScroll)
+			list:moveTo(nil, shiftPosList)
+		end
+	end
+	
+	function UIElement:getEnabled(elements, shiftPos)
+		local enabled = {}
+		local elHeight = elements[1].size.h
+		for i = 1, #elements do
+			if (i * elHeight - shiftPos > self.size.h or i * elHeight - shiftPos < 0) then
+				elements[i]:hide()
+				enabled[i] = false
+			else 
+				enabled[i] = true
+			end
+		end
+		return enabled
+	end
+	
+	function UIElement:mouseScroll(list, elHeight, scrollMin, scrollMax, minHeight, maxHeight, speed)	
+		if (list.shift.y + speed * elHeight >= minHeight) then
+			self:moveTo(self.shift.x, scrollMin)
+			list:moveTo(list.shift.x, minHeight)
+		elseif (list.shift.y + speed * elHeight <= -maxHeight) then
+			self:moveTo(self.shift.x, scrollMax)
+			list:moveTo(list.shift.x, -maxHeight)
+		else
+			list:moveTo(list.shift.x, list.shift.y + speed * elHeight)
+			local scrollProgress = -(list.shift.y - minHeight) / (maxHeight + minHeight)
+			self:moveTo(self.shift.x, scrollMin + (self.parent.size.h - self.size.h - scrollMin * 2) * scrollProgress)
+		end	
+	end
+	
+	function UIElement:barScroll(list, elHeight, scrollMin, scrollMax, minHeight, maxHeight, posY)
+		local sizeH = math.floor(self.size.h / 4)
+		local scrollScale = (self.parent.size.h - (scrollMin * 2 + self.size.h)) / maxHeight
+		
+		if (posY <= scrollMin) then
+			if (self.pressedPos.y < sizeH) then
+				self.pressedPos.y = sizeH
+			end
+			
+			self:moveTo(self.shift.x, scrollMin)
+			list:moveTo(list.shift.x, minHeight)
+		elseif (posY >= scrollMax) then
+			if (self.pressedPos.y > self.parent.size.h - sizeH) then
+				self.pressedPos.y = self.parent.size.h - sizeH
+			end
+			
+			self:moveTo(self.shift.x, scrollMax)
+			list:moveTo(list.shift.x, -maxHeight)
+		else
+			self:moveTo(self.shift.x, posY)
+			local scrollProgress = (self.shift.y - scrollMin) / (self.parent.size.h - scrollMin * 2 - self.size.h)
+			list:moveTo(list.shift.x, minHeight - (posY - scrollMin) * (1 / scrollScale) + ((list.size.h - elHeight) * scrollProgress))
+		end
+	end
+	
+	function UIElement:scrollElements(list, topBorder, botBorder, enabled)
+		for i = 1, #list do
+			lPos = list[i]:getLocalPos(0,0)
+			if (-lPos.y <= topBorder.pos.y or -lPos.y >= botBorder.pos.y) then
+				if (enabled[i] == true) then
+					list[i]:hide()
+					enabled[i] = false
+				end
+			else
+				if (enabled[i] == false) then
+					list[i]:show()
+					enabled[i] = true
+				end
+			end
+		end
+		topBorder:hide()
+		botBorder:hide()
+		topBorder:show()
+		botBorder:show()
+		return enabled
 	end
 	
 	function UIElement:addCustomDisplay(funcTrue, func)
@@ -114,8 +242,13 @@ do
 		if (self.bgImage) then unload_texture(self.bgImage) end
 	end
 	
+	function UIElement:updatePos()
+		if (self.parent) then 
+			self:updateChildPos()
+		end
+	end
+	
 	function UIElement:display()
-		if (self.parent) then self:updateChildPos() end
 		if (not self.customDisplayTrue) then
 			if (self.hoverState == BTN_HVR and self.hoverColor) then
 				set_color(unpack(self.hoverColor))
@@ -143,9 +276,19 @@ do
 	end
 	
 	function UIElement:show()
-		table.insert(UIVisualManager, self)
-		if (self.interactive) then
-			table.insert(UIMouseHandler, self)
+		local num = nil
+		for i,v in pairs(UIVisualManager) do
+			if (self == v) then
+				num = i
+				break
+			end
+		end
+		
+		if (not num) then
+			table.insert(UIVisualManager, self)
+			if (self.interactive) then
+				table.insert(UIMouseHandler, self)
+			end
 		end
 	end
 	
@@ -183,8 +326,10 @@ do
 	
 	function UIElement:handleMouseDn(s, x, y)
 		for i, v in pairs(UIMouseHandler) do
-			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h) then
+			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h and s < 4) then
 				v.hoverState = BTN_DN
+				v.btnDown(s, x, y)
+			elseif (s >= 4 and v.scrollEnabled == true) then
 				v.btnDown(s, x, y)
 			end
 		end
@@ -192,8 +337,8 @@ do
 	
 	function UIElement:handleMouseUp(s, x, y)
 		for i, v in pairs(UIMouseHandler) do
-			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h) then
-				v.hoverState = BTN_HVR
+			if (v.hoverState == BTN_DN) then
+				v.hoverState = nil
 				v.btnUp(s, x, y)
 			end
 		end
@@ -206,15 +351,22 @@ do
 					v.hoverState = BTN_HVR
 				end
 				v.btnHover(x,y)
-			else 
+			elseif (v.hoverState == BTN_DN) then
+				v.btnHover(x,y)
+			else
 				v.hoverState = false
 			end
 		end
 	end
 	
 	function UIElement:moveTo(x, y)
-		self.pos.x = x
-		self.pos.y = y
+		if (self.parent) then
+			if (x) then self.shift.x = x end
+			if (y) then self.shift.y = y end
+		else
+			if (x) then self.pos.x = x end
+			if (y) then self.pos.y = y end
+		end
 	end
 	
 	function UIElement:updateChildPos()
@@ -232,6 +384,8 @@ do
 	
 	function UIElement:uiText(str, x, y, font, align, scale, angle)
 		local font = font or FONTS.SMALL
+		local x = x or self.pos.x
+		local y = y or self.pos.y
 		local font_mod = font
 		local scale = scale or 1
 		local angle = angle or 0
@@ -284,6 +438,32 @@ do
 		else
 			set_color(unpack(self.bgColor))
 		end
+	end
+	
+	function UIElement:getPos()
+		local pos = {self.shift.x, self.shift.y}
+		return pos
+	end
+	
+	function UIElement:getLocalPos(xPos, yPos, pos)
+		local pos = pos or { x = xPos, y = yPos}
+		if (self.parent) then
+			pos = self.parent:getLocalPos(xPos, yPos, pos)
+			if (self.shift.x < 0) then
+				pos.x = pos.x - self.parent.size.w - self.shift.x
+			else
+				pos.x = pos.x - self.shift.x
+			end
+			if (self.shift.y < 0) then
+				pos.y = pos.y - self.parent.size.h - self.shift.y
+			else
+				pos.y = pos.y - self.shift.y
+			end
+		else
+			pos.x = xPos - self.pos.x
+			pos.y = yPos - self.pos.y
+		end
+		return pos
 	end
 	
 	function textAdapt(str, font, scale, maxWidth)
