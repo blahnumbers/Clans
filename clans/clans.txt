@@ -1,3 +1,1645 @@
-#tag	clanid	clanname	clantag	isofficial	rank	clanlevel	clanxp	memberstotal	isfreeforall	topachievement	members	leaders	
-CLAN	19	All Stars	AS	0	5	10	18020	14	1	1	Ph1l1 Deprived ConCon Icebear8 Juan Rust Morals Sparkaris Hunter0566 Legendexpe RealVortex LastHour Kukman Zalf TheGumball Karmaaa Aedam SidTheEpic Sunther Mishima12 Incandous Perfect Joltna Sexy Goku Envy Stonda2b RobbiX EvilTorified Vernaux DomDoDm60 Daeyyn Reaperos ElitePaladian	Trestet Charism Zwar krisis13	
-CLAN	1	Fish	Fish	1	152	8	9730	4	0	0	Fish	Fish	
+#tag	clanid	clanname	clantag	isofficial	rank	clanlevel	clanxp	memberstotal	isfreeforall	topachievement	isactive	members	leaders	
+CLAN	1	Fish	Fish	1	0	1	300	0	0	0	0			
+CLAN	2	Snoop	Snoop	0	500	1	100	17	0	0	2			
+CLAN	3	Quantum	Qu	0	474	1	150	5	0	0	2	ThePro6 PotramCZ Arlisiganteng kookster Mcreeper2 si13lent TehCreeper tdenev kirit0 rex54321 FearCreds snugglebear iCoolKick inuendo egho torabika1	damnpunch	
+CLAN	4	Parrot	Parrot	1	76	9	11150	49	0	0	2	quantbank Brotherboard Arquus rexblaze	yassir12	
+CLAN	5	spintoris	SPIN	0	0	1	0	5	0	0	2	SkulFuk andcream rainboweye poopy12 liaxo ItsZombie DruggedPanda Leaf Moop apple123 skeletonman Murcinary Hush Stellar SmallBowl fallu Rutz Ace120 megaJuice fudgiebalz greenblits Castra Jaker Lmorti DatSkip AssassinPro notnoob Tsuion Zockinator Ele Icky Bodhisattva Cold KiTFoX imapirate Odlov firebolty Scourge Static rcarey Flames Reta Lamby Nugget tertywerty Ping duck Butler	Kyou-kun	
+CLAN	6	Paranoia	Paranoia	0	0	1	0	0	0	0	0	szymoniak lassar Magnesium darkkille1	maxamb	
+CLAN	7	16 bit	16bit	1	0	1	0	0	0	0	0			
+CLAN	8	Abyss	Abyss	1	475	1	400	19	0	0	2			
+CLAN	9	RussuR	RussuR	1	0	1	50	0	0	0	0	XimiCheck Yobin TheNice Nyam nikil MADrBOT Marks2010 ivanivan MaxCOM SDdoggy Vladdi mamaha UniqueR	AnTaJl ASSASSIN92 Astaroth karabum Mad Fizik	
+CLAN	10	Millenium	MLNM	1	0	1	0	0	0	0	0			
+CLAN	11	Hack	Hack	1	331	4	5650	24	0	0	2			
+CLAN	12	Fake	Fake	0	0	1	0	2	0	0	1	konoRUS Pofig HAND StopMePlz iLLepidus rubilas sh2ezo Dexyand kekc1995 Osacura Aeon makconbl4 Markmad Pavlin buh0i greh GreenCr0w ParaZit Archi EazyStreet	Nirs hepukt4e Atom BONDarenko	
+CLAN	13	My Little Ponies	MyLittle	1	0	1	50	0	0	0	0	Djkuik	Yosua3110	
+CLAN	14	fl0w	fl0w	1	186	6	7750	38	0	0	2			
+CLAN	15	ThePieClan	TPC	1	0	1	0	0	0	0	0	swedishpower SocKeTe thedarkblood deprav BlueBird Vodka Kane chlebicek Pliskien Daanando Deiimosjw Cough 8OJ4N CpyJIb Super Lapetus YuenSiu deminik vorDo TripFlow irdumb Raiken Albus Trick Stealth War ImmortalPig Gary violentz BBKing TimmyboyG BetXonXme Alaistier Smaiva	William Smogard49 Deuteria snake	
+CLAN	16	Imbalanced	Imba	1	0	1	0	0	0	0	0			
+CLAN	17	Creamy Horse Mouths	CREAM	1	476	1	400	24	0	0	2			
+CLAN	18	BtC	BtC	1	0	1	0	0	0	0	0	ARMIN0 Possesed Kat Zinx BondyLox Muse 1FrozeN1 Deridor Swooya Bulous glOw Chuck Ponzo Zapekk Hug Fatulbrown strikas Clay Pixel LagSwitch Supergoalieguy	Kristis133 Alejandro Yoyo	
+CLAN	19	Gangsters	g	1	0	4	5000	6	0	1	2			
+CLAN	20	Frost_old	Frost_	1	0	1	0	0	0	0	0	imcap JKOoK Grey PLN Tarlan	sir	
+CLAN	21	Tora	Tora	0	0	1	0	0	0	0	0			
+CLAN	22	Evil	Evil	1	64	10	12700	25	0	0	2			
+CLAN	23	Impro	Impro	1	0	1	0	0	0	0	0	Hyde Spartan094 AgentP Crooked tictacky2 Apex Chintu Damano1 Oaky Pookie Hades rcrichman Taco Taek Zorow AnEvilBank Zuto PeSystem Madgecko11 aurelien91 Lucy Wicked	Ryder24 Goat Polybius	
+CLAN	24	Superhero	Hero	0	0	1	0	0	0	0	0			
+CLAN	25	Chess	cgregr	1	0	1	0	0	0	0	0			
+CLAN	26	spirit	spirit	1	0	1	0	5	0	0	2			
+CLAN	27	Caution	Caution	0	0	1	0	1	0	0	1	Rhaken Chozo marcus Thorn	suomynona	
+CLAN	28	Metagame	Meta	1	0	2	2500	0	0	0	0		cautionbank	
+CLAN	29	Damned	Damned	1	0	1	0	26	0	0	2			
+CLAN	30	Void	void	1	0	1	50	0	0	0	0	nblx Hector FighterKHV Bragador 132132 koliaaa SBADUNA ImEmpty Diod belyashik T0n0mi Huszti Xandr Trays Dekada kapcha reoka muller029 Kronet sniffer777 rnyitcpk Thor berzerker1	Sharik VuleXX CyI7peccop	
+CLAN	31	Phantom	Phantom	1	0	1	0	0	0	0	0			
+CLAN	32	Origin	Origin	0	15	19	26450	9	0	0	2			
+CLAN	33	Ethereal	Ethr	1	0	1	50	0	0	0	0	emoney78 Wiggitywoo Crow girlfights toriclash16 Schylar Slaybelle Creamypie MistyJr	cat4hbk Misty	
+CLAN	34	Vector	Vector	1	170	2	1800	18	0	0	2			
+CLAN	35	No Mercy	NM	1	0	1	1000	0	0	0	0	patrickooo omega90 RoneP xlr84life pause lloyd54321 Onsola Instep victortb Keshava Karbn Meija Revx vectorWallet HOPE	santos7877 Aadame Overlord	
+CLAN	36	Times of Panic	ToP	1	165	2	3250	18	0	0	2			
+CLAN	37	Neon New Times	Neon	1	0	12	15850	0	0	0	0	ichigio21 Kocimienta Skocik Demonzo Gaziu Alladyn Miroke BadTroll Virus17C kmenek enCorEpl TimesOfPanic Lehto	pizdu kolega1010 Trewnek Soreu Wook	
+CLAN	38	Enigma	Enigma	1	0	1	0	0	0	0	0			
+CLAN	39	NO	NO	1	546	4	5500	46	0	0	2			
+CLAN	40	Hunters	Hunters	1	0	1	400	0	0	0	0	rittu evil Eleeleth Hara Squee Gihar Poony Juntalis meatdad Zaarock Chac Mosier Chronos Daxx Tonakai Moonshake ed siku Opeth Hamster stix Velve Tre Hayate Mediaworks Sebsebeleb Smookr Colminator Cataclysm Galrath Solax THIGGIST Imsku WolfThane PhoenixJones Faint Smilies2 RKG Gynx einstein Gman80 jen Internet	Delaid hanz0 Rai	
+CLAN	41	Toribash Revolution Army	TRA	0	0	1	0	3	0	0	1			
+CLAN	42	Silver	Silver	1	0	1	0	0	0	0	0	Zamorakor DarknessZZ	20122012	
+CLAN	43	Legacy	Legacy	0	0	1	0	0	0	0	0			
+CLAN	44	Fyre	Fyre	1	0	1	50	0	0	0	0			
+CLAN	45	Night Glory	NGY	0	0	1	0	0	0	0	0			
+CLAN	46	Twisted	Twist	0	0	1	0	7	0	0	2			
+CLAN	47	Sigma	Sigma	1	0	1	50	0	0	0	0	timoman6 messiah154 RyanWolf marcokill MusicDance twistcash	Chelsie02	
+CLAN	48	Death Plague	DP	1	0	1	50	0	0	0	0			
+CLAN	49	Onyx	Onyx	0	0	1	0	1	0	0	1			
+CLAN	50	Nuclear	Nuke	0	478	1	150	4	0	0	1		CritiBank	
+CLAN	51	UnKonventional	UKON	0	0	1	0	5	0	0	2	TheNuclearBank	GenCorner BuckyTurg SupraMod	
+CLAN	52	Inquisition	i	1	190	6	7750	41	0	0	2	UKONsBank nova1222 marcel9 DarkXplay	Dark501	
+CLAN	53	Horror	Horror	0	0	1	0	1	0	0	1	Yiazmat Lord_Inquisitor FNugget Huck ape Fancy Lorrtex Zoro War_Hero Bulletron Dooby Toxic Eloquence Locus zwouter Zelda ToasterDan sham Matharu Uric Chris Tim illv HerobrineDead Liquidoom ImVeryBlue Virus kball fastmove Phone RAWWRH nerti WeDontWar HolyButler TyZi Kohta Matt76 Link Hagan Kevin Greg	Lightningkid eightah hawkesnightmare Tuna	
+CLAN	54	Rayo	Rayo	0	0	1	0	0	0	0	0		HorrorBank	
+CLAN	55	Humans	Humans	0	0	1	0	0	0	0	0			
+CLAN	56	Kicked	Kicked	0	0	1	0	0	0	0	0			
+CLAN	57	Seer	Seer	0	0	1	0	0	0	0	0			
+CLAN	58	NAO	nao	1	0	1	2350	0	0	0	0			
+CLAN	59	Decoded	DC	0	0	1	0	1	0	0	1			
+CLAN	60	ReflexZ	ReflexZ	0	0	1	0	0	0	0	0	inferno99		
+CLAN	61	Kittehs On Acid	KOA	0	0	1	0	0	0	0	0			
+CLAN	62	The	The	0	0	1	0	0	0	0	0			
+CLAN	63	The Scorpions	Scorpion	0	0	1	0	2	0	0	1			
+CLAN	64	Element	Ele	1	0	1	0	0	0	0	0	Volg	DarkScorpion	
+CLAN	65	Extreme	Extreme	1	0	1	450	0	0	0	0			
+CLAN	66	Ravenous	Rave	0	0	1	0	0	0	0	0			
+CLAN	67	Relax All	RelaxAll	1	202	2	3100	28	0	0	2			
+CLAN	68	Zero_old	Zero_old	1	0	1	1700	0	0	0	0	FlamingBob Nikelaos Shockwave k6vamees XaruS Kickass SuperJoJo lordrice kwygon KaylaPanda Xhiba PlayaJ ynvaser Zer0 EdiTz DrBear Sahee Yurner0 brainpain Gerpington Daeldir Destram Sissykick PACKET Samopal FistofLife Kr3wClot	killer3366	
+CLAN	69	Don't Trust Anyone	DTA	0	0	1	0	6	0	0	2			
+CLAN	70	Clan	Clan	1	0	1	0	0	0	0	0	OverMercy motoredge2 Papoose P1XLE MegaJack61	wherewolf2	
+CLAN	72	War For Fame	WFF	0	0	1	0	0	0	0	0			
+CLAN	73	Mister	Mr	1	0	1	1000	0	0	0	0			
+CLAN	74	Plasma	Plasma	0	0	1	0	3	0	0	1			
+CLAN	75	re	re	1	325	5	6050	49	0	0	2			
+CLAN	76	Addicted	Addicted	1	0	1	1400	0	0	0	0	plasmabank Mojo	NoSkills	
+CLAN	77	Aliens	Aliens	1	0	1	0	0	0	0	0	Saint Thrandir torismaser aleks95 Shar Kilcreed Dialord kabu SunR1se Sil Verax Shin-Ryuu MICu Chikin Arkenvoss Pat AzureMage Azuma Mike2k5 JaniklPOL Wojtek120 Jetsnix sygul Mistikal flxy Owca Mapleleaf Aikanaro Bust3r Slycooper XmiechoX micho beznick DarkHunt ThYphus AlphasoniK gerFight HoboJoey AHD Rooyall 1handclap Note Nobuddie uJelly Scorpio shadowelf Alessandro	Powas JtanK	
+CLAN	78	DA	DA	1	0	1	0	0	0	0	0			
+CLAN	79	Secret	Secret	1	0	1	0	0	0	0	0			
+CLAN	80	Pandora	Panda	1	0	1	0	0	0	0	0			
+CLAN	81	Mafia_old	Mafiaold	0	0	1	0	1	0	0	1			
+CLAN	82	Asian	Asian	0	0	1	0	0	0	0	0			
+CLAN	83	Ghoul	Ghoul	0	0	1	0	0	0	0	0		malincev	
+CLAN	84	Motion	Motion	1	0	1	0	0	0	0	0			
+CLAN	85	Fr_Death	Fr_Death	1	0	1	0	0	0	0	0			
+CLAN	86	Atlantic	Atlantic	1	0	1	0	0	0	0	0			
+CLAN	87	FROG	FROG	1	0	1	0	0	0	0	0			
+CLAN	88	Angels of Death	AoD	0	0	1	0	0	0	0	0			
+CLAN	89	UrbanUnit	Urban	1	0	1	300	0	0	0	0			
+CLAN	90	Chaos Theory	FrCT	1	0	1	0	0	0	0	0			
+CLAN	91	Inner Calm Outer Fury_Old	iCoF_Old	1	0	1	0	0	0	0	0			
+CLAN	92	RAWR	RAWR	1	515	4	5100	27	0	0	2			
+CLAN	93	Obey	Obey	1	3	63	91300	33	0	0	2			
+CLAN	94	-The Other Dead	DeaD	0	0	1	0	1	0	0	1	andreyoshi CMon Miska SlipAnc WeRd Bitlord gill066 MANtrain drekmajster IceShadow Kojiro Cindermomo kot jamieshmamie rathelfrog Yasiou Tabaluca Ramenryce borgpunx AndTheFisH gr3yh47 Celarion Snide_the_Clyde	Dargon BenDover Dr_Strangelove NutHug	
+CLAN	95	Templar	Templar	0	0	1	0	0	0	0	0	Tyzo ObeyBank WorldEater Crocap floop78 Lapin imaSlayaa PlataBear Kyuri Kolorz tomczo2000 Grim Vishnu Icon bibb Slizy Spartin99 FredSlave Jedi Kazu Pill Gruszex Vordred Deadmau5 joope1 Trestty Zack Frost Bastile Joel	JoboMan Cheshyre Hattersin	
+CLAN	96	Psych Ward	Psych	0	0	1	0	1	0	0	1		CtrlV	
+CLAN	97	Maraud and Decapitate	MAD	1	0	4	5000	4	0	0	1			
+CLAN	98	GermanUnderground	GerU	1	0	1	400	0	0	0	0		Vash7395	
+CLAN	99	Jolly Roger	JollyR	1	95	5	6850	30	0	0	2	Jarmund deerslayer nokturnal	hampa	
+CLAN	100	Knotz	kz	1	0	1	0	0	0	0	0			
+CLAN	101	Guardians	Gds	1	0	1	0	0	0	0	0	Squiziph missuse nikosefs Hippybob Kaszanas dengue Ferrock extremerun Aj Killjaden Sorriso EcoHitman Neon10TT buyakia McBurger Exoray sluthead ANDROIDex Raid Zalmoxis vendetta47 hAsbroken SthrideXX DropKick KOTBOLT FooL79 Manta Ukemonster	bRuCiA ThePirateKing	
+CLAN	102	Jkook N1	JopaLars	0	0	1	0	1	0	0	1			
+CLAN	103	raku	raku	1	0	1	0	0	0	0	0			
+CLAN	104	[UssR]	UssR	1	87	5	6500	33	0	0	2		Medyan	
+CLAN	105	League of Toribash Pros	LOTP	0	0	1	0	1	0	0	1			
+CLAN	106	Hidden Darkness	Hidden	0	0	1	0	2	0	0	1	nPocToCawa Gad3007 s7ing Dominor SainTD GiraFFus Pain 1SnakE3 ADIKELLO Ash Yoko Jonzke jubileewins VanyaK Artegr robotanik Invoker VoidBoy FistashQa KPOBOCTOK Ichigo shev daniil2010 WarStar441 Top4ok Lexsir PoxPox Costaly Woobey andrzej18	Taroni USSR 4edrick	
+CLAN	107	Lawedan	Law	0	0	1	0	3	0	0	1		LOTPBank	
+CLAN	108	1st	1st	0	49	9	12000	3	0	0	1	Thekaratecrab	crowhop44	
+CLAN	109	Latin	Latin	1	0	1	550	0	0	0	0	TehMahn BerkPwn	6d23	
+CLAN	110	Grim Reapers	Reaper	1	0	7	9000	0	0	0	0	1stBank xrayjoker	DALLTIFF	
+CLAN	111	shutting down	shutdown	0	0	1	0	0	0	0	0			
+CLAN	112	duck	duck	1	196	1	1350	20	0	0	2			
+CLAN	113	Evolution	eVo	1	162	6	8200	43	0	1	2			
+CLAN	114	Piratez	Piratez	1	0	1	0	28	0	0	2	Think hipotibor tajuddin47 affei Souls Taco901 Ginkey Rawr Minute Nagato Ocean Aiden cocacobra Lazors GrAmOf0n Fran Kore dick pushka Jak	Juhizz GamerDaPro Tengo MrJingles Rfifan BioEx	
+CLAN	115	Element Of Death	EoD	0	0	1	0	0	0	0	0	SupaDeadEye Mocucha Dodekus shinigamii evolution6 NoSBoH ivan stiktori Obazu Ninja Kiza ofCannibis ATHENS Dikarika KingBosh CoKe P0int AX7 Hue fireless Frankie DrunkenMonkey Victor4554 Eason Miner sstteevvee HighVoltage TeapoT Power PsyT iAcer Ern Mahulk17-0 Marrez Arakata matarika kouta youngsandm Shikkumo BinkLawz HASSAN Bloodage MiKE38	Eddy Tripstone	
+CLAN	116	Redemption	Red	0	0	1	0	0	0	0	0	Oscar1412 Golfball Rutten Mookiefish qq5ben Sicks XPaD Shaogorath MrTeapawt perica shadowXcor Axel Ruadhan JiBaiLanJiao marccod Squirre1 TheDog96 VIT0R Hygencide Railgun123 Razor Cole rappunk23 IBlackleon Jewww Simon tsukiomi	Uberis	
+CLAN	117	PsY	PsY	1	0	1	0	0	0	0	0			
+CLAN	118	The Last Legion	TLL	1	109	5	6000	22	0	0	2			
+CLAN	119	bncy	bncy	1	0	4	5000	24	0	0	2			
+CLAN	120	Alpha	Alpha	1	299	5	6400	19	0	0	2	Macrid Orion Pv2Caribou TheLLBank JDeck RBB Sidvicious FinalWish Templar Ealtrik BoulderSama Skylar Retro basic Peter cats Arctic Pouffy Reimu Viddah Slau Creati0n	Fear	
+CLAN	121	Fr3styL	f	1	0	1	0	0	0	0	0	noweb	Slith shteou veb Hamr Tenach vespesi3n SlainVeteran Clbck Blam HomerDawkins Megadoomer Albel Cevius AlexOwnz Yosaku BlackBear Lapsus RbLcK MahaTmA Ducky Eurgh m0o Dafe	
+CLAN	122	Old School	Old	0	0	1	0	3	0	0	1	KamiKo StabberZ Snudge 0815Rocker scheczudio Amok maldiluna Shockey Adamant Winver cowmeat HiPower Fire Alastor N3WB Fade Wounder	TIcux Diamond	
+CLAN	123	Revenge	rvng	1	0	1	0	0	0	0	0			
+CLAN	124	Undead Community	udc	0	0	1	0	3	0	0	1	nachoxp2 OldBot	OldBank	
+CLAN	125	Post-mortem	Postmort	0	0	1	0	0	0	0	0			
+CLAN	126	Odd	Odd	0	0	1	0	0	0	0	0	Fire2121	Cowman5 ccreedbank	
+CLAN	127	big stank gamers	stank	0	237	1	1750	7	0	0	2			
+CLAN	128	Killer	Killer	0	0	1	0	0	0	0	0			
+CLAN	129	DAI GURREN	TTGL	0	0	1	0	1	0	0	1	stankbank WankaStank AIDSBOMB Ferafex keggy fart0	null	
+CLAN	130	[T]	T	1	0	4	5000	25	0	0	2			
+CLAN	131	Funeral In Flames	Funeral	0	0	1	0	13	0	0	2		Shalnark	
+CLAN	132	Elite	Elite	1	51	6	8300	33	0	0	2	MrPoptart Nightin Shook spike6599 Giantz Vigilante Oblivion Larfen Phoenix chow11 StompBox pusga zeto Nearly ishi jisse Numbers leyz leilak Pulse Oracle lxor Bisonic Erth	VIDEOGAMES	
+CLAN	133	Flying Wings	FlWings	0	0	1	0	0	0	0	0	ToriAcid0 Orphen01 juciy YOURMOM152 tancio lean5326 Byoni Prade LHF FIFBank	Undefinedx dacrimax DeadFirexD	
+CLAN	134	Fairfax 	Fax	0	0	1	0	0	0	0	0	Sniper QualityBJ JesseBean BloodMach Sangriento greatone Dash Azion Bounafizta hidingwarior dzanks damasta97 Eddylee data Blade tantoehard Kunt Jomela Oxblix junior003 MikeHoy HeyoFred Gradeger Berzerk Shnok Apollo AlphaN00b Icosagon Kozmonaut Weebly	Sarutobi tacoBELL Snook	
+CLAN	135	Sm0ke	Sm0ke	0	0	1	0	2	0	0	1			
+CLAN	136	The Truth	Truth	0	287	1	1450	13	0	0	2			
+CLAN	137	Voltex	Vtex	0	0	1	0	2	0	0	1		8thMoon Fhiji	
+CLAN	138	DarkFiction	Fiction	0	0	1	0	2	0	0	1	iPwnNoob18 adjua Orthox Maj0rButth0le viliuxxl Aarodx Shockeye samir2222	xJokezx dsanders44 fadinglight unmutedcloud iStark	
+CLAN	139	Liquor	l	1	0	9	11750	0	0	0	0	xXZumbieXx	CowToy	
+CLAN	140	FaZe_old	FaZe_old	0	0	1	0	0	0	0	0		jameslinay Beached	
+CLAN	141	Strukt	Strukt	0	0	1	0	3	0	0	1			
+CLAN	142	Beyond	BYO	0	0	1	0	0	0	0	0			
+CLAN	144	Modern Warfare 2	MW2	0	0	1	0	5	0	0	2	darklyt750 potatoleg	AlfaFlip	
+CLAN	145	Essence	Essence	1	0	1	0	0	0	0	0			
+CLAN	146	Fallen Angels	Fallen	0	0	1	0	7	0	0	2			
+CLAN	147	14890571304	19264	0	0	1	0	0	0	0	0	00Ratna00 angelkiki tor30 ProBill	Sevennight	
+CLAN	148	RHG fighter	RHG	0	0	1	0	0	0	0	0			
+CLAN	149	Deus ex Bellum	DxB	0	0	1	0	0	0	0	0	CowTheWolf Saaree BVBank	1stGoD Inflict jackjason3 godwar123	
+CLAN	150	Fire	Fire	0	0	1	0	0	0	0	0			
+CLAN	151	the Sloppy Tacos	sloptac	0	0	1	0	2	0	0	1			
+CLAN	152	Templar - New Era	TemplarN	0	0	1	0	2	0	0	1			
+CLAN	153	The Ghosts	Ghosts	0	0	1	0	0	0	0	0			
+CLAN	154	rotted limbs	rotted	0	0	1	0	6	0	0	2	g8rjtr cscott360		
+CLAN	155	Time	Time	0	0	1	0	0	0	0	0		BankTemplarN caoloko	
+CLAN	156	Bleu	Bleu	1	0	1	0	0	0	0	0			
+CLAN	157	Immortals	Immortal	0	0	1	0	7	0	0	2	Orochi259 rhyn0 NaterNasty essarios34	synner1976 couscous	
+CLAN	158	rasta	rasta	0	565	1	300	5	0	0	2			
+CLAN	159	TheToriArmy	TTA	0	566	1	300	2	0	0	1			
+CLAN	160	A	aa	0	0	1	0	2	0	0	1	Bloxim RagerJ juggernaug Crisdar	kingofdac kingOFtheC pieman666	
+CLAN	161	Empress Royallity	Empress	0	0	1	0	0	0	0	0	BonLife	daimster moonchil gargoyl44 BetterDenU	
+CLAN	162	The Last Of The Living	TheLast	0	0	1	0	0	0	0	0	Skybird101	MrSchaf82	
+CLAN	163	Ronin	Ronin	0	212	1	650	4	0	0	1	AClanBAnk	Frost-Dragon	
+CLAN	164	AciD ProjecT	AciD	0	0	1	0	0	0	0	0			
+CLAN	165	Death Stars	Ds	0	0	1	0	1	0	0	1			
+CLAN	166	Darkness	DK	0	0	1	0	9	0	0	2	TheKebab13 Morgwan kriszhun Sukichu	xtermix	
+CLAN	167	Rage Ravens 	Rage	0	0	1	0	0	0	0	0			
+CLAN	168	Rise Against	Rise_old	0	0	1	0	0	0	0	0		pedro142	
+CLAN	169	Imperium_old	Imp_old	0	0	1	0	2	0	0	1	XxXOracleXxX Joaodiego7 XxYagooxX g0dhate5us jhennylinda S2KeiteS2 Judos Linkinjoe	spartano1	
+CLAN	170	Rust Is Dead	DeadRust	0	0	1	0	3	0	0	1			
+CLAN	171	Split	Split	0	0	1	0	0	0	0	0			
+CLAN	172	Fairy Tail Eternal Infinity	FTMage	0	359	1	800	2	0	0	1	HunterRobertson	giantCIII3	
+CLAN	173	Team Clockwerk	Clockwrk	0	0	1	0	5	0	0	2	RustBank Dillmancc	ReyMysterio9	
+CLAN	174	Obscure	Obscure	0	0	1	0	1	0	0	1			
+CLAN	175	Dead_Old	D_Old	0	0	1	0	0	0	0	0	BankTDS	SilverFoxy bugsbunnys NatsuHappy	
+CLAN	176	noob	Noob	0	0	1	0	0	0	0	0	Pkmasta unstable24 soretoe Renekade	Sastimos	
+CLAN	177	Brave_dead	bdead	0	0	1	0	0	0	0	0		ObscureClan	
+CLAN	178	Assassins	Assassin	0	0	1	0	5	0	0	2			
+CLAN	179	Master	Master	0	0	1	0	1	0	0	1			
+CLAN	180	Fury of the carrots	FuryOTC	0	0	1	0	0	0	0	0			
+CLAN	181	Sons Of Anarchy 	SoA	0	0	1	0	0	0	0	0	Redutz kylesan8 Roeltje99	Sephi2000 mrjacks	
+CLAN	182	ZombieGBR	Zombie	0	0	1	0	0	0	0	0		joupin	
+CLAN	183	QuickSliver	Quick	0	0	1	0	0	0	0	0			
+CLAN	184	QuickSilver	QS	0	0	1	0	2	0	0	1			
+CLAN	185	Perfected in Violence	PIV	0	0	1	0	5	0	0	2			
+CLAN	186	Dutch Primez	DPrimez	0	0	1	0	7	0	0	2			
+CLAN	187	Fueled By Instinct	FBI	0	0	1	0	0	0	0	0	QuicksBank	mw3maniac	
+CLAN	188	Omega	Omega	0	0	1	0	1	0	0	1	IGAME4700 Jabrok WantAHug	gabbyhouse JiGGG	
+CLAN	189	JBman's new Clan	Gracie	0	0	1	0	4	0	0	1	kongnick97 pudding4 diemitery2 IFollowYou mitchfu982 D4RKN3SS12	mitchfu98	
+CLAN	190	Infinity	Infinity	1	37	16	20350	30	0	0	2			
+CLAN	191	Joseph Kony's Special Forces	JOEKONY	0	0	1	0	0	0	0	0		iHand	
+CLAN	192	Sir_old	Sir_old	0	0	1	0	1	0	0	1	Rhomeozon iIcicle iAqua	JBMan	
+CLAN	193	Forever Alone	FAl	0	0	1	0	1	0	0	1	Rilay GVazF InfinityBank Bryan Will arkantros felipa Cercopes LMY felipao CaioReborn Linguissud skimo99 CS22 brunolages zVilche Erotic The124 Sintese FoxthisBR Zeker capMNO Faith olassilas thewarfare updenso capitao07 Akashi GutanBR ChocoSopa	lucastorre semnome3	
+CLAN	194	Monkeys	Monkey	0	0	1	0	0	0	0	0			
+CLAN	195	Delta Squadron	Delta	0	0	1	0	3	0	0	1		SirEvents	
+CLAN	196	Incognito Bandit	iB	0	0	1	0	0	0	0	0		Falih36	
+CLAN	197	Falcon	Falcon	0	0	1	0	5	0	0	2			
+CLAN	198	Heart	HB	0	0	1	0	0	0	0	0	hiimanoob NovaXP	ZeroXp	
+CLAN	199	Knights Of The Dark	KOTD	0	0	1	0	11	0	0	2			
+CLAN	200	Voltage	Volt	0	0	1	0	2	0	0	1	sabunim	DannyFlint Ginning XxBausexX mkeane	
+CLAN	201	Entity_old	Enti_old	0	0	1	0	2	0	0	1			
+CLAN	202	The Aces_old	Ace_old	0	0	1	0	0	0	0	0	hotdog169 Gorom Antigius RonPwnz MethodMan0 Purpleleaf super223 sanden125 jackniffer	xXB0SS Tallplay	
+CLAN	203	Shadow	Shadow	0	0	1	0	3	0	0	1	3001068	VoltageB	
+CLAN	204	Street Fighters	SFighter	0	0	1	0	13	0	0	2	BankWind	EvoO	
+CLAN	205	Vicious	Vicious	0	0	1	0	0	0	0	0			
+CLAN	206	Hitman	Hitman	0	0	1	0	2	0	0	1	360pulse	BANCHIERE Akahz	
+CLAN	207	Neko Hikikomori Kyokai	NHK	0	524	1	100	23	0	0	2	qsdasd zeus100 BIGgabriel DemonPhantom matadorkiller v4ndal0 Zebas FightersBank Lourencia	DragonForceJM DragonForceJP deadloco DragonForceVN	
+CLAN	208	Deadly Incredibly Elite's	DIE	0	0	1	0	3	0	0	1			
+CLAN	209	Snow	Snow	0	525	1	400	1	0	0	1	Maaster	diman00025	
+CLAN	210	Hype	Hype	0	0	1	0	0	0	0	0	hato1 MeltyMoon Goshared Andrsabaka screamuch Kripparium InSy June1 Deswent MCorbell Slko madnesss misnichek rfxDarth pbi6a4ok Lars nts Shtain glizt katfffff k1to BlackSugar	Stets	
+CLAN	211	Late	Late	0	0	1	0	1	0	0	1	XBankClan SystemDnb	NinjaxpOO	
+CLAN	212	Card	Ca	0	0	1	0	1	0	0	1		jeffrocker	
+CLAN	214	 Frenzy	Frenzy	0	0	1	0	2	0	0	1			
+CLAN	215	Topaz	Topaz	0	0	1	0	0	0	0	0		Lotebo	
+CLAN	217	Da Elite Assault Team	DEAT	0	0	1	0	4	0	0	1		joonveen	
+CLAN	218	Cold Thunder	ColdT	0	0	1	0	11	0	0	2			
+CLAN	219	Source	Source	0	575	1	0	3	0	0	1	FrenzyBank	imaboss234	
+CLAN	220	Undead Ninjas	UN	0	0	1	0	7	0	0	2			
+CLAN	221	CenteR	CenteR	0	0	1	0	0	0	0	0			
+CLAN	222	Fire&Ice	Fireice	0	0	1	0	2	0	0	1	MrRandom12 MrSwagg64 MrFarty	Liquid63	
+CLAN	223	Purely KO'd	PK	0	0	1	0	1	0	0	1	ThunderBank redstone47 camdawg14 Thdope DT50cal PapayaLord quantomkiller Renan11 azzzzz apple21	XXWOLFGANg	
+CLAN	224	H8 	H8	0	494	1	150	12	0	0	2	SourceBank INXSERGIO	VLeniK	
+CLAN	225	DarkHunters	DarkHunt	0	0	1	0	4	0	0	1	3rn3sto DUKEleNUKE DarkDoom16 PayYot	poky160 Meyers2032 Ninjapleaseish	
+CLAN	226	Pain	Pain	0	0	1	0	2	0	0	1			
+CLAN	227	Trap	Trap	0	0	1	0	1	0	0	1		patatman Natcho21	
+CLAN	228	FrazeBash	FB	0	577	1	50	35	0	0	2		shasdoe	
+CLAN	229	The Killers	Killers	0	0	1	0	0	0	0	0	Theloser21 thehungry1 NinjaWhite shnaz TheWicked ch4llt ninjabot54 laboblox Angelcrash SideChain	TSSGinkoo cubik	
+CLAN	230	Pulse_Old	Pulse_ol	0	0	1	0	0	0	0	0	Nitroducky SrHuevos sssjmo	sssjpo	
+CLAN	231	Incognito	Incognit	1	0	1	0	0	0	0	0	Ulthus	zotwi	
+CLAN	232	Gold Standard	Gold	0	0	1	0	2	0	0	1		cheese7201	
+CLAN	233	Rebellious Mana	Mana	0	0	1	0	4	0	0	1	lolboybob kick22 FBBank zacklm Skyvoid ThowBills dan00 supereez blueyoda TwinVillon philip5456 xfree Tatsumakio tictacdud LinkMe Fe3rLess starfo Thesold drakulabo Bubba335 Crossheir GG123Snipa PapaRapa lanceport DumbStrike renyck023 MrOverkill kenyae Stikkynote strickland1999 Nerd67Lui Vinishard BodinLoko LOLMAN179	runz2090	
+CLAN	234	pro	pro	0	0	1	0	1	0	0	1			
+CLAN	235	DaBosses	boss	0	0	1	0	0	0	0	0			
+CLAN	236	Celtics	Celtics	0	0	1	0	0	0	0	0			
+CLAN	237	Superawesome Walrus Akufuncture 	SWAG	0	0	1	0	2	0	0	1	DDKGaav	SKGuru	
+CLAN	238	Ultimate	u	1	0	16	20700	0	0	0	0	N0X10U5	Hencefold atomicface SdOg01	
+CLAN	239	HellBlades	HelBlade	0	0	1	0	0	0	0	0		supbro555	
+CLAN	240	Savage	Savage	0	0	1	0	4	0	0	1			
+CLAN	241	m0lf	m0lf	0	0	1	0	3	0	0	1			
+CLAN	242	Randomz	Randomz	0	0	1	0	4	0	0	1	SWAGbank	Burnedbug	
+CLAN	243	Vanished	Vanished	0	0	1	0	0	0	0	0			
+CLAN	244	Vitsuga Mind Eaters	Vitsuga	0	0	1	0	7	0	0	2			
+CLAN	245	Legal Annoyance Group	LaG	0	0	1	0	1	0	0	1	LeftNut Amida0110 AngelD12	abelo	
+CLAN	246	System Of Six	Sosix	0	0	1	0	2	0	0	1	Aneurisma ChanClone	william4050	
+CLAN	247	Dark Rage	DarkRage	0	0	1	0	1	0	0	1	Sourei HadesSoul	Majestiic kungfooy	
+CLAN	248	so much blood	smb	0	0	1	0	1	0	0	1			
+CLAN	249	Ice Dragons	Ice_old	0	0	1	0	0	0	0	0	Lightslash Vioolence BushidoBrown Flameshot1 Heku4 LoudDuck	superjanemba	
+CLAN	250	Knock Out Squad	KOS	0	0	1	0	4	0	0	1		Zizhi	
+CLAN	251	VL	Volatile	0	0	1	0	23	0	0	2	Blood145	LoXeroN	
+CLAN	252	Greatest off all toris	Goat	0	0	1	0	2	0	0	1	DrkRgeBank		
+CLAN	253	Olympus	Olympus	0	0	1	0	6	0	0	2		LazertazerX	
+CLAN	254	Lost	Lost	0	0	1	0	1	0	0	1			
+CLAN	255	Crow	Crowold	0	0	1	0	0	0	0	0	LexiBlox man909 Deadhead77	uenvythis	
+CLAN	256	Logic	Logic	0	0	1	0	2	0	0	1	TotalBeast thedude307 untamedfir FrankWalka demonobody Crisman789 Condorfoshi08 NoobSaba22 speztec IamNotAlt VLBankCentral macman27 TryHardLime Kirby624 Anoma Molinora DanyRH Jashon lilsckilla Kingblake kamarin7	UltraDX HaMzO	
+CLAN	257	Rengoku no Honoo	Honoo	0	0	1	0	7	0	0	2	destroking	ave100dj	
+CLAN	258	xCore	xCore	0	0	1	0	3	0	0	1	sylo12 uchiha789 Neji213 oldreed33 amandon	Sauske1126	
+CLAN	259	Regzy	Regzy	0	0	1	0	4	0	0	1		xpressie	
+CLAN	260	MandM	MandM	0	0	1	0	0	0	0	0			
+CLAN	261	Drugged	Drugged	0	0	1	0	1	0	0	1		Expect UKNWxBeast	
+CLAN	262	Simply Lethal	SL	0	0	1	0	1	0	0	1	MadMage Draco7 Askdevin777	TatsumiIncursio IncursioTatsumi RagnaHiyuu HiyuuTatsu	
+CLAN	263	SyN	SyN	0	0	1	0	0	0	0	0	Paveloshur vanek007	bull24	
+CLAN	264	The 7 Dragons Alliance	T7D	0	0	1	0	4	0	0	1	zeke218 HiRez PChaos	regularguy	
+CLAN	265	Eternal Chaos	EternalC	0	0	1	0	0	0	0	0			
+CLAN	266	The Deadly Alliance	TDA	0	0	1	0	2	0	0	1		drugbank	
+CLAN	267	Brave_Old ToriClan	B_OTC	0	538	1	50	2	0	0	1		goblin69	
+CLAN	268	HEAT	HEAT	0	0	1	0	1	0	0	1			
+CLAN	269	As One	Ao	0	0	1	0	0	0	0	0	TGBS XiaoXiaoHD Sisoku	Madpenny3k	
+CLAN	270	Sk1ll	Sk1ll	0	0	1	0	4	0	0	1			
+CLAN	271	Dream	Dream	0	0	1	0	0	0	0	0	TDABankAccount	laydown	
+CLAN	272	The Mutant	Mutant	0	0	1	0	4	0	0	1	Dash3r	Barin12345	
+CLAN	273	Ida	ida	0	0	1	0	0	0	0	0		2212211	
+CLAN	274	Butter	Butter	0	0	1	0	0	0	0	0			
+CLAN	275	followers of ishkur	FOI	0	0	1	0	8	0	0	2	CTLrokkilr aikerio T8Goliath	connor897	
+CLAN	276	Social Monsters	Monster	0	0	1	0	4	0	0	1			
+CLAN	277	Doctor_old	Dr_old	0	0	1	0	0	0	0	0	Death9677 doublecase	BrodyJS aquaman2000	
+CLAN	278	BlueFlameKillers	BFk	0	0	1	0	1	0	0	1			
+CLAN	279	The Corrupted	Corrupt	0	0	1	0	17	0	0	2			
+CLAN	280	The Illuminati	Ill	0	0	1	0	2	0	0	1	Remipl Duffy2014 vampypmp01 poemd Alduin101 foibanking	ja123465 poeta	
+CLAN	281	Aikido in Reality	AiR	0	0	1	0	0	0	0	0	tanouch68 Grafew alexraymond	unialfred	
+CLAN	282	Matrix	Matrix	0	306	1	1500	2	0	0	1			
+CLAN	283	King of Diamonds	KOD	0	0	1	0	1	0	0	1		IamBullet	
+CLAN	284	Yandere Waifus	Yandere	0	0	1	400	1	0	0	1	EINSTEIN12 KingShade PandaFan1 ezpleazer Greeny2993 OURB4NK UltraEner pwner101 ATP3 KoxOMG zjames24 tHOLY Shockwaver bigballz21 Hopeless1 ogunrotimi	nate6299	
+CLAN	285	Power_old	P_old	0	312	1	1350	1	0	0	1		MrOMGWTF ILLClan	
+CLAN	286	CURSED SEAL	SEALED	0	0	1	0	2	0	0	1			
+CLAN	287	Soloists	Soloist	0	0	1	0	2	0	0	1	KratosUG	aminsuper	
+CLAN	288	Black Tango Elite	BTE	0	0	1	0	1	0	0	1		barbush0	
+CLAN	289	Akane	Akane	0	0	1	0	0	0	0	0		QuartzK	
+CLAN	290	Jazzz	Jazz	0	0	1	0	3	0	0	1		LampGod	
+CLAN	291	Doom's Sentiels	STL	0	0	1	0	3	0	0	1	KazamaDaisuke	CoDHax	
+CLAN	292	Wrath Of The Dark Age	Darkness	0	0	1	0	1	0	0	1		Nagami Kuroie	
+CLAN	293	Unidentified Flying Object	UFO	0	0	1	0	3	0	0	1		Omgkiller2	
+CLAN	294	089627406746724586	24508674	0	0	1	0	0	0	0	0			
+CLAN	295	Dark Brotherhood	DB	0	0	1	0	11	0	0	2	mikee75 Goodzillabr	JazzBank	
+CLAN	296	SUKA GOVNO DER'MA PIZDEC OHUENNI	SUKA	0	0	1	0	0	0	0	0	Vov4ikpro RoKon	Nex0LeN	
+CLAN	297	PIZDEC OHUINNIY CLAN ATVICHAIY	PIZDEC	0	0	1	0	0	0	0	0		TheEpic11	
+CLAN	298	Bottle Sitting Therapy	Butilka	0	0	1	0	11	0	0	2	beastboy14 lokloki5	eldarlol	
+CLAN	299	Elite Striker 	ES	0	0	1	0	6	0	0	2			
+CLAN	300	BlueBlood	BluBlood	0	0	1	0	8	0	0	2	Lukeleque UyancarBank Fear2000 darkness64 EpikTacos STB1214 Cha0s311 saw9901 GigaTalios PhantomAssassin	kidbuu32	
+CLAN	301	Born Pure	BP	0	0	1	0	1	0	0	1			
+CLAN	302	Sound	Sound	0	0	1	0	0	0	0	0			
+CLAN	303	TSSMBOWZ_old	z_old	0	0	1	0	0	0	0	0	Chikensux taksist92 Renisux ytrbn97 vfxDort az9543 ruslanwar KoPCAP Fesh iQJungles	Griy	
+CLAN	304	Empire of Romans	EoR	0	0	1	0	14	0	0	2	NexuNuke ESbank chestknife Tzyzuke tastyn1nja	knarfman	
+CLAN	305	Vitality	Vital	0	0	1	0	0	0	0	0	TheDario64 MrCoolGuy1 logicality Crusher007 jstarnes squirrelpo DragonMan5	Kindercat	
+CLAN	306	Oblivion	Oblv	1	0	1	0	0	0	0	0		brendon125	
+CLAN	307	LiQuid	LiQuid	0	0	1	0	0	0	0	0			
+CLAN	308	KodeNamers latino	KeNs	0	0	1	0	0	0	0	0			
+CLAN	309	xSupreme	x_	0	0	1	0	5	0	0	2	popoi21 GrimDeth RickoDid robotspy Sagi2060 RedStinged hardcore56 PWBank angel112 Blood33	GameBuster DOGwitAIDS BankForBad Labster	
+CLAN	310	The Shield	Shield	0	0	1	0	1	0	0	1			
+CLAN	311	Eclipse	Eclipse	0	0	1	0	2	0	0	1			
+CLAN	312	Bronies	Brn	0	0	1	0	0	0	0	0			
+CLAN	313	Believe	Believe	0	0	1	0	0	0	0	0			
+CLAN	314	Mythic-Legends	Myth	0	0	1	0	8	0	0	2	DerpySlime Victorkn74	akden torichu 2girl4U	
+CLAN	315	Resurrected	Re_old	0	0	1	0	0	0	0	0		ShieldBank	
+CLAN	316	Dawn of the Derp	DoubleD	0	0	1	0	1	0	0	1	trclanbank	uglykitty3	
+CLAN	317	Apocalypse_old	ApOc	0	0	1	0	5	0	0	2			
+CLAN	318	Machine Gun Killaz	MGK	0	0	1	0	3	0	0	1			
+CLAN	319	Kamikaze	KMZ	0	0	1	0	1	0	0	1	MythicBank ZacGarby HazeyBlaze sheepyyy WhaleO Mrmuffler	FoxMcbluff bluflame	
+CLAN	320	Lucky_old	Lucky_ol	0	0	1	0	1	0	0	1			
+CLAN	321	Vex	Vex	0	0	1	0	1	0	0	1		TheDerpyH	
+CLAN	322	The Brotherhood	Bro	0	0	1	0	0	0	0	0	gesdude6 GREENBOSS suaske100 Derpyman7	coolgary1	
+CLAN	323	Lone	Lone	0	0	1	0	11	0	0	2	bobsbob ProdigyT	PimpAlive	
+CLAN	324	Eagles of the Night	Eagles	0	0	1	0	36	0	0	2		jakobsdrgn1	
+CLAN	325	Zen the buddhist's way of life	Zen	0	0	1	0	3	0	0	1		Finn101XD2	
+CLAN	326	Anime	Otaku	0	0	1	0	6	0	0	2		zSlick	
+CLAN	327	Vindicator of They	VoT	0	0	1	0	0	0	0	0			
+CLAN	328	ShadowSyndicate	SS	0	0	1	0	0	0	0	0	maxkill1 shimm3y LoneBank CrazyJoes Tuokrei Barketot imanoobxx Serg70877	PhuckY0U Wulf ViolentPa	
+CLAN	329	Gatherers Of Bones	GoB	0	481	1	400	2	0	0	1	andrei0199 crisbayern LauraNyaa Jizam1198 ToriMiner Drakey11 tanyu ssniiper28 bluechark Mirso Xakra Pheno nife099 RealMist jv2dias eaglesbank Komandos1 IHaveNoob imanoob80 chemney11 ShizzleDK Arttom yayumoto mastergms 2WOOF2 Casper258 Radiowise MrPollaVrd luis232 spanur wakawaka86 EasyAsPie Eneri OGFLY Meg4JR	Aguilado	
+CLAN	330	BloodClan Thread	BC	0	0	1	0	3	0	0	1	ASuperior SWbank	Zenbank	
+CLAN	331	RiFT	RiFT	0	0	1	0	0	0	0	0	Kotori RaydecKing OtakuBR evilman17 KuronishiX	Nanoir	
+CLAN	332	ComboKillers	CK	0	0	1	0	4	0	0	1			
+CLAN	333	Uzbekistan	UZB	0	0	1	0	2	0	0	1			
+CLAN	334	3spooky	3spooky	0	0	1	0	11	0	0	2		joshiposhi HexBone	
+CLAN	335	double u	doubleu	0	0	1	0	0	0	0	0	CMEXGaming popyou101	iScourge	
+CLAN	336	Delta Force	DF	0	0	1	0	0	0	0	0			
+CLAN	337	asfasfasf	asfasfas	0	0	1	0	0	0	0	0	th30b0ZZ	uTery dashie1234 andre1206	
+CLAN	338	Jellyfish	jf	0	0	1	0	0	0	0	0	ayder111	UZB	
+CLAN	339	Unit of you New	Uoy_N	0	0	1	0	6	0	0	2	Ian195 demonslayerMZ racci19 C4TM45T3R nahtian deepblue13 Zinc772	potatowolf commanderkief skittlepie bigbluemagoo	
+CLAN	340	Aeon	Aeon	1	0	1	0	18	0	0	2			
+CLAN	341	Back Flips	Flip	0	60	7	8650	13	0	0	2			
+CLAN	342	Pure and Deadly	PnD	0	0	1	0	0	0	0	0			
+CLAN	343	yam buy	yo	0	0	1	0	2	0	0	1			
+CLAN	344	wizzardpro	Wicked	0	555	1	50	6	0	0	2	RaiNboWDaSh31 PoopuPlato DeSsSH wadimi Yoti	Mariacho	
+CLAN	345	HouseOfGods	HG	0	0	1	750	0	0	0	0	Habeeb SXDave threedog2 Azure Chirs Rumour Jormungandr Abyss NotShadow CkyToH AeonBank Shadow102 Joeseph axelsXD Tryton Gautatyr iSpeed	TheAnimal	
+CLAN	346	Enigmatic Dardanuyp's army	Darda	0	556	1	50	11	0	0	2	FlipBank mobinladen xXSJXx cheffchen alteredmonk shad666 TheRealSJ spicymonky fragray Xetotrius ediblecow Eyeyeetdhik	xRegalia	
+CLAN	347	Vinyl	vL	0	180	2	3300	13	0	0	2			
+CLAN	348	Peaceful Kingdom	Peace	0	0	1	0	0	0	0	0		believeingod believeinjesus	
+CLAN	349	Realm	Realm	0	0	1	0	0	0	0	0	ironclaws Aderrus REU61909 alex116rus	wizzardpro AssKissum	
+CLAN	350	The Hawks	Hawk	0	0	1	0	8	0	0	2			
+CLAN	351	Evil Training Clan	ETC	0	0	1	0	0	0	0	0	dardanuyp2 Grymox Aliano thaleles kurainami raylizard TCZebra aua0007 Junkly 8Nightwing	dardanuyp	
+CLAN	352	betterfly	bf	0	0	1	0	11	0	0	2	VinylBank Silcox Protagonist Houkii VaQX TheFryGuy ImDurnk heptie Lokey Diameter Zoji v400	Pieman4210	
+CLAN	353	Breeze	BRZ	0	0	1	0	0	0	0	0			
+CLAN	354	Inferno	INO	0	0	1	0	2	0	0	1			
+CLAN	355	Aggressors	Angry	0	0	1	0	6	0	0	2	strongann7 Promofoe sparten111 danielwoj Snackk MilkyLaser	ElectroFruty slycreep	
+CLAN	356	Family_old	Fa_	1	0	1	50	0	0	0	0			
+CLAN	357	RVG	ReVenG	0	0	1	0	3	0	0	1	asgas qyt3 ag as MrMelk Tateri AshleyWilliams sumrack F1stoR Chrome16 xXx97 sanek1423	http Koziwe	
+CLAN	358	The lions	Lion	0	0	1	0	0	0	0	0			
+CLAN	359	Forces of Good	GOOD	0	0	1	0	0	0	0	0	assasins10	vexon459	
+CLAN	360	DEFAULT	DEFAULT	0	0	1	0	10	0	0	2	hakker14 Profesional AggressorsBank ilyxa00 Serna	DeadPool66	
+CLAN	361	The Dragons Empire	Dragons	0	0	1	0	37	0	0	2			
+CLAN	362	Dael's Buttslut	DBS	0	453	1	200	5	0	0	2	froodler66 GTSz	leMunchkin	
+CLAN	363	Acquiesce	Aq	0	0	1	0	0	0	0	0			
+CLAN	364	1ManClan	1ManClan	0	245	1	1800	5	0	0	2			
+CLAN	365	Aussie Brawlers	AUS	0	0	1	0	0	0	0	0	khra dtoribash Billiam172 Crosis2929 sabak1999 Cayene1991 Markus2929 123lol23	zzzzpunk kareemo333	
+CLAN	366	HeadHunters	HeaD	0	0	1	0	0	0	0	0	zonespace78 eggwalrus smirkenorf sevboy lolhis Quaxoi2nd troller13 NickNinja Al3xnder Jensson Jehad555 Cerz99 dudleytuff ralfeusz Dreigon1 mikimenek1 kalsparith Unions Icaro12345 vugsy 5up3rNova2 darkmurder Syrus21 Rokkugo Pikachaz Tehrandomz Xerosarasi andrik03 jhorzib som3dud ESTGlaDos uBARu lolczacik Terminux Laris	doggie66 mineyo66	
+CLAN	367	Gamers	GM	0	0	1	0	0	0	0	0	N3rdFlow	racci Doodyhead BravoBank iEvil	
+CLAN	368	Hell	Hell	0	0	1	0	19	0	0	2			
+CLAN	369	Super Mega Ultra Dolphin Squad	SMUDS	0	0	1	0	0	0	0	0	Toxic1o SoAlone	lukemg ToxicLee londen	
+CLAN	370	Devil	Devil	0	391	1	600	3	0	0	1			
+CLAN	371	Rage	Rag3	0	0	1	0	1	0	0	1			
+CLAN	372	Pure_old	Pure_old	0	0	1	0	0	0	0	0			
+CLAN	373	BRAWLERS	BRAWL	0	0	1	0	2	0	0	1	ACECOMBAT1 tazamaru yaunf Fanex24 MarcusFox Breezy264 x0deadzone0x cupman EXscout BudderBaws draoballay Warpek tshirtzak xViralModz epis88 Manderkan NinjaThat boydown Wiktoriuss		
+CLAN	374	Ninja Hood	Ninja	0	0	1	0	0	0	0	0			
+CLAN	375	Arcade Crowd	AC	0	516	1	350	32	0	0	2	Kendama Greatrocco	Speeddy	
+CLAN	376	Asleep	Asleep	0	0	1	0	2	0	0	1		Wold	
+CLAN	377	ZION	ZION	0	0	1	0	2	0	0	1			
+CLAN	378	Brutal Killers	BK	0	0	1	0	0	0	0	0	justinwars	FaCrafter	
+CLAN	379	Toribash Navy Seals	NSeals	0	0	1	0	1	0	0	1			
+CLAN	380	God_old	God_old	0	0	1	0	1	0	0	1	SirWebster ManOnFireFilms SabreRage -Cyri- Fatman680 rossbarker Kratar1 Peaky04 ZoraVasser LowDough NOCAT6 Obliviia FastGuy123 VinhVinh DarkxHero nodarkness 1v1MeSkrub jojohill1 ZackAndChris Cookie maniac211 Lbponator TheRooikat coolvi25 Iawesome3 leoepard ChrisTheBoss ShawnTheSheep Chillkidd1 HypePunch ArcadeCrowd	JackMorris	
+CLAN	381	Domination 	Dnation	0	0	1	0	0	0	0	0	Applsauce	AwakeBank	
+CLAN	382	DeathPanda	Dishonor	0	0	1	0	1	0	0	1		knbank DassB	
+CLAN	383	Pure Skill	Skill	0	0	1	0	3	0	0	1			
+CLAN	384	Russian Community	RC	0	0	1	0	4	0	0	1		NSealsBank	
+CLAN	385	Flux	Flux	0	0	1	0	0	0	0	0		fireeyes	
+CLAN	386	hobo's clan	cat	0	460	4	5550	14	0	0	2			
+CLAN	387	420	420	0	0	1	0	2	0	0	1		noobgamer9	
+CLAN	388	("\[o_0]/")	o_0	0	0	1	0	4	0	0	1	Acquiesce headtaker7	xxSkillbankxx	
+CLAN	389	Hazard	HaZ	0	392	1	650	4	0	0	1	ttigerr4 tiburi3040 ClanBankRC	kuva	
+CLAN	390	Enclave Remants	Enclave	0	0	1	0	0	0	0	0			
+CLAN	391	PyroTechnics	Pyro	0	0	1	800	0	0	0	0	teacozzy noteztc HOBOHOBOHOBOHOBOHOBO cat Freelancer	dinkletick l0t hobo fallooo ActionAction Fish sirkill1 Echoforce Text	
+CLAN	392	Fallen Shadows	Shadows	0	0	1	0	0	0	0	0		BlazinUp PlayerID420	
+CLAN	393	Dominion	Dominion	0	0	1	0	1	0	0	1	christano5 conner21	Xincognito C0NJ3R	
+CLAN	394	Accel World / Sword Art Online	Accel	0	0	1	0	5	0	0	2	CoolBen Austin1456 HazardBank	DatPhoenix	
+CLAN	395	Sloth Society	Sloth	0	0	1	0	2	0	0	1			
+CLAN	396	The Order	Order	0	0	1	0	0	0	0	0			
+CLAN	397	Strong	STRN	0	0	1	0	0	0	0	0			
+CLAN	398	Team Girl Scouts	TGS	0	217	1	2200	13	0	0	2		MPuffins	
+CLAN	399	Soldiers of Death	SoD	0	0	1	0	0	0	0	0	LeadKnight ShiningBlade SkyLance	DuskRainbow BlackThunder	
+CLAN	400	Taking Down Bowls	Stoners	0	561	1	50	19	0	0	2		SlothBank Leisure	
+CLAN	401	Mangrove	Ma	0	562	1	50	1	0	0	1			
+CLAN	402	Bagged Milk Association	BMA	0	0	1	0	2	0	0	1			
+CLAN	403	Magic_old	MagicOLD	0	0	1	0	18	0	0	2	Tman Irrita KEKETHECAT Estimax Kookoo11 Nyann DuckTape iNoobBruh Antleronio kungpao3	Nomad danceswithwolfs Pimp	
+CLAN	404	Bourne	Bourn	0	0	1	0	2	0	0	1			
+CLAN	405	Brighton Beach	bb	0	0	1	0	1	0	0	1	Amerex ThatGuy42 juniorsgzz 420420 waltherwj BrutalTKO LOLMAN234 Night0Rage BlackBuzz ryotbox PandaBPotH flame003 clanmanband cjjerel17 alexand242 beastdog24 StonersBank BlkDmnd	Outsid3r	
+CLAN	406	Ascend	Ascend	1	0	4	5450	0	0	0	0		Darius559	
+CLAN	407	The Risen Ones	TheRisen	0	0	1	0	0	0	0	0	century246 MilkTank		
+CLAN	408	10ThousandFists	10K	0	0	1	0	1	0	0	1	EpikFlame AberMad Hearing ZeDeatstar daTorch Immortaled athenS123 BRZ largekilar hip247lox MindFrik HackerLol BlueBurger kabutoops SecreTree	Narrid911 Wished Formed	
+CLAN	409	Electric	e	1	0	8	10050	0	0	0	0	AMB	darkcratoz	
+CLAN	410	Sovereignty	Reign	0	0	1	0	1	0	0	1		BBBank	
+CLAN	411	Most Offensive Players	MOP	0	0	1	0	23	0	0	2			
+CLAN	412	League Of Extraordinary Toribash	LOET	0	0	1	0	21	0	0	2			
+CLAN	413	Herois de Combate	HC	1	0	1	1950	0	0	0	0		DemonDr1ve	
+CLAN	414	Armageddon	Arm	0	0	1	0	6	0	0	2			
+CLAN	415	Aether	Ae	1	36	6	8350	23	0	0	2		TheMrKhaos	
+CLAN	416	International Boxing Organizatio	Pugilist	0	0	1	0	3	0	0	1	Rinzler146 Bluebirdx0 DeFebyan Iakes nnnninja redifilde BluHawkEye 1234rulez lookoutdilly waffle2906 mingo31620 Ultiment Toubuscause regirisk funnelcake1 Leprekaun ToriReu inchesevan	EliteDoom kickinggo MegaSlayer516 Pr0Acid PixelHaVen	
+CLAN	417	Dark Angels	Dark_old	0	0	1	0	3	0	0	1	FireMage1 meezervuk landmine23 Eviildead LordButler lachlan878 Monkeypies bloxfive12 xDATx SmutnaaPL icreep34 traloxis16 werd3339 LOET Katt1 123tut shark50 DarkButler	aquafire52 butlar1010 TrustyKid	
+CLAN	418	Advt	Advt	0	0	1	0	3	0	0	1			
+CLAN	419	United Russia	RUS	0	0	1	0	14	0	0	2	BankInfamous Deffnout Saeko chrys96 ettoreloco	GuilhermeFac	
+CLAN	420	French Toast Mafia 	FTM	0	0	1	0	3	0	0	1	Avikaa Vaiol ThePebble Private Velair Chilledon Mzebra cigarillo Nikos FIJY Pair 2WC robatic rology Haunter bodedee Tsui roplane DabLord theee RickTick	adam2332 Rial	
+CLAN	421	Stealth	Stealth	0	0	1	0	7	0	0	2	GoodRage	Popoops IBOBank	
+CLAN	422	cerf	cerf	0	0	1	0	1	0	0	1	LORD2172 Darklord47	GirlyNinja	
+CLAN	423	KOONTZ Clan	KTZ	0	0	1	0	7	0	0	2	TheChromeK FalconTRM	Zachy1	
+CLAN	424	Brave_old	B_old	0	0	1	0	0	0	0	0	Merek Tandix GambiTFlower vovan312 waraxe1998 Lunty player89ru Gogy123 colen aizik AAAndrey santehik	Yoshize temisov97	
+CLAN	425	nV	nV	0	0	1	0	2	0	0	1	Ninja3925 zoucrane	DaGreatOne	
+CLAN	426	Revelations Italian Clan	Revel	0	0	1	0	1	0	0	1		marc1103 Beastlyslh Rank11 jellyops therhood GL94 Budderz	
+CLAN	427	Despair	DSPR	0	0	1	0	9	0	0	2		sobakavr1	
+CLAN	428	Rain_old	Ra_old	0	0	1	0	3	0	0	1	Noob1243 HenriqueGJ HerbalFeud KTZbank Chinie	PurpleCats ShinyShoes	
+CLAN	429	Velvet Rose	Rose	0	0	1	650	0	0	0	0			
+CLAN	430	Nyan Squad*	Nyan	0	0	1	0	0	0	0	0	24601K	Kittnphile	
+CLAN	431	Sensei	Sensei	0	0	1	0	7	0	0	2		bncytix	
+CLAN	432	SHLYUXA	SHLYUXA	0	0	1	0	1	0	0	1	44shades44 trickstyle Moojo9374 madman121 raff16 SirCrispy TronPotato CaptainCast	KoalaTime	
+CLAN	433	8D	8D	0	0	1	0	3	0	0	1	Zorro01 SABEEEE	Fuscu	
+CLAN	434	The Best	B35T	0	466	1	200	20	0	0	2		RoseBank	
+CLAN	435	Hard	Hard	0	0	1	0	0	0	0	0			
+CLAN	436	It's a clan_old	Its_old	0	0	9	11000	0	0	0	0	SenseiBank nashywan MLGkiLLeRz talliban spaxsta	Dushik Sorrix	
+CLAN	437	Senators	Senator	0	0	1	0	0	0	0	0		VIPBankVIP	
+CLAN	438	The Energy	Energy	0	0	1	0	7	0	0	2	Goshuujinsama	nemevoli hiPriest	
+CLAN	439	Alt_F4_old	_old	0	0	1	0	4	0	0	1	Fox0Trot Iceee159 panos40 Dualityy KickerSubs chuckGreene smartbest BatNator Germis jbxman13 1Filopl addablebobcat Freitass04 joouman Chacant InOFF anga26 xXUndeadEliteXx joaosm2002	LordRape	
+CLAN	440	Sparring Nation reborn	TrapBois	0	198	2	2700	11	0	0	2			
+CLAN	441	Scar	Scar	0	0	1	0	28	0	0	2			
+CLAN	442	Real Fury	Fury	0	0	1	0	0	0	0	0			
+CLAN	443	Cresent Onlline	COE	0	410	1	550	3	0	0	1	z0mgslay MilkyDoo ToastedWafflez Siegus LagMamba KenSensei	jasonle253	
+CLAN	444	HoldAll	HoldAll	0	0	1	0	2	0	0	1	BankF4 Wrap Aypax	ErrorFX	
+CLAN	445	The Expendables	Exp	0	0	1	0	1	0	0	1	AIIIken Kanray xHandown MEANY Curser Sparbank pidsanator007 MKBlade299 TimeToEat TrapThang	KawaiiSwag	
+CLAN	446	Chimera	Chimera	0	0	1	0	0	0	0	0	durosey122 nada743 FatalJosh dlOolb salaping1 awsomguy1 zapid123 xT0X1C RedCobra54 Master360X Mazakari chickim P0RTALS papadopo benjami832 tylom youbedying agumon123 ximelonz BACONHAMS vince7182 H0rny98 deth888 dragon1974 timmy517 Flint53 trxy	JudgRipper	
+CLAN	447	The Sk8r Club	Sk8r	1	17	22	28550	39	0	0	2			
+CLAN	448	Insanity	Insane_o	0	0	1	0	0	0	0	0	topdog111	imataxi Kokuo	
+CLAN	449	Nothing to Lose	NtL	0	0	1	0	4	0	0	1	ryuu12	22cgobert	
+CLAN	450	Riot!	Ri0t	0	0	1	0	5	0	0	2	CrezySky25		
+CLAN	451	Minion	Minion	0	0	1	0	0	0	0	0			
+CLAN	452	Violent Resolution	Violent	0	0	1	0	5	0	0	2	VibeBank ZeDerpyOne Goughy WantsYou Hurr1c4ne desu StaticPlease VICTOR Rhaemond Genjin Gustikayi DanWebb sethtus Jodus dmvox Jeff Glitch SparkyAU Ryan darthc3po SruX Sneaky steven00 TartTurtle illustrious Parrot Jarandjar iSpawn billy MoonSick Reno Dexx GrannyGumJob SemiCold King Litre Elite Lost	BillyTheSk8rBoi	
+CLAN	453	ViraL	ViraL	0	0	1	0	6	0	0	2			
+CLAN	454	The Alliance	Alliance	0	0	1	0	0	0	0	0	briss031	NinjaKiller54 TinySwexx Kazato	
+CLAN	455	The Crimson Bloodline	TCB	0	0	1	0	19	0	0	2	Custon Uzabo PotatoPeel UDoThis	Fista	
+CLAN	456	Exploit	Explo	0	0	1	0	0	0	0	0			
+CLAN	457	Metal	M_old2	0	57	9	11400	1	0	0	1	ViolentBank Tricks265 hanqover cutie2	julianclark	
+CLAN	458	Outdoor	Outdoor	0	379	1	700	11	0	0	2	mtjeffers1 raimpage Tigershow deadlytox metaPunchZ	xS4V4G3x	
+CLAN	459	Technological Unit	Techno	0	0	1	0	4	0	0	1			
+CLAN	460	inknation_dead	inknat_D	0	0	1	0	7	0	0	2	XxtwatxX Krathos5 LeonBR1 tharuna6 Inidodo743 yohans232 YouMadbro9 DrSizzle Dethwarden GeneralXO1 15fight15 ReeLoVersa Shroomyjoe KiritoHado cowthecow1 veyzz	Crimson20 ViceGrip Jakob20	
+CLAN	461	Ko punch	Ko	0	0	1	0	5	0	0	2			
+CLAN	462	Volume Control	Volume	0	0	1	0	3	0	0	1	masterx3		
+CLAN	463	Men on Time	MoT	0	574	1	50	8	0	0	2	dngbank Sirkill40 andresYT4 SirLol90 th31ron Chameleon4 askn najjar1	shrey coolin1 sinzcarbon	
+CLAN	464	Instinct_old	inst_old	0	0	1	0	0	0	0	0	TechnoBank Kickflip7	WaterRacer WaterTech	
+CLAN	465	Circle of War	OF	0	0	1	0	2	0	0	1	Anklebits InkSparrow ethantwo pjer InkClanBank SeattleTruth	Life420	
+CLAN	466	Senju	Senju	0	0	1	0	8	0	0	2	redphinex crayrik RunToriV2 linster666	Moveway	
+CLAN	467	TBT	TBT	0	0	1	0	0	0	0	0	Xebruh	DubSlice32 nathan524	
+CLAN	468	Freedom Clan	Freedom	0	0	1	0	0	0	0	0	johnlac Aladyn Naruto437 the99bank wacca kemal222	basyir KK00	
+CLAN	469	Savants	SaV	0	398	1	850	2	0	0	1			
+CLAN	470	Kings	King	0	0	1	0	14	0	0	2	CircleBank	TheWarz	
+CLAN	471	Mecha Fighters	MF	0	0	1	0	0	0	0	0	ghjkibadfr UberBot2k KaiChaos toriyawa brunnog4 maxor23456	enver1000 ALEM3000	
+CLAN	472	Senior	Sr	0	0	1	0	0	0	0	0			
+CLAN	473	unknown	unknown	0	0	1	0	4	0	0	1			
+CLAN	474	Experience	xp	1	0	15	19000	0	0	0	0		Worth SaVBanker	
+CLAN	475	Dark blood	DBlood	0	0	1	0	9	0	0	2	lealjoo Metal2 vibeast340 KosBank Itrickster TendoX hunter7ar WedgieNinja MrBananaMan Shinsoku ChaosHornTail	Hummertime KyaryPamyuPamyu AngelsWill	
+CLAN	476	Azazel	Ze	0	0	1	0	0	0	0	0			
+CLAN	477	Ignition	IGN	0	0	1	0	1	0	0	1			
+CLAN	478	pleblord	pleblord	0	0	1	0	0	0	0	0	Warriorguy dancetori	WarDogUk92 Aerovirt	
+CLAN	479	phenomenal	Phen	0	412	1	650	1	0	0	1			
+CLAN	480	NightWolfs	Nights	0	0	1	0	4	0	0	1	DBloodBank Tankist4321 101HP ZALIPON228 Droillex eclipseyou Vomiting lavash16	sosiska444	
+CLAN	481	CarbonDioxide	Co2	0	156	2	3000	3	0	0	1			
+CLAN	482	Exotic_old	Exot_old	0	528	1	100	1	0	0	1		smashalt	
+CLAN	483	Fatalwarriors	Fatal	0	0	1	0	0	0	0	0			
+CLAN	484	All Natural	Natural	0	0	1	0	0	0	0	0		MasterTr0n	
+CLAN	485	The Fearless	Fear	0	0	1	0	0	0	0	0	manolokito cwkid	yargonxp12 toricubem	
+CLAN	486	Guild	Guild	0	0	1	0	1	0	0	1		KetchupKonnoiseur GlaceonHD Skotomox	
+CLAN	487	Essence-Minor	EssM	0	0	1	0	14	0	0	2		brayton	
+CLAN	488	Eternal	Eternal	0	213	2	2300	1	0	0	1			
+CLAN	489	FightforChrist	FFC	0	0	1	0	0	0	0	0			
+CLAN	490	Premium	Prime	0	0	1	0	1	0	0	1			
+CLAN	491	the quackers	quack	0	578	1	50	16	0	0	2		Solidman24	
+CLAN	492	Freestylers	FS	0	0	1	0	0	0	0	0	ZiGerZaGeR Solar13 KingScabby gamer828 EssMBot polterpup TomTh3Bomb legofund Thrdacnt kruum Skystar115 falololo	VanHotsu AltAzn	
+CLAN	493	Leauge of the undead	Lotu	0	0	1	0	0	0	0	0		leonovevo	
+CLAN	494	Tonic Raiders	tonic	0	0	1	0	8	0	0	2			
+CLAN	495	Banners_Old	Banned_O	0	0	1	0	0	0	0	0		blogg00	
+CLAN	496	RWBY	RWBY	0	0	1	0	5	0	0	2	quackbank kavest birdmanfly rander123 nomeman QuackyFace 19980704 Justscr3am romo17 zvven29 Ninjax116 jonasbr55 Ludwight superwaver	daggerpro SicariusHD	
+CLAN	497	Tokyo	Tokyo	0	329	1	1000	14	0	0	2			
+CLAN	498	69-Inverse	69	0	0	1	0	6	0	0	2			
+CLAN	499	Attention Deficit Ohh Shiny	ADOS	0	0	1	0	1	0	0	1	rsabatino lizzle FusRoYay orangelovr NugiClz jarictal freekill9	JAKES8569	
+CLAN	500	Coffee	Coffee	0	0	1	0	1	0	0	1			
+CLAN	501	Nationalist Socialist Worker's P	Emone	0	0	1	0	4	0	0	1	M0ntz00m4 SwagPandasBank	BlakeBelladonna Torchwick Nozomi	
+CLAN	502	VIRUS	Virus	0	0	1	0	2	0	0	1	KwisatzHaderach Marvil17 Colzack PheonixRed PortgazAce Mullebug30 pooharmy Venege Loser30 Vyralinfektion MatsukiHioga Aomine200 Atheistic	ghoul	
+CLAN	503	Nova	Nova	0	473	1	200	14	0	0	2	Stripper	AggravatedTorto Yoshimitsu dennisrodman donos milkytats	
+CLAN	504	The Empire	Empire	0	0	1	0	0	0	0	0		bishop214	
+CLAN	505	Zero Gravity	Zero_G	0	0	1	0	6	0	0	2		Lucent	
+CLAN	506	Extremekillas	ETK	0	582	1	50	24	0	0	2	Masonslice TeePeeGee	zymon22 SaladDays	
+CLAN	507	Delirious Psychos	Delirium	0	0	1	0	20	0	0	2	VirusLAB	iHunters	
+CLAN	508	Aki	Aki	0	304	1	1400	10	0	0	2	Novasbank iverson12 slyther Byx mcis6969 irongiant77 REGstudios Ficha24 Cubish AjasDark flesh009 Ulquiorra09 vlad2268	marcolepro	
+CLAN	509	Deadly Warriors	DW	0	0	1	0	2	0	0	1			
+CLAN	510	Insurrection	INS	0	0	1	0	0	0	0	0	Kaiokenrio KhaosArt hunter549	GAREE chr1s7 Repleye	
+CLAN	511	The Champions	Champion	0	0	1	0	2	0	0	1	timtamdan megascott tangytacos dopeydog zukez00m XwizzyX xzex15 ElectricTV Theman263 herotime Latitude18 DuBa4oK Fireivanbr mlgbank IThinkNot rhcp508 Mana99 ssyPounder 100ko5 koolkile puffling69 natedog355	coltmaster1 mozzie15	
+CLAN	512	Lux	Lux	0	0	4	5100	0	0	0	0	Jaymah rabbit120 Leunard11k marshaller Depsty NuKeZ HSBunny1 Kingme121 SgtDark39 4zK CodyRko DarkGods DoZeMoon h1nd3r PixHd Angelie123 Basically DragonElit DyllianGOD	Olaugh	
+CLAN	513	Hydra	Hydra	0	0	1	0	0	0	0	0	sammymueg blindshark MafDiver iEatuNoobz Steampunch viopeanut epicdemon9 VodkaKing AkiScorpio	AkiBank	
+CLAN	514	The fox family 	TFF	0	537	1	300	1	0	0	1	BancoBR15	HOMERGAMER	
+CLAN	515	Mystic	Mystic	0	203	1	1200	11	0	0	2			
+CLAN	516	Wild	Wild	0	0	1	0	0	0	0	0	Gustavo725	CHPbank	
+CLAN	517	Souless	Souless	0	381	1	650	7	0	0	2			
+CLAN	518	Exodus_old	Exo_old	0	0	1	0	0	0	0	0			
+CLAN	519	Zutto	Z	0	351	1	800	5	0	0	2		Foxxy20	
+CLAN	520	2656578	2767567	0	0	1	100	0	0	0	0	MysticBank Hollar Fr0styCube NataJin gokulaa KingM1K3 1Rodia1 Necr0W0lf shardikx jahovawitness Goganiukaz	Kazikon	
+CLAN	521	Nexus	Nx	0	0	1	0	1	0	0	1			
+CLAN	522	Monkey Clan	Monkeys	0	0	1	0	15	0	0	2	thatguy445 xEmotionx aixa	g1nger coolgav20 SOULESSBANK rigbi7894	
+CLAN	523	WAPOW	WAPOW	1	2	60	85850	24	0	0	2			
+CLAN	524	TheRebels	Rebels	0	0	1	0	2	0	0	1	Sentinels AlkaMS PervGuy	AlexNeo36 MSGX	
+CLAN	525	Very Important Players	VIP	0	0	1	0	1	0	0	1			
+CLAN	526	Blood	Blood	1	0	1	400	0	0	0	0		NexusClanBank	
+CLAN	527	Tentails	NTSFS	0	0	1	0	6	0	0	2	Sikuz Josh643 Acidx1 narwhal20 ferrara44 Reneee ElToros tipson carzyjess2 RichardPhist RainXBow zarinfire fha3 Errror404	Pulse3	
+CLAN	528	TheBeastz	TheBeast	0	0	1	0	2	0	0	1	Krulls Broskii hazelbud PimpKilla MrFreeDay ShhhMikes J5R12500 Fluxorious Snak3Scal3 LordGaara wapowbank Blackacezi FieryWolf Pyro 264axel WETBank Hannw Darknesslor vickykiler Seth IIIDARTIII UnUnTrue vipercat	Hecate	
+CLAN	529	Sharks	Sharks	0	0	1	0	3	0	0	1	Eins1879tein	WildBoyLee	
+CLAN	530	Spacejam	Jam	0	0	1	0	0	0	0	0		Saschanno	
+CLAN	531	The Alive Ninjas	Alive	0	540	1	50	16	0	0	2			
+CLAN	532	aZu	aZu	0	0	1	0	0	0	0	0	QWERTYkiop slasher098 dylanflash subzero118 DaDucky2	hainscat	
+CLAN	533	Misster	Mister	0	0	1	0	0	0	0	0	Domas564	bosskidrs	
+CLAN	534	Shrektastic	Shrek	0	0	1	0	5	0	0	2	Disembowel ssada	CAH9I	
+CLAN	535	N00B	n00b	0	0	1	0	0	0	0	0			
+CLAN	536	ViViDATiON	ViVi	0	0	1	0	5	0	0	2	sammybeagl deadturtl3 RobotBrock cooly1375 EliteViper skunkdinnr NinjaM12 xMrPeanutx lolz309 Mruberkins bluethooth Alichart Optimizer asdfman12345 spawnkilla	blueguys45	
+CLAN	537	Skullz	Skullz	0	0	1	0	20	0	0	2			
+CLAN	538	Mod 	Mod	0	365	1	400	6	0	0	2			
+CLAN	539	Blade	Blade	0	0	1	0	0	0	0	0	ImShredz Ghost761 SwagManJag	DarthTBias Krimzen	
+CLAN	540	Beshers	Be	0	0	1	0	0	0	0	0			
+CLAN	541	Based	b_old2	0	0	1	0	0	0	0	0	MrRedBlood LightInTheDark DATiON	RaiderTime Unrealisti	
+CLAN	542	Ghetto	Gt	1	115	4	5550	2	0	0	1	popcar1 Andy7580 omarclub2 razafitra xxxrock JorseCannon Doboni Siade Rel3el 1234dog legsnapper02 Darkar99 Patspone Akako thomas827 modyembaby	Emam123 Hampa122 ModyKiller 7amomaged	
+CLAN	543	Legion	Legion	0	366	1	400	21	0	0	2	SilenceOne alin334 XXSk1llzXX TheModBank SANIBOUY	Ninja3926	
+CLAN	544	School of the USSR	SotUSSR	0	0	1	0	0	0	0	0			
+CLAN	545	Toribash Mirin Crops	Mirins	0	0	1	0	5	0	0	2			
+CLAN	546	Hysteria	HST	0	0	1	0	1	0	0	1			
+CLAN	547	Brotherhood	Shinobi	0	0	1	0	7	0	0	2	Cataly7t 1Shadow111	Rizle nickroman Kure ViRooz	
+CLAN	548	TwerkTeam	Twerk	0	367	1	850	7	0	0	2	brandb Culneaj badass92 Dradude123 Thomasleaf merrr Lance37 joethehobo Dudeyo123 ultrajdog Moonslayed kesselring rampage246 xXRatXx Kj3ll EpicEzio GhostXWolf Mikko3m LegionFund	jewdough Darkshark8	
+CLAN	549	Tea	Tea	1	0	1	1450	0	0	0	0			
+CLAN	550	Green Furi	Furi	0	0	1	0	1	0	0	1	Heisenburger noramen4u BeeUtiful swagical	MightySeaman	
+CLAN	551	SwishGamers	Swish	0	307	1	1050	3	0	0	1		TribalD86	
+CLAN	552	Teh Kewlest Kats	KewlKats	0	477	1	150	7	0	0	2	Johnnycat1 Joshy24 ETV Danvictor123 Frosty24 Unknown1327	101Jai	
+CLAN	553	Viper	Vp	0	0	1	0	1	0	0	1	TwerkBank infectedpube Ganked spidermang 420wc 69WC	ManlyMelon	
+CLAN	554	Sirs	Sir	0	226	1	2150	10	0	0	2			
+CLAN	555	Cobras	Cobra	0	0	3	3500	0	0	0	0	MastrBalls		
+CLAN	556	Shift	Shift	0	368	1	750	11	0	0	2		SwishTC BankOfSwish Bio101	
+CLAN	557	Sharp 	Sh	0	0	1	50	0	0	0	0	MaxSG Provenance Chuver Klaymen3	Pooper43 HolotorSux cancerlov	
+CLAN	558	Ypsilon	Y_	0	262	1	1700	2	0	0	1		Generosity	
+CLAN	559	Progib	Progib	0	0	1	0	0	0	0	0	Vaalbara moopman2 Weed624 Edgarrr StacheCash Skrubbin unraveling theninjagamer xxVEXxx	Blastrex4	
+CLAN	560	The God	TheGod	0	504	1	350	36	0	0	2			
+CLAN	561	Resurrection	Res	0	86	4	5900	8	0	0	2	moodzy terminatar ibrahim007 yooly tlozoot probass paypass ZexyZex pgtto	ShiftBank 2handcIap	
+CLAN	562	Apex_old	Apex_	0	90	5	6150	3	0	0	1			
+CLAN	563	Chain Killer	ChainKil	0	0	1	0	1	0	0	1	CryForDeathBank	jamcook69	
+CLAN	564	Tombstone	Tomb	0	0	1	0	4	0	0	1			
+CLAN	565	Central 46	C4	0	0	1	950	0	0	0	0	luca1103 PenyMan oR3AL1TYo patriot77 giemel theboss421 caesar0612 PotatoPool Hy6ac heywolfv2 Kokonut minster45 Tacticss mowers SoulCrusher ElGod halobub memunchcookie iluvp0nyz killerkool blackfire500 dng1bery Tom1300 prudentmildew BATBOY1 Clapping LIVING549 TheGodCryo GmacD16 deathcome ElectroCharge Nogf godGoat Sp3d Taintless	Curtussy	
+CLAN	566	(REK)	REK	0	0	1	0	0	0	0	0	neston123 GeneFock OtavioXM AlyxsonA Tr0ll123	ResBank GPdokrl Toriality	
+CLAN	567	Extream	Ex_old	0	0	1	0	4	0	0	1	ApexClan Jacko1222	MindStorm	
+CLAN	568	Zombies	Zombies	0	0	1	0	0	0	0	0		Arielsajs	
+CLAN	569	Yes	Yes	0	207	2	2350	2	0	0	1	Treeko SwiftNic	StrawHatBank Narct	
+CLAN	570	Blood Warriors	Bw	0	324	1	950	6	0	0	2			
+CLAN	571	The Fighters	TF	0	506	1	100	4	0	0	1			
+CLAN	572	Demonix	Demon	0	0	1	0	6	0	0	2	msaman2 PedroKat LesSTyLz	wolf645	
+CLAN	573	real n6ga$ forreal	Flow	0	0	1	0	5	0	0	2			
+CLAN	574	Survival Of The Fittest	_SOTF_	0	507	1	100	7	0	0	2	YesBanker	KooopeR	
+CLAN	575	Exploding Octopus	EO	0	0	1	0	7	0	0	2	UpUrAsz TragicMind im2probro iRazeri Nuckem	leefaith	
+CLAN	576	Exiled	Exile	0	195	1	2000	1	0	0	1	BeastBlake Satiros NarutoHDG	ManOfHonor	
+CLAN	577	Lucid Dreams	Lucid	0	0	1	0	1	0	0	1	NawpX IPandaGirl RealZephon ItzLear	NutSnap Trekz	
+CLAN	578	Turbo	Turbo	0	0	1	0	3	0	0	1	UltraBank ROGER6610 leadtitan1	etoria KMCD00	
+CLAN	579	Hadouken	Hadouken	0	0	1	100	0	0	0	0	Zbone69 zazaisbaws Happiness1 SkrewLose Treatyer chris2004	thegoliath	
+CLAN	580	Agent	Agent	0	510	1	100	8	0	0	2	EagleCo Squidhead RANGER101 Wazaap13 Fonzoo	Zaratancho Toribanoob	
+CLAN	581	Retro	Retro	0	553	1	50	2	0	0	1		azizcreed	
+CLAN	582	CORM&H	Octopus	0	0	1	0	0	0	0	0		GravityFalls	
+CLAN	583	Beyond Illusion	Beyond	0	0	1	0	0	0	0	0		NubbyOwns RapidCounter99 PLife	
+CLAN	584	Solaris	Solaris	0	0	1	0	9	0	0	2			
+CLAN	585	Knight_old	K_old	0	0	1	50	0	0	0	0	crush3r98 Mreast emilycat AgentFBIBank gokasLT Tori0503 tariqepix	D3adSpac3	
+CLAN	586	Sinister	SIN	0	371	1	700	3	0	0	1	Oravle	sora0420	
+CLAN	587	Elite Masters	EMC	0	0	1	0	0	0	0	0			
+CLAN	588	Different	DiFFeR	0	0	1	0	0	0	0	0			
+CLAN	589	RazerRainbow	RR	0	0	1	0	22	0	0	2	curryby fox21 Ryu146 vyntche Rissep giorgaras Kintec cunoaka	XangleX	
+CLAN	590	Vault	Vault	0	315	1	1100	3	0	0	1			
+CLAN	591	Titan	Titan	0	285	1	1100	2	0	0	1	SubOhm 2GOSU4U	Killthekilled	
+CLAN	592	ddddddddd	dddddd	0	0	1	600	0	0	0	0			
+CLAN	593	Officially Bodoh	O_o	0	0	1	0	0	0	0	0			
+CLAN	594	Bery	bery	0	0	1	0	1	0	0	1	DashiiHD tomman13 cptflash Goku101 FunBank PonyKick alex258 sniper2819 Vortex105 Razar100 SaltyNinja Giraffey XDIMCOOL TofeeLux ninjagirl9 Quickgnat	megathom Medpax ZChilliDog Snores DeadGamer9 CMYap	
+CLAN	595	Salt	Salt	0	0	1	0	3	0	0	1		TheVaultBank Mopin vaultsbank	
+CLAN	596	OvO  It's a clan	OvO	0	0	1	0	1	0	0	1	Sirenn	BankTitan	
+CLAN	597	Secret Assassians Parkour Team	SAPT	0	356	1	700	8	0	0	2			
+CLAN	598	Dynasty	Dynasty	0	0	1	0	0	0	0	0			
+CLAN	599	Ghosts	Ghost	0	389	1	650	3	0	0	1		ThePeto	
+CLAN	600	Imperial_old	Impr_old	0	0	1	50	0	0	0	0	andpepper edChips	irrelevant	
+CLAN	601	The Victorious 	Victory	0	0	1	600	0	0	0	0		oshit	
+CLAN	602	Marsians	Marz	0	482	1	150	7	0	0	2	bankSA julesthom braybray12 Dgkyogi lolsrtiker HyPe4LIFE Zillzer	Colacola	
+CLAN	603	Cold Hearted Silent Killers	SK	0	0	1	0	11	0	0	2			
+CLAN	604	Feared	Feared	0	0	1	0	0	0	0	0	ghostsbank Yamsk	RallyRevo	
+CLAN	605	Born To Kill	B2K	0	0	1	0	2	0	0	1			
+CLAN	606	Toxic	Toxic	0	0	1	0	0	0	0	0			
+CLAN	607	Trick_Old	Trick_OL	0	0	3	3600	0	0	0	0	Youmadbro0 captainhar Fallen12X mickan knightst BrianZFirst	ButtHugin	
+CLAN	608	Nuclear Foxes	Fox	0	0	1	0	2	0	0	1	SilverSDX tayloravpr AshleyLiddie conake07 xeranthus H3llMaine BryceSeckt Biggun123	CLMforLife BigK123 MtnDew88	
+CLAN	609	Phase	Ph	0	484	1	150	1	0	0	1			
+CLAN	610	Attack	Attack	1	61	7	9600	21	0	0	2	Lukemsf	LtDeath	
+CLAN	611	Tribe	Tribe	1	0	1	1800	0	0	0	0			
+CLAN	612	Phoenix	Phoenix	0	147	3	3500	1	0	0	1			
+CLAN	613	The One Unit	T1U	0	0	1	0	0	0	0	0	RedF0x	Iarayi	
+CLAN	614	Brutal Fighter League	Brutal	0	0	1	700	0	0	0	0		PhaseBank	
+CLAN	615	Rekd	Rekd	0	0	1	0	0	0	0	0	kashaftw deathdog Alasor Antman777 GeSaK Yarmen333 Hitl Qelectron 1000jaus XForceFulX oray98 MiloMax06 Smmogon mmmeeeu Daniel0481 max222212 bluepheonix Name SemiHampa vladik000ifl cawa000	Punk AkeSS	
+CLAN	616	Diamonds	Dmnd	0	92	5	6550	1	0	0	1			
+CLAN	617	Nightingale	Gale	0	0	1	950	0	0	0	0		PhoenixClanBank	
+CLAN	618	WarHead	WaR	0	0	10	12750	0	0	0	0			
+CLAN	619	OverPowered	OP	0	0	1	300	0	0	0	0			
+CLAN	620	Critical	Crit	0	0	1	1250	0	0	0	0			
+CLAN	621	KicK	KicK	0	0	1	0	0	0	0	0		DmndsBank	
+CLAN	622	2321321	23323223	0	0	1	800	0	0	0	0			
+CLAN	623	Business	Bu	0	0	1	0	0	0	0	0			
+CLAN	624	supr	noshow	0	0	1	0	1	0	0	1			
+CLAN	625	NOT	NOT	0	286	1	1550	2	0	0	1			
+CLAN	626	FlipzCrew	Flipz	0	0	1	0	21	0	0	2			
+CLAN	627	Rock	Rock	1	281	1	700	14	0	0	2			
+CLAN	628	Russian The Best	RTB	0	0	1	50	0	0	0	0			
+CLAN	629	The Wolf Pack	Wolf	0	0	1	1200	0	0	0	0		nick1110	
+CLAN	630	Beta_old	Beta_old	0	0	5	6200	0	0	0	0		Waden12 WadenAlwaysGotB	
+CLAN	631	Vintage_old	v_old	0	158	2	3450	11	0	0	2	flipsdude XxBudderLoverxX FlameGiant zedscott Finlay101 TheMan3451 FaceOfFace LukePieStalker DragonSpy natanael2 SilentKilz PedoNinja Trouble666 mauricio90 quaeo	LegendKilz Nobtublub Pikachu97 DragonKilz PainKilz DrugsKilz	
+CLAN	632	Quackle	quackle	0	0	1	350	1	0	0	1	D3571NY Maniken RockB4NK BORODABRA vovans AlphaSmec Enchantment Nervo13 Oopis chunglou3 aCharge wlterwhite Thomas Granata13	Heid xylinado	
+CLAN	633	Gear	Gear	0	0	1	0	0	0	0	0			
+CLAN	634	Anti-beings	Anti	0	0	1	0	0	0	0	0			
+CLAN	635	Clairvoyant	cl	0	0	1	0	0	0	0	0			
+CLAN	636	Angels	Angel	0	317	1	1050	4	0	0	1	aginaa Anglo irgina betmachine xArbyZx Jurawesome BigDaddeyD MRifikal	VintageVault DeTr3vNi TomWanks	
+CLAN	637	Hungarian Shadows	HS	0	422	1	600	9	0	0	2		Quackle	
+CLAN	638	MineBash	MB	0	0	1	0	4	0	0	1			
+CLAN	639	Trinity	Trinity	0	0	1	0	2	0	0	1			
+CLAN	640	Wave	Wave	0	0	2	2250	0	0	0	0			
+CLAN	641	Vortex Gaming	vort_old	0	0	1	0	0	0	0	0	BankAngel BluePoema ohmyGulay	ToriGirl88	
+CLAN	642	Revolution	Rev	0	0	1	700	0	0	0	0	Mentha lufy1993 Pax12 MancelHUN TK7 ProWarPig2141 BREFOX	Neuspeed Tomiiiwhaw	
+CLAN	643	Unique	Unique	0	559	1	50	5	0	0	2	BenJB99 HazzaGames paddykeegan	mrDWB	
+CLAN	644	Arcane	Arcane	0	0	1	0	1	0	0	1		NauseaBot BlurSync	
+CLAN	645	Assassination	TA	0	238	1	1800	2	0	0	1			
+CLAN	646	Zone	Zone	0	0	1	0	2	0	0	1			
+CLAN	647	Monopoly Richest	Monopoly	0	0	1	0	0	0	0	0			
+CLAN	648	3Hunned	3Hunna	0	0	1	0	9	0	0	2	WEKEE lamontiboy n00bL0s3r N00Balt	Kabolt	
+CLAN	649	Alliance of Chaos	AoC	0	319	1	1050	6	0	0	2		iRookii	
+CLAN	650	Most Wanted	MW	0	560	1	50	1	0	0	1		AssassinBank zZCyborgZz	
+CLAN	651	The Idiot Clan	Idiot	0	276	1	1750	5	0	0	2		BankofZone Wight	
+CLAN	652	Squad 1	S1	0	239	1	1650	3	0	0	1			
+CLAN	653	w0w	w0w	0	0	1	0	0	0	0	0	ChainBoy ReallyRawr lilpinky NoobL0rd Matio34 chab1 Hasan619 JOITO	RealRaw123	
+CLAN	654	Idle	Idle	0	347	1	1150	1	0	0	1	HipnoToad Tickle448 Nydigodia CoinOrc10	wornox amith416	
+CLAN	655	Darkside	Darkest	0	424	1	550	18	0	0	2		IHATETHISNAME	
+CLAN	656	White Noise	WN	0	0	1	0	0	0	0	0	IdiotsBank FirstHack chief07 Neob	RageMaker	
+CLAN	657	345345453	345	0	517	1	350	2	0	0	1	Arteyom Olipunt	skarzz	
+CLAN	658	SunBros 	SunBros	0	0	1	0	4	0	0	1			
+CLAN	659	Horde	H_old	0	0	10	20350	0	0	0	0		ackass	
+CLAN	660	Genesis	Genesis	0	0	1	50	0	0	0	0	alaska12 HunterZoro alexnico1 Halo4death bolt12 rwalk115 luckyfin0 fireball25 Zoomster95 speedster1 zakar9 gtblake22 Swexxspark Swexxpie potiens sk1ps otf	jerseyboy1	
+CLAN	661	Shaded Exiles	SE	0	0	1	0	0	0	0	0			
+CLAN	662	SoaR	SoaR	0	0	1	0	8	0	0	2		oFiR20503 adir123	
+CLAN	663	Smile	Smile	0	289	1	1100	40	0	0	2	magictoe Envictus UnknownGuy	otterbox	
+CLAN	664	Hermits of Doom	HoD	0	0	1	0	2	0	0	1			
+CLAN	665	Pause	Pause	0	197	2	2600	9	0	0	2			
+CLAN	666	OpTic	OpTic	0	267	1	1750	9	0	0	2			
+CLAN	667	The Dark Fire (Latino)	TDF	0	0	1	0	0	0	0	0	cjullman JorgeFlare VilmarSA SoaRsBank TheG18 flameninja180	Toxicpaul youtuber18	
+CLAN	668	Shaolin	Shaolin	0	268	1	1550	10	0	0	2	alexrussello4 GodOfTime5 FarcosToribash PrismAleks blackknight23 Korpet Sar2 PvPAnimals eulokoroco xXBattleXx Epicrules loveyoubob SmileDogMe Atrain1118 basheed haunted91 Joso12 ggmmii33 OnlyFlygon Rigist DEATHarcana Owned213 cjbryant12 xxbeast027 uselessv Nomefoda Kvngtori DarkBoy18 ZionNinja NerdNinja2 mrRAYS steelbite9 MajicPantz Spxralz MissXoXo KnightLight Qu1cks1l	Mrolas Smi1ey SmilingBank	
+CLAN	669	Halcyon	Hal	0	0	1	0	0	0	0	0		shadow5599 elderorb	
+CLAN	670	TeamSwift	Swift	0	0	1	150	0	0	0	0	Cybrid Dropeq galwender Kemtrix Devillz123 BooSH218	overwave DopeMaster SifuMasterz	
+CLAN	671	Ace	Ace	0	290	1	1250	1	0	0	1	OpticFist OpticShockey OpticPower OpTicSuper OpticRookie OpTicCoLd OpTicKowla	SlickBank OpticSlick	
+CLAN	672	Presence Clan	Presence	0	0	1	1950	0	0	0	0			
+CLAN	673	Xenon	Xe	0	278	1	1550	4	0	0	1	tjakka5 dotDLL nrenni24 Phef 0paque whiteace85 K1ngWaffles HellToHeaven hck5	who0p	
+CLAN	674	Multi Martial Art_	MMA_	0	0	1	0	7	0	0	2			
+CLAN	675	Sample_old	Sample_o	0	0	1	0	0	0	0	0			
+CLAN	676	TheBestSkills	TBS	0	0	1	0	4	0	0	1		ViperVolt	
+CLAN	677	Embers	Ember	0	136	2	2250	8	0	0	2			
+CLAN	678	clan tag	clan_tag	0	0	1	0	0	0	0	0	jordannipper85 XenonTC	PlazmaXT BuZe	
+CLAN	679	TheCrew	Crew	0	519	1	100	28	0	0	2	Baariq88 AnXer RYUSE ihsanm XxketoxX ramirez21	azbar	
+CLAN	680	Terror	Terror	0	0	1	0	0	0	0	0			
+CLAN	681	Omen	Omen	0	0	1	0	9	0	0	2	Rilkacent fabianmano Jumped14	pajillero	
+CLAN	682	Orbit	Orbit	0	0	1	0	6	0	0	2	100dan DeathSod Ewennator	kidzero kidzer0 Keukegen Aeld CopperCutie	
+CLAN	683	The Last Daimyo	Last	0	570	1	50	10	0	0	2			
+CLAN	684	Thrive	Thrive	0	429	1	500	4	0	0	1	Zaricolo Lubricant nokeen12 Gwarrior Smookiex reklawboss Imthepawr Gman1347 1amBatman SSunde3 dawkins62 claudiu12 sachiel420 D84D Incster ultramark GanstaKatt LubeDeuce claudiu13 FatalFTW TheZEROts Mufinz Rej3ctz grew1022 felixfell mono1 BadMango	MrNubbinz	
+CLAN	685	Ninjas Of Doom 	NoD	0	0	1	0	3	0	0	1			
+CLAN	686	Nitro	Nitro	1	4	52	72750	11	0	0	2	Qwelled Voon wootdude Th3Mantis AzzilinHD DatGama KillMan435 AikidoNewb	leateralis	
+CLAN	687	VALI CLAN	VALI	0	223	1	1800	2	0	0	1	PiiZ Sxause Kittehz Cray0nz Moisho	BugsBunny7	
+CLAN	688	xxxToriTube	XXX	0	0	1	0	2	0	0	1	Hyabushi THAdanster 1Seth1 LDBank Zacnick SilentCoil sgtTUNA DogeCap	torobian blazerboy1	
+CLAN	689	Gece Gaming clan	Gece	0	571	1	50	16	0	0	2	IHGCZxzxr ThriveBank jimmyfin1	MastaJim	
+CLAN	690	Hoax	hoax	0	172	2	3400	3	0	0	1	kozbi lewy266	HardGirlPL	
+CLAN	691	E-Raze	ERaze	0	572	1	300	1	0	0	1	Rexxy527 NitrosBank Bercat Thinkfast5 mytholigy PaidToKIll Prince Wumpus PatDaGamr Alien Carnivorax	DJMC SkyWhale Day BlackDragon	
+CLAN	692	Something Sloppy	Sloppy	0	105	4	5700	5	0	0	2	WhiskeyKid	Aimbow	
+CLAN	693	JohnCena	JohnCena	0	0	1	0	5	0	0	2		Banned4Sex SquirtsALot	
+CLAN	694	SouthPaw	SouthPaw	0	0	1	0	36	0	0	2	erikiron gritime912 WaterPIses 1kie27i ChainJail andreas512 OIAMAIO kilfritz AliBastard Ironfabus DerpyHDoo iReviveYa Nxruto	mastergo91 rasse10727 Azumswebro	
+CLAN	695	Cockbound Agony	COCK	0	173	1	1450	12	0	3	2	Disappointed	Hoaxbank DarkWolf26	
+CLAN	696	Bloom	Bloom	0	488	1	400	7	0	0	2		Haruku	
+CLAN	697	The Last Crusade	Crusade	0	0	1	0	1	0	0	1	YoungGunna Shmonehhhh ShmoneyBruh BlakkCard	marchioni	
+CLAN	698	Extra	Extra	0	0	1	0	0	0	0	0		onfire37 xFruitx lovedaice Shanebat1 pmpknpie	
+CLAN	699	Steel	Steel	0	337	1	800	13	0	0	2	Granular Evilrage Tavkun12 juliankho Badgerz100 YonkouKaido notnormal CHEWY1 xxxNeyoxxx BoxerBot ChiefRex henokugly videeogams DarkEnygma Insomulous theboxman1 dracon243 OrthodoxRin AllMight AlrTaken xfrigidus ICYL Norinviir Laniuss Hydride gabrielxK SaitoOs1 Krylaak MADURI helkan xqtxqt PxlWizard	HeroLegend Tardysoap Boonster rjniscool1	
+CLAN	700	Force	Force	0	376	1	800	2	0	0	1	Divine Daddykins Connoisseur StellarGoddess Zolnerowich Odegaard DrBojangles WesternUnion Maycie Dylan HealthyJew Desmarais	HATERSlN Gentleman	
+CLAN	701	Respect is Painful	Rip	0	225	1	1800	8	0	0	2	whatthahel Lazoolee Quwaad66 ReeceJ66 Tortuga1 LokiBank	Orange65	
+CLAN	702	CodeZero	Code	0	432	1	550	2	0	0	1		thelasbank	
+CLAN	703	Pure Fighters	PureF	0	433	1	250	8	0	0	2			
+CLAN	704	Polar Vortex	Polar	0	395	1	350	11	0	0	2	bry1999 cooks15 sangee jawbreakerxx SteelBank xEpIcgammErX justkidding87 Thisili D1sturbed1 SixPool 10kicks Crapes	DivineStrm	
+CLAN	705	Hex	Hex	0	573	1	50	1	0	0	1	ForceVault	Toxicwolf450	
+CLAN	706	iTc Clan	iTc	0	93	5	6400	3	0	0	1	iron1o1 thunderstrike45 Deelan BLACKxp1 Knight200 Khenzik BankOfRiP	PassTerma	
+CLAN	707	TAcTUal Clan	TAcT	0	0	1	0	5	0	0	2		HexSquared YOUMADBRA	
+CLAN	708	Drift	Dt	0	119	3	4200	14	0	0	2	caxww ExPadeiro camerondo PureFB SasukeFG BRGameplays werneckman	Masculino0	
+CLAN	709	Dark Viper	DV	0	0	1	600	0	0	0	0	ynotkiwi RGKZ MrJazzy894 rogovin1 PolarBank TC14423 Tywo2 dogetech FennTheFox striker122	zpolyx	
+CLAN	710	The Twat Squad	TTS	0	0	1	0	0	0	0	0		NerdyTeen	
+CLAN	711	Inner Calm Outer Fury	iCoF	1	0	1	2000	0	0	0	0	M1ntyBac0n	RomeBank iTcBank	
+CLAN	712	The T'one Fighters	TheT1F	0	0	1	800	0	0	0	0	FapTard AbsTin medead	NZF1beat Grail	
+CLAN	713	The Monastery	Monk	1	0	10	12500	0	0	0	0	trollern Bank412 ScearyGuy Goldmane11 PuffinPunk Luu300 WarriorAnsons	Daction oreosftw Smookie Apostelez flaketball kingbeast2 Re4ch	
+CLAN	714	Sector 7	s7	0	0	1	1000	0	0	0	0			
+CLAN	715	Fight Club	FC	0	5	10	45250	11	0	0	2			
+CLAN	716	tecno power	tecno	0	523	1	100	7	0	0	2			
+CLAN	717	Bad Boys Society	BBS	0	493	1	150	12	0	0	2			
+CLAN	718	Spartan Warriors	Warrior	0	380	1	1000	6	0	0	2			
+CLAN	719	BEWM Power	BEWM	0	0	1	0	3	0	0	1			
+CLAN	720	Suki	S	1	121	4	4800	14	0	0	2	Sparturnha Destinyz gzus123 xXOBLIVIONXx FsmScience2 AyomidePsg giremane TheConCon Rickypop05 LifeGoods jhunter03	FCTourney FCBank HellHood	
+CLAN	721	Hack Academy	AH	0	0	1	0	6	0	0	2	MrWiner trovao334 alarcon papelmache magikcarps AquaBoy764	XDplayer	
+CLAN	722	Team Axis	Axis	0	0	1	0	1	0	0	1	LunarSoul SirBass HoboAsian1 ringloo Lamby111 yuko321 smittydata skr9boi imperv PurpManiac connor1123	BBSbank	
+CLAN	723	187	187	0	0	1	0	0	0	0	0	Lelhouse wolfhomie2 quickstar8	davidburn RastasBank patryx101	
+CLAN	724	RIPO	RIPE	0	0	1	0	5	0	0	2	yolocraft Killerbox2	XLazorusX	
+CLAN	725	for pricks	prick	0	0	1	0	0	0	0	0	Daisuki PandaHero beenyXD MikuNeru ultraBlast RuriroNeko Shrook Caveisier Accused KonskyKkt CroKO xGodEnzx Jack	Neru	
+CLAN	726	Graffiti	Graffiti	0	0	1	0	0	0	0	0	3a4To6aH Sellen sk8er Litong	TIcuxuatp hedshotik	
+CLAN	727	Shakur Team	SRTM	0	99	5	6700	2	0	0	1		Hevyfir3	
+CLAN	728	Suplex	Suplex	0	0	1	250	0	0	0	0			
+CLAN	729	Secret Kicking Demons	Sekide	0	0	1	0	3	0	0	1	ChaosLaw TheGuy509 Aidzee	70p ezzatbat	
+CLAN	730	Defiant	Defiant	0	0	4	5700	0	0	0	0			
+CLAN	731	Catalyst	Ct	1	24	13	16350	23	0	0	2			
+CLAN	732	Nebula	Nebula	0	526	1	550	7	0	0	2	NillLive	EgorD2003	
+CLAN	733	WarHero	WarHero	0	527	1	100	4	0	0	1			
+CLAN	734	New Age	NewAge	0	0	1	0	0	0	0	0	rugall tresu	Rellfox	
+CLAN	735	Ox Tether	OX	0	122	3	4100	17	0	0	2			
+CLAN	736	Professional Griefers	PG	0	495	1	150	5	0	0	2	Jebus -Kas- CoinBank Oli rhyz Zwift wyrelade WeooWeoo Athin Vinyl Fedz Scar ZOOK sledgren Bless Vin786 twisters -Lucie- Baphomet Avoxithy Swosh darrenl4 Theory	Submerge Calamity Thanatos	
+CLAN	737	Quake	Q_old	0	0	1	400	0	0	0	0	TheCreepyOne LeViper ftag342671 albert234 XavCo7	Creeper010 Moopy01	
+CLAN	738	The Disciples	Discples	0	0	1	0	5	0	0	2	me1121 TNGbank LolMeLol	DjDillen24	
+CLAN	739	SwegUnit	Sweg	0	529	1	350	3	0	0	1			
+CLAN	740	Velocity	Velocity	0	0	2	2550	0	0	0	0	WHYBank OzzmaKappa diemitery tanyu123 XenPhinZ FurysKy Lenny5124 spicyman12 PunSlayer szymex bearcrown gabehuff Animalrock shayark1 Ungaro shadow2344	ManlyFish	
+CLAN	741	___The King Of Iron Fist Tournam	TEKKEN_d	0	0	1	1650	0	0	0	0	JeZus820 karkuwa Zaramess	Kyzox Meowings	
+CLAN	742	o3o	o3o	0	0	1	0	1	0	0	1			
+CLAN	743	Atomic	Atom	0	472	1	500	1	0	0	1	rymcleish ShadowKrit Archaeonn CargoPants	DirectM2	
+CLAN	744	Legendary Team	LT	0	0	2	3250	0	0	0	0	SwegBank	SwegCookie Eizou	
+CLAN	745	Question Internet	qi	0	530	1	100	4	0	0	1			
+CLAN	746	ktm	KTM	0	0	1	0	2	0	0	1			
+CLAN	747	Mechanical illusion	Mechanic	0	0	1	150	0	0	0	0		o3oBanker	
+CLAN	748	Saucy	Saucy	0	496	1	150	4	0	0	1		AtomicBank	
+CLAN	749	The Anbu Black Ops	Anbu	0	0	1	0	2	0	0	1			
+CLAN	750	Plague	Plague	0	0	1	650	0	0	0	0	Campioni topicz Jord33	qibankz	
+CLAN	751	ClanGods	ClanGodz	0	0	1	0	1	0	0	1	ktmbank	mistory	
+CLAN	752	Test	Test	1	0	1	0	0	0	0	0			
+CLAN	753	ilyxa	il	0	0	1	0	1	0	0	1	shinx97 juzeror	Justix Jasonsauce	
+CLAN	754	Birds	Bird	0	0	1	0	1	0	0	1	AnbuBank	Cerberex99	
+CLAN	755	Dox	Orthodox	0	0	1	0	13	0	0	2			
+CLAN	756	Style	Style	0	497	1	400	1	0	0	1		Audit0r	
+CLAN	757	Lion's Pride	Pride	0	0	1	0	0	0	0	0			
+CLAN	758	SuperNova	SnS	0	498	1	450	15	0	0	2		iluxa99221	
+CLAN	759	IceColdGames	ICG	0	581	1	50	3	0	0	1		TheBigDad	
+CLAN	760	Haunted Clan	Haunted	0	29	10	26700	12	0	0	2	Spudalot ThugLove supahkye Toninho563 swages jubbaj DaNewb12 BigTater viol3453 Ingemar Toshiro78	SparBot Tetsukyuseishu	
+CLAN	761	Get Rekt	Rekt	0	0	1	0	3	0	0	1		NiceKE	
+CLAN	762	Gravity	Gravity	0	499	1	400	4	0	0	1			
+CLAN	763	Demons	Demons	0	269	1	1350	21	0	0	2	CataGames Lesserone WetYoga Ringo710 WickedEuph DogeKun NvrTrust SuperNovaBank Shizpy Slaya129 Scoobsss Th3Broken MetaSnakez Tristan101	Baku00	
+CLAN	764	dedclanunofficial	asdasdas	0	0	1	0	0	0	0	0	DarkVenus DCSF	gabriel61	
+CLAN	765	VIPS	VIPS	0	0	1	0	4	0	0	1	mondaiji Dolphyno Butter6699 Skaimu ThaHazer MrBacon64 RavWolf xHauntedBankx DPhoenix1	Ravager Yaysian Robbie	
+CLAN	766	TheHerd	Herd	0	0	1	0	0	0	0	0	Rezutt123	EpiccipE Bluud	
+CLAN	767	HolySacrament	Holy	0	584	1	50	5	0	0	2	wabble234 MagmaClash GravityBnk	Beta51	
+CLAN	768	ForbiddinNinjas	Ninjas	0	535	1	50	2	0	0	1	broFX189 ryan9754 Kurt987 Spike10783 Jeremy161 alon2u RoyalHound cibaichao FlyinMonk playerout1 slayer3467 brutal55 djad venderhill alexm17 rbrynerpv TheManNoob daniel1967	IProNo bibliber rayell	
+CLAN	769	The Music Junkies	MJs	0	536	1	50	9	0	0	2			
+CLAN	770	YSL GANG	YSL	0	255	1	1600	17	0	0	2		Xblackdead GustavoR15 jefsinho1 woliveiraw	
+CLAN	771	Metalic	MT	0	0	1	0	2	0	0	1			
+CLAN	772	Brasileiros	BR	0	164	2	2550	2	0	0	1	SacramentBank djbro Tuska1 Zenistar	temeez123	
+CLAN	773	BlackFox's	BlackFox	0	0	1	0	8	0	0	2	NINJASBANK	Smile12231	
+CLAN	774	wOW i cant sell this toriclan ba	wOW	0	0	1	0	0	0	0	0	CuteMufin Resef Mentari TaCo72 BashScream ImNoob361	FyreViper INSANITY58 Medaroh	
+CLAN	775	Niarai	Niarai	0	0	1	0	4	0	0	1	TramaticTz NikeBank TRIGGER77 fenek666 walkinater NutPug Wolfalt99 ExoticTrap FaLifeBich Finessing	Chassity Roller408 mrbankzZz DrFadeAway TopSyTurby flyhighh dalebigby	
+CLAN	776	The Revolutionists	Revo	0	400	1	600	4	0	0	1		Spartaaagh gab2468	
+CLAN	777	L3g3nD@RY	L3	0	0	1	0	2	0	0	1	DendX	Brunotca	
+CLAN	778	Cent	Cent	0	0	1	0	0	0	0	0	vbigsmoke daynieman Kertop ZTBank Fozking Wolftron1 coconut165	DCrasher	
+CLAN	779	QOX - Steezers	QOX	0	0	1	0	5	0	0	2			
+CLAN	780	Vocation	VoC	0	100	4	5850	8	0	0	2	swaggerdod dukezaaa thenext7	Dactil	
+CLAN	781	Nightmare	Nightmar	0	0	1	0	3	0	0	1	Rtham Constipation RevolBank	Evicted	
+CLAN	782	Good Game	GG	0	539	1	300	2	0	0	1	F3Z3S	sonicskate	
+CLAN	783	Funky Town	Funk	0	0	1	0	0	0	0	0			
+CLAN	784	Crazed and Estranged	Crazed	0	0	1	0	1	0	0	1	Legonator8 Pokeee goodblock ortegabush	MrPatchez	
+CLAN	785	Donger	Donger	0	145	3	4400	26	0	0	2	VoCBank CPUX BrutSynn victor3680	DvSpl WrRrRrRrR iSublime Turde	
+CLAN	786	Saint	Saint	1	20	19	24700	28	0	0	2	Cepheux NightmareB	GODofDEAD2	
+CLAN	787	Jade Lotus	JL	0	153	2	3100	39	0	0	2	FragzOut	Askijeki2	
+CLAN	788	Rising	Rising	0	159	3	3500	2	0	0	1			
+CLAN	789	Soltera	Sol	0	0	1	50	0	0	0	0		CrazedBank	
+CLAN	790	Cheat_old	Cheat_	0	0	1	1450	0	0	0	0	BasedDong raiseurdongers lildonger DongAlot DongSlick MyDongerIsBig DDongerR Dongest uGDong 4Donger ayydong DonGay GodDonger dongmeme 420Dongeroni Donging DemonDong ProDonger DongTrump DongerDong GetDonged tidaldong AirDong	iDong TheDonger RazeUrDongerz	
+CLAN	791	Vice	Vice	0	0	1	0	4	0	0	1	TheCrooksBank firefox20 Ztc01 Darkonix Flamesmash S3S Princess nmasters31 playboicarti Nulu Hisato Vericitti Dare Cathedral Sacyka Jeferson zubin JinJe Marcos xeneizear Oriq Worm FoJoTheFox Vetz1 aero Kiss 16bars Nate	Xastle DaNewNinja Furry	
+CLAN	792	Acrid Assasins	Acrid	0	541	1	50	2	0	0	1	Haruzo McDill Dermokai LilRag DameNingen NeverKnown XxDeexX Sk3tch9 Josh56x Shless Resoo mutedcloud crosby PlasmacometX Demki unpopular thef00I synner9 V3L3N0 Darkbind DrunkenSik cliff1020 Drunkensan MagesticDufus Drunkenm9 Farting123 Drunkenoto hawhaw2 Hiarocc MrNekoSan Gnarill mattm8r Jimjon17 420BongSquad xFUNxTIMEx dragonguts Poblingo DELZ432	goblinmage	
+CLAN	793	Division	D	0	204	2	2400	7	0	0	2	RisingCLAN	LORDDANIIL	
+CLAN	794	root	root	0	415	1	550	10	0	0	2			
+CLAN	795	Trill	Trill	0	174	2	2600	2	0	0	1			
+CLAN	796	Strikers	Striker	0	339	1	500	22	0	0	2	KirkKnight baboonbrai	gabekiller Gabe	
+CLAN	797	Wizardry	WiZ	0	0	1	0	2	0	0	1		cain32 maki112	
+CLAN	798	Fort	Ft	0	0	1	0	2	0	0	1	DuragWallet Surfings laithoon Chauffeur Dejean hibbagibba KillerBotX	Hypez Neighborhood boonkig Senorita	
+CLAN	799	Loyal Alternative Clan	LAC	0	0	1	50	0	0	0	0	Chelios449 XDominikX lockigod nik257 TTeHuC Pinus reeker ggeniiyss Dasnil	deathdancerr	
+CLAN	800	United Noobs	UnitedN	0	0	1	850	0	0	0	0		txt2point0 GetSlapped	
+CLAN	801	Waka Waka	WakaWaka	0	0	1	0	3	0	0	1	Uchimato OKOR diverjojo Ac3ofSpad3 captaindude Caribdis AquaCraft SGTsmith59 shameera78 harsith12 harsha12 PhntmRider blyke09 AngusBeefX Planes123 Soupzs HumanityOK qaz21swert KennyLu0 ashes420	explodingpanda2 TheFnlVctr	
+CLAN	802	Petal	Petal	0	0	1	0	0	0	0	0	HexBug78	UKkillerz	
+CLAN	803	Newbie Very Hard	NVH_T19	0	0	1	0	3	0	0	1	burrito72	Kydd	
+CLAN	804	mlg	mlg	0	545	1	50	4	0	0	1			
+CLAN	805	464ee6845e65465e	4664	0	0	6	7800	0	0	0	0			
+CLAN	806	Kung Fu Hustle	Hustle	0	341	1	850	14	0	0	2	BetaBetaBetaBetaBeta WWWWWWWWWWWWWWWWWWW	Pac_Man	
+CLAN	807	Death gods	DG	0	441	1	200	5	0	0	2			
+CLAN	808	The Fallout	Fallout	0	163	2	3300	5	0	0	2	Tuzti1222 skidker	Blademaster123	
+CLAN	809	Unity Reforged	Unity	0	416	1	550	4	0	0	1	MataTyzi Matasin MataBas	snoresville	
+CLAN	810	Rampage	Rampage	0	547	1	300	3	0	0	1			
+CLAN	811	The Forsaken Ones	Forsaken	0	548	1	50	9	0	0	2	JJc00l929 ICKYVICKY nickhawk76 eric4047 arryhay mcgreater Dyleris ethang101 firewolf20k pilot223	Boiisammy seseps LuXun7 XouLung	
+CLAN	812	Random_old	RM_old	0	503	1	100	2	0	0	1	jetpacjosh ethan457 jcksptcy XxXxXecksXxXxX	SexyDude33	
+CLAN	813	Cypher	Cypher	0	442	1	450	7	0	0	2	FaloutBank NewVegas42 CobraOsNaz	DeathsGirl vurse1243	
+CLAN	814	Evil Panda Empire	EvilPand	0	0	1	0	0	0	0	0	UnityChest entreprenr FutureASDF	Habits	
+CLAN	815	RUDE	Rude	0	0	1	0	6	0	0	2	dankkkk xXCoolTeen	ToriD25	
+CLAN	816	CyberFun	Cyber	0	0	1	0	9	0	0	2	DEMITUHAN Marmaduke778 MunkyMatt Ghostman56 icrawler imaNober djben5 steve2727	SydScific	
+CLAN	817	Dank Kush	Dank	0	94	4	5650	11	0	0	2	Nikich1900	Snoodles	
+CLAN	818	The Z Fighters	zF	0	271	1	1600	36	0	0	2	DarkDemonKing nicuking PigiWigi11 Richcarlos xXkillaXx5	JagJam SilverCenturion	
+CLAN	819	Apollo	Apollo	0	549	1	50	7	0	0	2			
+CLAN	820	Keepers of Hell	KoH	0	550	1	300	4	0	0	1	FXDragoons Mika1997 Dameow hunpeter12	fakyumen izaya91	
+CLAN	821	Kill 'n' Chill	KnC	0	31	10	25650	8	0	0	2	Symtax Boopdedoop KittyKattt blahdeblah IBeAKat Ttakhettik MrsBlahTox jaeev	DerpyDark	
+CLAN	822	Immortal Fez	fez	0	551	1	50	4	0	0	1	DqDaryQuen Scar120 DANNYD60 DADDIO RavageWolf TooProMate messi1234 gabby123 DummyKahn	yonas123 PopCornXP	
+CLAN	823	UnitedWeStand	UWS	0	0	1	0	0	0	0	0	MrG00 B7ackH3art ikillzass Legalrice 666manowar superMCS Weed1353 Marquetti DawnStarMC Elsys Huray EnigmaCat flyhigh88 NomNomco Miggy1 johnzilla ShadowPow Tenis Butl T8t3rMan Alterm4nn Joffyman Triagnos DIMOHA25 Dylberto Electric42 alexikasi skandalf BTL11 BTL12 PrefectDeity BTL13 Paul1999c	BlackGoku Codemann40 Robonobo	
+CLAN	824	Jinx	Jinx	0	418	1	500	31	0	0	2	LaxAttack LelBro Shet101 Drewbacca1 Bac0nBot Bac0nB0T	troll6676	
+CLAN	825	K1	K1	0	235	2	2250	1	0	0	1	Infernato itop134 lolrune	Mystin	
+CLAN	826	Demonic	DMC	0	0	1	0	4	0	0	1	KnCBank Truth Dusk Venom b3aquino Darkeys7 eElectro	Kikipro	
+CLAN	827	Transcendent	Tr	0	0	1	0	2	0	0	1	C0rruptS0ul Yoki	TamaKuu skweeks	
+CLAN	828	The Core	Core	0	148	2	3400	26	0	0	2			
+CLAN	829	Elemental	Element	0	249	1	1600	5	0	0	2	apexpr3d JinxBank Ninjinx kingtt7 Piggykun Skullseye rwjpizzalu 3P1CN3SS bakulatp jinxbank2 lunk4ter P1zz4Th13f xgacek1 yourikram quain2000 Doodlerz pingu5259 Plato19 Florstyy gunnarbatt sephirorian chroniclee DaHusky evan2266 nuh154 chasepwner McxLOL AmeriDuke8 Hyrbrid 1Jeterix	robolegacy	
+CLAN	830	N3rgy	NRG	0	0	1	700	0	0	0	0		Narcissu	
+CLAN	831	Sprite	Sprite	0	209	2	2250	2	0	0	1	Cinereo	Thelv MrLacroquette Torieraser	
+CLAN	832	Tits and Moobs	Tits	0	294	1	1150	9	0	0	2	TranscendentBan	TamedWolf	
+CLAN	833	sweaty	sweaty	0	509	1	350	9	0	0	2	venom852 carmod 0CoreBank0 MushuPunch DarkM1000 thecoke629 barfbrains kmgsh1243 kikabash TksZ goblen11 swag17 useername AngryKoala LincolnSRS TintolasC iTzMaximos LolSRito kaikebb emauron gagedang joaobroi12 leoobngato Killah454 FusRoHerp	noobnumba0	
+CLAN	834	Insane Membrains	Insane	0	84	4	5850	6	0	0	2	Altiazio dumiseful JosephMayo Tear	strander01	
+CLAN	835	The Holy Millennium Empire	THme	0	0	1	2150	0	0	0	0			
+CLAN	836	Phase Clan	PhaseC	0	0	1	0	7	0	0	2	MrHardBas	Cparta	
+CLAN	837	A Tsunami	Aqua	0	446	1	450	8	0	0	2	LexiNepeta DagaHeck Sparkles AndMelons Hepatitis Brie	LoneBlueWolf evilturkey Sugar	
+CLAN	838	BloodHunters	BH	0	0	1	0	2	0	0	1	VagialArea yBalls ySquirt CoIors CameItoe bunghoel swettybalz Zephyrate	SetOfBalls	
+CLAN	839	The Bomb Squad	Bomb	0	25	10	24250	8	0	0	2	lnsaneBank TheMoab Moztly Brutha125 JustDragon	SkearzSG	
+CLAN	840	ParadoX	ParadoX	0	134	3	3650	5	0	0	2			
+CLAN	841	Victorious 	Vic	0	296	1	1100	5	0	0	2	Reprime SpartanFox beakstar JohnC235 Bottler	Tarniak ISongbird	
+CLAN	842	Crucify	Crucify	0	146	3	3500	4	0	0	1	Banzaii99 davey484t MrPranx iWookies wuww TheRedstoner matt7771	redstonbro	
+CLAN	843	Lexa	Lexa	0	27	10	29300	3	0	0	1	gabriel280	UndeadNinja	
+CLAN	844	allah akbar	allah	0	0	1	2200	0	0	0	0	Bombank AcidPunch hipomp xboxVSgun DharMahn jakhuen	Dionysis Lotramus	
+CLAN	845	Antares Crew	A_CREW	0	0	1	0	1	0	0	1	pXBank P1R1K170 GenYOLO noob9226	Sonii	
+CLAN	846	Team Solo War	TSW	0	0	1	900	0	0	0	0	MinorJoke BDejanu Wh1T3FcK22	Dzono111 moneymoneym	
+CLAN	847	UpRise	UpRise	0	512	1	100	4	0	0	1		hellman222 manipule lillypain iTerror	
+CLAN	848	Joker	Joker	0	191	1	2000	2	0	0	1	Wanheda	Aelt Grimms	
+CLAN	849	The Missclickers	TMC	0	355	1	800	6	0	0	2		DystopiaBank	
+CLAN	850	Mortal	Mortal	0	513	1	100	3	0	0	1		Ninurta	
+CLAN	851	meow	meow	0	0	1	0	3	0	0	1			
+CLAN	852	Dead on Arrival	DoA	0	179	2	2600	1	0	0	1	yuma007 GhostSwift FlippZz	lloydmana	
+CLAN	853	7th Dimension	7th	0	210	1	2200	1	0	0	1	sdawg	HyperTori0	
+CLAN	854	Sora	Sora	0	192	2	2400	1	0	0	1	ivolakit2 ninjapro30 SuperKhan03 ConCon91 beast7474	Blckinfrno	
+CLAN	855	Soul Reapers	Reap	0	175	2	2450	6	0	0	2	Syrelz Jenterra	qwertty23	
+CLAN	856	Titan Warriors	Titans	0	112	4	5750	2	0	0	1	WaterBolt	Blnc hood	
+CLAN	857	RoyalKnights	Royal	0	257	1	1600	8	0	0	2		Aezen	
+CLAN	858	U Mad Bro Gaming	UMBG	0	0	1	0	0	0	0	0		NexusTC	
+CLAN	859	Qatar +974	974	0	0	1	0	3	0	0	1		clubleader	
+CLAN	860	Inner G	innerg	0	0	1	1150	0	0	0	0	DeathsBank PoeTaeToez Inzector DeathNOx12	yocdub1 Verlyx	
+CLAN	861	Splinter Cell	thespy	0	0	1	0	3	0	0	1	pitonBR	GamingBank	
+CLAN	862	Anonymous	Anon	0	229	1	2050	6	0	0	2	krabman318 Kumli MrHaxor firedemon25 HeartOfGod qweahgfd1 PoopyGumba	jigyansu	
+CLAN	863	Wanted	WAD	0	557	1	300	1	0	0	1			
+CLAN	864	NeonGamers	NG	0	558	1	50	4	0	0	1	lolqtr1212 nasser2323	amqn1212	
+CLAN	865	Pablo Diego Jose Francisco de Pa	Pablo	0	0	1	0	0	0	0	0			
+CLAN	866	The Komrades	Komrade	0	345	1	900	4	0	0	1	SenadoSPQR zeus711	hades813	
+CLAN	867	Haze	Haze	0	332	1	850	2	0	0	1	erickmanue TimeWolf SuBZe OmegaHo AnonClanBank	GitGud360	
+CLAN	868	Blood Lust	bL	0	0	1	0	3	0	0	1	mrhjwlh	Kexel Det0nat0r	
+CLAN	869	Letahl System	Lethal	0	0	1	0	0	0	0	0	cspspy lion770 flameskill	Fox124	
+CLAN	870	DeadlyJuans	Juans	0	0	1	0	6	0	0	2			
+CLAN	871	Skittles	SKTL	0	0	1	0	1	0	0	1	KomradBank ShadyWest tmkboss	chriswinna	
+CLAN	872	Believe In Todd	TRAPDOGZ	0	0	1	0	11	0	0	2	NamesName	PikachuSBN	
+CLAN	873	The IV Order	IV	0	0	1	0	0	0	0	0	BloodLustBANK eowyn979	Cinemuck	
+CLAN	874	Chaos	Chaos	0	454	1	500	13	0	0	2			
+CLAN	875	tuckered	tuckered	0	455	1	500	14	0	0	2	JuanDirtNacho Indarian kakaBG	Davyy20 JuanBicBoi PersassyJackson	
+CLAN	876	Team Asu	Asu	0	0	3	4650	0	0	0	0		SKTLBank	
+CLAN	877	The Hated	Hated	0	142	3	4200	1	0	0	1	iamnobodi Annexing 1000pasta ASAPMexico	xXxpucslayerxXx Gangsterlicious NotaNSASpy Breadbug init2winitscrub BustaMcThunderstick Thallium	
+CLAN	878	Corporation Of Assassins	CoA	0	274	1	1350	4	0	0	1			
+CLAN	879	Kingdom of Nothar	Nothar	0	167	2	3000	12	0	0	2	InsanityLP vahoha tommi1808 RareCrick ImDominic lambo5000 Jurae Problemzz1 MegaManX77 Bizzubles SanctuxM Smoshygod	Lezdodis12	
+CLAN	880	Aurora	A_old	0	160	3	4150	1	0	0	1	JeffersOfTuckered Frigate JeffersOfLife TuckeredofChoas of11 Batman Bane StevenBT XXXX batmwah sid MataFaint realdaddy	TuckeredofLife	
+CLAN	881	breakout unity	breakout	0	0	1	0	1	0	0	1			
+CLAN	882	Krisp	Krisp	0	457	1	450	12	0	0	2		SrsBank	
+CLAN	883	The grid	TG	0	0	1	700	0	0	0	0	blahLOL Xkavile drewkills	CamzzV2	
+CLAN	884	Master Military Squad	MMS	0	0	1	0	1	0	0	1	FlaminFist LukeLR rkon DallasPay Lurios deadskull0 FleinSaemundson Gentle3 ChaZbearZ monk1256	NotharBank pitpat906	
+CLAN	885	Kids in the dark 	KiTD	0	265	1	1350	1	0	0	1		AuroraBank	
+CLAN	886	aeious3434	a23344	0	0	1	850	0	0	0	0		TempestXx	
+CLAN	887	Pokemon Fan Club	PKMN	0	0	1	100	0	0	0	0	MysticKrunch Chimora ZeLolzies oezzam1331 MixedDough KilroySto BoBoChickn BoBoSwagns UrbanKill2 Flipso powop	shmoney	
+CLAN	888	The Electric Team	ElectriC	0	421	1	500	12	0	0	2			
+CLAN	889	BOOM	BOOM	0	154	3	4000	30	0	0	2		megaboye	
+CLAN	890	DrugMoneyGang	Gang	0	0	1	600	0	0	0	0		TobyAltAcc	
+CLAN	891	Pulse	Pulse	0	0	1	0	0	0	0	0			
+CLAN	892	Reflex clan thread	Reflexcl	0	0	1	0	0	0	0	0			
+CLAN	893	Seek	Seek	0	288	1	1400	4	0	0	1	mohamed115 anaz786 moondager115 gasr Beatter joao147HD jeredo joeygetz Dynamix1 Sadgunman22 BLAHr5yerh	getwrkdm8	
+CLAN	894	the reapers	Reapers	0	458	1	500	4	0	0	1	pun1sh PhiSiKa Ky0p S0lt BoomsBank DAG Bathious P4P4Z0LA Kingofdojo Mazoh JerryAtric michelle97 HunabKu Cemper DatPaulyD NUMP XxShadowx3 Tamazaki SchoolboyQ3 BlueAsh Nurano CheerLead vivifr basilelacr Ladezik RexEvilz TechnoWuz Planetory IsmokeMDMA 1KRONOS1	thedevill Dieveln	
+CLAN	895	For Fuck Sake	ffs	0	0	1	0	0	0	0	0			
+CLAN	896	FANTA	FANTA	0	259	1	1700	24	0	0	2			
+CLAN	897	VoidGaming	VG	0	118	3	4350	11	0	0	2			
+CLAN	898	Artist's Guild	AG	0	0	1	0	0	0	0	0	MistBank Do0msday	Spetnatz Werdi89	
+CLAN	899	Oni	Oni	0	0	1	0	3	0	0	1	tarbat13 IsLemos warbro2	iibrah4	
+CLAN	900	Aztec clan	Az	0	252	1	1550	2	0	0	1			
+CLAN	901	Dynamic	Dy	0	0	1	0	2	0	0	1	LEGEND811 WindFrog aqil07 andrewkaa Gomric D0ntL00k MMAmango AlexSmarty IAmK1ng Yftoshi QPfreak FirstSerf Gengar21 showeidek K0JIxO3HuK iron290 LOTUC MrPzycho JoyBlast 912079574 Bullet1607	olachimaru sashok7699 FANTA93	
+CLAN	902	Cloud	Cloud	0	0	1	850	0	0	0	0	bu11d0g12 TBBank2 PuncherBot omgAmazang Ricestood omgAmaBank TrixsterX Zombifier2 CyberClanBank LifeSensei	NINJASKILS	
+CLAN	903	Aura Reborn	AuRe	0	346	1	950	6	0	0	2			
+CLAN	904	Menacing	Menace	0	59	8	10000	1	0	0	1	CoolKid339 DAVEOMGz	OniBank	
+CLAN	905	Fairy	Fairy	0	110	4	4850	2	0	0	1	Machttertoe	Cheeserino	
+CLAN	906	Ninjas	Nin	0	183	2	2450	5	0	0	2	cr922633	ManlyTori	
+CLAN	907	New Generation	NwG	0	0	2	3250	0	0	0	0			
+CLAN	908	Intercept	IntrCept	0	0	1	0	0	0	0	0	Teraton Kiraah chrystopher23 JinjNinj Bradley32	h1pe0ple	
+CLAN	909	Inferno_Galaxy	I_Galaxy	0	0	1	0	9	0	0	2		MenacingBank	
+CLAN	910	Chillfaction	cF	0	0	1	0	1	0	0	1	FairyBank	Luuda	
+CLAN	911	Fortune	Fo	0	425	1	600	2	0	0	1	Floods NINJBank	modera8 Defyed chickenhaw	
+CLAN	912	Serenity's embrace	Serenity	0	0	1	0	4	0	0	1			
+CLAN	913	Pixels	Pixels	0	247	1	1700	2	0	0	1			
+CLAN	914	Kawaii Clan~	Kawaii	0	486	1	150	5	0	0	2	Arniteaux Lexuss852 zombie85 Xel672 Thefoxwar Neosplayer zefirr	Baspro45 AdrIceTea	
+CLAN	915	2nd Clan	2nd	0	0	1	500	0	0	0	0		Nagelbash	
+CLAN	916	New Era	Ne	0	46	10	17900	1	0	0	1	Raekor	iJoka	
+CLAN	917	Reflex	Reflex	0	152	2	3050	14	0	0	2	0Wafflez0 JohnPaolo Hardnosedd	Bavaros	
+CLAN	918	Sinon	Sinon	0	0	10	16550	0	0	0	0	PixelsBank	edited	
+CLAN	919	Cummies	Cummies	0	0	1	0	4	0	0	1	TeflonGuy ninalaser KawaiiBank GameBot03	CaptainCoolGirl	
+CLAN	920	Avenge	Avenge	0	0	1	0	3	0	0	1			
+CLAN	921	Massacre	Massacre	0	564	1	50	16	0	0	2		NBBank	
+CLAN	922	Veteranos	VETERAN	0	168	2	2450	17	0	0	2	Kirshy AlexL2003 Awesomest2 alvegiton killa8 Shiftzone1 RflxBank HitMeBud DrTooGood BudderBalz pure6 AllOfIt dubtheffox	yannick023	
+CLAN	923	1	1	0	0	1	0	2	0	0	1			
+CLAN	924	ProClapper's	PC2V	0	0	1	0	1	0	0	1		XxCreation batbuscus Soggu KittehKatt	
+CLAN	925	iloveyou	iloveyou	0	0	1	0	0	0	0	0	firas0098	diaao rod1360	
+CLAN	926	Vendetta	V4V	0	408	1	600	3	0	0	1	Holediiz PawPow Hasak emd6 FadeBlack carnage824 H3LLFIGHT sumobuddha Razortech buddy9804 SinonChan aroxin mrvica Mike123v40 JesterChao	WarlordLan	
+CLAN	927	dauntless	daunt	0	428	1	500	1	0	0	1	AndrewY SIMETRIK elpran1234 Darktors hectorel123 chrisboz SmokingManzu Fofipambi Arkandrio v2garcia XxXsipXxX gallinanegra xxemile63 bbttv2 zShadowPL	DragonFigt olidudude	
+CLAN	928	ToriBetting	Betting	0	0	1	0	3	0	0	1		LegendLH Foalon32	
+CLAN	929	Tears	Tears	0	222	1	1750	1	0	0	1		ramfan123456	
+CLAN	930	h0wl	h0wl	0	0	1	0	1	0	0	1			
+CLAN	931	Pixel Kingdom	Pixel	0	0	1	0	2	0	0	1	WarpedOrbs	VendettaBank Hamex	
+CLAN	932	The Logical	Logical	0	0	1	0	0	0	0	0		isuck4life	
+CLAN	933	God	God	0	22	10	26000	1	0	0	1		Archos331 BenchCo QuasarBank	
+CLAN	934	Wanks 	Wankers	0	0	1	0	2	0	0	1		ICryI	
+CLAN	935	Break The Brain	Break	0	0	1	0	1	0	0	1		h0wlBank	
+CLAN	936	Kill_Bill	K_B	0	0	1	0	0	0	0	0	PixelBank	jamonseco	
+CLAN	937	Prey Gaming	Prey	0	97	4	5500	1	0	0	1			
+CLAN	938	Banned	Banned	0	520	1	350	3	0	0	1		JBank	
+CLAN	939	Death Note	DN	0	120	3	3800	14	0	0	2	SDuelWanks	Sduels	
+CLAN	940	&#937;Predator&#937;	Predator	0	240	1	1850	22	0	0	2		BreakBank	
+CLAN	941	Rising Academy 	AcRising	0	0	1	0	2	0	0	1			
+CLAN	942	Risk	Risk	0	0	6	7800	0	0	0	0		Equinox01	
+CLAN	943	Martial Arts Uncontested	MAU	1	0	3	4850	0	0	0	0	Gusmanak ALEKSIJE09	Sxeex212	
+CLAN	944	Cannibalism	Cannibal	0	0	1	500	0	0	0	0	kupu ninjomon DNbanker xbox360me kurkurlo ulb300 Biboy27 GenericLez ItsDustin1 Nightwlng 1177799 FuriousG20	loca301 purpbelt2	
+CLAN	945	Different Light	DL	0	430	1	250	15	0	0	2	xoptimusx CartoonRep Spinefall FireEmblem UkeMePlz Thebluest1 giovanni31 T4K3N KewlBabyYOTE 001B 001C 001D DrGaster ARysk Epic789 mariosega FIREWOLFGAMER	001A OzSpliter TitanGuard PredatorTomb GodArawn	
+CLAN	946	Krypt	Krypt	0	79	4	5750	4	0	0	1		CUBOToff ElenaJ	
+CLAN	947	Stars	Star	0	0	5	6000	0	0	0	0			
+CLAN	948	Shadow Wolves	xWolfx	0	0	1	0	4	0	0	1			
+CLAN	949	Ideology	Idea	0	375	1	850	5	0	0	2			
+CLAN	950	Maelstrom	Mae	0	0	1	950	0	0	0	0	Hopster98 SmuglerElf Mauzer03 MufinsRus Ramicelium DLBankftw drizznit12 MyPuppySky ZomBQ bran611 GitRektBro AisLife zachsriah mambo64	vexx2005	
+CLAN	951	Shadow Army	Shad0	0	292	1	1150	28	0	0	2	TheLegendBank TitaniumBlue	xJax pencile4	
+CLAN	952	Tears of Gaia	Gaia	0	65	6	7500	5	0	0	2			
+CLAN	953	JackAzz X Crew	x	0	394	1	650	23	0	0	2	Tazorus AgeKun dbp77	yesjathen	
+CLAN	954	Team Game masters Eng	TGME	0	218	2	2250	1	0	0	1	ArekkuDesu Dynkys kaiquebaka Brenolibre	IdeaBank	
+CLAN	955	Born2Kill Clan	Born2Kil	0	0	1	0	0	0	0	0			
+CLAN	956	Frigus Odium	Odium	0	138	2	3400	1	0	0	1	uglykitty2 GototKaca Ju5tTheTip yteck PeeceWolf DarkRiddl1 idubbbz21 jotornado azoozy dantewines Kyanity Zwater gd05 LoxDown FoxCyclone Hydra07 TheParodox danitri30 canberkos ShadOBank nikolozi xXpr0Xx99 rafarato deadlox300 xIIEWOXV	Shad0wlv99 Mennie03 Grenades	
+CLAN	957	VorteX	VorteX	0	139	3	3650	13	0	0	2	ki11er vichu4499 FireDiesel friscowz	TiPBank	
+CLAN	958	Brothaz Grimm	Grimm	0	0	1	0	0	0	0	0	iBash JunkKicks GamingPro928 Hans skylord30 Samdolf5 DziadekGun JustSmurf Farid0147 Duplicater Darkwing27 YazOrfa ForceOp thekaiguy cr2zyg2mer thedworuht stringtheory trustgone	Assassin dabarrett JackAzzClan ClanBank ClanTeam	
+CLAN	959	Corpse	Corpse	0	0	1	1050	0	0	0	0		Koro4eVIP	
+CLAN	960	Royal Art Academy	Royals	0	490	1	150	4	0	0	1			
+CLAN	961	Fancy	Fancy	0	327	1	1050	6	0	0	2		KervinMC	
+CLAN	962	Nightraid	NRaid	0	0	5	6500	0	0	0	0	gnx ChosenRice VtXBank Psyckho derpyface9 Rixra condolale3 JakDRipper SenseiNugg TheTempest legoer23 IronSmash	DaLanimilbus	
+CLAN	963	Laughing my ass off	LMAO	0	360	1	700	3	0	0	1			
+CLAN	964	Villian	Villian	0	328	1	950	2	0	0	1			
+CLAN	965	Colon Three	C3	0	378	1	700	1	0	0	1	MikeysAlt Mikeyboon Boonstra	RoyalsBank	
+CLAN	966	League of Shadows	LS	0	53	8	10250	4	0	0	1	FancyClanBank robo1321 tcagle2077 SupriseCake RawrForCry	Aerk	
+CLAN	967	Kira	Kira	0	348	1	800	1	0	0	1			
+CLAN	968	Execute	Execute	0	396	1	800	5	0	0	2	8IIIIIIIID x3Idiot	DaForce	
+CLAN	969	Relentless_	R_	0	261	1	1950	1	0	0	1		ZeyZ Fooken	
+CLAN	970	NomNom	nn	0	0	1	0	0	0	0	0		C3sBank	
+CLAN	971	My_Team	My	0	349	1	1000	1	0	0	1	dragon5556 Erty23	polosee182 polosee2	
+CLAN	972	Imperium	Imp	0	0	1	0	1	0	0	1		Worriorz	
+CLAN	973	Dark Fox	DarkFox	0	199	1	2150	7	0	0	2	ExecuteBank WingChunSifu RazrBlde MrDohnutz	Continua	
+CLAN	974	Control	Control	0	0	1	0	1	0	0	1		PC4219	
+CLAN	975	Mishou Clan	Mishou	0	310	1	950	5	0	0	2			
+CLAN	976	Athens	Athens	0	150	2	3350	12	0	0	2		JugOMilk	
+CLAN	977	Dragon slayers	Slayer	0	189	1	2050	7	0	0	2		ImpTreasur	
+CLAN	978	Chode Legion	Chode	0	411	1	700	1	0	0	1	Twistex04 Engage12 Zorbakx32 Hunter1000 deadman380 wolving	xXpieftwXx	
+CLAN	979	LazerHD	LazerHD	0	468	1	200	1	0	0	1		jodybud	
+CLAN	980	Osiris	Osiris	0	116	2	3050	12	0	0	2	TheDuckGod xmlgXbong Kitten1123 snoe	lolcats101	
+CLAN	981	Team Tacwaba	Tyrone	0	0	1	0	2	0	0	1	NyteHawk jiff3 15253 kevinjr Duneem GasGiant snakebite6 minhtran TehTrafficCone Mortom buttfacer	Jestier	
+CLAN	982	The Hell Kings	THK	0	302	1	1200	8	0	0	2	3scndtmrs Zenotama ssabmud rektornaws arzo63	acer14 J4k312	
+CLAN	983	Black Magic	BM	0	0	1	1450	0	0	0	0		chodebeast	
+CLAN	984	Free	Free	0	108	4	4750	8	0	0	2		xAngelicx	
+CLAN	985	Bubbles	Bubbles	0	0	1	250	0	0	0	0	Dugdogbunz RasChest Dzage ZhongKui Raixem AlexVolt PoneySuce PrinceAU Cjmack20 TheGuy5 darkenings	Maniholder	
+CLAN	986	N.W.A	NWA	0	0	1	300	0	0	0	0		Manners Tacwabank	
+CLAN	990	The King Of Iron Fist Tournament	TEKKEN	0	41	10	13850	27	0	0	2	jkbank forcanegra M4ster10 mcmath1 skyrck69 xDresser	xDonoXD AndreRieger	
+CLAN	991	S1L3NT	SLNT	0	200	1	2050	10	0	0	2			
+CLAN	992	Black Angels	BLA	0	144	3	3850	5	0	0	2	TheNightOwl FeralMexican DerpPigeon MagicGirls batfaty treel09	Vuxy Dankmemestan	
+CLAN	993	Mente Maestra	MM	1	0	21	27500	0	0	0	0			
+CLAN	994	Ancient	Ancient	0	470	1	500	3	0	0	1			
+CLAN	995	GodlyPoison	Poison	0	576	1	50	14	0	0	2			
+CLAN	996	Oxidus	Oxi	0	0	1	0	0	0	0	0			
+CLAN	997	Raiders Rush	RaR	0	0	1	0	0	0	0	0			
+CLAN	998	Spiritual Fluid	Fluid	0	45	10	15450	1	0	0	1	saturn133 iOnse kartik123 xTikvax robbystyle FluffyPanda darcss pakkun106 Corrax SVEN4TECH xDueSx H1ss Fresh1995 0awesome0 S2kSER Meicer XSweetBoyX fadibob kostya1222 MrKingJ Zmajko mcsanek xXjokedXx	Aliser Voljnij777 retardguy9 HardKing	
+CLAN	999	Epix Incorporated	Epix	0	0	1	0	5	0	0	2	FootRipper yodaking1 AgingAss bobby1177 iMERC scottdec11 willdakila lllRiotlll	jzobel8 yodaking13	
+CLAN	1000	Lords	Lords	0	413	1	300	3	0	0	1	mocacha Tankmax111 MrWooz LTKP	gamer08	
+CLAN	1001	Tau Dynasty	Tau	0	169	2	2550	8	0	0	2			
+CLAN	1002	Knights Of Chaos	Chaotic	0	0	5	6300	0	0	0	0	lilolmkjn1 warlizard	blueAndreyoshi	
+CLAN	1003	Romanorum	Roman	0	89	4	5650	2	0	0	1	Masood2013 inarte13 flaxshadow Luck11 laurentK2 lobanja sun832 Fooxy157 BrianTiago illdemoteu rigedog20	Soreley RPGuy AleksxP	
+CLAN	1004	Stealing Society	Stealing	0	0	4	4800	0	0	0	0			
+CLAN	1005	ElSword	El_S	0	434	1	600	6	0	0	2			
+CLAN	1006	Legendary Ghosts	LGhosts	0	0	1	0	0	0	0	0		Tawtz	
+CLAN	1007	The Mafia	Mafia	0	414	1	600	3	0	0	1	SISISSA HoodIum 8star	eKeynet d0peyd0pe	
+CLAN	1008	HeadShotz	Shotz	0	0	1	0	1	0	0	1	zaboekulan ryoukoo	NoVB98	
+CLAN	1009	testtest	testtest	0	0	1	0	0	0	0	0	ledledlee AsrielBoss TokyoGhoul DatVinny TauBank	Kirakat UANubbins TBGlitch	
+CLAN	1010	Vatniki Russkie	vata	0	0	1	0	6	0	0	2			
+CLAN	1011	Pie	Pie	0	243	1	1600	5	0	0	2		SparKour Volcran	
+CLAN	1012	Devils Wrath	DevilsWr	0	579	1	50	2	0	0	1			
+CLAN	1013	Gynx	Gynx	0	580	1	50	1	0	0	1	DogSpike FNBank KyaegerX Contolr GingaSnap1	KrispNeko	
+CLAN	1014	amen	amen	0	0	1	0	1	0	0	1			
+CLAN	1015	royalunits	unit	0	531	1	350	10	0	0	2	AnnoGamer kungfucuTR	BILIVION	
+CLAN	1016	Daedra	Daedric	0	532	1	350	3	0	0	1		SeemsN00B	
+CLAN	1017	Bitches And Drugs_old	BAD_old	0	0	1	300	0	0	0	0			
+CLAN	1018	Aloof	Aloof	0	533	1	100	3	0	0	1	Radogoshi Pride rastah Firen Just	pidaras666	
+CLAN	1019	Metal_old	M_old	0	0	1	1000	0	0	0	0	Rhycon	DDSilver WasteCroc Bobguy521 RedRobinHD	
+CLAN	1020	Zero	Zero	0	0	1	0	10	0	0	2		pantyme66 Zuraex	
+CLAN	1021	Akatsuki	Akatsuki	0	350	1	900	24	0	0	2		notGynx	
+CLAN	1022	le	le	0	78	7	8900	1	0	0	1		Holyhero	
+CLAN	1023	Scarlet	St	0	305	1	1350	8	0	0	2	toririri Hankai cedwic DestructXZ wdrm PartyGamez trumpet123 tchiika chiantcul	lelex	
+CLAN	1024	ZEST	ZEST	0	0	1	0	1	0	0	1	NatWarrior Jegeren64	Dubstep921	
+CLAN	1025	Calamity	Calamity	0	0	1	0	0	0	0	0			
+CLAN	1026	tl;dr	TLDR	1	0	5	6150	0	0	0	0	GoingQuantum	Kanakei L3G3ND4RYN1NJ4	
+CLAN	1027	Lemon Squad	LemSq	0	438	1	650	8	0	0	2			
+CLAN	1028	remove01	remove01	0	0	4	4800	0	0	0	0	kevin909 Psyk067 Badeger Delta Calvin57 LoanSharkofZero	speakesy1 chongy Wik NinjaVodou	
+CLAN	1029	because ginks killed meta	bgkm	0	0	1	0	4	0	0	1	damien3258 bIivi0n EmoZombeh2 Thelulz63 DerpyDoge2 datwhatguy UchihaFam azrizam Ulaid Chocorules MrTori9000 Galactyx Plyagamer Victer ShyNaio alien247 Taigon21 bale11 hunter8250 UberDerpig geman1 KVRAGamer killian00	ObitUchiha	
+CLAN	1030	Fluff Fighters	Fluff	0	0	1	0	2	0	0	1		leclan	
+CLAN	1031	iMortale	iMortale	0	256	1	1750	6	0	0	2	StormFade	Chux Reversing StVault selfbets tokoi ScarIet arlet	
+CLAN	1032	The Prodigies of LIFE	Prodigy	0	141	3	3650	23	0	0	2		Shayu	
+CLAN	1033	Undead	Undead	1	6	22	29350	28	0	0	2			
+CLAN	1034	The Hell Of Life	THOL	0	363	1	400	3	0	0	1			
+CLAN	1035	Solar	Solar	0	439	1	500	17	0	0	2	TwoShue02 Johnny8127 Lordzilla shadowcyth ducky11 hungy2010 h0tpr0456	iZeroxx	
+CLAN	1036	Portal	Portal	0	0	1	0	0	0	0	0			
+CLAN	1037	The True Ones	True	0	352	1	450	10	0	0	2	iSource resentment Not2wc	magnificent	
+CLAN	1038	&#12320;Angels of Tricking&#1232	AoT	0	0	1	0	3	0	0	1		Nortoking Xilxini	
+CLAN	1039	Phoenix Rising	Rise	0	0	1	0	7	0	0	2	Retaliation dancefreak charles025 NoobsLord Bob560	Sarcophagous	
+CLAN	1040	The Noobs	Noobs	0	0	1	0	1	0	0	1	baby24683 snapfish12 Habatsu Joeflow170 B34tZ Roughryder AllyGirl killboss56 GabIseTBGC kitro4 MagicPot mythological Mugily Mantuska2 Spawalrus SuperP57j iiXeon Rize94 25thBam yolo1231 acesnipr	KidRobin MrsMewfin	
+CLAN	1041	Spider Guild	Spider	0	364	1	100	10	0	0	2	UndeadBank AnOnImatoo lucajas RangerKIL Tadomikaari DthNoctam bayonetta22 -Kau- bacalhau Blackbooster Clemencie 121Rdo xMath cazum098 jaoquito Allno paiiute0 davibraz Kookiie UDMarket leozero matador432 Ryuk iiisauei Thii13 3Vinciius3	BluWeed Yoda	
+CLAN	1042	Doctor_	Dr_	0	244	1	1750	0	0	0	0	GenNate Creepazoid KinGxKO	Ferahk	
+CLAN	1043	Notice Me Senpai	Senpai_o	0	0	1	100	0	0	0	0	ArcticBlaze xXBladeRullerXx loitner TeamMega David1237 Blu4pple MTFGL AloKirito keven5 FlameFerno 5rktxlr8r Recz ScrubinNub FaMzyy GoldenFATE Terrorick	jermaine1	
+CLAN	1044	Majestic	Majestic	0	0	1	0	1	0	0	1			
+CLAN	1045	Nope 	Nope	0	0	2	3250	0	0	0	0	Raider12 XavierSan Zayo60 iuseaol Winterburn TrollenCC KillerT800 LadyLife hershey13	Cowslayer0	
+CLAN	1046	Picture This!	Pix	0	353	1	850	1	0	0	1	AoTxBank pandafake	xerekx123	
+CLAN	1047	Censor	Censor	0	270	1	1600	3	0	0	1	mrIman2002 TheSpartanLife acehard WeAreAnonymous Argonus 0ldSch00l	Brenden98	
+CLAN	1048	The Homeboys	Hood	0	542	1	50	1	0	0	1		EffELOffff	
+CLAN	1049	TheFarm	TheFarm	0	311	1	1250	11	0	0	2	Rairi355 AgentMars iMysticVoid CyphX Qozy69 aaronski7 houstonamj LayKodax quebecoi ZaloHesh	DarthRory	
+CLAN	1050	miscellaneous	misc	0	0	1	0	4	0	0	1			
+CLAN	1051	Mutants	Mutants	0	0	1	0	1	0	0	1			
+CLAN	1052	Carbon	Carbon	0	322	1	900	3	0	0	1		stevenbank	
+CLAN	1053	Unforgetable 	UNREAL	0	0	1	0	0	0	0	0			
+CLAN	1054	Mythic Dawn	MYTHIC	0	354	1	900	9	0	0	2		PictureThisBank	
+CLAN	1055	TEAMAU	Au	0	161	2	3400	20	0	0	2	CensorBank Nelel	TheRainy	
+CLAN	1056	Demig0dz	DGodz	0	544	1	50	10	0	0	2		HomeBank	
+CLAN	1057	Super Elite Spar/Parkour Team	Spark	0	157	2	3250	2	0	0	1	MsBarkDog MrTwtyBird MrOinkPig MrBaaSheep MrBuzzBee MrCluckChicken MrFarmerJo MrSpitLlama MrsSnuffleBunny MrHeeHawDonkey	MrMewTiger	
+CLAN	1058	pizzppipiaipazpiazipazpiazpiazpa	pizzaazi	0	0	1	0	0	0	0	0	lixilou BestMC mltoribash	smrl	
+CLAN	1059	Impulse United	impulse	0	0	1	0	21	0	0	2		Prepnuty	
+CLAN	1060	Chroma	Chroma	0	0	1	0	0	0	0	0	CrazySA	NinjaFoh thekid0536	
+CLAN	1061	DukeLings	DukeL	0	75	4	5900	15	0	0	2			
+CLAN	1062	Hidden	h	1	98	3	4250	32	0	0	2	setoff kondziorex sandtastroph Riphex bb1swagger youngjay54 SKiPPY1080 Fleegle22	john420	
+CLAN	1063	FanClan!	FanClan	0	0	1	0	2	0	0	1	thatsjesus deasert rrektt ImFazeBro nadshot34341234 fazebench tistic ken69 SLUMPGOD thentic tomatic tomobile Kassh topsyy tob0t tumn stralya ntie	Qoxa taundra	
+CLAN	1064	The Dark Brethren	Dark	0	127	2	3050	7	0	0	2	Imanubpls ClickTrig Azriim FilthyFrank CR0WNZ BluCronics RaisinGod DrLimez Jimboe	judosmurf	
+CLAN	1065	Containment Breach	SCP	0	0	1	0	2	0	0	1	ClanHolder	JoonSpe	
+CLAN	1066	The Shocking Scythers	Shock	0	386	1	600	4	0	0	1			
+CLAN	1067	DaMaGe	DaMaGe	0	0	1	0	3	0	0	1	deathchain224 Mitalo randuds marleyboro Alj316 AndrewL9 theosmash kakaxa2222 BrendonBADASSE hotrods13 fearny2468 grfben tiarnan21 Reenko Rakhadhiya DUB6 Beagle1 badangel51 mathei cabel2000	bosstori	
+CLAN	1068	Strictly Business	sB	0	227	1	1900	4	0	0	1			
+CLAN	1069	The Lotus Eaters	Lotus	0	82	5	6850	1	0	0	1	Tekst Gythron Zaroenk qim22 Alasdyr GodFall DukeLBank Xxlikeboss arcaneblak Malkav1554 Dmes DySx yorki sphoderman	troller1234	
+CLAN	1070	Era	Era	0	0	1	0	0	0	0	0	iver Formo SBCbank TORIITO rblrenan Daedalus HellFireBR cappuccino Lite Xylonn Inox KillerTo Carnage yuki Thalles Miko Toriboth kilermvm Menage Agony gabrielll Love Life Shade void loison GHMWolf Milk Doctor victorlouc	Curvine Orny	
+CLAN	1071	Forbidden	Fbidden	0	0	1	0	0	0	0	0	spoog	Jaisph	
+CLAN	1072	gods the Ninjas	ImGOD	0	343	1	950	18	0	0	2	DarkBankTB IEnea Coolcj1290 Quis	Rhysifer RussD3x Mastertron	
+CLAN	1073	Angels of Darkness	Angels	0	0	1	550	0	0	0	0	OzKlunk	OzClunk	
+CLAN	1074	Entropy	Py	0	0	1	0	0	0	0	0		Haydenary RinOkumera umiko 2vREAPERv2	
+CLAN	1075	shad0w	shad0w	0	444	1	450	1	0	0	1	proxnoobz	OwnageHD iTzStealth	
+CLAN	1076	Warriors of Anarchy	Anarchy	0	0	1	0	2	0	0	1	IspeedI SchaoticS Rezeden	elvarg580	
+CLAN	1077	We Are One	One	0	387	1	600	24	0	0	2		LotusBank	
+CLAN	1078	Voodoo	oo	0	0	1	1100	0	0	0	0			
+CLAN	1079	Light_	Light_	0	0	1	0	6	0	0	2			
+CLAN	1080	Operative Spies	Spy	0	323	1	1150	5	0	0	2	DOPABR ninjafoda9 chokolatoo ggrtg theeayrt Nazagmr Jgamerbr12 bielpop DarkLeo143 davih123 GamerRNooB d00M12345 cazumbo LucasPudim CXGamer gghg Ubixaum	ThiagoPERF	
+CLAN	1081	Camel Paw	CP	0	0	1	0	2	0	0	1			
+CLAN	1082	Forthcoming Legacy	Legacy_	0	480	1	500	6	0	0	2			
+CLAN	1083	Ireland	IRL	0	369	1	700	3	0	0	1		callum137	
+CLAN	1084	Ice Style Interrogation Stance	isis	0	552	1	50	7	0	0	2		NotMaxiboo SKULLRID3R	
+CLAN	1085	Pamel Caw	PC	0	0	1	0	2	0	0	1	ticktock01 vase27 Ahmed20amr alexus0102 MinerFight cesar9 StarSoul RKTGames MrStabs Lectono ajn1 FadedFaith onlyonehit Blending Siniester djbunch47 dimafik Comcross DRAG0NSIN OneBank1B planetedm Derpyderk MrSimple58 bima446	ChiefEian	
+CLAN	1086	Z68	Z68	0	131	2	3400	4	0	0	1			
+CLAN	1087	Nemesis	Nem	0	508	1	50	5	0	0	2	dragonslye Reilbas KenJize	robohid RedFire12 armamat	
+CLAN	1088	Cell	Cell	0	0	1	1850	0	0	0	0	isakrafn royals Legaz SpyBank	Totalblast	
+CLAN	1089	Mecha	Mecha	0	201	1	1650	15	0	0	2	MyJokes	Biaker	
+CLAN	1090	bingo	Bingo	0	272	1	1450	12	0	0	2	audykhamis FearApple YoloTwist	NoobLegacy NutAnAlt Peewewe	
+CLAN	1091	Lore	Lore	0	445	1	750	1	0	0	1	DIEPER Alt43	RebornBank	
+CLAN	1092	The Kitty Titty	TKT	0	0	1	0	1	0	0	1	DatTricker jonje Tone2Many X5XP	VigiIance emeny SoIo	
+CLAN	1093	king	k	0	0	1	0	6	0	0	2	CoCyHoK	taksist	
+CLAN	1094	Forge	Fr	0	388	1	750	2	0	0	1	GrnMonster	Kisef maxx1544 yeawww	
+CLAN	1095	childporn	chldporn	0	0	1	300	0	0	0	0	NemesisBank Shanzor ZuperZet	kyemonkey ninjmonky	
+CLAN	1096	Shadows Of Dark	Uprising	0	447	1	200	16	0	0	2			
+CLAN	1097	Uchiha Clan	Uchiha	0	250	1	1000	50	0	0	2	MrBeany imStunt UsagiInaba sheetboy xFIRExGAME TheMechaBank kidfury102 Tops620 luza Sarok gta4000 Misia44 Gangplank44 jacklox2 Handsdown	KDigityDog	
+CLAN	1098	Crushing Clans For Fun	CCFF	0	214	2	2350	1	0	0	1	notb45 NotHolo NotTank NotAthin NOTDOOM Vinylla IsntHope	notviddah Notninjascourge NotSwosh IsntSparky NotCalamity	
+CLAN	1099	Foxy	Foxy	0	263	1	1500	2	0	0	1		monkeybo	
+CLAN	1100	Cyanide	Cyanide	0	137	3	4200	7	0	0	2		Novarules	
+CLAN	1101	Oreo	Oreo	0	403	1	550	1	0	0	1	omegasher Empiregd Shaneww300 xdezznutz Arcyus	d3pot1	
+CLAN	1102	Slendeh	Fisheh	0	0	1	0	0	0	0	0	amed	acture	
+CLAN	1103	FadingClan	Fading	0	448	1	450	22	0	0	2			
+CLAN	1104	NanoClan	Na	0	0	1	1750	0	0	0	0	shutgun garrison12 PATTHERICK coolkillerco Drillum wawes TBashBeast Mikey54 Fallout987 dierromax Gamer80 ForumScrub ck0x	xnnx Fata1ty Chipole	
+CLAN	1105	Zenith's Spark	ZPark	0	0	1	0	5	0	0	2	Sokushi fame255 oONooneOo KatTheCat Spitder Rehxas watashida UchihaSantos EinVasalle Edine Atomic9000 ertdaturtle Swrve Mankerbite FireRobe97 magostic rampaGT SnowyFox D4rkD3vil TroyUchiha Reprisal12 XFrenxy SonGotek Akusami rares5750 Wumbo03 Paintheady imikeYT Ashumaye enzochan Tomsmith7 Plague100 KingSingh2 djvd DragonJak imaaltboi Majormarks CigaroSprm MrBatard Kraas Ki0ttan TinyEnd0 Zacton CamBoyed warbeast56 Vioq	Santanos FearBringr tavious567 SaanTheSun	
+CLAN	1106	The Abyss	Ab	0	38	3	4400	31	0	4	2		BankOfCCFF	
+CLAN	1107	Undisputed	Udp	0	0	1	0	1	0	0	1		LilWeiner MeatDragon	
+CLAN	1108	asdasfgerghqerqwqwer	asdfsfga	0	0	2	3500	0	0	0	0	XLocc beastxdon CyanideBank thilhas Adalwolf	FrogClan Fast2day	
+CLAN	1109	Wind	w	0	554	1	300	5	0	0	2		Money582	
+CLAN	1110	I am	im	1	34	7	8500	23	0	0	2			
+CLAN	1111	Dynamo	Dynamo	0	449	1	200	3	0	0	1	Czarrrr 4D4MY Extcc BeastRazor MaxGamer17 DARKLYTE22 DeRavenger Exodiiuss beanbeanbean mokopuna epicwish Htutoo KillaFever Skeevir Slitherzz TerraGod2o Teemo0913 dammers22 noobpro201 LetsGoRek	Vegusion xXVazVanXx	
+CLAN	1112	reclaimed	reclaim	0	176	2	2600	5	0	0	2			
+CLAN	1113	T.B.P	TBP	0	0	1	0	4	0	0	1	Wirew ZParkBank ksumm1998 Mist001	Lync99	
+CLAN	1114	Soukio	Soukio	0	40	10	18150	27	0	0	2	AbyssBank DarkCause tcgmunky Argentin01 F5Shots IceHydra Nightmares1 IITrickin jc55 jacob1011 VividHell Skadi Proxtay FireMurray ZorgonMoE eagle39021 Spekky Drakesord8 ggboss68 harley01 CXXIV Melodicity DuckV12 Torfy sandhead47 BigBrandon Jorg3x54 Beybestar Frostic1 Ferusblak gundey	tlclay Ackl	
+CLAN	1115	Future	Future	0	28	10	19700	20	0	0	2		mermaidbac	
+CLAN	1116	Orion	On	0	0	2	2300	0	0	0	0			
+CLAN	1117	Eye For An Eye	Eye	0	483	1	450	1	0	0	1	WindBank MartGarrix mdm8000	moop12 NotShoddy	
+CLAN	1118	WarBoys	WarBoy	0	181	2	3450	4	0	0	1	Reshiss GLaD0S Kyure Kyle T0ribush Fake XsGamer Eldricht Nightflow 8BitMenace CataIyst Aubrey junai BigCats Xydra Jaxon Zoomb Lopsin Jupiter Hisoka Eitheror Fates	box	
+CLAN	1119	Black Pentagram	Penta	0	55	7	9600	9	0	0	2	FlareBank jabface123	dharma1001	
+CLAN	1120	Shinpaku Alliance	Shinpaku	0	326	1	600	6	0	0	2	Harruto olufeso90 MaxPvPer	nexus153 Eziv	
+CLAN	1121	Monochromatic	Mono	0	390	1	650	18	0	0	2	modzodzo Hui3228 youA	mohwah	
+CLAN	1122	Warriors	Warri4lf	0	0	1	0	0	0	0	0	DezzieBear coolman800 Xylaphone Fodgod YungBlood1 DeKrow Slickcombo MirkoArcor zedzy fantalimao RektByu sidcoker02 Heafp KevinsNuts peanuts1 view5 PandaHA1 Jypsie natsu92719 Xzoix HazrVB TEHEMike	MiniMex soukio ibzz flamecore DaBeast294	
+CLAN	1123	Burning Gods	Burnt	0	333	1	850	23	0	0	2	nova5432 SirDaskar xVintorx BatDuck Arkadios32 Footure kesiryuu LilRat Yayshun RawbIsGate Recc0 Eversnogg Legitop0p CrustyBlack MorningDo olice Bananas	Gasai Krisp Rawb	
+CLAN	1124	None	None	0	0	1	800	0	0	0	0			
+CLAN	1125	Reckless	RL	0	106	2	3150	26	0	0	2		BuckRoot	
+CLAN	1126	Instinct	Instinct	0	0	1	0	4	0	0	1	juvytoot Tet Owel	Justin	
+CLAN	1127	Uber	Uber	0	0	1	0	0	0	0	0	Psyapane10 Sonic1991 turost temohpaB Gambi321 NO08 XeenoMorph sccr13plyr XAssassin6	BFHPRO Boaplitas Darik144 Groogeyz	
+CLAN	1128	Companions	Cpn	0	187	1	2150	4	0	0	1	ScarpiBank TardGuard	EricScarpi TheTerror9 Zakattakk Rileykell	
+CLAN	1129	a_old	a_old1	0	0	1	0	0	0	0	0	Gamming squid925 adam71880 lilraymond manj Reddog1637 kikaSOUL 3n2Love zanderco Pandakin	Xylian monobanker Cheeto2k DJElite KozoNinja XT0riG0dX vant2x Dezo2x	
+CLAN	1130	WEED	Weed	0	62	5	6350	26	0	0	2			
+CLAN	1131	Move	Move	0	420	1	700	1	0	0	1	sawyer3 ultramagna MyNameIsTaken gmzx64max Voidnoise R3kTF0XY NinjaDino1 Stempy101 XDeviskateX Ultrafine7 Gabe1250 Jayzmaster dark1mido mahmoudnasr11 DashEm myweed TiSa powersubO NJW2000 xXMmosXx RogueKillz killerkelt	WolfXGamer	
+CLAN	1132	Versace	Vs	0	188	2	2650	4	0	0	1			
+CLAN	1133	Time For Rekt	TFR	0	48	10	14450	15	0	0	2	player123GG RecklessBank ShadowIWS Azuras58 rolands123 Knakies2 monkeyishi gun43 jl26 Sorceryy Sloth TRAgamer Rivaille19 FITE2NITE Frequila lickerlint Vafkor Bigsters toffeethief GWKfighter Panthers32 ShadowCar1 tomas85 Jpodmoney Damien8746	Thronior	
+CLAN	1134	Mobility	Mob	0	316	1	1350	3	0	0	1	WeedBear beerhead36 AmazingKid	StormRazor	
+CLAN	1135	The Lucky Ones	Lucky	0	50	8	9800	18	0	0	2			
+CLAN	1136	apocalyptic	APOK	0	68	8	10000	4	0	0	1	tomibash HawkeyeTFA Astral	Flosax	
+CLAN	1137	Mercenaries	Merc	0	0	1	250	0	0	0	0			
+CLAN	1138	Raconteurs	Ra	0	0	1	0	2	0	0	1	JGMlegend Elespada DouglasVa GDBninja CraneoBank AssassinDark SoundWaveShock nicolas554 Pijunclo Rasendor lxXandresxxl HybridTB Kyater24 mrfacu juliconda DeathRed69 JumpiOp ElAlesi rogeliotroll NapoTronex M1chi37 FlipAKick TrimCorn battikun galepic Skrubadubdub	AlienDnB	
+CLAN	1139	Innate Fighters	Innate	0	282	1	1350	12	0	0	2		killshot30	
+CLAN	1140	Rain	Rain	0	215	1	1500	13	0	0	2	WApowyo Xykez yoyotip	epiczo	
+CLAN	1141	Oxford Dough Boys	ODB	0	182	2	3200	1	0	0	1	Ultravox06 ninosanz xRazorPL SkarbonkaTFR MiszczToJa prodigames RushPL Condings trebeter Fowo236PL fravls M800	Balik Kotminiser Extrice	
+CLAN	1142	The Knights In Shining Armor	TKSA	0	0	1	0	2	0	0	1	GaupBrown Hill1	Powyel	
+CLAN	1143	PLus	PLus	0	230	2	2250	2	0	0	1	m200294 bigdogluck zamier Lushsmoke PKRitz DJYap Lysithix Protoend Tourney13 Ullyses scullex Haiao Fayeskeck	BigDog harith2708 LEGITTRIX koenaw Shark	
+CLAN	1144	The Jackal Clan	Jackal	0	0	1	0	0	0	0	0	VCTGaming Spid3rgod33 roadto	garykofi	
+CLAN	1145	Laws Of Entropy	Entropy	0	54	7	9400	6	0	0	2			
+CLAN	1146	Biohazard	BoZ	0	373	1	350	4	0	0	1	Tlcux	conteur	
+CLAN	1147	The Black Mafia Family	BMF	0	221	1	2000	11	0	0	2	BlackRover ecko222 FaZestoRms InnateBank 936156 spike250 Korit Sacryfide SATYR111 SKULL7456 zombilla8	Krypt1k	
+CLAN	1148	Xen	Xen	0	374	1	750	9	0	0	2	RainBank5000 br1zzle Hayab005a Bazzle Zal00pa NullSpook Vectorman Brucce Newnab T0astman awesomerp Guzzzy LinxZ	Starpaii DanyKreep DashSora SushiRoll	
+CLAN	1149	ViP fighters	ViPfight	0	0	1	0	0	0	0	0		CreditCard	
+CLAN	1150	Uzumaki Clan	Uzumaki	0	485	1	450	6	0	0	2	Russell29	MAXXXIM003	
+CLAN	1151	Project Zetsubou	zP	0	0	1	1000	0	0	0	0		PlusBank polosee1	
+CLAN	1152	S.P.E.C.I.A.L.!	SPECIAL	0	459	1	500	10	0	0	2			
+CLAN	1153	Edge	Edge	0	0	1	0	4	0	0	1	LoEntropy Jagron Extremelol SubZack DoGoFhOpE	kevo756	
+CLAN	1154	Lifters	Lift	0	211	1	2250	2	0	0	1	Pardox1128 Ayyyy	NUKEx92 cutterchop	
+CLAN	1155	Mythology	Mythical	0	71	6	7350	6	0	0	2	TheMafiaBank Duy22 PrimeDuck Vnigamerz2 Takutobro1 anal123 nathanjw zhuyuan FakeChoco redbandits	Mark0911	
+CLAN	1156	Fallen Spektre 	FSpkt	0	0	1	0	1	0	0	1	roboaedin Anaemia AceZangoo Heggy341 Ethdogger Pandadault knightjoyz sagekid55	FalcoV1	
+CLAN	1157	Bendaki	Bendaki	0	231	1	1650	7	0	0	2			
+CLAN	1158	Shouting	Shout	0	124	3	4350	2	0	0	1		KlLLBOT slayer345 RifqiX TBu4 petter12 kittenscupid	
+CLAN	1159	Carpe Noctem	CN	0	0	1	0	0	0	0	0			
+CLAN	1160	Neko Clan	neko	0	407	1	900	2	0	0	1	SorryJack JennyRemix Hampire VipClouds BAMFtoast Puuure	TheTakenKing PandaYOTEBot UnderTaleTem TaleSans	
+CLAN	1161	T3CK	T3CK	0	357	1	700	18	0	0	2	xXUrbiNXx EdgeBank piriel12	yologuy3	
+CLAN	1162	Mixed Martial Arts	MMA	0	246	1	1350	14	0	0	2	cyrooptics	420Cheezit	
+CLAN	1163	Orange Nova	O_N	0	423	1	500	2	0	0	1	MythBank TheTopGuy 5thArcanum KG7Eymeil moabcbx1	koalaking	
+CLAN	1164	Eternity	Eternity	0	216	1	1500	20	0	0	2		AidanTong	
+CLAN	1165	Dark Blood Clan	DBC	0	0	1	0	0	0	0	0	Legiaseth Bendakibank TheHotDog8 CoolCat174 SupaaSsj	Kaorie2 DarkRob13	
+CLAN	1166	Harder, Better, Faster, Stronger	HBFS	0	308	1	1300	4	0	0	1	mudducky04	DestBank	
+CLAN	1167	Senpai	Senpai	0	309	1	1300	9	0	0	2			
+CLAN	1168	It's The Ultimate Achievement	ITUA	0	135	3	3850	8	0	0	2	KatsuAoki	Musli	
+CLAN	1169	SQUAD BANDERZ	BANGERZ	0	563	1	50	1	0	0	1	iiCupcake DezNoodles T3CKBank TheDogeGod PrOPlAyEr5 Shrark MeCrazy getrekt312 Toribashi4 bigfot redead123 Atominon GigaN93 UrGame dumasxD VirtualXP DoYouTroll	Teknical	
+CLAN	1170	Best I Am	Bestiam	0	253	1	1750	7	0	0	2	Yoyoness Jamescou12 sinisterpuppy69 RockyQ mmabank algiux sylo11 Usbmauro noobnie123 GrandRips AproPanduh Alterations DetriTB	olanthecat	
+CLAN	1171	Invincible	I7	0	0	1	0	7	0	0	2		Cardaman Novavault	
+CLAN	1172	OMEGA HELIX	OmX	0	125	2	3300	17	0	0	2	200102274 0WinneR1 Romagi3 danil2ka20 Danila700 Dimahhh FairGame56 Silicon12 XXXBOSSXXTR MeGaFoN Wasdizkin evrasiasae sasKE199 sadovnick crazycoop IJOLI Danik200	MiOn33 lakakrut Guns152	
+CLAN	1173	ToriBash	TB	0	88	5	6450	2	0	0	1			
+CLAN	1174	Clen	Clen	0	426	1	450	6	0	0	2	HBFSBank iLamp cadbury69	IceEnigma	
+CLAN	1175	Alchemy	Chem	0	462	1	200	2	0	0	1	maxehg buttkick3 EllingV jzszwa SenpaiAcc BurnTab Demecy Cassh	DartzPie	
+CLAN	1176	We Have Risen	Risen	0	518	1	350	3	0	0	1	ITUABank DeadMurder brystro TwinFungi 1ceEater WiseJiji DualshockX	Morkyne	
+CLAN	1177	Galaxy	Galaxy	0	300	1	1250	8	0	0	2		mvpbby1	
+CLAN	1178	BAD	BAD	0	277	1	1700	1	0	0	1	MoldyBank MapoTofu HatdaCat Dopeplayer WERULE LeKrakkenz	nikatoor	
+CLAN	1179	The Mewfin	Mewfin	0	0	1	0	16	0	0	2	KyLeeKitten CMitchell Qblivion GeeVenum LongSchlong Wireworm	Rainite	
+CLAN	1180	The Role-Play Yakuza	RPY	0	427	1	500	13	0	0	2	ZABUZA12 Mazedest ZenDoge XormTeck6 T3LEM Zergle Awudis SouBr123 AsrielGG Ninjayden1 lazerghost 77077 WolfeFight DoubleBons KakiSakai 0ffensive	Kyros117	
+CLAN	1181	Smoked	Kush	0	0	1	0	0	0	0	0		DGabo22 RekenWor	
+CLAN	1182	Flaming-infinity	Flame	0	113	4	4950	14	0	0	2	jorgul Pinnky GIimpsed jamy162 nihuon	Eden	
+CLAN	1183	Dragon	Dragon	0	0	1	0	1	0	0	1	icals	IbankI	
+CLAN	1184	Raiders	Raiders	0	0	1	200	0	0	0	0	NoobHonor zekromXL	TrueKirian	
+CLAN	1185	Beast	Beast	0	567	1	50	4	0	0	1	niener TheDealer5 Forg0tten Yunochan Slasher325 bossboyNO2 Savings	Xoid	
+CLAN	1186	Dave Smith	BigDave	0	568	1	50	4	0	0	1		KEKESHI	
+CLAN	1187	Sin With A Grin	Grin	0	464	1	450	8	0	0	2	DaKurlzz27 pikchu47 Mary556 Krazybot78 torisharkb jawbreakerxxx qwqwqw21 AbyssLord9 MozkoRom Bobomb12 ssjgogito EnzoVector	FireHawk17 LegitCyan MuffinFist CyanSky	
+CLAN	1188	Lewd Warfare	Lewd	0	0	1	0	4	0	0	1	YakuzaB SentinelEn SentinelNR DaRebelz vgaggia flaruto Sohudari demonguy42 Mothlin itsme323 ubermankil karowin	SentinelCe	
+CLAN	1189	The Faltering Angels	TFA	0	320	1	1100	2	0	0	1			
+CLAN	1190	Saints	Saints	0	260	1	1700	1	0	0	1	alminjudo1 ProtatoBot amaniboom Laserman03 REETWEEK12 Hobbet360 Netshock shimmerix xcikx AngelEisa7 JhonyBash TheFlameBank SupaEx	danish25	
+CLAN	1191	Order Of the Lost Light	FTL	0	335	1	1050	2	0	0	1		MintCat	
+CLAN	1192	Deity	Deity	0	465	1	450	1	0	0	1			
+CLAN	1193	NightShade	Night	0	132	2	2700	13	0	0	2	ceazarjay1 KingzJace david440	UkeNorris	
+CLAN	1194	The Khans	TKs	0	569	1	300	4	0	0	1		BigStevo BigDavo RedPanda mused	
+CLAN	1195	Over Kill	OK	0	0	1	1750	0	0	0	0	Lyrah Tomski96 herotag Alevzykzl	darkjustis T1RS Rem0r Zaxopheek	
+CLAN	1196	Herbal	Herbal	0	0	1	0	17	0	0	2	Sprig LewdBank deathnic99	Veggum	
+CLAN	1197	DragonFire	DFire	0	521	1	100	11	0	0	2	TFABank	KingChung	
+CLAN	1198	Demons Extasy	Extasy	0	0	1	0	6	0	0	2		SVault	
+CLAN	1199	WuSpooky	WuTang	0	0	1	0	3	0	0	1	FTLBank	MetaReachxx	
+CLAN	1200	Ocean	Oc	0	0	10	13500	0	0	0	0		AnteikuBank	
+CLAN	1201	Rival	Rival	0	336	1	750	35	0	0	2	evilkatana majel d4angerouz solopaw icecharlie Mehdi1000 DankDab Slingman82	superdeths Dxstinee HackDown bojers sHaDoWBREZ	
+CLAN	1202	Ignore	IG	0	0	1	0	0	0	0	0	Nilkin G3TE3KTM8 sebek345	ZENTON	
+CLAN	1203	Perfect People	PP	0	0	1	350	0	0	0	0			
+CLAN	1204	Awsomniac	AwS	0	301	1	1050	3	0	0	1	travD25 mimiboss kookidu59 Yologamer4 CoCube Maximec3101 lolodelcor teddydeat remy49 laury0071 minibas XraY02 Maximum83 xxmaxime28xx Zelonax	Cyon22 gabrielkio	
+CLAN	1205	Rural Dust Monkeys	Rural	0	409	1	300	6	0	0	2	PipokahBr alert5 illusionn 4m4nd4 On3k1ckM4n	Ligthchuck RanaFrowlz cycero123 YSRGameplays DFireBank SrOfWar	
+CLAN	1206	FireStars	FireStar	0	0	1	0	28	0	0	2	fodones666 GGGamerPT GmsBR zVictorPvP LeoAngel	antonio272	
+CLAN	1207	Reality Check	Real	0	431	1	500	3	0	0	1	MIUI halen	Fakecjslick	
+CLAN	1208	Cookie	Co	0	0	1	0	2	0	0	1			
+CLAN	1209	Xll clan	XII	0	224	2	2250	1	0	0	1	TNGamer01 TaylorMVC whitebelty RivalBank ScaryClowns4 coolgiy baker504 darkjaad Obeyme34 mesofunny politelovr TomCatX3 sethmania KrimsonTim savage349 720ClaW face9380 exterit Gogotta ItzDerian Rekon69 shuitori Timonk M102Dload troll974 misko1 GoldenJRD wesh93 REX10019 ledo2424 imadoop amorphous8 savagee	ItzzMurder HolyFish99	
+CLAN	1210	The KingZz	KingZz	0	0	1	0	8	0	0	2			
+CLAN	1211	It's a clan	Its	0	0	1	0	5	0	0	2			
+CLAN	1212	Arial	Arial	0	0	1	0	0	0	0	0	onlinecat9 RedX18	kingKhalil	
+CLAN	1213	bodied	Bode	0	232	1	2200	10	0	0	2	slgkiller golflord11 Riotek MinaMitte AmassaB	iAmChair	
+CLAN	1214	Tribal Taurus 	Tribal	0	489	1	150	7	0	0	2	Znox974 irofild630 zute76 Shaps mikalo124 wassim58 Warrix aieto zipstix zute concon79 levy31 TERRY15033 Styris warghost23 amine95280 mageul88 GrimPaparo fireshaw tom8513 Mesrine13 wissem1122 KillerMp2 niamorz terry1503 Moyosuke Skyl0Z0	Fireryx	
+CLAN	1215	An Undying Hope	Hope	0	0	1	0	3	0	0	1		reSip jpacc Vincent183	
+CLAN	1216	Unleashed	Unleash	0	0	1	0	1	0	0	1	Lucky5921	Orteil	
+CLAN	1217	Ultra	Ultra	0	467	1	200	10	0	0	2		qMKp	
+CLAN	1218	Glyphipterix	Glyph	0	248	1	1450	6	0	0	2	IvanPATSAN Lon458 Nekit1218 lokobr1 AtomicNissan Kageyare XaxinXax	Miauinator	
+CLAN	1219	Wizards	Wizard	0	361	1	900	2	0	0	1	nakoN swagpro eloa	Something SKITZOFRENIK	
+CLAN	1220	Faded Warriors	Fade	0	522	1	350	7	0	0	2			
+CLAN	1221	Whiplash	Ash	0	58	3	4600	21	0	0	2	Abyzou GIock CapainD Valentex12 Warri0rs Ziphon ImZyzz clitster BodiedBank	Winning1	
+CLAN	1222	sick nasty	sickNsty	0	491	1	400	5	0	0	2	Jsohau11 Jbean2001	Krooking dargito SKLEbank KidFail360 Budsie	
+CLAN	1223	HardMode	HM	0	0	1	0	2	0	0	1	ebay1260	MLPSnoop69 Westley666	
+CLAN	1224	ELECTROSHOCK	ELECTRO	0	0	1	400	0	0	0	0		Volixys	
+CLAN	1225	scourge klan	scourge	0	492	1	500	5	0	0	2	KObro500 fixederror TheTunami jaseline Femme	SolarPig23 ckm730 heavyhit34 Allegiant SwiftUni	
+CLAN	1226	The Rich Life	Rich	0	123	4	5300	6	0	0	2	Glyphipterix Illusion Flats PlsDontKillMe	Hentai calmdown09	
+CLAN	1227	Power Punch	PowPow	0	63	4	5950	36	0	0	2	OompaLoompa	4M4Z3	
+CLAN	1228	Saccadic Toribash Fight Club	SAROR	0	70	3	4150	42	0	0	2	ssgamingil xxmax2801xx KillingBlow kelvin04 Destroyer364 RamD00M	longchin	
+CLAN	1229	Vampire	Vamp	0	44	7	8700	3	0	0	1	DestroVol Aqil96 GoochKick LukePlayer aetha 6Satan6 hmaoo DeliMeat2 LOLlytes1 CainisGood whatislyfe lilreeys SwagyBread Burlesque biglolkid cuteboy234 noobyvic flylie9 3drocket porco123	ash3292	
+CLAN	1230	ShockWave	SW	0	140	3	3650	5	0	0	2	iKink MarketBoy	BankGang wetness rusty69	
+CLAN	1231	Submission	Submit	0	155	3	3800	1	0	0	1	HMBank	DownPulse	
+CLAN	1232	Equestrian brony	Epony	0	0	1	0	3	0	0	1			
+CLAN	1233	Knights	Kn	0	233	1	2050	2	0	0	1	GiveMeTCs Scissor414 moopsux syzy	eEmily	
+CLAN	1234	Ink	IIO	0	0	1	0	2	0	0	1	TheRichLifeB CrimsonFL liancan iFat couchpickle	iTrap	
+CLAN	1235	Natural Born Killers	NBK	0	0	1	700	0	0	0	0	PoWPoWBank Toms2006 ToonFox Protecte fluffy22 PHANTOMPUNCH Mehdi3000 Ghostur Jackboho nekokat omsi293 fapacius GREATACE hamoudaB kobytown goku558 B4DG4M3UR karateka13 slayer5929 DeathEra lzubrovas18 Icpex dribller19 Vortex950 lutador124 medo4265 drumdaddy SukiFights Dragon0208 domxer mickdu63 Christ2209 RedBlast0 theo06 FrostDu12 keller12	Kadaro RLNate Crollex bestboylol	
+CLAN	1236	Smashing Pappa	SP	0	397	1	850	4	0	0	1	senpie505 Coolshade Viprin nitrooz Hadesrealm heroesMuse noob101xxx DDamSS VonxCrane tenitri JamesDJ75 sonicsoni Marco32166 DaBigDerp LucarioEX Baccheus PaperToAsh gusnatan420 N1ghtSh4de AcexMercy SwatKill Linkbro1 Diamors eddieb123 adamla9001 wolford844 agentdc304 Rekface saucin notchy4 EpicWolf47 flaruto10 UnknownEDM HALO78 Quadragnos Vyaxesces MrN00bz Rinyl darkkirito1 EatenToast skul304 Dark10fire	Crakzeno slendeerr	
+CLAN	1237	Dimensional	Di	0	0	1	0	7	0	0	2	VampBank kamekaz Bootmane	DarkMessiah	
+CLAN	1238	Germans Going Hard	GerH	0	469	1	200	9	0	0	2	PurpleBird Doomkamon jackydude772 piosone	ShockBank	
+CLAN	1239	Enforce	Enf	0	39	10	18050	8	0	0	2		DrHack	
+CLAN	1240	Vengeance	Ve	0	18	10	32900	17	0	0	2	thunder105 getkilled2	thebrony1	
+CLAN	1241	Legend of Free Fighters	LOFF	0	242	1	1450	10	0	0	2	KnClanBank	romn4	
+CLAN	1242	Azarius	Azarius	0	0	1	0	9	0	0	2		BabyJ2kr Tsuubi	
+CLAN	1243	ninja fighters	fighters	0	0	1	0	10	0	0	2			
+CLAN	1244	Frost	Frost	1	338	1	800	23	0	0	2		STINKYDUCK YouDuckYou UkeBully olofmeister	
+CLAN	1245	Jeet Kune Do	JKD	0	32	10	12700	15	0	0	2	DimiBank Darrennr9 VamoCNB Smarmy MerCulies KwikThots	Rhythmetic	
+CLAN	1246	Top secret	Ts	0	143	3	3750	3	0	0	1	FabiSan schraddle GerBank luapn PandaRkrt H3iope1 killkaese just15t	Aninokaze	
+CLAN	1247	Predator	Pred	0	0	1	500	0	0	0	0	EnforceBank iKaili DemoKiller fares44 Wasdkeys1 Forstyll	AGxBerta keap67	
+CLAN	1248	Disturbed	DIST	0	303	1	1250	4	0	0	1	Ihab7 vctgamingg TheMonkE Sanghelian randolf11 TakeTor Sumsoul NxRzBeast Keiip xMatts2801 anawadamaH VibratorMan VealBank HotNoob69 Ibex Skeliton22 BoxSpring	SVTCobra	
+CLAN	1249	The Villains	Tv	0	83	4	5550	15	0	0	2	sonicX2 Thunas PyroCake meridois PvPTomas NoobDud leonmoss ggvip Kalby	StaxXx	
+CLAN	1250	Killas	Killa	0	0	1	0	2	0	0	1	Dimasajs SkyVerse Verdenzo LightHate hejka123 Whhite	TomerSiman Flosa xxxhoxxx	
+CLAN	1251	9 Lives_old	9_old	0	399	1	750	3	0	0	1	Ghastomuch fajar007 Nasabawi bonerfartd darwolf19 ClearGamer lucariost fightBank	KilerStorm shinekill	
+CLAN	1252	APERTURE SCIENCE	APERTURE	0	0	1	0	4	0	0	1	FrostBank P137 1bcb3 Trocher3 Deeza445 brzostek SpmSL Mongius Kamura Meap theHevy Slash viliuxazz 0rigami Ragey07 Kido Hero Star SparChar SrCheetah Jere azzeffir23 Mercurit	Pidda Blackjack	
+CLAN	1253	Immortal Technology	ITech	0	471	1	500	1	0	0	1	JKDbank theDestro sc00t3r carlman123 MasonDoIt unknown122 tochukwu2 GudGammer SQUVD NOOBFEST5 dominicko loko9010	whoremonk GanjaJoe93 GetBlazed	
+CLAN	1254	Atom	At	0	0	1	0	0	0	0	0	Guty838 Jordus	101Link101	
+CLAN	1255	Brasil	Brasil	0	133	3	3950	1	0	0	1			
+CLAN	1256	Lord of Toribash	Lord	0	126	2	3250	25	0	0	2	DangerBank icritical AWESOMEkc85	Denis88888	
+CLAN	1257	xd	xd	0	0	1	0	1	0	0	1	Swuex MoreTCPLz crashjs coals Squaddless punchz153 Beatmove Arson1010 Swaganime TimThaThug arthurmac Miner9045 SlientMojo	xEgyptian bix1234	
+CLAN	1258	The Broken Empire	Broken	0	0	1	0	3	0	0	1	ogjam	Lolierz	
+CLAN	1259	S_K	S_K	0	0	1	0	1	0	0	1	9Bank	AcidGirl BloxTime	
+CLAN	1260	Heyday of Martial Arts	HoMA	0	0	1	600	0	0	0	0	1GLaD0S1 Matag BexGaming	1VoidPony1	
+CLAN	1261	fasoidhgfhjsdafgsdia	Dhfgvuas	0	284	1	1300	1	0	0	1		waffle133	
+CLAN	1262	Sarra novinha no grau	SNNG	0	321	1	700	4	0	0	1			
+CLAN	1263	The Rogues	Rogue	0	0	2	3050	0	0	0	0		CatBlack3	
+CLAN	1264	RGB	RGB	0	435	1	600	8	0	0	2	ninjaxguns FedXGaming yokedcross DiskLaunch VYorbit344 nnn27 CrowVanwa rotifer MajesticLyon NomNam Addeen bgs99c jaywjay03 iininjacat PatoNoiado IwaoYachi SenseiYhan Discodan12 killerbort AlphaPsn Fruite TLordBank	HeroOFF Hardware123 Jaker200	
+CLAN	1265	Thieves	Thief	0	102	4	5400	1	0	0	1		supermond	
+CLAN	1266	Last Alliance	LA	0	0	1	0	0	0	0	0	TheBigChip SSong	sekyle1321	
+CLAN	1267	sword art online	SAO	0	362	1	650	1	0	0	1		Aztecc	
+CLAN	1268	Heyoka 	Heyoka	0	177	2	2400	14	0	0	2			
+CLAN	1269	silver crow	Crow	0	0	5	6500	1	0	0	1		RedStarBR	
+CLAN	1270	aaaaa	aaaaa	0	0	1	0	5	0	0	2	HeySweet omem Magrelin	0ppai	
+CLAN	1271	Weapons of mass destruction	WOMD	0	0	1	0	1	0	0	1			
+CLAN	1272	Crease	Crease	0	0	1	450	0	0	0	0	RGBbank BasketLord Basket123 BackflipIt KineticF beanladem slayer95	LordBasket	
+CLAN	1273	Not-Good-Enough	NGE	0	0	1	1900	0	0	0	0		Seahag	
+CLAN	1274	GVNG	GVNG	0	69	3	4150	11	0	0	2			
+CLAN	1275	UnderGrab	UnderG	0	0	1	0	0	0	0	0		Reptile252	
+CLAN	1276	XY	XY	0	0	1	0	1	0	0	1	tippymango Zane35 Chadoud bone323 M7G4M3R NoP1337 kinqjak 22r6 BAMFXRECON GamerFlow1	Kawabongah M0neyM4ker CheyGamer DanceBbx	
+CLAN	1277	Union	Union	0	436	1	550	2	0	0	1	ESORDIAM		
+CLAN	1278	Oh	Oh	0	583	1	300	4	0	0	1	546345643 Sleepin453 Sleepin452 Sleepin451 Sleepin450		
+CLAN	1279	SLUMP	SLUMP	0	534	1	350	3	0	0	1		Ninja3002	
+CLAN	1280	Vanquish 	Vq	0	330	1	1100	2	0	0	1			
+CLAN	1281	Twins	Twins	0	0	1	750	0	0	0	0			
+CLAN	1282	Controll	Ctrl	0	437	1	200	3	0	0	1	Shadow KungFuMantis iLace Bedroom 5ide RedClan Rappi	nuclearzz Sikje milkman96 Odla	
+CLAN	1283	Classy	Classy	0	0	1	0	2	0	0	1			
+CLAN	1284	J5	J5	0	0	2	3000	0	0	0	0		allidoispw	
+CLAN	1285	High Noon	Noon	0	0	1	0	2	0	0	1	UnionBank	Neld	
+CLAN	1286	TIGER DEMON	SatanCat	0	0	1	0	2	0	0	1	Kouto OhBank ironmountain	TacoTerror	
+CLAN	1287	The Guardians	Guardian	0	382	1	500	5	0	0	2		Thugbank THESLUMP ADcena	
+CLAN	1288	Cursed	Cursed	0	0	5	6050	0	0	0	0	colerouse12	VQbank	
+CLAN	1289	Rejects	Rejects	0	0	1	300	0	0	0	0			
+CLAN	1290	The Fates	Fates	0	130	1	2150	4	0	0	1	ICOAJackz ConorCon	Hontas	
+CLAN	1291	Eons	eon	0	0	1	50	1	0	0	1		MrDerpo ClassyBank	
+CLAN	1292	Yami no akuma	Akuma	0	383	1	450	2	0	0	1			
+CLAN	1293	Legendary	Legend	0	0	1	0	0	0	0	0	iAcser	Jaizen	
+CLAN	1294	Leash	Leash	0	0	3	4550	0	0	0	0	TigDeBANK	Xxsensei2	
+CLAN	1295	SuperModdedMonkeys	SMM	0	501	1	100	6	0	0	2	zycogames XxDEVILBOYxX Roykhan PrettyRose	fearthee	
+CLAN	1296	Knob Gobblers	Kg	0	0	2	2950	0	0	0	0			
+CLAN	1297	Complex	Complex	0	384	1	850	2	0	0	1			
+CLAN	1298	Project Kickbox	ProjectK	0	502	1	50	11	0	0	2	TheFaithBank DailyGames MiniKiwi	MaxPara	
+CLAN	1299	The Squad	Squad	0	0	1	0	1	0	0	1	LandoroG		
+CLAN	1300	InterVention	INTER	0	234	1	2050	1	0	0	1	Xxbigbossx	palsnw	
+CLAN	1301	Demon clan	Sinned	0	440	1	200	15	0	0	2			
+CLAN	1302	Ayame	Ayame	0	0	1	0	2	0	0	1			
+CLAN	1303	Eagles	Eg	0	0	1	600	0	0	0	0	Sky3816 xSpo0keY bremo4 aloi18 Blsonic	Froixo07	
+CLAN	1304	Y__	Y__	0	206	1	1500	1	0	0	1			
+CLAN	1305	Kekkei Genkai	Genjutsu	0	193	1	2200	1	0	0	1	FrontlinerZ	TradeMarked	
+CLAN	1306	Delta	De	0	0	1	350	0	0	0	0	Nindjango Chunkeur Reedyjack Bluwack kaboom34 deadlyeye5 thekill666 ilangames reckless43	jeff1999 SpaceSmoke	
+CLAN	1307	brave	b	0	0	1	850	2	0	0	1		Adskfn	
+CLAN	1308	Rebels	Rebel	0	0	1	150	0	0	0	0		ICEEMAN1	
+CLAN	1309	Lycanthropy	Lycan	0	543	1	50	13	0	0	2	dfeet2 fion581 seedpile turkeylove PinkieDian LoveGirl16 ghostboy4 Baeisready BagelDoe	blooooppp ghostgirl4 FroZenClan ItzHavoc36 asomeray ItzKyle36	
+CLAN	1310	Registered Sex Offenders	Offended	0	0	1	700	0	0	0	0	mant	Twilight	
+CLAN	1311	Notion	Notion	0	0	1	0	3	0	0	1			
+CLAN	1312	Wildly Inept Pacifists	WIP	0	0	1	0	0	0	0	0		Mythoclast	
+CLAN	1313	Boredom	bored	0	340	1	300	25	0	0	2		KekkeiGenkai	
+CLAN	1314	Reincarnation	Rein	0	385	1	750	2	0	0	1			
+CLAN	1315	Execution	Ex	0	0	1	0	6	0	0	2	KeLai	MercuryVoid	
+CLAN	1316	Soap	Soap	0	279	1	1150	5	0	0	2			
+CLAN	1317	KoRuPTeD	KoRuPT	0	313	1	550	1	0	0	1	Probowser XMaster666 CptHump 0ROCKERSTAR0 Marineops Smaiv NeonIcy13 GdReaper BuyHat DogPro2 GirlySplat RealNK	grzegi991	
+CLAN	1318	Valor	Vr	0	0	1	0	2	0	0	1			
+CLAN	1319	Weeaboos	Weebs	0	342	1	800	6	0	0	2	PopShart CrashBound	Mozie	
+CLAN	1320	Dark Light	Light	0	0	1	0	0	0	0	0			
+CLAN	1321	raid akame	raid	0	0	1	0	1	0	0	1	MechaKoopa Sonicgo123 SwagShot Lederain HolyBaconZ xM0M0x ExCerberus ClockCuber 54556 Toneless Hydrogenex aaruu steamf Kirensk Janekus maderone iDab4You FsmScience Fywer HapekGaner Lucix12 toriwhore2 Coolman889 blackman21	HoeImRambo	
+CLAN	1322	HeartLess	HL	0	30	8	10250	5	0	0	2	ReinBank	Oidan	
+CLAN	1323	light	li	0	417	1	550	4	0	0	1	urbrained idkabout MewTheCute Tiacon DrEarRape	PandaKing2	
+CLAN	1324	BattleClan	Battle	0	293	1	750	9	0	0	2	SoapBank zaeh Felnin iDueler	poIiceman	
+CLAN	1325	Black	Black	0	443	1	550	8	0	0	2		XGetRektX6	
+CLAN	1326	The Last Trinity	TT	0	194	1	2200	5	0	0	2	VrBanks	Treves	
+CLAN	1327	The Aogiri Tree	AOG	0	0	5	6600	0	0	0	0	Yasuri WaifuLaifu LaifuWaifu KiTFaTe Beebie	TentacleGod	
+CLAN	1328	NEW GENERATIONS	NEWGENER	0	505	1	50	4	0	0	1			
+CLAN	1329	Pound It Fam	Pound	0	128	2	2350	6	0	0	2		RaidBank12	
+CLAN	1330	NotCompanions	nCpn	0	0	1	0	16	0	0	2	Sinchio tigerleis ssamzang EnderEye3 DisguisedG	simga Agzet nooblets21 coolipad PirateSD InuYahsha	
+CLAN	1331	night	n	0	43	5	6400	6	0	0	2	lightclan PopPunk jaxes9669 tomaliqi	Rocky304	
+CLAN	1332	Static	Static	0	479	1	350	1	0	0	1	scythe12 allmp Hiyak Yamatogawa FR33ZERr Pulosul2004 markskaggs TomImura	NiveNow	
+CLAN	1333	Cool Kids Club	Cool	0	0	1	0	2	0	0	1	BeforeBleach JewsMatter DyesMatter Africoont FootLongDong EyesMatter Trapmatter	LivesMatter	
+CLAN	1334	VanirGodz	VanirGod	0	8	10	18750	14	0	0	2	Jammit EatPotatos Ball killerPT29	Lambence2789	
+CLAN	1335	Nation_old	N_old	0	0	1	1000	0	0	0	0			
+CLAN	1336	Fear	Ar	0	151	1	1900	3	0	0	1	AnnoyingAF DarkShootr	BigOrange69 swag2020	
+CLAN	1337	Desire	Desire	0	0	1	100	0	0	0	0	PoundBank EpicElite0 KxsxiRyujin Pblo IvoryBlood d3vi1	Viamere	
+CLAN	1338	Raze	Raze	0	236	1	1150	13	0	0	2	Asstral Dentsukon Disque BoisQui Vodka84 StonDAB2 Mercurry Scratsh T1PDNitrox Ultimathon AperoxyZ Tomitash WaveWeed31 OkayTFA GrosNoob00	Fl0sex	
+CLAN	1339	The Flaming Pheonixes	TFP	0	0	1	0	8	0	0	2	FiddleJr TananPro Cosmiiiic Kradel Madara7113	kitsuu	
+CLAN	1340	Power	P	1	14	11	14300	5	0	0	2		eakwing	
+CLAN	1341	Virals	virals	0	117	2	2950	2	0	0	1		Inferno Furier	
+CLAN	1342	Beta	Beta	0	228	1	700	38	0	0	2	RemoFTW VanirBank Syrup NATSU11 Catsumoto Headkill22 Ambrogino Sabuc Darkcoolguy Eightsouls DEATH76 Kapi201 Jagon11	viper63	
+CLAN	1343	N00b Nest	Nnest	0	219	1	1350	2	0	0	1			
+CLAN	1344	IHighCombustion	IGNITION	0	402	1	500	5	0	0	2	FearB4nk	Carlisian GWBrick219	
+CLAN	1345	Hollow Berserk	Hollow	0	0	1	0	2	0	0	1			
+CLAN	1346	Blank	Blank	0	370	1	450	8	0	0	2	autist69 PandaGirly killing27 Xilbur jordstyle PKLE Kiimunosa Newbie26 PepesSon MLGIIDoge AtlTre22	TrizzyTan Swords213	
+CLAN	1347	As a Kite	asakite	0	0	1	0	1	0	0	1	HexGizmo allmusic 0nepanch Acidication Iceskimo Phairoh meca55	Wolfdog69	
+CLAN	1348	Juice	J_old	0	0	1	0	1	0	0	1	Vassallo Raven Zpeace RoyalMeat	BankPower	
+CLAN	1349	Psych0	psych0	0	0	1	650	0	0	0	0	ViralsBank	Juggernaut	
+CLAN	1350	Dae	Dae	0	205	1	1150	1	0	0	1	FiftyThree Liankan alecvan131 BetaBankk RaleDRager RockyFyst Novai UnHonored1 DJMemeStar Marfam Expiiry SuperMic Rhyff gumma HAZRD revenje davidseko killakid56 suryo3321 samuraistick angode Koohai lemonsinac lopitejo Kladeoc paridicse Flagbox FireFist59 Sokobon em0tion Rocca PKDK NINJUST alecvan127 HashtagSwag Jenju Khuun	Detoxified	
+CLAN	1351	RoyalEmpires	Royalty	0	171	1	1400	2	0	0	1		NameIsFish 2arua	
+CLAN	1352	Mercury	Mercury	0	0	1	0	2	0	0	1	CandyKane2 joaogamer0 epicguy341	BigPaPa810 sirspoon	
+CLAN	1353	Tiger	Tiger	0	511	1	50	3	0	0	1		WhitePhoenix Tetraed	
+CLAN	1354	Ikea	Ikea	0	0	1	1400	0	0	0	0	yeks2 G23 NotAproxyZ KymaniRanM PouetV2 iiFalco	PhantM80 X2XP	
+CLAN	1355	Imperial	Imperial	0	314	1	150	2	0	0	1		Env11	
+CLAN	1356	Fire Phoenix	FireP	0	297	1	450	7	0	0	2		flooq	
+CLAN	1357	Life	Life	0	0	1	650	0	0	0	0			
+CLAN	1358	Karma	Ka	0	344	1	250	1	0	0	1		xXSkymau5Xx	
+CLAN	1359	Noodle	Noodle	0	273	1	1050	3	0	0	1		ReasgeEX RoyaltyBank	
+CLAN	1360	Ykcor	Ykcor	0	0	1	0	2	0	0	1	swaggysir	Orangefour	
+CLAN	1361	THE LEGEND 27	27	0	0	1	0	0	0	0	0	tahouni Funny56	ItzPulse	
+CLAN	1362	THELEGEND27	legend27	0	514	1	50	11	0	0	2			
+CLAN	1363	GB	GB	0	0	1	0	4	0	0	1	DarkBabble	ImBat	
+CLAN	1364	Satire	Satire	0	9	10	15450	2	0	0	1	Prenze Shadow8912 SteakDog MrDarkTori FirePhoenix BloodyVine JapanAnime	StabYourIt josephibis james1020	
+CLAN	1365	Taken	Tk	0	0	1	0	3	0	0	1			
+CLAN	1366	Chivalry	C	0	10	10	17450	11	0	0	2		MiD02	
+CLAN	1367	Demolition	Demo	0	298	1	200	4	0	0	1	drfartsy	WMKing Fanker453	
+CLAN	1368	Hyuga Clan	Hyuga	0	0	1	0	9	0	0	2		Everliving bashsteel	
+CLAN	1369	Clout Gods	Cg	0	404	1	200	7	0	0	2			
+CLAN	1370	Victrix Mortalis	ViX	0	405	1	150	2	0	0	1	jordanp23 Shenji nickzth papa1998 mj52 DeadRealism Flash2552 GlacierCha StRiDeR100 faintpls	snowman515	
+CLAN	1371	glitch_	_	0	19	4	5950	11	0	0	2	VITINHOZIK Gunterfefe kinajo	guiborges	
+CLAN	1372	Deadly Sin	Dsin	0	42	4	5200	48	0	0	2	Spart4ge	bloodrec	
+CLAN	1373	Puscboi	Pboi	0	450	1	400	4	0	0	1	TakenBank Bugabuga69	w0lfdrag0n	
+CLAN	1374	Masturbation Isnt So Smart	Miss	0	0	1	0	1	0	0	1	ChivBank 12SMYLEY12 karhu16 PAiKOr YellowDrug Duckstone Piny Lopice lIifemoon Calco999	Breay	
+CLAN	1375	Destiny	Destiny	0	166	1	1900	3	0	0	1	NathanJk BankOfDemo	money52 CookieMS	
+CLAN	1376	Blitz Clan	Blitz	0	72	2	3050	10	0	0	2	Aceron13 flaruto69 Anthony1st Naruto9Tai Waffleton IOmegaLord dreklel ACplayz	npc333	
+CLAN	1377	WAPEW	WAPEW	0	0	1	0	1	0	0	1	Memetheif XYoung pablitosgm Weebooo FyreAir boymatter toribashking12	OneDance FourDance Weed	
+CLAN	1378	8	8	0	280	1	950	4	0	0	1	KillinS1N	Misiaczeq	
+CLAN	1379	Profit Stealers	Ps	0	0	1	750	0	0	0	0	Judaism 12388 RawrBomb Apixelated WolfGFX glitchBank Gridlocker NoobToriba Movester Skillzoz IceTaco	Skyfortune Icantseeyou	
+CLAN	1380	papa	papa	0	0	1	0	0	0	0	0	Anto2002 0BankSin0 aslan073 KingTim ToKeR31 notchnick Lyamtsev bboyHitman TrollzoR2 0Raik0 MyxTap Missingno0 ZifAron ENGS omegapro1 bgkj bvncmx12 ybrbnjc09 AnEggstick RIope zl0ig0g4 grisha9809 alesha2112 artilerie BioMech999 Sone kamikoto23 war4ik artjom9899 makspauk mrnitron Nord54 LastHate Kristina32 UnicornXXL 4mordoc lSigrYl frendz540 Dynjy shadowLUCHA Jugami Codetuds LaoKon VASYLII SlendrMan0 reosuke Abknight	Dark871	
+CLAN	1381	Astra	Astra	0	451	1	100	4	0	0	1	Reclevic Plury Nistery	Marlilissa	
+CLAN	1382	FurClan	FurClan	0	258	1	850	1	0	0	1		Hyzroden	
+CLAN	1383	Fast	Fast	0	452	1	350	4	0	0	1	Fuleko alison08 godmoster	libio kirito1s1	
+CLAN	1384	Two Faced	2F	0	220	1	700	2	0	0	1	P4b10T4c0 alanrose Kendapay Diandro Rainwayz Roxes1755 Kerdav24 NimmNimm lMiracle	HaramBank	
+CLAN	1385	Exterminate	EXT	0	0	1	0	1	0	0	1		Chaplin19	
+CLAN	1386	All we need is game	Aneed	0	264	1	1050	6	0	0	2	Eight3 Eight4 Eight5	Eight2	
+CLAN	1387	deadaero	Aasdasda	0	101	1	2050	3	0	0	1			
+CLAN	1388	Valhalla	Valhalla	0	456	1	100	10	0	0	2			
+CLAN	1389	Attack On Titan And Fairy Tail	AoT_FT	0	103	1	1950	25	0	0	2	AstraBank Creeds1st gore0314	Miiraak	
+CLAN	1390	Six Paths Sages	SixPaths	0	7	10	13300	41	0	0	2		FurBank	
+CLAN	1391	Shovellers United	sU	0	0	1	0	1	0	0	1	m1rk Fastbank Fishhh	Miracle	
+CLAN	1392	SKI	Ski	0	406	1	50	11	0	0	2	Handler	FapZilla	
+CLAN	1393	Lightnings Brothers	LB	0	0	1	750	0	0	0	0		Killer0205	
+CLAN	1394	ecchi	ecchi	0	275	1	650	12	0	0	2	stalker3DR AneedBank bypyro1 eldos228 CrisBan20	renat385	
+CLAN	1395	Clue	Clue	0	0	1	50	0	0	0	0	CheatVault	Alex Daelnir	
+CLAN	1396	Speeds Clan ResumeTime	SpeedsCl	0	0	1	0	4	0	0	1	ipMANjr Tomo1256 DaBoomba Dankineer Kryonix1 FockyKill Indigoo21 Chase1275 LKluke	max72397	
+CLAN	1397	Chill Clan	Chill	0	80	1	1750	5	0	0	2	spark926 ryguyxxx getmerked titanfall P0RN0 IAmTheAlex dumpling44 maddog226 Ozouto AotFTBank mememach1 LiderHunt heat05 PixelViper JammyJoel Tomato1998 Cyberway Iciest TheKing256 ItzMeBoi XxLUISExX destruidorp4 gyyupo25hi Bossman211 darrick123	hampa6565 Dillon4543	
+CLAN	1398	Alone	Alone	0	372	1	200	8	0	0	2	SIXbank Diabolic iKage spyguyguy sensei superbomb4 whyphie KitKaTe BashMyAsh W0nder Rahzah deathf inmmortal8 wasssaap poope Kuebiko poinfgsing pitzahut GodLemon losyh zarru TheTruStik MrMiyagy Firdeath Dkilla123 torassoohh Cubiqal Lion Parrudao12 Falcon dareflash artyrlol docdraco2 DarkHorsePyro Gbleek SendMeUrCrackers RelaxMotion shaderoses Fluhd TFNYT Swat	KillSwitch EverWolf Iccy	
+CLAN	1399	_underscore	__	0	0	1	0	2	0	0	1		MakikoKyan	
+CLAN	1400	Voxel	Voxel	0	0	1	0	1	0	0	1	BurninCrow Stiq SkiBank Mujem12 cjdiamonds MsPoison Ocilas2002 Accelarate benpsyalt benpsy GINGYSVIR	Numbrt	
+CLAN	1401	Sinners	SINS	0	23	5	6150	24	0	2	2			
+CLAN	1402	Wistful	Wist	0	129	1	1000	7	0	0	2	Weebkun Kwing714 iiHentai Laserkidz Nevoe karatekid28 weyou Ceytune owlbass lewd	ecchiBank Yami	
+CLAN	1403	All Stars	AS	0	1	10	26150	47	0	0	2			
+CLAN	1404	PoloseeSquadBoys	Polosee	0	0	1	0	1	0	0	1	Eruptor brendude1 SpeedBank	SpeedTime	
+CLAN	1405	Doctor	Dr	0	318	1	500	5	0	0	2	ChillBank0 Kraiz Wilded Hexionix	dillon7803	
+CLAN	1406	The Commanders Old Time	Command	0	11	9	11850	20	0	0	2	Azizin lolloer RealOne1 nabiel19 XGNToxic	Toribishu Fratguy joaodiniz	
+CLAN	1407	Shinrinyoko	y	0	251	1	900	1	0	0	1	Toriino	JCoIe	
+CLAN	1408	asdd	asdd	0	0	1	0	1	0	0	1		LyricHouse	
+CLAN	1409	lifelike	ll	0	0	1	0	2	0	0	1	TheRealFly Enerus natasnomed macart100 GenoxFR GenosFlame forsythe WinjaStar uMADbruH1 TheMate11 TheMate101 firelord99 RGBStreak Banan745 tikipunch8 BossCool xhentaix Tipsy17 TrixTrip IGetLucky NotTheMate RedBooza cornHUBBB maddoctor9	Chirss	
+CLAN	1410	Trance	Trance	0	12	7	9650	18	0	0	2	WistBank slicy TheOne372 BlankX99 depfan1231 fucboi369 TwenManCZ	apache789 MakBoss SirIpMan	
+CLAN	1411	Echo Clan	Echo	0	67	1	2150	3	0	0	1	StarsBank Deprived ph1l1 ConCon Icebear8 Juan Rust Sunther Morals Sparkaris Hunter0566 Legendexpe LastHour KUKMAN TheGumball Karmaaa Aedam sidtheepic Zalf Perfect Joltna Sexy Goku Envy Stonda2b RobbiX EvilTorified Vernaux DomDoDm60 Daeyyn Reaperos ElitePaladian Kenshain DLGXCDFFE Nope Cobra Corruption Mafia Minimoe Mani Vanish Blur ASEvents	Trestet Zwar krisis13 Charism	
+CLAN	1412	Death Raiders	Death	0	0	1	0	3	0	0	1		Analitik	
+CLAN	1413	Exotic	eXo	0	0	1	0	1	0	0	1	Sound haddiV tone34 Pirate	Phil	
+CLAN	1414	nub and Pro	nP	0	0	1	0	21	0	0	2	ibromsnt123 TG0D sleapmon ApatheticP lurpahi rogerx246 Snankz Kr3s ComandBank surfer2u khalil1 XlightX MsDovahkin ButtBeLit TheTeller imakeplays Rhawrz KingFC15	CxKenshin SilentKnT	
+CLAN	1415	EliteOverlords	Overlord	0	283	1	800	3	0	0	1		p7d3	
+CLAN	1416	JuicyFruit	J	0	334	1	450	5	0	0	2		Neurosis01	
+CLAN	1417	Spongebob Squarepants	Sponge	0	358	1	450	4	0	0	1		Carding Yukuzia	
+CLAN	1418	Decapitate And Slaughter	Decap	0	56	3	3650	10	0	0	2	PurgeVII hoihouhoi IKoorie EMBERSWIFT lop2 DeliMeatC3 iqrataylor T7Bank troller7 DamienDave CheweyCube Xlite7 valdibet UltraVortx Dana01 wolftr Despite adrian0801	ShadowMan76	
+CLAN	1419	Envy	Envy	0	0	1	0	0	0	0	0	xThricer pingwyll	FallenFang	
+CLAN	1420	MidNite	MN	0	35	4	4800	10	0	0	2	DEATHEVIL1 mega34	Taqq	
+CLAN	1421	The Aquarium	Water	0	461	1	100	3	0	0	1		ExoVault	
+CLAN	1422	Originals	o	0	0	4	5100	0	0	0	0		Nugeten Motorbutt3 motorbutt4 motorbutt5 motorbutt6 motorbutt7 motorbutt8 motorbutt9 Motorbutt0 MotorbuttA MotorbuttB MotorbuttC MotorbuttD MotorbuttI MotorbuttE MotorbuttH MotorbuttF MotorbuttG Motorbuttx MotorbuttJ motorbutt1	
+CLAN	1423	quest	q	0	0	1	0	1	0	0	1		alejambo lTeemo HoppyFeet	
+CLAN	1424	Solo	SOLO	0	91	1	1550	2	0	0	1	FruityBank etaceh lol12w MultiGod	Wolfy	
+CLAN	1425	Absolute Wise	AW	0	149	1	1050	2	0	0	1	Narkotc Aetania SteelAce	FIatLine Bob	
+CLAN	1426	Market gods tc lords	Market	0	0	1	0	0	0	0	0	Trivalyn shevee DecappedBank kacperunio ExHoly LucasPudi NightFuryN GabeElite david2800 David28000	Shogun Crocotta Kenjamyn Qukslice	
+CLAN	1427	Error	Error	0	16	5	6250	13	0	0	2			
+CLAN	1428	The Vipers	Viper	0	96	1	1600	5	0	0	2	bawwws ilikehulk Lorenzo911 Keyo360 aymaan125 DanSzew K1ll4rk47 NinjaFTW74 kkix	LostIsSad MNBank	
+CLAN	1429	Naix	Naix	0	0	1	0	4	0	0	1	0Bomb0 dayshwan	VBfund	
+CLAN	1430	Natural Selection	Darwin	0	0	2	3000	0	0	0	0			
+CLAN	1431	WarGods	WG	0	26	1	1200	12	0	0	2		DarudeSandstorm	
+CLAN	1432	Demon	Demonic	0	266	1	700	2	0	0	1	Justamess	NovaZelp	
+CLAN	1433	Kurupt Recruit Prosper	KRP	0	393	1	400	1	0	0	1	DoDoBank	Apck	
+CLAN	1434	Still Alive	SA	0	0	1	0	0	0	0	0			
+CLAN	1435	Baguette	By	0	77	1	1400	15	0	0	2	Zimwolf999 1Kuro1 Chocoj0ito batwing35 Jihadist ErrorVault SemiMan Insurrect XOsphere fluddah RCNFL titoine2 KikoKun16	Untrue	
+CLAN	1436	Kyushindo	KyD	0	0	1	0	8	0	0	2	silvertron bgjames1 GetDunkedOn Frohto PlayerID457910	Shre Yashrox NotPranit	
+CLAN	1437	Atomic Ashes	Atomic	0	208	1	700	11	0	0	2	NaixBank SemiHampa2 OhhJeey	Vurtune	
+CLAN	1438	Myst	Myst	0	0	1	0	2	0	0	1		JxL	
+CLAN	1439	Worm	Worm	0	0	1	400	0	0	0	0	ErickDav RageOff HydraOtry WiZZOradre Naixxxx Warabi FlameFoxy SemiHampa1 nohchi08 SemiPsix EGrun0n	hakker11	
+CLAN	1440	Twinswords Clan	Swords	0	0	1	0	0	0	0	0	ECLASSICAL	BLOCKER16	
+CLAN	1441	Where Hoes Only Imagine Staying	WhoIs	0	463	1	50	5	0	0	2		KuruptBank	
+CLAN	1442	Toxicity	Tox	0	291	1	400	7	0	0	2			
+CLAN	1443	Deadly Squad	DSQ	0	107	1	1150	2	0	0	1	Sunha Chades Hyrozen Jagger700 GhostLdv LeCacaBIeu HVNANitrox KazuyaFR yoloshow WeshAlors Tjulienm tHeMaXwell LaMonnaie	AproxyZ Dentsukun	
+CLAN	1444	Legends Never Die	Legends	0	21	4	5750	3	0	0	1	Thomasdule boyace Proxysim legamerkil kami59 AZzerty Santoclog lennonv	no1star	
+CLAN	1445	too much sauce	sauce	0	0	1	0	10	0	0	2	AtomBank Rookie149 RayzerJ FluffyTurd Ninjabot45 Azuritus MrRobato THEMAN657 Vassel FNAPARA	HLPMEPLZ	
+CLAN	1446	Nakama	Nakama	0	73	1	1900	7	0	0	2	MystCellar	robstar1234	
+CLAN	1447	i_am	i_am	0	0	1	50	0	0	0	0			
+CLAN	1448	Family	Fa	0	184	1	800	6	0	0	2			
+CLAN	1449	Tron	Tron	0	47	1	2150	5	0	0	2	gotrick105 xmto ManifestMP	KiniMiwi imkittykat	
+CLAN	1450	Girls Only	Girls	0	0	1	0	0	0	0	0	Kavil ToxicityBank iDreams Lampito 0Lucifer0 Angel	Stiqqed	
+CLAN	1451	Lucid Clan Recruitment	LucidCla	0	0	1	0	13	0	0	2		alximikrus DSQbank	
+CLAN	1452	No Club Lone Wolf	NCLW	0	0	1	0	23	0	0	2	360SWAG DillonCrew WhiteButton	Dillon	
+CLAN	1453	Bliss	Bliss	0	0	1	0	2	0	0	1	Dragon Finesse Nerfpls Fatul Turtlenecks Hoka Woeb Shockay911	slicc iTemp	
+CLAN	1454	Market Profesional	Shop	0	0	1	0	1	0	0	1	yaraslavak Primerium MCS4NEK lolnest Alimka	YustiFillar Ermak20006	
+CLAN	1455	Keepers	Keep	0	254	1	250	8	0	0	2			
+CLAN	1456	Next Generation	Next	0	111	1	1150	10	0	0	2	Kingsta Dscigs ucer FreshKek cial Kelling	TsuTsuCuckoo	
+CLAN	1457	PerryLegion	PL	0	0	1	0	11	0	0	2	Godsmack03 DragonMaster123 seifpopo NubzFurLif Oshun	komutsuki Shortwaves	
+CLAN	1458	AssBlasters	Ass	0	487	1	50	2	0	0	1			
+CLAN	1459	MonsterLand	MSD	0	81	1	250	8	0	0	2	OmniNight vladaSMA Towibasher LucidNite xDarkPlayz funlandkid GlitchHopG CarrionM gurlgamer69 maciek2770 RASECOK banana2244 MarcusDead	blood43 eboy32 ronnoc6781 FlipperDoodl	
+CLAN	1460	GeTSuM	OG	0	0	1	0	0	0	0	0	Ferras Liar iRookie Lexx Flash Gravity Osiris Aracoon MRootz fira Sasuke Lileath USB Natejas Ares iAwesome Rekd Rythm Warrior The7thVoid elvis Micah Facade	Orko Shmevin	
+CLAN	1461	Flawless Fighters Faction	Flawless	0	33	1	1950	31	0	0	2	chris5216 Swagatrini	BIissVault	
+CLAN	1462	Echo	ec	0	0	1	0	2	0	0	1	BankShop	N4zy	
+CLAN	1463	Rotten	RO	0	85	1	950	13	0	0	2	Disordered iiAsami Nethologal redkiller12 P0rt4bl3 Nodeaths Ozric Hudson811	SmokeShadow	
+CLAN	1464	Volt	vo	0	13	4	3800	35	0	0	2	madman57 PyrieBash LYFT fazjog jackferry oakashoka iDisrupt GameingGod Twat DuckButts	RRDube420 Dylan4000	
+CLAN	1465	Vision	Vision	0	0	1	300	0	0	0	0	LMioxi LGabe LPill LFaDeXBOI LTempest LHOPE LWattr Lrevx LBlur	LXeneizear LTheodore	
+CLAN	1466	Dinosaurs	Dino	0	0	1	0	4	0	0	1	RCNFL364 andtitties	WadeBank	
+CLAN	1467	ReBorN	ReBorN	0	241	1	100	42	0	0	2	MSDBank Wadaaa kalasaider xuiges228 nekro228 Trenih	Regrater sevah814	
+CLAN	1468	Team ICA	ICA	0	185	1	700	11	0	0	2			
+CLAN	1469	Oracle	Oracle	0	0	1	0	2	0	0	1	djarumblue SageBlock ricopaxton MasterXPL ichigoS27 ViciousOne CharlJay captain000 nanaomi BearRom Axton1996 dorios Arunesh31 robov1 goddragon hackerban d3m0n94 SUCKABEEP lillyx zHydra SoftFox shameflame Laaki wabuzz Junleeboi MacTurd lefarid123 Deviljho22	xCaptKillx iHang ToriGod08	
+CLAN	1470	Virtue	v	0	377	1	100	9	0	0	2	ImPhantom9	abxy	
+CLAN	1471	Impure Squad	Impure	0	52	2	1500	9	0	0	2	SenseiDc willamoo10 juanhs ngix MarsRed Vurb Avastin NoHaxJustTB Krises Suckest Afina Nasywa Bruneian	Darky	
+CLAN	1472	Adventure	a	0	66	1	450	18	0	3	2	Angelo2005 ItsSuso Ripper2423 zeolyninja Israphel30 Futuristy mallow05 JasperTS SkillOptic HoOh tochukwu NU1R1 ShisuiU THRSavage TBVoltBank LIONsoundc ItsLank Baptiste23 GrownUp Ash4136 rafadantas Bestalteve lolzyboy HaHaLOLOL Yuma LucarioSky Gizziboy TRN5 rafallini lujaks crive vitinho312 dead4your WooDYEN Latenci	nunonana	
+CLAN	1473	A House Divided	HD	0	0	1	400	0	0	0	0			
+CLAN	1474	Finding da Secrets	FDS	0	0	1	0	1	0	0	1	hakplays JawJawad mede3	dinoking51	
+CLAN	1475	AutoMatic	am	0	0	1	0	1	0	0	1	traler7611 GrappyPooh snake32 k3vs s2a2 holotronik HorizonT1 yKoala ThiefMoves H0onn butlikker LimeCl XSourisX fnaf123450 Lkings12 Tazare boomerz12 generalant 1Atomic1 MelonDrama DahLinks Blubbacon Thundaowna xxemi329xx BrysonBoi Dethwolff NathuBR Syphlex RebornNez ReBorNsBank Sulare HxCxChaos SeoCraft Ti0K1llu4 PLURPOLICE amon69 Adam Doomd PeteTheKid skillam Jenny	ShelliuX	
+CLAN	1476	Testerino	tstrn	0	0	1	0	0	0	2	0	Fred Snowman Xioi ICAstig Miracle11 Mack Lyp Hours JediMinds Hypersaint ackevisch	Swepples	
+CLAN	1477	tetsfdhjkasfhkjsdh	tdhsajkd	0	0	1	0	0	0	0	0	Tr3mor	Merer Tremor1218 PureWalrus	
+CLAN	1478	BloodShed	BS	0	0	1	0	0	1	0	0	Expresscard Firesun EonXeon Roukan Kirito Jasprem SuperLolicon	2ruD Itzanovich	
+CLAN	1479	Test Clan Test	tclt	0	0	1	0	0	1	0	0	kia1 Haluejah GuardianB English10 XnZs Neos0345 Snsei c0nsp1r3 TheDeadKing	Bman2095	
+CLAN	1480	heylookfreeclan	HYFC	0	0	1	0	0	1	0	0	Tempest AdvntrBank Prime oscar100 Tree Quack Grohenbird Kriegery EradeoStar Grrreatest Typhon Plus Smaguris Griselbrand DOOM shit	NANI Surge	
+CLAN	1481	666 Demons	666	0	0	1	0	2	0	0	1		Rissei alcohaulin soccerblue Farset KillerFeri Sthip Primal	
+CLAN	1482	Weebs	Weeb	0	0	1	0	0	0	2	0	Xylent	emoney79	
+CLAN	1483	Daddy	Daddy	0	0	1	0	0	0	0	0	AmVault		
+CLAN	1484	Torigod	Torigod	0	0	1	0	0	0	0	0			
+CLAN	1485	WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW	whatheck	0	0	1	0	0	1	0	0			
+CLAN	1486	FR4NC4AIS	ifrench	0	0	1	0	0	0	0	0			
+CLAN	1487	glOw	glOw	0	0	1	0	0	0	0	0	sir_old		
+CLAN	1488	outdream	outdream	0	0	1	0	2	0	0	1		Duckalt	
+CLAN	1489	pSycHo	pSH	0	0	1	0	1	0	0	1	Beats00	Luigizinhu perfect01	
+CLAN	1490	Apex Reborn	Apex	0	0	1	0	0	0	0	0			
+CLAN	1491	babababababa	babababa	0	0	1	0	0	1	0	0			
+CLAN	1492	awsom guys	awsomguy	0	0	1	0	5	0	0	2			
+CLAN	1493	NoStar	NoStar	0	0	1	0	0	0	0	0		ruby	
+CLAN	1494	aMob	AAP	0	0	1	0	0	0	0	0			
+CLAN	1495	Medicate	Medicate	0	0	1	0	0	0	0	0		Viking	
+CLAN	1496	Thugs	Thug	0	0	1	0	0	0	0	0	ILikPonys Adweathers	Ambad	
+CLAN	1497	Royal	R	0	0	1	0	1	0	0	1	LILPUMPOO	HolyZombie	
+CLAN	1498	Zeno	Zeno	0	0	1	0	0	0	0	0		Oricom	
+CLAN	1499	The Void	_v_	0	0	1	0	0	0	0	0			
+CLAN	1500	D Lil Pump Fanatics	D_Rose	0	0	1	0	0	1	0	0	KikAss1000 supercow10 CapitalSTEEZ Tayquan RaeSremmurd	shorts2007	
+CLAN	1501	wdwddwd	wdwdwd	0	0	1	0	0	1	0	0			
+CLAN	1502	Savior4	wassup	0	0	1	0	0	1	0	0			
+CLAN	1503	Hello	SaviorHa	0	0	1	0	0	1	0	0			
+CLAN	1504	Mama	Handsome	0	0	1	0	0	1	2	0			
+CLAN	1505	Legit	LGT	0	0	1	0	0	1	0	0		RoyalVault	
+CLAN	1506	CB	CockyBoi	0	0	1	0	0	1	0	0			
+CLAN	1507	Aa	Adopted	0	0	1	0	0	1	0	0			
+CLAN	1508	FromTheAshes	FTA	0	0	1	0	0	0	0	0		JSRFKING	
+CLAN	1509	S4	Savior4	0	0	1	0	0	0	0	0			
+CLAN	1510	Anal	Anal	0	0	1	0	3	0	0	1			
+CLAN	1511	Master Monster Team	MMT	0	0	1	0	0	1	0	0			
+CLAN	1512	Bad Banned Bandits	BBB	0	0	1	0	0	0	0	0			
+CLAN	1513	Gangster Urban Team	Gangster	0	0	1	0	0	1	2	0		MisterDarky	
+CLAN	1514	KoshkaTeam	KT	0	0	1	0	0	0	0	0			
+CLAN	1515	weaponsMasters	wm	0	0	1	0	0	0	0	0			
+CLAN	1516	MAX	M	0	0	1	0	0	0	0	0			
+CLAN	1517	Lick My Coconuts	LMC	0	0	1	0	2	0	0	1			
+CLAN	1518	Admins Of The World	Admin	0	74	1	200	10	0	3	2	Legend Veoo AnalBank	Tristan	
+CLAN	1519	c137	C137	0	0	1	0	0	0	0	0			
+CLAN	1520	GhostDivision	GD	0	0	1	0	2	0	2	1			
+CLAN	1521	Orthadox	oax	0	0	1	0	0	1	0	0			
+CLAN	1522	passive aggressive white girls	girl	0	0	1	0	0	1	0	0			
+CLAN	1523	Ebizou	Ebizou	0	0	1	0	0	0	0	0		kiska4	
+CLAN	1524	BOT	BOT	0	0	1	0	0	0	0	0			
+CLAN	1525	everlast	ever	0	0	1	0	0	0	0	0	LickBank	TheSk8rGod	
+CLAN	1526	boxy	box	0	0	1	0	0	0	0	0	apazon lmgwinner haydiepops Commas craigxhing Viktor100 Manitoda DEADMANS90 TiuNescau	TrialBob	
+CLAN	1527	Golf	Golf	0	0	1	0	1	1	0	1			
+CLAN	1528	brs da zoeira	brs	0	0	1	0	0	0	0	0	RooDie10 MoxSPI	Tim0n24	
+CLAN	1529	Boonk Gang	Kv241g	0	0	1	0	0	0	0	0		Riqo	
+CLAN	1530	Kvng	Kvng	0	0	1	0	0	0	0	0		dances	
+CLAN	1531	qa	qa	0	0	1	0	0	1	0	0			
+CLAN	1532	Scanner	SN	0	0	1	0	0	0	0	0			
+CLAN	1533	Inventive Thoughts	tH	0	0	1	0	2	0	0	1			
+CLAN	1534	asdfas	fffafdds	0	0	1	0	0	1	0	0			
+CLAN	1535	Suprem3	Suprem3	0	0	1	0	0	0	0	0	Regula	Pidgenere	
+CLAN	1536	Mediel	MED	0	0	1	0	0	1	0	0		edudeuruim	
+CLAN	1537	Of being every you	OBEVY	0	0	1	0	4	1	0	1			
+CLAN	1538	Digital	DIGI	0	0	1	0	0	0	0	0			
+CLAN	1539	Kung Fu Warriors	KFW	0	0	1	0	0	0	2	0		challenged	
+CLAN	1540	StaleMemes	Memes	0	0	1	0	0	0	0	0		StepaBet	
+CLAN	1541	Kung Fu Masters	KFM	0	0	1	0	3	1	2	1	Lanah iTBank	thurnax	
+CLAN	1542	J0KER	J0Ker	0	0	1	0	0	1	0	0			
+CLAN	1543	XeoP	XeoP	0	0	1	0	0	0	0	0			
+CLAN	1544	Ninjas With Autism 	NWA2	0	0	1	0	0	0	0	0			
+CLAN	1545	MIGHT	MIGHT	0	0	1	0	3	1	0	1	grumpyrob0 gabriQL27 TxxTZ abdul67	Joeythegoa	
+CLAN	1546	ToribashFightClub	TFC	0	0	1	0	0	0	0	0		CYK05	
+CLAN	1547	AnonymousHackers	HAK	0	0	1	0	0	0	0	0			
+CLAN	1548	BITCHNEEGER	Bniga	0	0	1	0	0	1	0	0			
+CLAN	1549	SunShine	Sun	0	0	1	0	2	0	2	1	Charliskyman LCGames sponge7809	gohan657	
+CLAN	1550	Jello People	JeLLo	0	0	1	0	0	0	0	0			
+CLAN	1551	Detroit Smashers	Smash	0	0	1	0	3	0	2	1		Suprem3	
+CLAN	1552	Assasins Of The North	AotN	0	0	1	0	3	0	2	1		WildRebel	
+CLAN	1553	MOOONSTERKILL	MK	0	0	1	0	0	1	0	0	abcdduck12 Bullred12 KingAlt12	MightyAlt	
+CLAN	1554	mlgpros	mlg2	0	0	1	0	1	0	2	1		PotatoMzM8	
+CLAN	1555	The Super Cancer	TSC	0	0	1	0	0	1	0	0			
+CLAN	1556	TheOnlyOne	TOO	0	0	1	0	0	1	2	0			
+CLAN	1557	Mother Natures Breast Milk	MamaMilk	0	0	1	0	0	0	0	0	starwolf12 Gnaww	Nikev2	
+CLAN	1558	Modify	mode	0	0	1	0	0	0	0	0		Wes0425	
+CLAN	1559	HALOSSS	HLS	0	0	1	0	0	1	0	0	SmashBank Cur5ed	Obito10	
+CLAN	1560	People of hashtaghi	ishi	0	0	1	0	0	0	0	0	dadestroy wizard6667 DaShady	Chijimatsu	
+CLAN	1561	ishi	ishishi	0	0	1	0	0	1	0	0			
+CLAN	1562	MC	MC	0	0	1	0	0	0	0	0	Ghour	mlgproguy2	
+CLAN	1563	Wapow2	_WAPOW_	0	0	1	0	0	0	0	0		Keshoihut	
+CLAN	1564	No Chill	nc	0	0	1	0	0	0	2	0		JeSss	
+CLAN	1565	The Checkered	TC	0	0	1	0	0	0	0	0			
+CLAN	1566	Assasins	Assasins	0	0	1	0	0	1	0	0			
+CLAN	1567	Nitussoproundofgalaxy	NTSPDGX	0	0	1	0	0	1	0	0			
+CLAN	1568	Illuminati Appreciation Society	IAS	0	0	1	0	0	0	0	0			
+CLAN	1569	CHECKERS	CS	0	0	1	0	3	0	0	1		Redundant	
+CLAN	1570	Rust	Rt	0	401	1	200	1	0	0	1			
+CLAN	1571	KNOW	KNOW	0	0	1	0	0	0	0	0		ArkhamKnight	
+CLAN	1572	R3kth4ns Community	R3kTh4ns	0	0	1	0	0	0	0	0			
+CLAN	1573	Bloodbath	BLOODBTH	0	0	1	0	0	1	0	0			
+CLAN	1574	MartialsArts	Martials	0	0	1	0	0	0	0	0		250J0KER	
+CLAN	1575	ToriFighters	TFight	0	0	1	0	0	0	0	0		RRdube2	
+CLAN	1576	brs	soubr	0	0	1	0	0	0	0	0		Aurxz	
+CLAN	1577	NightHunters	NiHun	0	0	1	0	3	0	0	1	idandixon7 Mezzoomo	B7TB	
+CLAN	1578	Mitos Brasileiros	BrMit	0	0	1	0	4	1	0	1	Verold	RustyMen	
+CLAN	1579	Saiyajins	Saiyajin	0	0	1	0	0	0	0	0		NABIL976	
+CLAN	1580	Avent	aet	0	0	1	0	0	1	0	0			
+CLAN	1581	Rank Gods	Rank	0	0	1	0	2	0	0	1		coolgut1	
+CLAN	1582	Milford	Milf	0	0	1	0	0	0	0	0			
+CLAN	1583	The Shadow	TheS	0	0	1	0	0	0	0	0			
+CLAN	1584	X clan	XC	0	178	1	1200	7	0	0	2		arthu23	
+CLAN	1585	AdminO	Breach	0	0	1	0	0	0	0	0	Sasha6509 dandans158	str1k6r	
+CLAN	1586	Dragonslayers	Dgs	0	0	1	0	0	0	0	0	xsMatths GustavinBr Augusto74 GabinhoBR	Lucecara Baguidoido	
+CLAN	1587	Burst	burst	0	0	1	0	3	0	0	1			
+CLAN	1588	#Doomd-20171015190301		0	0	1	0	0	0	0	0		Sneez5	
+CLAN	1589	doomd	Doom	0	0	1	0	4	0	2	1	SulidSneak	ToriStars	
+CLAN	1590	kkix	kkix	0	0	1	0	0	0	0	0			
+CLAN	1591	4 Bars Wolf	4B	0	0	1	0	0	0	2	0			
+CLAN	1592	MILF	MILFy	0	0	1	0	0	0	0	0	vapourized JSmusic treyndm MaxWarp xxnemoxx VoidSpace7	takasi	
+CLAN	1593	Hellsing	HellS	0	0	1	0	0	0	2	0		ProlessO	
+CLAN	1594	Hellsing ultimate	Hellsing	0	0	1	0	1	0	0	1			
+CLAN	1595	PewPew	Pew	0	114	1	200	13	0	0	2	Blimped	Telepathy Urgent	
+CLAN	1596	R4Z0R INFINITE	R4Z0R	0	0	1	0	0	0	0	0			
+CLAN	1597	LiT	LiT	0	0	1	0	1	0	0	1	Messaged NotFazjog cookielu	Enlyn	
+CLAN	1598	Manic	Manic	0	0	1	0	1	0	0	1			
+CLAN	1599	DeSpairUs	DSU	0	0	1	0	2	0	2	1			
+CLAN	1600	Forget	Forget	0	0	1	0	0	0	0	0		G0dMan	
+CLAN	1601	THE EXPIRED	te	0	0	1	0	1	0	0	1			
+CLAN	1602	Forgotten	FN	0	104	1	200	16	0	2	2		Igla1337	
+CLAN	1603	Carnage	Carnage	0	0	1	0	0	0	0	0	SoCoolMan Ares13254 SilentWraith DragoMaka1 Mafi0so Reqosted ToriKid4 666Butcher KVRI xrl5Life peac0ck01 Goraxin	xAhMaDx	
+CLAN	1604	Incersion	CER	0	295	1	0	18	0	2	2		SsJasonsS	
+CLAN	1605	Beggar Sect	beggar	0	0	1	0	0	1	0	0		NIKA1337	
+CLAN	1606	tubular	TuBu	0	0	1	0	0	0	0	0		Hellions	
+CLAN	1607	THUGSTER	Thus	0	0	1	0	0	0	0	0		SkulzT CrazedTech	
+CLAN	1608	AikidoMasters	Aikido	0	0	1	0	1	0	0	1			
+CLAN	1609	Ultimate Fighting	UFC	0	0	1	0	1	0	0	1	BlakkBear	Xpiry	
+CLAN	1610	Teletubbies	TELE	0	0	1	0	1	0	0	1	CaydenJ loljvms123 AyeJude Asfall HolyHood RedGamez Jockeus xXZacharXx waffle792 Psychism Boggeten Bane205 VillaiNM SonSwagku	TheForgetFul jelaun	
+CLAN	1611	GUCCI	Gucci	0	0	1	0	2	0	0	1			
+CLAN	1612	LouisVuttion	LV	0	0	1	0	0	0	0	0	Wu22UP Iwatchedit Perfect022 XxNinja0xX Reseen13 MyLeftNut8 buttmannz RedLaser16 0takuKing Jeraightzz nattie10 Beta39 Blazeros Davidpres bry22333 zuilserip Ultimateoz Asassinsa	GETREKT96	
+CLAN	1613	lame losers	Lame	0	0	1	0	0	1	0	0		mtTai	
+CLAN	1614	Kasmiro	Kay	0	0	1	0	0	0	0	0			
+CLAN	1615	Supa	Supa	0	0	1	0	1	0	0	1			
+CLAN	1616	Laughing Coffin	LC	0	0	1	0	0	0	0	0		KordLess MortyC137 RickC132	
+CLAN	1617	Dead	Untagged	0	0	1	0	0	1	0	0		BurgerPRO	
+CLAN	1618	Sponsor me	Sponsor	0	0	1	0	0	1	0	0		fugiggly	
+CLAN	1619	Stupid Clan Stupid Members	Stupid	0	0	1	0	1	1	0	1		Khary Quest	
+CLAN	1620	tori credit give	tcg	0	0	1	0	0	0	0	0			
+CLAN	1621	bloodtree	bT	0	0	1	0	1	0	0	1		kabma	
+CLAN	1622	AquaticPotato	AP	0	0	1	0	2	0	0	1			
+CLAN	1623	Secret Society	Society	0	0	1	0	0	0	0	0		FasleFate	
+CLAN	1624	Nocoperekt	NCK	0	0	1	0	0	1	0	0			
+CLAN	1625	Decadent	DCT	0	0	1	0	1	0	2	1			
+CLAN	1626	OFFENSIVE	OFE	0	0	1	0	1	1	2	1			
+CLAN	1627	Marshmello	mars	0	0	1	0	0	1	0	0		MrSofty	
+CLAN	1628	Half the Separation	Half	0	0	1	0	0	0	2	0		philippe13	
+CLAN	1629	gecko	gecko	0	0	1	0	4	0	0	1		bombaxceiba	
+CLAN	1630	Warriors of god	Wisdom	0	0	1	0	0	0	0	0		EnjGames sul1er	
+CLAN	1631	Pro2Tek	Tek	0	0	1	0	0	0	0	0			
+CLAN	1632	Brasil_Up	BrasilUp	0	0	1	0	1	0	0	1		Dokeyio	
+CLAN	1633	DARKlords	DRKL	0	0	1	0	2	0	0	1	DecaBank		
+CLAN	1634	Young Sauce Godz	SG	0	0	1	0	3	0	0	1	Darkk4	MasterUzi	
+CLAN	1635	New Gen Uchihas	NGU	0	0	1	0	0	0	0	0		CarPedO	
+CLAN	1636	Of The 9	9	0	0	1	0	0	0	0	0		Darkshot1	
+CLAN	1637	Aikido Universe 	AxU	0	419	1	200	4	1	3	1	Benky6 Cristian57 RASORTH33	SamuelGms	
+CLAN	1638	ConFUsioN	ConFUsed	0	0	1	0	1	0	0	1		blitzpro	
+CLAN	1639	godslayers	thegods	0	0	1	0	1	0	0	1			
+CLAN	1640	24k Gold	24k	0	0	1	0	1	1	0	1		PROTOCOLO2	
+CLAN	1641	Traps Are Not Gay	TANG	0	0	1	0	11	0	0	2		mastersmur jahnell123	
+CLAN	1642	A Clan	AClan	0	0	1	0	1	1	2	1	sammyboi20 xXJMLDXx FlushaMeN	DanGerG Unique12 TankThird	
+CLAN	1643	People Clan	DCFans	0	0	1	0	1	1	0	1			
+CLAN	1644	Overdose	Cocaine	0	0	1	0	0	0	0	0			
+CLAN	1645	SAD BOYS	Drugs	0	0	1	0	2	0	0	1	HentaiBash l3ullShit AikidoRevy YukiHentai	XxKimaXx	
+CLAN	1646	Auxiliary	AUX	0	0	1	0	4	0	0	1	silverman4	SCTribute	
+CLAN	1647	Terr0r	Ter	0	0	1	0	0	0	0	0	omarsami	GOD101KR	
+CLAN	1648	Terrors	Terrors	0	0	1	0	1	1	0	1		bat4676	
+CLAN	1649	Terr0rz	Terr	0	0	1	0	1	0	0	1	Immotay DesiTwist regotten Chazer Umbrella R0i GhostFlow bands Chab	Dobby Haku	
+CLAN	1650	Venus	Venus	0	0	1	0	0	0	0	0	kia2	17pi	
+CLAN	1651	VLTRA	VLTRA	0	0	1	0	1	0	0	1		Greencrush	
