@@ -2,6 +2,12 @@
 
 dofile("clans/errors.lua")
 
+DEAD = 0
+ALIVE = 1
+ACTIVE = 2
+
+CLANLOGODEFAULT = "clans/clanLogoDefault.tga"
+
 do
 	Clan = {}
 	Clan.__index = Clan
@@ -43,7 +49,7 @@ do
 			if string.match(ln, "^CLAN") then
 				local segments = 14
 				local data_stream = { ln:match(("([^\t]*)\t"):rep(segments)) }
-				if (data_stream[12] == "2") then
+				--if (data_stream[12] == "2") then
 					local clanid = tonumber(data_stream[2])
 					for i = 5, 12 do 
 						data_stream[i] = tonumber(data_stream[i])
@@ -59,7 +65,7 @@ do
 					end
 					entries = entries + 1
 					clans[entries] = clanid
-				end
+				--end
 			end
 		end
 		
@@ -208,7 +214,16 @@ do
 	end
 	
 	--Displays clan list
-	function Clan:showClanList()
+	function Clan:showClanList(mode)
+		local mode = mode or ACTIVE
+		local clans = {}
+		
+		for i = 1, #allClans do
+			if (ClanData[allClans[i]].isactive >= mode) then
+				table.insert(clans, allClans[i])
+			end
+		end
+		
 		local clanListView = UIElement:new( {	parent = clanView,
 												pos = { 0, clanTopBar.size.h },
 												size = {clanView.size.w, clanView.size.h - clanTopBar.size.h - 40} } )
@@ -232,7 +247,7 @@ do
 												size = {25, clanListView.size.h - listEntryHeight},
 												bgColor = {0,0,0,0.5} } )
 		
-		local scrollScale = (clanListClanArea.size.h) / (#allClans * listEntryHeight)
+		local scrollScale = (clanListClanArea.size.h) / (#clans * listEntryHeight)
 		local scrollBarInteractive = true
 		
 		if (scrollScale > 1) then
@@ -251,7 +266,7 @@ do
 													pressedColor = {1,1,1,0.5},
 													scrollEnabled = true } )
 		
-		for i = 1, #allClans do
+		for i = 1, #clans do
 			local isEven = 0
 			if (i / 2 == math.floor(i / 2)) then 
 				isEven = 0.2
@@ -287,42 +302,42 @@ do
 				-- Draw clan info
 				local textScaleMod = 0.82
 				
-				local clanRank = ClanData[allClans[i]].rank
+				local clanRank = ClanData[clans[i]].rank
 				if (clanRank == 0) then 
 					clanRank = "-"
 				end
 				set_color(1,1,1,1)
 				clanListClanRank[i]:uiText(clanRank, nil, nil, FONTS.MEDIUM, CENTER, textScaleMod)
 				
-				local clanTag = "(" .. ClanData[allClans[i]].clantag .. ")"
-				if (ClanData[allClans[i]].isofficial == 1) then
-					clanTag = "[" .. ClanData[allClans[i]].clantag .. "]"
+				local clanTag = "(" .. ClanData[clans[i]].clantag .. ")"
+				if (ClanData[clans[i]].isofficial == 1) then
+					clanTag = "[" .. ClanData[clans[i]].clantag .. "]"
 				end
 				clanListClanTag[i]:uiText(clanTag, nil, nil, FONTS.MEDIUM, RIGHT, textScaleMod)
 				
 				draw_quad(clanListClanName[i].pos.x - 5.5, clanListClanName[i].pos.y + 10, 1, 20)
-				local clanName = ClanData[allClans[i]].clanname
+				local clanName = ClanData[clans[i]].clanname
 				if (get_string_length(clanName, FONTS.MEDIUM) * textScaleMod > clanListClanName[i].size.w) then
 					clanListClanName[i]:uiText(clanName, clanListClanName[i].pos.x, clanListClanName[i].pos.y, FONTS.MEDIUM, LEFT, textScaleMod)
 				else
 					clanListClanName[i]:uiText(clanName, clanListClanName[i].pos.x, clanListClanName[i].pos.y + 9, FONTS.MEDIUM, LEFT, textScaleMod)
 				end
 				
-				clanListClanMembers[i]:uiText(ClanData[allClans[i]].memberstotal .. "/" .. LevelData[ClanData[allClans[i]].clanlevel + 1].maxmembers, clanListClanMembers[i].pos.x, clanListClanMembers[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
+				clanListClanMembers[i]:uiText(ClanData[clans[i]].memberstotal .. "/" .. LevelData[ClanData[clans[i]].clanlevel + 1].maxmembers, clanListClanMembers[i].pos.x, clanListClanMembers[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
 				
-				if (ClanData[allClans[i]].isofficial == 1) then
+				if (ClanData[clans[i]].isofficial == 1) then
 					clanListClanOfficial[i]:uiText("Official", clanListClanOfficial[i].pos.x, clanListClanOfficial[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
 				else 
 					clanListClanOfficial[i]:uiText("Unofficial", clanListClanOfficial[i].pos.x, clanListClanOfficial[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
 				end
 				
-				if (ClanData[allClans[i]].isfreeforall == 1) then
+				if (ClanData[clans[i]].isfreeforall == 1) then
 					clanListClanJoinMode[i]:uiText("Free for all", clanListClanJoinMode[i].pos.x, clanListClanJoinMode[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
 				else 
 					clanListClanJoinMode[i]:uiText("Invite Only", clanListClanJoinMode[i].pos.x, clanListClanJoinMode[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
 				end
 				
-				if (i ~= #allClans) then
+				if (i ~= #clans) then
 					draw_line(clanListClan[i].pos.x, clanListClan[i].pos.y + clanListClan[i].size.h - 1, clanListClan[i].pos.x + clanListClan[i].size.w, clanListClan[i].pos.y + clanListClan[i].size.h - 1, 1)
 				end
 			end)
@@ -330,7 +345,7 @@ do
 				function()
 					CLANLISTLASTPOS = { scroll = clanListScrollBar:getPos(), list = clanListClanArea:getPos() }
 					clanListView:kill()
-					Clan:showClan(allClans[i])
+					Clan:showClan(clans[i])
 				end, function() end)
 		end
 		
@@ -338,6 +353,33 @@ do
 											pos = {0,0},
 											bgColor = {0.2,0.2,0.2,1},
 											size = {clanView.size.w, listEntryHeight} } )
+											
+		clanListClanRank[#clans + 1] = UIElement:new( {	parent = clanListTopBar,
+												pos = {10, 9},
+												size = {60, clanListTopBar.size.h} } )
+		clanListClanTag[#clans + 1] = UIElement:new( {	parent = clanListTopBar,
+												pos = {80, 9},
+												size = {250, clanListTopBar.size.h} } )
+		clanListClanMembers[#clans + 1] = UIElement:new( {	parent = clanListTopBar,
+													pos = {390, 9},
+													size = {100, clanListTopBar.size.h - 18} } )
+		clanListClanOfficial[#clans + 1] = UIElement:new( {	parent = clanListTopBar,
+													pos = {500, 9},
+													size = {100, clanListTopBar.size.h} } )
+		clanListClanJoinMode[#clans + 1] = UIElement:new( {	parent = clanListTopBar,
+													pos = {610, 9},
+													size = {150, clanListTopBar.size.h} } )
+													
+		clanListTopBar:addCustomDisplay(false, function()
+			set_color(1,1,1,1)
+			draw_line(clanListTopBar.pos.x, clanListTopBar.pos.y, clanListTopBar.pos.x + clanListTopBar.size.w, clanListTopBar.pos.y, 2)
+			clanListClanRank[#clanListClanRank]:uiText("Rank", nil, nil, FONTS.MEDIUM, CENTER)
+			clanListClanTag[#clanListClanTag]:uiText("Clan Name", nil, nil, FONTS.MEDIUM, CENTER)
+			clanListClanMembers[#clanListClanMembers]:uiText("Members", nil, nil, FONTS.MEDIUM, CENTER)
+			clanListClanOfficial[#clanListClanOfficial]:uiText("Status", nil, nil, FONTS.MEDIUM, CENTER)
+			clanListClanJoinMode[#clanListClanJoinMode]:uiText("Join Mode", nil, nil, FONTS.MEDIUM, CENTER)
+		end)
+											
 		clanListBotBar = UIElement:new( {	parent = clanListView,
 											pos = {0,clanListView.size.h},
 											bgColor = {0.2,0.2,0.2,1},
@@ -358,7 +400,13 @@ do
 		clanViewBackButton:hide()
 		tabName:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
-			tabName:uiText("Clan List", tabName.pos.x, tabName.pos.y, FONTS.BIG, CENTER, 0.7)
+			local modeStr = "Active"
+			if (mode == DEAD) then
+				modeStr = "All"
+			elseif (mode == ALIVE) then
+				modeStr = "Alive"
+			end
+			tabName:uiText("Clan List - " .. modeStr, tabName.pos.x, tabName.pos.y, FONTS.BIG, CENTER, 0.7)
 			end)			
 	end
 	
@@ -367,7 +415,6 @@ do
 		local clanLevelValue = ClanData[clanid].clanlevel
 		local clanTopAch = ClanData[clanid].clantopach
 		local xpBarProgress = (ClanData[clanid].clanxp - LevelData[clanLevelValue].minxp) / (LevelData[clanLevelValue + 1].minxp - LevelData[clanLevelValue].minxp)
-		
 		if (xpBarProgress > 1) then
 			xpBarProgress = 1
 		end
@@ -440,51 +487,6 @@ do
 			set_color(1,1,1,1)
 			clanForumLink:uiText("Clan page on forum", clanForumLink.pos.x, clanForumLink.pos.y + 10, FONTS.MEDIUM, CENTER)
 		end)
---[[	local clanMembersOutline = UIElement:new( {	parent = clanInfoView,
-													pos = {10, 105},
-													size = {clanInfoView.size.w / 2 - 15, 90},
-													bgColor = {0,0,0,0.5},
-													shapeType = ROUNDED,
-													rounded = 10 } )
-		local clanMembers = UIElement:new( {	parent = clanMembersOutline,
-												pos = {2, 2},
-												size = {clanMembersOutline.size.w - 4, clanMembersOutline.size.h - 4},
-												bgColor = {1,1,1,0.5},
-												shapeType = clanMembersOutline.shapeType,
-												rounded = clanMembersOutline.rounded / 5 * 4 } )
-		clanMembers:addCustomDisplay(false, function()
-			set_color(1,1,1,1)
-			clanMembers:uiText("Total Members", clanMembers.pos.x, clanMembers.pos.y, FONTS.MEDIUM, CENTER)
-			clanMembers:uiText(ClanData[clanid].memberstotal, clanMembers.pos.x, clanMembers.pos.y + 35, FONTS.BIG, CENTER, 0.6)
-		end)
-		local clanLeadersOutline = UIElement:new( {	parent = clanInfoView,
-													pos = {-clanInfoView.size.w / 2 + 5, 105},
-													size = {clanInfoView.size.w / 2 - 15, 90},
-													bgColor = {0,0,0,0.5},
-													shapeType = ROUNDED,
-													rounded = 10 } )
-		local clanLeaders = UIElement:new( {	parent = clanLeadersOutline,
-												pos = {2, 2},
-												size = {clanLeadersOutline.size.w - 4, clanLeadersOutline.size.h - 4},
-												bgColor = {1,1,1,0.5},
-												shapeType = clanLeadersOutline.shapeType,
-												rounded = clanLeadersOutline.rounded / 5 * 4 } )
-		clanLeaders:addCustomDisplay(false, function()
-			set_color(1,1,1,1)
-			if (ClanData[clanid].leaders:match("%s")) then
-				clanLeaders:uiText("Leaders", clanLeaders.pos.x, clanLeaders.pos.y, FONTS.MEDIUM, CENTER)
-			else
-				clanLeaders:uiText("Leader", clanLeaders.pos.x, clanLeaders.pos.y, FONTS.MEDIUM, CENTER)
-			end
-		end)
-		local clanLeadersList = UIElement:new( {	parent = clanLeaders,
-													pos = {5, 22},
-													size = {40, clanLeaders.size.h - 20} } )
-		clanLeadersList:addCustomDisplay(false, function()
-			set_color(1,1,1,1)
-			clanLeadersList:uiText(ClanData[clanid].leaders, clanLeadersList.pos.x, clanLeadersList.pos.y, 4, LEFT, 0.8)
-		end)
---]]
 		local clanMembersOutline = UIElement:new( {	parent = clanInfoView,
 													pos = { 10, clanLevel.size.h + clanXpBarOutline.size.h + 20 },
 													size = {clanInfoView.size.w - 20, 90},
@@ -523,22 +525,19 @@ do
 													bgColor = {1,1,1,0.5},
 													shapeType = clanTopAchievementOutline.shapeType,
 													rounded = clanTopAchievementOutline.rounded / 5 * 4 } )
-		local clanTopAchIcon
-		local clanTopAchName
-		local clanTopAchDesc
 		if (clanTopAch ~= 0) then
-			clanTopAchIcon = UIElement:new( {	parent = clanTopAchievement,
+			local clanTopAchIcon = UIElement:new( {	parent = clanTopAchievement,
 												pos = {10, 8},
 												size = {80,80},
-												bgImage = "/clans/aid"..clanTopAch..".tga" } )
-			 clanTopAchName = UIElement:new( {	parent = clanTopAchievement,
+												bgImage = "/clans/achievements/"..clanTopAch..".tga" } )
+			local clanTopAchName = UIElement:new( {	parent = clanTopAchievement,
 												pos = {100, 5},
 												size = {clanTopAchievement.size.w - 110, 20} } )
 			clanTopAchName:addCustomDisplay(false, function()
 				set_color(1,1,1,1)
 				clanTopAchName:uiText(AchievementData[clanTopAch].achname, clanTopAchName.pos.x, clanTopAchName.pos.y, FONTS.MEDIUM, CENTER)
 			end)
-			clanTopAchDesc = UIElement:new( {	parent = clanTopAchievement,
+			local clanTopAchDesc = UIElement:new( {	parent = clanTopAchievement,
 													pos = {100, 30},
 													size = {clanTopAchievement.size.w - 110, 66} } )
 			clanTopAchDesc:addCustomDisplay(false, function()
@@ -546,7 +545,7 @@ do
 				clanTopAchDesc:uiText(AchievementData[clanTopAch].achdesc, clanTopAchDesc.pos.x, clanTopAchDesc.pos.y, FONTS.SMALL, CENTER)
 			end)
 		else
-			clanTopAchDesc = UIElement:new( {	parent = clanTopAchievement,
+			local clanTopAchDesc = UIElement:new( {	parent = clanTopAchievement,
 												pos = {50, 25},
 												size = {clanTopAchievement.size.w - 100, 50} } )
 			clanTopAchDesc:addCustomDisplay(false,
@@ -561,17 +560,22 @@ do
 											bgColor = {0,0,0,0.1},
 											shapeType = ROUNDED,
 											rounded = 10 } )
+		local clanRankText = "Rank "..ClanData[clanid].rank
+		if (ClanData[clanid].rank < 1) then
+			clanRankText = "Unranked"
+		end
 		clanRank:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
-			clanRank:uiText("Rank "..ClanData[clanid].rank, clanRank.pos.x, clanRank.pos.y + 5, FONTS.BIG, CENTER, 0.6)
+			clanRank:uiText(clanRankText, nil, clanRank.pos.y + 7, FONTS.BIG, CENTER, 0.6)
 		end)
 		local clanLogo = UIElement:new( {	parent = clanInfoRightView,
 											pos = { 0, clanRank.size.h + 5 },
 											size = { 250, 250 },
 											bgColor = {0,0,0,0.1},
-											bgImage = "/clans/cid"..clanid.."logo.tga",
+											bgImage =  { "../textures/clans/"..clanid..".tga", CLANLOGODEFAULT },
 											shapeType = ROUNDED,
 											rounded = 10 } )
+		loadClanLogo(clanid, clanLogo)
 		local clanJoin = UIElement:new( {	parent = clanInfoRightView,
 											pos = { 0, clanRank.size.h + clanLogo.size.h + 10 },
 											size = { 250, 60 },
@@ -620,6 +624,7 @@ do
 		clanViewBackButton:addMouseHandlers(function() end, function()
 			clanInfoView:kill()
 			clanInfoRightView:kill()
+			remove_hooks("logodownload")
 			Clan:showClanList()
 			end, function() end)
 		tabName:addCustomDisplay(false, function()
@@ -782,6 +787,36 @@ end
 		err(ERR.playerFolderClan)
 		file:close()
 		return false
+	end
+	
+	function loadClanLogo(clanid, element)
+		download_clan_logo(clanid)
+		local rotation = 0
+		local scale = 0
+		local transparency = 0.8
+		add_hook("draw2d", "logodownload", function()
+			local downloads = get_downloads()
+				set_color(0,0,0,transparency - 0.4)
+				draw_quad(element.pos.x, element.pos.y + element.size.h - 30, element.size.w, 30)
+				set_color(1,1,1,transparency)
+				draw_disk(element.pos.x + 65, element.pos.y + element.size.h - 15, 6, 12, 200, 1, rotation, scale, 0)
+				rotation = rotation + 2.5
+				scale = scale + 5
+				if (scale > 360) then
+					scale = -360
+				end
+				draw_text("Updating", element.pos.x + 90, element.pos.y + element.size.h - 28, FONTS.MEDIUM)
+				draw_text("Updating", element.pos.x + 90, element.pos.y + element.size.h - 28, FONTS.MEDIUM)
+			if (table.getn(downloads) == 0) then
+				if (transparency == 0.8) then
+					element:updateImage("../textures/clans/"..clanid..".tga", CLANLOGODEFAULT)
+				end
+				transparency = transparency - 0.05
+				if (transparency <= 0) then
+					remove_hooks("logodownload")
+				end
+			end
+		end)
 	end
 	
 	function Clan:drawVisuals()

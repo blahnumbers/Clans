@@ -12,7 +12,7 @@ RIGHT = 2
 BTN_DN = 1
 BTN_HVR = 2
 
-DEFAULTITEXTURE = "torishop/icons/defaulticon.tga"
+DEFTEXTURE = "torishop/icons/defaulticon.tga"
 
 do
 	UIElementManager = {}
@@ -54,17 +54,9 @@ do
 			elem.size.w = o.size[1]
 			elem.size.h = o.size[2]
 			if (o.text) then elem.text = o.text end
-			if (o.bgColor) then
-				elem.bgColor = o.bgColor
-			end
+			if (o.bgColor) then	elem.bgColor = o.bgColor end
 			if (o.bgImage) then 
-				local tempicon = io.open(o.bgImage)
-				if (tempicon == nil) then
-					elem.bgImage = load_texture(DEFAULTITEXTURE)
-				else
-					elem.bgImage = load_texture(o.bgImage)
-					io.close(tempicon)
-				end
+				elem:updateImage(o.bgImage)
 			end
 			if (o.shapeType) then 
 				elem.shapeType = o.shapeType
@@ -234,12 +226,26 @@ do
 		for i,v in pairs(self.child) do
 			v:kill()
 		end
-		self:hide()
-		self = {	pos = { x = nil, y = nil },
-					size = { w = nil, h = nil },
-					bgColor = { 1, 1, 1, 0 }
-				}
 		if (self.bgImage) then unload_texture(self.bgImage) end
+		for i,v in pairs(UIMouseHandler) do
+			if (self == v) then
+				table.remove(UIMouseHandler, i)
+				break
+			end
+		end
+		for i,v in pairs(UIVisualManager) do
+			if (self == v) then
+				table.remove(UIVisualManager, i)
+				break
+			end
+		end
+		for i,v in pairs(UIElementManager) do
+			if (self == v) then
+				table.remove(UIElementManager, i)
+				break
+			end
+		end
+		self = nil
 	end
 	
 	function UIElement:updatePos()
@@ -466,6 +472,32 @@ do
 		return pos
 	end
 	
+	-- Used to update background texture
+	-- Image can be either a string with texture path or a table where image[1] is a path and image[2] is default icon path
+	function UIElement:updateImage(image, default)
+		local default = default or DEFTEXTURE
+		if (image[2]) then
+			default = image[2]
+			image = image[1]
+		end
+		if (self.bgImage) then
+			unload_texture(self.bgImage)
+		end
+		local filename
+		if (image:find("^%.%./")) then
+			filename = image:gsub("%.%./", "data/")
+		else 
+			filename = "data/script/" .. image:gsub("^/", "")
+		end
+		local tempicon = io.open(filename, "r", 1)
+		if (tempicon == nil) then
+			self.bgImage = load_texture(default)
+		else
+			self.bgImage = load_texture(image)
+			io.close(tempicon)
+		end
+	end
+	
 	function textAdapt(str, font, scale, maxWidth)
 		local destStr = {}
 		
@@ -499,6 +531,7 @@ do
 		return (str:gsub('%(', '%%(')
 					:gsub('%)', '%%)')
 					:gsub('%[', '%%[')
-					:gsub('%]', '%%]'))
+					:gsub('%]', '%%]')
+					:gsub('%-', '%%-'))
 	end
 end
