@@ -13,6 +13,8 @@ BTN_DN = 1
 BTN_HVR = 2
 
 DEFTEXTURE = "torishop/icons/defaulticon.tga"
+DEFTEXTCOLOR = DEFTEXTCOLOR or { 1, 1, 1, 1 }
+DEFSHADOWCOLOR = DEFSHADOWCOLOR or { 0, 0, 0, 0.6 }
 
 do
 	UIElementManager = {}
@@ -27,7 +29,6 @@ do
 	function UIElement:new(o)
 		local elem = {	parent = nil,
 						child = {},
-						text = nil,
 						pos = { x = nil, y = nil },
 						shift = { x = nil, y = nil },
 						size = { w = nil, h = nil },
@@ -37,6 +38,7 @@ do
 						customDisplayTrue = false,
 						customDisplay = function() end,
 						interactive = false,
+						innerShadow = { 0, 0 },
 						}
 		setmetatable(elem, UIElement)
 		
@@ -53,10 +55,18 @@ do
 			end
 			elem.size.w = o.size[1]
 			elem.size.h = o.size[2]
-			if (o.text) then elem.text = o.text end
 			if (o.bgColor) then	elem.bgColor = o.bgColor end
 			if (o.bgImage) then 
 				elem:updateImage(o.bgImage)
+			end
+			if (o.innerShadow) then
+				elem.shadowColor = {} 
+				if (type(o.shadowColor[1]) == "table") then
+					elem.shadowColor = o.shadowColor
+				else
+					elem.shadowColor = { o.shadowColor, o.shadowColor }
+				end
+				elem.innerShadow = o.innerShadow
 			end
 			if (o.shapeType) then 
 				elem.shapeType = o.shapeType
@@ -256,6 +266,24 @@ do
 	
 	function UIElement:display()
 		if (not self.customDisplayTrue) then
+			if (self.innerShadow[1] > 0 or self.innerShadow[2] > 0) then
+				set_color(unpack(self.shadowColor[1]))
+				if (self.shapeType == ROUNDED) then
+					draw_disk(self.pos.x + self.rounded, self.pos.y + self.rounded, 0, self.rounded, 500, 1, -180, 90, 0)
+					draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.rounded, 0, self.rounded, 500, 1, 90, 90, 0)
+					draw_quad(self.pos.x + self.rounded, self.pos.y, self.size.w - self.rounded * 2, self.rounded)
+					draw_quad(self.pos.x, self.pos.y + self.rounded, self.size.w, self.size.h / 2 - self.rounded)
+					set_color(unpack(self.shadowColor[2]))
+					draw_disk(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded, 0, self.rounded, 500, 1, -90, 90, 0)
+					draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.size.h - self.rounded, 0, self.rounded, 500, 1, 0, 90, 0)
+					draw_quad(self.pos.x, self.pos.y + self.size.h / 2, self.size.w, self.size.h / 2 - self.rounded)
+					draw_quad(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded, self.size.w - self.rounded * 2, self.rounded)
+				else
+					draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h / 2)
+					set_color(unpack(self.shadowColor[2]))
+					draw_quad(self.pos.x, self.pos.y + self.size.h / 2, self.size.w, self.size.h / 2)
+				end
+			end
 			if (self.hoverState == BTN_HVR and self.hoverColor) then
 				set_color(unpack(self.hoverColor))
 			elseif (self.hoverState == BTN_DN and self.pressedColor) then
@@ -264,15 +292,15 @@ do
 				set_color(unpack(self.bgColor))
 			end
 			if (self.shapeType == ROUNDED) then
-				draw_disk(self.pos.x + self.rounded, self.pos.y + self.rounded, 0, self.rounded, 500, 1, -180, 90, 0)
-				draw_disk(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded, 0, self.rounded, 500, 1, -90, 90, 0)
-				draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.rounded, 0, self.rounded, 500, 1, 90, 90, 0)
-				draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.size.h - self.rounded, 0, self.rounded, 500, 1, 0, 90, 0)
-				draw_quad(self.pos.x + self.rounded, self.pos.y, self.size.w - self.rounded * 2, self.rounded)
-				draw_quad(self.pos.x, self.pos.y + self.rounded,self.size.w, self.size.h - self.rounded * 2)
-				draw_quad(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded, self.size.w - self.rounded * 2, self.rounded)
+				draw_disk(self.pos.x + self.rounded, self.pos.y + self.rounded + self.innerShadow[1], 0, self.rounded, 500, 1, -180, 90, 0)
+				draw_disk(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded - self.innerShadow[2], 0, self.rounded, 500, 1, -90, 90, 0)
+				draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.rounded + self.innerShadow[1], 0, self.rounded, 500, 1, 90, 90, 0)
+				draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.size.h - self.rounded - self.innerShadow[2], 0, self.rounded, 500, 1, 0, 90, 0)
+				draw_quad(self.pos.x + self.rounded, self.pos.y + self.innerShadow[1], self.size.w - self.rounded * 2, self.rounded)
+				draw_quad(self.pos.x, self.pos.y + self.rounded + self.innerShadow[1], self.size.w, self.size.h - self.rounded * 2 - self.innerShadow[2] - self.innerShadow[1])
+				draw_quad(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded - self.innerShadow[2], self.size.w - self.rounded * 2, self.rounded)
 			else
-				draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h)
+				draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h - self.innerShadow[1] - self.innerShadow[2])
 			end
 			if (self.bgImage) then
 				draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h, self.bgImage)
@@ -360,16 +388,16 @@ do
 	function UIElement:handleMouseHover(x, y)
 		local disable = nil
 		for i, v in pairs(tableReverse(UIMouseHandler)) do
-			if (disable) then
+			if (v.hoverState == BTN_DN) then
+				disable = true
+				v.btnHover(x,y)
+			elseif (disable) then
 				v.hoverState = false
 			elseif (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h) then
 				if (v.hoverState ~= BTN_DN) then
 					v.hoverState = BTN_HVR
 					disable = true
 				end
-				v.btnHover(x,y)
-			elseif (v.hoverState == BTN_DN) then
-				disable = true
 				v.btnHover(x,y)
 			else
 				v.hoverState = false
@@ -439,13 +467,13 @@ do
 		end
 	end
 	
-	function UIElement:setButtonColor()
+	function UIElement:getButtonColor()
 		if (self.hoverState == BTN_DN) then
-			set_color(unpack(self.pressedColor))
+			return self.pressedColor
 		elseif (self.hoverState == BTN_HVR) then
-			set_color(unpack(self.hoverColor))
+			return self.hoverColor
 		else
-			set_color(unpack(self.bgColor))
+			return self.bgColor
 		end
 	end
 	
@@ -538,8 +566,8 @@ do
 	
 	function draw_text_new(str, xPos, yPos, angle, scale, font, shadow, col1, col2)
 		local shadow = shadow or nil
-		local col1 = col1 or nil
-		local col2 = col2 or { 0, 0, 0, 0.6 }
+		local col1 = col1 or DEFTEXTCOLOR
+		local col2 = col2 or DEFSHADOWCOLOR
 		if (shadow) then
 			set_color(unpack(col2))
 			draw_text_angle_scale(str, xPos - shadow, yPos, angle, scale, font)
@@ -550,6 +578,9 @@ do
 			draw_text_angle_scale(str, xPos + shadow, yPos + shadow, angle, scale, font)
 			draw_text_angle_scale(str, xPos, yPos - shadow, angle, scale, font)
 			draw_text_angle_scale(str, xPos, yPos + shadow, angle, scale, font)
+			set_color(col2[1], col2[2], col2[3], 1)
+			draw_text_angle_scale(str, xPos + shadow * 2, yPos + shadow * 2, angle, scale, font)
+			draw_text_angle_scale(str, xPos + shadow * 2, yPos + shadow * 2, angle, scale, font)
 		end
 		if (col1) then
 			set_color(unpack(col1))

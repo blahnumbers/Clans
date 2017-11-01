@@ -134,10 +134,12 @@ do
 										rounded = 10 } )
 		clanView = UIElement:new( {	parent = clanViewBG,
 											pos = {4,4},
-											bgColor = {1,1,1,0.6},
+											bgColor = {0,0,0,0.1},
 											size = {clanViewBG.size.w - 8, clanViewBG.size.h - 8},
 											shapeType = clanViewBG.shapeType,
-											rounded = clanViewBG.rounded / 3 * 2 } )
+											rounded = clanViewBG.rounded / 3 * 2,
+											innerShadow = { 0, 5 },
+											shadowColor = {1,1,1,0.8} } )
 		clanTopBar = UIElement:new( {	parent = clanView,
 											pos = {0,0},
 											bgColor = {0.2,0.2,0.2,1},
@@ -435,13 +437,14 @@ do
 		clanViewBackButton:hide()
 		tabName:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
-			local modeStr = "Active"
+			--[[local modeStr = "Active"
 			if (mode == DEAD) then
 				modeStr = "All"
 			elseif (mode == ALIVE) then
 				modeStr = "Alive"
 			end
-			tabName:uiText("Clan List - " .. modeStr, tabName.pos.x, tabName.pos.y, FONTS.BIG, CENTER, 0.7)
+			tabName:uiText("Clan List - " .. modeStr, tabName.pos.x, tabName.pos.y, FONTS.BIG, CENTER, 0.7)--]]
+			tabName:uiText("Clan List", tabName.pos.x, tabName.pos.y, FONTS.BIG, CENTER, 0.7)
 			end)			
 	end
 	
@@ -456,31 +459,30 @@ do
 		end
 		
 		local clanInfoView = UIElement:new( {	parent = clanView,
-												pos = { 10, clanTopBar.size.h + 10 },
+												pos = { 265, clanTopBar.size.h + 10 },
 												size = { clanView.size.w - 275, clanView.size.h - clanTopBar.size.h - 20},
 												bgColor = {0,0,0,0.1},
 												shapeType = ROUNDED,
 												rounded = 10 } )
 		local clanInfoRightView = UIElement:new( {	parent = clanView,
-													pos = { -260, clanTopBar.size.h + 10 },
+													pos = { 10, clanTopBar.size.h + 10 },
 													size = { 250, clanView.size.h - clanTopBar.size.h - 20 } } )
 		local clanLevel = UIElement:new( {	parent = clanInfoView,
 											pos = {0, 5},
 											size = {clanInfoView.size.w, 35} } )
 		clanLevel:addCustomDisplay(false, function()
-			set_color(1,1,1,1)
-			clanLevel:uiText("Clan Level " .. clanLevelValue, clanLevel.pos.x, clanLevel.pos.y, FONTS.BIG, CENTER, 0.6)
+			clanLevel:uiText("Clan Level " .. clanLevelValue, clanLevel.pos.x, clanLevel.pos.y, FONTS.BIG, CENTER, 0.6, nil, 1.5)
 			end)
 		local clanXpBarOutline = UIElement:new( {	parent = clanInfoView,
 													pos = {10, 45},
 													size = {clanInfoView.size.w - 20, 50},
-													bgColor = {0.1,0.1,0.1,0.5},
+													bgColor = { 0.1, 0.1, 0.1, 0.5 },
 													shapeType = ROUNDED,
 													rounded = 10 } )
 		local clanXpBar = UIElement:new( {	parent = clanXpBarOutline,
 											pos = {2, 2},
 											size = {clanXpBarOutline.size.w - 4, clanXpBarOutline.size.h - 4},
-											bgColor = {1,1,1,0.3},
+											bgColor = {0.75,0.75,0.75,1},
 											shapeType = clanXpBarOutline.shapeType,
 											rounded = clanXpBarOutline.rounded / 5 * 4 } )
 		local clanXpBarProgress
@@ -488,17 +490,18 @@ do
 			clanXpBarProgress = UIElement:new( {	parent = clanXpBar,
 													pos = {0, 0},
 													size = {clanXpBar.size.w * xpBarProgress, clanXpBar.size.h},
-													bgColor = {0,0.8,0,0.7},
+													bgColor = {0.78,0,0.02,1},
 													shapeType = clanXpBar.shapeType,
-													rounded = clanXpBar.rounded } )
+													rounded = clanXpBar.rounded,
+													innerShadow = { 4, 4 },
+													shadowColor = { { 0.91, 0.34, 0.24, 1 }, { 0.33, 0, 0, 1 } } } )
 		end
 		
 		local clanXp = UIElement:new( {	parent = clanXpBar,
 										pos = {0, 8},
 										size = {clanInfoView.size.w, 25} } )
 		clanXp:addCustomDisplay(false, function()
-			set_color(1,1,1,1)
-			clanXp:uiText(ClanData[clanid].clanxp .. " / " .. LevelData[clanLevelValue + 1].minxp .. " XP", clanXp.pos.x, clanXp.pos.y, FONTS.BIG, CENTER, 0.5)
+			clanXp:uiText(ClanData[clanid].clanxp .. " / " .. LevelData[clanLevelValue + 1].minxp .. " XP", clanXp.pos.x, clanXp.pos.y, FONTS.BIG, CENTER, 0.5, nil, 1.5)
 		end)
 		local clanForumLinkOutline = UIElement:new( {	parent = clanInfoView,
 														pos = {clanInfoView.size.w / 2 - 150, -60},
@@ -520,8 +523,7 @@ do
 				open_url("http://forum.toribash.com/clan.php?clanid="..clanid)
 			end, nil)
 		clanForumLink:addCustomDisplay(false, function()
-			set_color(1,1,1,1)
-			clanForumLink:uiText("Clan page on forum", clanForumLink.pos.x, clanForumLink.pos.y + 10, FONTS.MEDIUM, CENTER)
+			clanForumLink:uiText("Clan page on forum", clanForumLink.pos.x, clanForumLink.pos.y + 10, FONTS.MEDIUM, CENTER, 1, nil, 1)
 		end)
 		local clanMembersOutline = UIElement:new( {	parent = clanInfoView,
 													pos = { 10, clanLevel.size.h + clanXpBarOutline.size.h + 20 },
@@ -539,9 +541,8 @@ do
 												shapeType = clanMembersOutline.shapeType,
 												rounded = clanMembersOutline.rounded / 5 * 4 } )
 		clanMembers:addCustomDisplay(false, function()
-			set_color(1,1,1,1)
-			clanMembers:uiText("Clan Roster", clanMembers.pos.x, clanMembers.pos.y + 5, FONTS.BIG, CENTER, 0.5)
-			clanMembers:uiText("Press to see all clan members", clanMembers.pos.x, clanMembers.pos.y + 45, FONTS.MEDIUM, CENTER, 0.9)
+			clanMembers:uiText("Clan Roster", clanMembers.pos.x, clanMembers.pos.y + 5, FONTS.BIG, CENTER, 0.5, nil, 1.5)
+			clanMembers:uiText("Click to see all clan members", clanMembers.pos.x, clanMembers.pos.y + 45, FONTS.MEDIUM, CENTER, 0.9, nil, 1)
 		end)
 		clanMembers:addMouseHandlers(nil,
 			function()
@@ -572,14 +573,13 @@ do
 												size = {clanTopAchievement.size.w - 110, 20} } )
 			clanTopAchName:addCustomDisplay(false, function()
 				set_color(1,1,1,1)
-				clanTopAchName:uiText(AchievementData[clanTopAch].achname, clanTopAchName.pos.x, clanTopAchName.pos.y, FONTS.MEDIUM, CENTER)
+				clanTopAchName:uiText(AchievementData[clanTopAch].achname, clanTopAchName.pos.x, clanTopAchName.pos.y, FONTS.MEDIUM, CENTER, 1, nil, 1)
 			end)
 			local clanTopAchDesc = UIElement:new( {	parent = clanTopAchievement,
 													pos = {100, 30},
 													size = {clanTopAchievement.size.w - 110, 66} } )
 			clanTopAchDesc:addCustomDisplay(false, function()
-				set_color(1,1,1,1)
-				clanTopAchDesc:uiText(AchievementData[clanTopAch].achdesc, clanTopAchDesc.pos.x, clanTopAchDesc.pos.y, FONTS.SMALL, CENTER)
+				clanTopAchDesc:uiText(AchievementData[clanTopAch].achdesc, clanTopAchDesc.pos.x, clanTopAchDesc.pos.y, 4, CENTER, 0.75, nil, nil, {0,0,0,1} )
 			end)
 		else
 			local clanTopAchDesc = UIElement:new( {	parent = clanTopAchievement,
@@ -587,8 +587,7 @@ do
 												size = {clanTopAchievement.size.w - 100, 50} } )
 			clanTopAchDesc:addCustomDisplay(false,
 				function()
-					set_color(1,1,1,1)
-					clanTopAchDesc:uiText("This clan hasnt chosen an achievement to display", clanTopAchDesc.pos.x, clanTopAchDesc.pos.y, FONTS.MEDIUM, CENTER)
+					clanTopAchDesc:uiText("This clan hasnt chosen an achievement to display", clanTopAchDesc.pos.x, clanTopAchDesc.pos.y, FONTS.MEDIUM, CENTER, 1, nil, 1)
 				end)
 		end
 		local clanRank = UIElement:new( {	parent = clanInfoRightView,
@@ -603,7 +602,7 @@ do
 		end
 		clanRank:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
-			clanRank:uiText(clanRankText, nil, clanRank.pos.y + 7, FONTS.BIG, CENTER, 0.6)
+			clanRank:uiText(clanRankText, nil, clanRank.pos.y + 7, FONTS.BIG, CENTER, 0.6, nil, 1.5)
 		end)
 		local clanLogo = UIElement:new( {	parent = clanInfoRightView,
 											pos = { 0, clanRank.size.h + 5 },
@@ -617,7 +616,7 @@ do
 		end
 		local clanJoin = UIElement:new( {	parent = clanInfoRightView,
 											pos = { 0, clanRank.size.h + clanLogo.size.h + 10 },
-											size = { 250, 60 },
+											size = { 250, 62 },
 											bgColor = {0,0,0,0.1},
 											shapeType = ROUNDED,
 											rounded = 10 } )
@@ -641,7 +640,7 @@ do
 												rounded = clanJoinButtonOutline.rounded / 5 * 4 } )
 			clanJoinButton:addCustomDisplay(false, function()
 				set_color(1,1,1,1)
-				clanJoinButton:uiText("Join Clan", clanJoinButton.pos.x, clanJoinButton.pos.y + 5, FONTS.MEDIUM, CENTER)
+				clanJoinButton:uiText("Join Clan", clanJoinButton.pos.x, clanJoinButton.pos.y + 5, FONTS.MEDIUM, CENTER, nil, nil, 1)
 			end)
 			clanJoinButton:addMouseHandlers(nil,
 				function()
@@ -650,12 +649,12 @@ do
 		elseif (ClanData[clanid].isfreeforall == 1) then
 			clanJoin:addCustomDisplay(false, function()
 				set_color(1,1,1,1)
-				clanJoin:uiText("Free to join", clanJoin.pos.x, clanJoin.pos.y + 15, FONTS.MEDIUM, CENTER)
+				clanJoin:uiText("Free to join", clanJoin.pos.x, clanJoin.pos.y + 15, FONTS.MEDIUM, CENTER, nil, nil, 1)
 			end)
 		else
 			clanJoin:addCustomDisplay(false, function()
 				set_color(1,1,1,1)
-				clanJoin:uiText("Invite Only", clanJoin.pos.x, clanJoin.pos.y + 15, FONTS.MEDIUM, CENTER)
+				clanJoin:uiText("Invite Only", clanJoin.pos.x, clanJoin.pos.y + 15, FONTS.MEDIUM, CENTER, nil, nil, 1)
 			end)
 		end
 
@@ -698,9 +697,9 @@ do
 		clanLeadersCaption:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
 			if (ClanData[clanid].leaders:match("%s")) then
-				clanLeadersCaption:uiText("Leaders", clanLeadersCaption.pos.x, clanLeadersCaption.pos.y, FONTS.MEDIUM, CENTER)
+				clanLeadersCaption:uiText("Leaders", clanLeadersCaption.pos.x, clanLeadersCaption.pos.y, FONTS.BIG, CENTER, 0.6, nil, 1.5)
 			else
-				clanLeadersCaption:uiText("Leader", clanLeadersCaption.pos.x, clanLeadersCaption.pos.y, FONTS.MEDIUM, CENTER)
+				clanLeadersCaption:uiText("Leader", clanLeadersCaption.pos.x, clanLeadersCaption.pos.y, FONTS.BIG, CENTER, 0.6, nil, 1.5)
 			end
 		end)
 		local clanMembersCaption = UIElement:new( {	parent = clanMembersView,
@@ -708,11 +707,11 @@ do
 													size = {clanMembersView.size.w, 25} } )
 		clanMembersCaption:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
-			clanMembersCaption:uiText("Members", clanMembersCaption.pos.x, clanMembersCaption.pos.y, FONTS.MEDIUM, CENTER)
+			clanMembersCaption:uiText("Members", clanMembersCaption.pos.x, clanMembersCaption.pos.y, FONTS.BIG, CENTER, 0.6, nil, 1.5)
 		end)
 		local clanLeaders = UIElement:new( {	parent = clanLeadersView,
-												pos = {10, clanLeadersCaption.size.h + 10},
-												size = {clanLeadersView.size.w - 20, clanLeadersView.size.h - clanLeadersCaption.size.h - 20} } )
+												pos = {10, clanLeadersCaption.size.h + 15},
+												size = {clanLeadersView.size.w - 20, clanLeadersView.size.h - clanLeadersCaption.size.h - 25} } )
 		local clanLeadersAll = textAdapt(ClanData[clanid].leaders, FONTS.MEDIUM, 1, 20)
 		local clanLeadersList = {}
 		for i = 1, #clanLeadersAll do
@@ -727,8 +726,8 @@ do
 													hoverColor = {0.8,0.8,0.8,1},
 													pressedColor = {0.4,0.4,0.4,1} } )
 			clanLeadersList[i]:addCustomDisplay(true, function()
-				clanLeadersList[i]:setButtonColor()
-				clanLeadersList[i]:uiText(clanLeadersAll[i], clanLeadersList[i].pos.x, clanLeadersList[i].pos.y, FONTS.MEDIUM)
+				local color = clanLeadersList[i]:getButtonColor()
+				clanLeadersList[i]:uiText(clanLeadersAll[i], clanLeadersList[i].pos.x, clanLeadersList[i].pos.y, FONTS.MEDIUM, CENTER, nil, nil, 1, color)
 			end)
 			clanLeadersList[i]:addMouseHandlers(nil, function()
 				open_url("http://forum.toribash.com/member.php?username="..clanLeadersAll[i])
@@ -737,44 +736,49 @@ do
 		local clanMembers = UIElement:new( {	parent = clanMembersView,
 												pos = {10, clanMembersCaption.size.h + 10},
 												size = {clanMembersView.size.w - 20, clanMembersView.size.h - clanMembersCaption.size.h - 20} } )
-		local clanMembersAll = textAdapt(ClanData[clanid].members, FONTS.MEDIUM, 1, 20)
+		local clanMembersAll = textAdapt(ClanData[clanid].members, FONTS.MEDIUM, 1, 30)
 		local clanMembersList = {}
-		local memberPos = { x = 0, y = -20 }
+		local memberPos = { x = 0, y = -25 }
 		for i = 1, #clanMembersAll do
-			memberPos.y = memberPos.y + 20
-			if (memberPos.x + 270 > clanMembers.size.w and memberPos.y + 60 > clanMembers.size.h) then
+			memberPos.y = memberPos.y + 30
+			if (memberPos.x + 320 > clanMembers.size.w and memberPos.y + 60 > clanMembers.size.h) then
 				clanMembersList[i] = UIElement:new ( {	parent = clanMembers,
-														pos = {-135, -40},
-														size = {135, 40},
+														pos = {-160, -40},
+														size = {160, 40},
+														bgColor = {0,0,0,0.6},
+														shapeType = ROUNDED,
+														rounded = 10 } )
+				clanMembersList[i + 1] = UIElement:new ( {	parent = clanMembersList[i],
+														pos = {2, 2},
+														size = {clanMembersList[i].size.w - 4, clanMembersList[i].size.h - 4},
 														bgColor = {1,1,1,.5},
 														shapeType = ROUNDED,
-														rounded = 10,
+														rounded = 8,
 														interactive = true,
 														hoverColor = {0.8,0.8,0.8,.5},
 														pressedColor = {0.4,0.4,0.4,.5} } )
-				clanMembersList[i]:addCustomDisplay(false, function()
-					set_color(0.2,0.2,0.2,1)
-					clanMembersList[i]:uiText("View All", clanMembersList[i].pos.x, clanMembersList[i].pos.y + 8, FONTS.MEDIUM, CENTER)
+				clanMembersList[i + 1]:addCustomDisplay(false, function()
+					clanMembersList[i + 1]:uiText("View All", clanMembersList[i].pos.x, clanMembersList[i].pos.y + 6, FONTS.MEDIUM, CENTER, nil, nil, 1)
 				end)
-				clanMembersList[i]:addMouseHandlers(nil, function()
+				clanMembersList[i + 1]:addMouseHandlers(nil, function()
 					open_url("http://forum.toribash.com/clan.php?clanid="..clanid)
 				end, nil)
 				break
 			end--]]
-			if (memberPos.y + 20 > clanMembers.size.h) then
-				memberPos.x = memberPos.x + 135
-				memberPos.y = 0
+			if (memberPos.y + 50 > clanMembers.size.h) then
+				memberPos.x = memberPos.x + 160
+				memberPos.y = 5
 			end
 			clanMembersList[i] = UIElement:new( {	parent = clanMembers,
 													pos = {memberPos.x, memberPos.y},
-													size = {135, 20},
+													size = {160, 40},
 													bgColor = {1,1,1,1},
 													interactive = true,
 													hoverColor = {0.8,0.8,0.8,1},
 													pressedColor = {0.4,0.4,0.4,1} } )
 			clanMembersList[i]:addCustomDisplay(true, function()
-				clanMembersList[i]:setButtonColor()
-				clanMembersList[i]:uiText(clanMembersAll[i], clanMembersList[i].pos.x, clanMembersList[i].pos.y, FONTS.MEDIUM, LEFT, 0.8)
+				local color = clanMembersList[i]:getButtonColor()
+				clanMembersList[i]:uiText(clanMembersAll[i], clanMembersList[i].pos.x, clanMembersList[i].pos.y, FONTS.MEDIUM, LEFT, nil, nil, 1, color)
 			end)
 			clanMembersList[i]:addMouseHandlers(nil, function()
 				open_url("http://forum.toribash.com/member.php?username="..clanMembersAll[i])
@@ -811,7 +815,7 @@ do
 		end
 		
 		for i = 1, #allClans do
-			if (ClanData[allClans[i]].clantag == tag) then
+			if (string.lower(ClanData[allClans[i]].clantag) == string.lower(tag)) then
 				return allClans[i]
 			end
 		end
