@@ -493,7 +493,13 @@ do
 		if (tempicon == nil) then
 			self.bgImage = load_texture(default)
 		else
-			self.bgImage = load_texture(image)
+			local textureid = load_texture(image)
+			if (textureid == -1) then
+				unload_texture(textureid)
+				self.bgImage = load_texture(default)
+			else
+				self.bgImage = textureid
+			end
 			io.close(tempicon)
 		end
 	end

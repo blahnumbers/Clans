@@ -7,6 +7,7 @@ ALIVE = 1
 ACTIVE = 2
 
 CLANLOGODEFAULT = "clans/clanLogoDefault.tga"
+LOGOCACHE = {}
 
 do
 	Clan = {}
@@ -21,12 +22,12 @@ do
 		local cln = {}
 		setmetatable(cln, Clan)
 	
-		if (player == "" or nil) then
+		if not (player:find('%[') or player:find('%(')) then
 			cln.clanid = nil
-			--player = get_master().master.nick
-		--end
-		else
-		cln.clanid = getClanId(player)
+		elseif (player == nil) then
+			cln.clanid = getClanId(get_master().master.nick, true)
+		else 
+			cln.clanid = getClanId(player)
 		end
 		return cln
 	end
@@ -173,6 +174,7 @@ do
 			function()
 				remove_hooks("clanVisual")
 				remove_hooks("uiMouseHandler")
+				remove_hooks("logodownload")
 				clanView:kill()
 			end, function() end)
 		clanViewQuitButton:addCustomDisplay(false, function()
@@ -345,7 +347,7 @@ do
 				function()
 					CLANLISTLASTPOS = { scroll = clanListScrollBar:getPos(), list = clanListClanArea:getPos() }
 					clanListView:kill()
-					Clan:showClan(clans[i])
+					Clan:showClan(clans[i], true)
 				end, function() end)
 		end
 		
@@ -411,7 +413,8 @@ do
 	end
 	
 	-- Displays single clan data
-	function Clan:showClan(clanid)
+	function Clan:showClan(clanid, logoReload)
+		local logoReload = logoReload or nil
 		local clanLevelValue = ClanData[clanid].clanlevel
 		local clanTopAch = ClanData[clanid].clantopach
 		local xpBarProgress = (ClanData[clanid].clanxp - LevelData[clanLevelValue].minxp) / (LevelData[clanLevelValue + 1].minxp - LevelData[clanLevelValue].minxp)
@@ -511,6 +514,7 @@ do
 			function()
 				clanInfoView:kill()
 				clanInfoRightView:kill()
+				remove_hooks("logodownload")
 				Clan:showMembers(clanid)
 			end, nil)
 		local clanTopAchievementOutline = UIElement:new( {	parent = clanInfoView,
@@ -575,7 +579,9 @@ do
 											bgImage =  { "../textures/clans/"..clanid..".tga", CLANLOGODEFAULT },
 											shapeType = ROUNDED,
 											rounded = 10 } )
-		loadClanLogo(clanid, clanLogo)
+		if (logoReload == true) then 
+			loadClanLogo(clanid, clanLogo)
+		end
 		local clanJoin = UIElement:new( {	parent = clanInfoRightView,
 											pos = { 0, clanRank.size.h + clanLogo.size.h + 10 },
 											size = { 250, 60 },
@@ -606,7 +612,7 @@ do
 			end)
 			clanJoinButton:addMouseHandlers(nil,
 				function()
-				open_url("http://forum.toribash.com/clan.php?clanid="..clanid.."?join=true")
+				open_url("http://forum.toribash.com/clan.php?clanid="..clanid.."&join=1")
 			end, nil)
 		elseif (ClanData[clanid].isfreeforall == 1) then
 			clanJoin:addCustomDisplay(false, function()
@@ -637,7 +643,7 @@ do
 			set_color(1,1,1,1)
 			tabName:uiText(clanNameStr, tabName.pos.x, tabName.pos.y, FONTS.BIG, CENTER, 0.7)
 			end)
-end
+	end
 	
 	-- Displays clan members and leaders
 	function Clan:showMembers(clanid)		
@@ -744,7 +750,7 @@ end
 		
 		clanViewBackButton:addMouseHandlers(function() end,
 			function()
-				Clan:showClan(clanid)
+				Clan:showClan(clanid, true)
 				clanLeadersView:kill()
 				clanMembersView:kill()
 			end, function() end)
@@ -761,35 +767,51 @@ end
 	end
 	
 
-	function getClanId(player)
-		local str = "[)\]]"
+	function getClanId(player, ownData)
+		local ownData = ownData or false
+		local str = "[%)%]]"
 		local strMatch = string.find(player, str)
+		local tag = string.sub(player, 2, strMatch - 1)
 		
-		if (strMatch) then
-			player = string.sub(player, strMatch + 1)
-		end
-		
-			local file = io.open("custom/" .. player .. "/item.dat", 'r', 60)
-			if (file == nil) then
-				err(ERR.playerFolderPerms)
-				file:close()
+		if (ownData) then
+			if (strMatch) then
+				player = string.sub(player, strMatch + 1)
+			end
+			
+				local file = io.open("custom/" .. player .. "/item.dat", 'r', 60)
+				if (file == nil) then
+					err(ERR.playerFolderPerms)
+					file:close()
+				return false
+			end
+					
+				for ln in file:lines() do
+				if string.match(ln, "CLAN 0;") then
+					local clanid = string.gsub(ln, "CLAN 0;", "")
+						clanid = tonumber(clanid)
+					file:close()
+					return clanid
+				end
+			end
+			err(ERR.playerFolderClan)
+			file:close()
 			return false
 		end
-				
-			for ln in file:lines() do
-			if string.match(ln, "CLAN 0;") then
-				local clanid = string.gsub(ln, "CLAN 0;", "")
-					clanid = tonumber(clanid)
-				file:close()
-				return clanid
+		
+		for i = 1, #allClans do
+			if (ClanData[allClans[i]].clantag == tag) then
+				return allClans[i]
 			end
 		end
-		err(ERR.playerFolderClan)
-		file:close()
-		return false
 	end
 	
 	function loadClanLogo(clanid, element)
+		for i = 1, #LOGOCACHE do
+			if (LOGOCACHE[i] == clanid) then
+				return
+			end
+		end
+		
 		download_clan_logo(clanid)
 		local rotation = 0
 		local scale = 0
@@ -813,6 +835,7 @@ end
 				end
 				transparency = transparency - 0.05
 				if (transparency <= 0) then
+					table.insert(LOGOCACHE, clanid)
 					remove_hooks("logodownload")
 				end
 			end
