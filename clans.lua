@@ -9,6 +9,7 @@ dofile("clans/clandatamanager.lua")
 dofile("clans/uielement.lua")
 
 allClans = Clan:getClanData()
+playerClan = Clan:getPlayerClan()
 local clan = Clan:create(ARG1)
 
 Clan:getLevelData()

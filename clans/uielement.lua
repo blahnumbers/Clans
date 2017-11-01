@@ -283,6 +283,7 @@ do
 	
 	function UIElement:show()
 		local num = nil
+				
 		for i,v in pairs(UIVisualManager) do
 			if (self == v) then
 				num = i
@@ -295,6 +296,10 @@ do
 			if (self.interactive) then
 				table.insert(UIMouseHandler, self)
 			end
+		end
+		
+		for i,v in pairs(self.child) do
+			v:show()
 		end
 	end
 	
@@ -331,10 +336,11 @@ do
 	end
 	
 	function UIElement:handleMouseDn(s, x, y)
-		for i, v in pairs(UIMouseHandler) do
+		for i, v in pairs(tableReverse(UIMouseHandler)) do
 			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h and s < 4) then
 				v.hoverState = BTN_DN
 				v.btnDown(s, x, y)
+				return
 			elseif (s >= 4 and v.scrollEnabled == true) then
 				v.btnDown(s, x, y)
 			end
@@ -342,22 +348,28 @@ do
 	end
 	
 	function UIElement:handleMouseUp(s, x, y)
-		for i, v in pairs(UIMouseHandler) do
+		for i, v in pairs(tableReverse(UIMouseHandler)) do
 			if (v.hoverState == BTN_DN) then
 				v.hoverState = nil
 				v.btnUp(s, x, y)
+				return
 			end
 		end
 	end
 	
 	function UIElement:handleMouseHover(x, y)
-		for i, v in pairs(UIMouseHandler) do
-			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h) then
+		local disable = nil
+		for i, v in pairs(tableReverse(UIMouseHandler)) do
+			if (disable) then
+				v.hoverState = false
+			elseif (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h) then
 				if (v.hoverState ~= BTN_DN) then
 					v.hoverState = BTN_HVR
+					disable = true
 				end
 				v.btnHover(x,y)
 			elseif (v.hoverState == BTN_DN) then
+				disable = true
 				v.btnHover(x,y)
 			else
 				v.hoverState = false
@@ -388,15 +400,15 @@ do
 		end
 	end
 	
-	function UIElement:uiText(str, x, y, font, align, scale, angle)
-		local font = font or FONTS.SMALL
+	function UIElement:uiText(str, x, y, font, align, scale, angle, shadow, col1, col2)
+		local font = font or FONTS.MEDIUM
 		local x = x or self.pos.x
 		local y = y or self.pos.y
 		local font_mod = font
 		local scale = scale or 1
 		local angle = angle or 0
 		local pos = 0
-		local align = align or LEFT
+		local align = align or CENTER
 		if (font == FONTS.BIG) then
 			font_mod = 4.5
 		elseif (font == 4) then
@@ -416,22 +428,13 @@ do
 				xPos = x
 			end
 			if (self.size.h > (pos + 1) * font_mod * 10 * scale + font_mod * 10) then
-				draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				if (font == FONTS.BIG or font == FONTS.MEDIUM) then
-					draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				end
+				draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
 				pos = pos + 1
 			elseif (i ~= #str) then
-				draw_text_angle_scale(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				if (font == FONTS.BIG or font == FONTS.MEDIUM) then
-					draw_text_angle_scale(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				end
+				draw_text_new(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
 				break		
 			else
-				draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				if (font == FONTS.BIG or font == FONTS.MEDIUM) then
-					draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				end
+				draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
 			end			
 		end
 	end
@@ -531,6 +534,38 @@ do
 			table.insert(destStr, newStr)
 			return str
 		end
+	end
+	
+	function draw_text_new(str, xPos, yPos, angle, scale, font, shadow, col1, col2)
+		local shadow = shadow or nil
+		local col1 = col1 or nil
+		local col2 = col2 or { 0, 0, 0, 0.6 }
+		if (shadow) then
+			set_color(unpack(col2))
+			draw_text_angle_scale(str, xPos - shadow, yPos, angle, scale, font)
+			draw_text_angle_scale(str, xPos - shadow, yPos - shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos - shadow, yPos + shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos + shadow, yPos, angle, scale, font)
+			draw_text_angle_scale(str, xPos + shadow, yPos - shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos + shadow, yPos + shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos, yPos - shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos, yPos + shadow, angle, scale, font)
+		end
+		if (col1) then
+			set_color(unpack(col1))
+		end
+		draw_text_angle_scale(str, xPos, yPos, angle, scale, font)
+		if (font == FONTS.MEDIUM or font == FONTS.BIG) then
+			draw_text_angle_scale(str, xPos, yPos, angle, scale, font)
+		end
+	end
+	
+	function tableReverse(tbl)
+		local tblRev = {}
+		for i, v in pairs(tbl) do
+			table.insert(tblRev, 1, v)
+		end
+		return tblRev
 	end
 	
 	function strEsc(str)

@@ -354,7 +354,8 @@ do
 		clanListTopBar = UIElement:new( {	parent = clanListView,
 											pos = {0,0},
 											bgColor = {0.2,0.2,0.2,1},
-											size = {clanView.size.w, listEntryHeight} } )
+											size = {clanView.size.w, listEntryHeight},
+											interactive = true } )
 											
 		clanListClanRank[#clans + 1] = UIElement:new( {	parent = clanListTopBar,
 												pos = {10, 9},
@@ -371,7 +372,7 @@ do
 		clanListClanJoinMode[#clans + 1] = UIElement:new( {	parent = clanListTopBar,
 													pos = {610, 9},
 													size = {150, clanListTopBar.size.h} } )
-													
+		
 		clanListTopBar:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
 			draw_line(clanListTopBar.pos.x, clanListTopBar.pos.y, clanListTopBar.pos.x + clanListTopBar.size.w, clanListTopBar.pos.y, 2)
@@ -387,12 +388,44 @@ do
 											bgColor = {0.2,0.2,0.2,1},
 											size = {clanView.size.w, listEntryHeight},
 											shapeType = clanView.shapeType,
-											rounded = clanView.rounded } )
+											rounded = clanView.rounded,
+											interactive = true } )
 											
 		clanListBotBar:addCustomDisplay(false, function()
 				set_color(0.2,0.2,0.2,1)
 				draw_quad(clanListBotBar.pos.x, clanListBotBar.pos.y, clanListBotBar.size.w, 10)
 			end)
+		
+		local myClan = UIElement:new( {	parent = clanListBotBar,
+										pos = { clanListBotBar.size.w / 2 - 150, 5 },
+										size = { 300, clanListBotBar.size.h - 6 },
+										shapeType = ROUNDED,
+										rounded = 5,
+										bgColor = {0.5,0.5,0.5,1},
+										interactive = true,
+										hoverColor = {0.7,0.7,0.7,1},
+										pressedColor = {0.3,0.3,0.3,1} } )
+		if (playerClan ~= 0) then
+			myClan:addCustomDisplay(false, function()
+				set_color(1,1,1,1)
+				myClan:uiText(ClanData[playerClan].clanname, nil, myClan.pos.y + 4)
+			end)
+			myClan:addMouseHandlers(function() end,
+				function()
+					CLANLISTLASTPOS = { scroll = clanListScrollBar:getPos(), list = clanListClanArea:getPos() }
+					clanListView:kill()
+					Clan:showClan(playerClan, true)
+				end, function() end)
+		else
+			myClan:addCustomDisplay(false, function()
+				set_color(1,1,1,1)
+				myClan:uiText("Create new clan", nil, myClan.pos.y + 4)
+			end)
+			myClan:addMouseHandlers(function() end,
+				function()
+					open_url("http://forum.toribash.com/clan_register.php")
+				end, function() end)
+		end
 		
 		clanListScrollBar.pressedPos = { x = 0, y = 0 }
 		
@@ -774,28 +807,7 @@ do
 		local tag = string.sub(player, 2, strMatch - 1)
 		
 		if (ownData) then
-			if (strMatch) then
-				player = string.sub(player, strMatch + 1)
-			end
-			
-				local file = io.open("custom/" .. player .. "/item.dat", 'r', 60)
-				if (file == nil) then
-					err(ERR.playerFolderPerms)
-					file:close()
-				return false
-			end
-					
-				for ln in file:lines() do
-				if string.match(ln, "CLAN 0;") then
-					local clanid = string.gsub(ln, "CLAN 0;", "")
-						clanid = tonumber(clanid)
-					file:close()
-					return clanid
-				end
-			end
-			err(ERR.playerFolderClan)
-			file:close()
-			return false
+			return Clan:getPlayerClan()
 		end
 		
 		for i = 1, #allClans do
@@ -803,6 +815,32 @@ do
 				return allClans[i]
 			end
 		end
+	end
+	
+	function Clan:getPlayerClan()
+		add_hook("console", "consoletext", function(s,i)
+			remove_hooks("consoletext")
+			return 1
+		end)
+		local file = io.open("custom/" .. get_master().master.nick .. "/item.dat", 'r', 1)
+		
+		if (file == nil) then
+			err(ERR.playerFolderPerms)
+			file:close()
+			return 0
+		end
+					
+		for ln in file:lines() do
+			if string.match(ln, "CLAN 0;") then
+				local clanid = string.gsub(ln, "CLAN 0;", "")
+				clanid = tonumber(clanid)
+				file:close()
+				return clanid
+			end
+		end
+		err(ERR.playerFolderClan)
+		file:close()
+		return 0
 	end
 	
 	function loadClanLogo(clanid, element)
