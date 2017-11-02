@@ -300,7 +300,7 @@ do
 				draw_quad(self.pos.x, self.pos.y + self.rounded + self.innerShadow[1], self.size.w, self.size.h - self.rounded * 2 - self.innerShadow[2] - self.innerShadow[1])
 				draw_quad(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded - self.innerShadow[2], self.size.w - self.rounded * 2, self.rounded)
 			else
-				draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h - self.innerShadow[1] - self.innerShadow[2])
+				draw_quad(self.pos.x, self.pos.y + self.innerShadow[1], self.size.w, self.size.h - self.innerShadow[1] - self.innerShadow[2])
 			end
 			if (self.bgImage) then
 				draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h, self.bgImage)

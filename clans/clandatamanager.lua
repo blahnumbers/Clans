@@ -290,7 +290,7 @@ do
 													size = {115, clanListClan[i].size.h} } )
 			clanListClanName[i] = UIElement:new( {	parent = clanListClan[i],
 													pos = {205, 0},
-													size = {175, clanListClan[i].size.h} } )
+													size = {175, clanListClan[i].size.h + 5} } )
 			clanListClanMembers[i] = UIElement:new( {	parent = clanListClan[i],
 														pos = {390, 9},
 														size = {100, clanListClan[i].size.h - 18} } )
@@ -304,41 +304,41 @@ do
 			-- run replacement draw function to ensure proper scroll work
 			clanListClan[i]:addCustomDisplay(false, function()				
 				-- Draw clan info
-				local textScaleMod = 0.82
+				local textScaleMod = 0.75
 				
 				local clanRank = ClanData[clans[i]].rank
 				if (clanRank == 0) then 
 					clanRank = "-"
 				end
 				set_color(1,1,1,1)
-				clanListClanRank[i]:uiText(clanRank, nil, nil, FONTS.MEDIUM, CENTER, textScaleMod)
+				clanListClanRank[i]:uiText(clanRank, nil, nil, 4, CENTER, textScaleMod)
 				
 				local clanTag = "(" .. ClanData[clans[i]].clantag .. ")"
 				if (ClanData[clans[i]].isofficial == 1) then
 					clanTag = "[" .. ClanData[clans[i]].clantag .. "]"
 				end
-				clanListClanTag[i]:uiText(clanTag, nil, nil, FONTS.MEDIUM, RIGHT, textScaleMod)
+				clanListClanTag[i]:uiText(clanTag, nil, nil, 4, RIGHT, textScaleMod)
 				
 				draw_quad(clanListClanName[i].pos.x - 5.5, clanListClanName[i].pos.y + 10, 1, 20)
 				local clanName = ClanData[clans[i]].clanname
 				if (get_string_length(clanName, FONTS.MEDIUM) * textScaleMod > clanListClanName[i].size.w) then
-					clanListClanName[i]:uiText(clanName, clanListClanName[i].pos.x, clanListClanName[i].pos.y, FONTS.MEDIUM, LEFT, textScaleMod)
+					clanListClanName[i]:uiText(clanName, clanListClanName[i].pos.x, clanListClanName[i].pos.y, 4, LEFT, textScaleMod)
 				else
-					clanListClanName[i]:uiText(clanName, clanListClanName[i].pos.x, clanListClanName[i].pos.y + 9, FONTS.MEDIUM, LEFT, textScaleMod)
+					clanListClanName[i]:uiText(clanName, clanListClanName[i].pos.x, clanListClanName[i].pos.y + 9, 4, LEFT, textScaleMod)
 				end
 				
-				clanListClanMembers[i]:uiText(ClanData[clans[i]].memberstotal .. "/" .. LevelData[ClanData[clans[i]].clanlevel + 1].maxmembers, clanListClanMembers[i].pos.x, clanListClanMembers[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
+				clanListClanMembers[i]:uiText(ClanData[clans[i]].memberstotal .. "/" .. LevelData[ClanData[clans[i]].clanlevel + 1].maxmembers, clanListClanMembers[i].pos.x, clanListClanMembers[i].pos.y, 4, CENTER, textScaleMod)
 				
 				if (ClanData[clans[i]].isofficial == 1) then
-					clanListClanOfficial[i]:uiText("Official", clanListClanOfficial[i].pos.x, clanListClanOfficial[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
+					clanListClanOfficial[i]:uiText("Official", clanListClanOfficial[i].pos.x, clanListClanOfficial[i].pos.y, 4, CENTER, textScaleMod)
 				else 
-					clanListClanOfficial[i]:uiText("Unofficial", clanListClanOfficial[i].pos.x, clanListClanOfficial[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
+					clanListClanOfficial[i]:uiText("Unofficial", clanListClanOfficial[i].pos.x, clanListClanOfficial[i].pos.y, 4, CENTER, textScaleMod)
 				end
 				
 				if (ClanData[clans[i]].isfreeforall == 1) then
-					clanListClanJoinMode[i]:uiText("Free for all", clanListClanJoinMode[i].pos.x, clanListClanJoinMode[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
+					clanListClanJoinMode[i]:uiText("Free for all", clanListClanJoinMode[i].pos.x, clanListClanJoinMode[i].pos.y, 4, CENTER, textScaleMod)
 				else 
-					clanListClanJoinMode[i]:uiText("Invite Only", clanListClanJoinMode[i].pos.x, clanListClanJoinMode[i].pos.y, FONTS.MEDIUM, CENTER, textScaleMod)
+					clanListClanJoinMode[i]:uiText("Invite Only", clanListClanJoinMode[i].pos.x, clanListClanJoinMode[i].pos.y, 4, CENTER, textScaleMod)
 				end
 				
 				if (i ~= #clans) then
@@ -378,11 +378,11 @@ do
 		clanListTopBar:addCustomDisplay(false, function()
 			set_color(1,1,1,1)
 			draw_line(clanListTopBar.pos.x, clanListTopBar.pos.y, clanListTopBar.pos.x + clanListTopBar.size.w, clanListTopBar.pos.y, 2)
-			clanListClanRank[#clanListClanRank]:uiText("Rank", nil, nil, FONTS.MEDIUM, CENTER)
-			clanListClanTag[#clanListClanTag]:uiText("Clan Name", nil, nil, FONTS.MEDIUM, CENTER)
-			clanListClanMembers[#clanListClanMembers]:uiText("Members", nil, nil, FONTS.MEDIUM, CENTER)
-			clanListClanOfficial[#clanListClanOfficial]:uiText("Status", nil, nil, FONTS.MEDIUM, CENTER)
-			clanListClanJoinMode[#clanListClanJoinMode]:uiText("Join Mode", nil, nil, FONTS.MEDIUM, CENTER)
+			clanListClanRank[#clanListClanRank]:uiText("Rank")
+			clanListClanTag[#clanListClanTag]:uiText("Clan Name")
+			clanListClanMembers[#clanListClanMembers]:uiText("Members")
+			clanListClanOfficial[#clanListClanOfficial]:uiText("Status")
+			clanListClanJoinMode[#clanListClanJoinMode]:uiText("Join Mode")
 		end)
 											
 		clanListBotBar = UIElement:new( {	parent = clanListView,
@@ -420,8 +420,7 @@ do
 				end, function() end)
 		else
 			myClan:addCustomDisplay(false, function()
-				set_color(1,1,1,1)
-				myClan:uiText("Create new clan", nil, myClan.pos.y + 4)
+				myClan:uiText("Create new clan", nil, myClan.pos.y + 4, nil, nil, nil, nil, 1)
 			end)
 			myClan:addMouseHandlers(function() end,
 				function()
