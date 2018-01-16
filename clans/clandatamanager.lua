@@ -178,7 +178,7 @@ do
 		clanViewQuitButton:addMouseHandlers(function() end,
 			function()
 				remove_hooks("clanVisual")
-				remove_hooks("uiMouseHandler")
+				--remove_hooks("uiMouseHandler")
 				remove_hooks("logodownload")
 				clanView:kill()
 			end, function() end)
@@ -819,11 +819,19 @@ do
 			remove_hooks("consoletext")
 			return 1
 		end)
-		local file = io.open("custom/" .. get_master().master.nick .. "/item.dat", 'r', 1)
+		
+		local player_name = get_master().master.nick
+		if (player_name == "") then
+			return 0
+		end
+		player_name = player_name:gsub("%b{}", "")
+		player_name = player_name:gsub("%b[]", "")
+		player_name = player_name:gsub("%b()", "")
+		
+		local file = io.open("custom/" .. player_name .. "/item.dat", 'r', 1)
 		
 		if (file == nil) then
 			err(ERR.playerFolderPerms)
-			file:close()
 			return 0
 		end
 					

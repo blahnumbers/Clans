@@ -17,12 +17,14 @@ DEFTEXTCOLOR = DEFTEXTCOLOR or { 1, 1, 1, 1 }
 DEFSHADOWCOLOR = DEFSHADOWCOLOR or { 0, 0, 0, 0.6 }
 
 do
-	UIElementManager = {}
-	UIVisualManager = {}
-	UIMouseHandler = {}
+	UIElementManager = UIElementManager or {}
+	UIVisualManager = UIVisualManager or {}
+	UIMouseHandler = UIMouseHandler or {}
 	
-	UIElement = {}
-	UIElement.__index = UIElement
+	if (not UIElement) then 
+		UIElement = {}
+		UIElement.__index = UIElement
+	end
 	
 	
 	-- Spawns new UI Element
@@ -438,7 +440,7 @@ do
 		local pos = 0
 		local align = align or CENTER
 		if (font == FONTS.BIG) then
-			font_mod = 4.5
+			font_mod = 5
 		elseif (font == 4) then
 			font_mod = 2.4
 		elseif (font == FONTS.SMALL) then
@@ -552,9 +554,9 @@ do
 	end
 	
 	function addWord(destStr, str, newStr, font, scale, maxWidth)		
-		local word = string.match(str, "%a+.")
+		local word = string.match(str, "%a+%p*[%a*]*.")
 		if ((get_string_length(newStr .. word, font) * scale) < maxWidth) then
-			str = str:gsub(word, "")
+			str = str:gsub(word, "", 1)
 			newStr = newStr..word
 			str = addWord(destStr, str, newStr, font, scale, maxWidth)
 			return str
