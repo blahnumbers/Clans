@@ -6,9 +6,10 @@ CLANLISTLASTPOS = { scroll = {}, list = {} }
 FREEJOINENABLED = true
 
 dofile("clans/clandatamanager.lua")
-dofile("clans/uielement.lua")
+dofile("toriui/uielement.lua")
 
 allClans = Clan:getClanData()
+playerClan = Clan:getPlayerClan()
 local clan = Clan:create(ARG1)
 
 Clan:getLevelData()

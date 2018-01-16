@@ -12,7 +12,9 @@ RIGHT = 2
 BTN_DN = 1
 BTN_HVR = 2
 
-DEFAULTITEXTURE = "torishop/icons/defaulticon.tga"
+DEFTEXTURE = "torishop/icons/defaulticon.tga"
+DEFTEXTCOLOR = DEFTEXTCOLOR or { 1, 1, 1, 1 }
+DEFSHADOWCOLOR = DEFSHADOWCOLOR or { 0, 0, 0, 0.6 }
 
 do
 	UIElementManager = {}
@@ -27,7 +29,6 @@ do
 	function UIElement:new(o)
 		local elem = {	parent = nil,
 						child = {},
-						text = nil,
 						pos = { x = nil, y = nil },
 						shift = { x = nil, y = nil },
 						size = { w = nil, h = nil },
@@ -37,6 +38,7 @@ do
 						customDisplayTrue = false,
 						customDisplay = function() end,
 						interactive = false,
+						innerShadow = { 0, 0 },
 						}
 		setmetatable(elem, UIElement)
 		
@@ -53,18 +55,18 @@ do
 			end
 			elem.size.w = o.size[1]
 			elem.size.h = o.size[2]
-			if (o.text) then elem.text = o.text end
-			if (o.bgColor) then
-				elem.bgColor = o.bgColor
-			end
+			if (o.bgColor) then	elem.bgColor = o.bgColor end
 			if (o.bgImage) then 
-				local tempicon = io.open(o.bgImage)
-				if (tempicon == nil) then
-					elem.bgImage = load_texture(DEFAULTITEXTURE)
+				elem:updateImage(o.bgImage)
+			end
+			if (o.innerShadow) then
+				elem.shadowColor = {} 
+				if (type(o.shadowColor[1]) == "table") then
+					elem.shadowColor = o.shadowColor
 				else
-					elem.bgImage = load_texture(o.bgImage)
-					io.close(tempicon)
+					elem.shadowColor = { o.shadowColor, o.shadowColor }
 				end
+				elem.innerShadow = o.innerShadow
 			end
 			if (o.shapeType) then 
 				elem.shapeType = o.shapeType
@@ -234,12 +236,26 @@ do
 		for i,v in pairs(self.child) do
 			v:kill()
 		end
-		self:hide()
-		self = {	pos = { x = nil, y = nil },
-					size = { w = nil, h = nil },
-					bgColor = { 1, 1, 1, 0 }
-				}
 		if (self.bgImage) then unload_texture(self.bgImage) end
+		for i,v in pairs(UIMouseHandler) do
+			if (self == v) then
+				table.remove(UIMouseHandler, i)
+				break
+			end
+		end
+		for i,v in pairs(UIVisualManager) do
+			if (self == v) then
+				table.remove(UIVisualManager, i)
+				break
+			end
+		end
+		for i,v in pairs(UIElementManager) do
+			if (self == v) then
+				table.remove(UIElementManager, i)
+				break
+			end
+		end
+		self = nil
 	end
 	
 	function UIElement:updatePos()
@@ -250,6 +266,24 @@ do
 	
 	function UIElement:display()
 		if (not self.customDisplayTrue) then
+			if (self.innerShadow[1] > 0 or self.innerShadow[2] > 0) then
+				set_color(unpack(self.shadowColor[1]))
+				if (self.shapeType == ROUNDED) then
+					draw_disk(self.pos.x + self.rounded, self.pos.y + self.rounded, 0, self.rounded, 500, 1, -180, 90, 0)
+					draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.rounded, 0, self.rounded, 500, 1, 90, 90, 0)
+					draw_quad(self.pos.x + self.rounded, self.pos.y, self.size.w - self.rounded * 2, self.rounded)
+					draw_quad(self.pos.x, self.pos.y + self.rounded, self.size.w, self.size.h / 2 - self.rounded)
+					set_color(unpack(self.shadowColor[2]))
+					draw_disk(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded, 0, self.rounded, 500, 1, -90, 90, 0)
+					draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.size.h - self.rounded, 0, self.rounded, 500, 1, 0, 90, 0)
+					draw_quad(self.pos.x, self.pos.y + self.size.h / 2, self.size.w, self.size.h / 2 - self.rounded)
+					draw_quad(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded, self.size.w - self.rounded * 2, self.rounded)
+				else
+					draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h / 2)
+					set_color(unpack(self.shadowColor[2]))
+					draw_quad(self.pos.x, self.pos.y + self.size.h / 2, self.size.w, self.size.h / 2)
+				end
+			end
 			if (self.hoverState == BTN_HVR and self.hoverColor) then
 				set_color(unpack(self.hoverColor))
 			elseif (self.hoverState == BTN_DN and self.pressedColor) then
@@ -258,15 +292,15 @@ do
 				set_color(unpack(self.bgColor))
 			end
 			if (self.shapeType == ROUNDED) then
-				draw_disk(self.pos.x + self.rounded, self.pos.y + self.rounded, 0, self.rounded, 500, 1, -180, 90, 0)
-				draw_disk(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded, 0, self.rounded, 500, 1, -90, 90, 0)
-				draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.rounded, 0, self.rounded, 500, 1, 90, 90, 0)
-				draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.size.h - self.rounded, 0, self.rounded, 500, 1, 0, 90, 0)
-				draw_quad(self.pos.x + self.rounded, self.pos.y, self.size.w - self.rounded * 2, self.rounded)
-				draw_quad(self.pos.x, self.pos.y + self.rounded,self.size.w, self.size.h - self.rounded * 2)
-				draw_quad(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded, self.size.w - self.rounded * 2, self.rounded)
+				draw_disk(self.pos.x + self.rounded, self.pos.y + self.rounded + self.innerShadow[1], 0, self.rounded, 500, 1, -180, 90, 0)
+				draw_disk(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded - self.innerShadow[2], 0, self.rounded, 500, 1, -90, 90, 0)
+				draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.rounded + self.innerShadow[1], 0, self.rounded, 500, 1, 90, 90, 0)
+				draw_disk(self.pos.x + self.size.w - self.rounded, self.pos.y + self.size.h - self.rounded - self.innerShadow[2], 0, self.rounded, 500, 1, 0, 90, 0)
+				draw_quad(self.pos.x + self.rounded, self.pos.y + self.innerShadow[1], self.size.w - self.rounded * 2, self.rounded)
+				draw_quad(self.pos.x, self.pos.y + self.rounded + self.innerShadow[1], self.size.w, self.size.h - self.rounded * 2 - self.innerShadow[2] - self.innerShadow[1])
+				draw_quad(self.pos.x + self.rounded, self.pos.y + self.size.h - self.rounded - self.innerShadow[2], self.size.w - self.rounded * 2, self.rounded)
 			else
-				draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h)
+				draw_quad(self.pos.x, self.pos.y + self.innerShadow[1], self.size.w, self.size.h - self.innerShadow[1] - self.innerShadow[2])
 			end
 			if (self.bgImage) then
 				draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h, self.bgImage)
@@ -277,6 +311,7 @@ do
 	
 	function UIElement:show()
 		local num = nil
+				
 		for i,v in pairs(UIVisualManager) do
 			if (self == v) then
 				num = i
@@ -289,6 +324,10 @@ do
 			if (self.interactive) then
 				table.insert(UIMouseHandler, self)
 			end
+		end
+		
+		for i,v in pairs(self.child) do
+			v:show()
 		end
 	end
 	
@@ -325,10 +364,11 @@ do
 	end
 	
 	function UIElement:handleMouseDn(s, x, y)
-		for i, v in pairs(UIMouseHandler) do
+		for i, v in pairs(tableReverse(UIMouseHandler)) do
 			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h and s < 4) then
 				v.hoverState = BTN_DN
 				v.btnDown(s, x, y)
+				return
 			elseif (s >= 4 and v.scrollEnabled == true) then
 				v.btnDown(s, x, y)
 			end
@@ -336,22 +376,28 @@ do
 	end
 	
 	function UIElement:handleMouseUp(s, x, y)
-		for i, v in pairs(UIMouseHandler) do
+		for i, v in pairs(tableReverse(UIMouseHandler)) do
 			if (v.hoverState == BTN_DN) then
 				v.hoverState = nil
 				v.btnUp(s, x, y)
+				return
 			end
 		end
 	end
 	
 	function UIElement:handleMouseHover(x, y)
-		for i, v in pairs(UIMouseHandler) do
-			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h) then
+		local disable = nil
+		for i, v in pairs(tableReverse(UIMouseHandler)) do
+			if (v.hoverState == BTN_DN) then
+				disable = true
+				v.btnHover(x,y)
+			elseif (disable) then
+				v.hoverState = false
+			elseif (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h) then
 				if (v.hoverState ~= BTN_DN) then
 					v.hoverState = BTN_HVR
+					disable = true
 				end
-				v.btnHover(x,y)
-			elseif (v.hoverState == BTN_DN) then
 				v.btnHover(x,y)
 			else
 				v.hoverState = false
@@ -382,15 +428,15 @@ do
 		end
 	end
 	
-	function UIElement:uiText(str, x, y, font, align, scale, angle)
-		local font = font or FONTS.SMALL
+	function UIElement:uiText(str, x, y, font, align, scale, angle, shadow, col1, col2)
+		local font = font or FONTS.MEDIUM
 		local x = x or self.pos.x
 		local y = y or self.pos.y
 		local font_mod = font
 		local scale = scale or 1
 		local angle = angle or 0
 		local pos = 0
-		local align = align or LEFT
+		local align = align or CENTER
 		if (font == FONTS.BIG) then
 			font_mod = 4.5
 		elseif (font == 4) then
@@ -410,33 +456,24 @@ do
 				xPos = x
 			end
 			if (self.size.h > (pos + 1) * font_mod * 10 * scale + font_mod * 10) then
-				draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				if (font == FONTS.BIG or font == FONTS.MEDIUM) then
-					draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				end
+				draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
 				pos = pos + 1
 			elseif (i ~= #str) then
-				draw_text_angle_scale(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				if (font == FONTS.BIG or font == FONTS.MEDIUM) then
-					draw_text_angle_scale(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				end
+				draw_text_new(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
 				break		
 			else
-				draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				if (font == FONTS.BIG or font == FONTS.MEDIUM) then
-					draw_text_angle_scale(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font)
-				end
+				draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
 			end			
 		end
 	end
 	
-	function UIElement:setButtonColor()
+	function UIElement:getButtonColor()
 		if (self.hoverState == BTN_DN) then
-			set_color(unpack(self.pressedColor))
+			return self.pressedColor
 		elseif (self.hoverState == BTN_HVR) then
-			set_color(unpack(self.hoverColor))
+			return self.hoverColor
 		else
-			set_color(unpack(self.bgColor))
+			return self.bgColor
 		end
 	end
 	
@@ -464,6 +501,38 @@ do
 			pos.y = yPos - self.pos.y
 		end
 		return pos
+	end
+	
+	-- Used to update background texture
+	-- Image can be either a string with texture path or a table where image[1] is a path and image[2] is default icon path
+	function UIElement:updateImage(image, default)
+		local default = default or DEFTEXTURE
+		if (image[2]) then
+			default = image[2]
+			image = image[1]
+		end
+		if (self.bgImage) then
+			unload_texture(self.bgImage)
+		end
+		local filename
+		if (image:find("^%.%./")) then
+			filename = image:gsub("%.%./", "data/")
+		else 
+			filename = "data/script/" .. image:gsub("^/", "")
+		end
+		local tempicon = io.open(filename, "r", 1)
+		if (tempicon == nil) then
+			self.bgImage = load_texture(default)
+		else
+			local textureid = load_texture(image)
+			if (textureid == -1) then
+				unload_texture(textureid)
+				self.bgImage = load_texture(default)
+			else
+				self.bgImage = textureid
+			end
+			io.close(tempicon)
+		end
 	end
 	
 	function textAdapt(str, font, scale, maxWidth)
@@ -495,10 +564,46 @@ do
 		end
 	end
 	
+	function draw_text_new(str, xPos, yPos, angle, scale, font, shadow, col1, col2)
+		local shadow = shadow or nil
+		local col1 = col1 or DEFTEXTCOLOR
+		local col2 = col2 or DEFSHADOWCOLOR
+		if (shadow) then
+			set_color(unpack(col2))
+			draw_text_angle_scale(str, xPos - shadow, yPos, angle, scale, font)
+			draw_text_angle_scale(str, xPos - shadow, yPos - shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos - shadow, yPos + shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos + shadow, yPos, angle, scale, font)
+			draw_text_angle_scale(str, xPos + shadow, yPos - shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos + shadow, yPos + shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos, yPos - shadow, angle, scale, font)
+			draw_text_angle_scale(str, xPos, yPos + shadow, angle, scale, font)
+			set_color(col2[1], col2[2], col2[3], 1)
+			draw_text_angle_scale(str, xPos + shadow * 2, yPos + shadow * 2, angle, scale, font)
+			draw_text_angle_scale(str, xPos + shadow * 2, yPos + shadow * 2, angle, scale, font)
+		end
+		if (col1) then
+			set_color(unpack(col1))
+		end
+		draw_text_angle_scale(str, xPos, yPos, angle, scale, font)
+		if (font == FONTS.MEDIUM or font == FONTS.BIG) then
+			draw_text_angle_scale(str, xPos, yPos, angle, scale, font)
+		end
+	end
+	
+	function tableReverse(tbl)
+		local tblRev = {}
+		for i, v in pairs(tbl) do
+			table.insert(tblRev, 1, v)
+		end
+		return tblRev
+	end
+	
 	function strEsc(str)
 		return (str:gsub('%(', '%%(')
 					:gsub('%)', '%%)')
 					:gsub('%[', '%%[')
-					:gsub('%]', '%%]'))
+					:gsub('%]', '%%]')
+					:gsub('%-', '%%-'))
 	end
 end
