@@ -250,7 +250,7 @@ do
 		end
 		
 		if (not isClaimed) then
-			return "Next reward in" .. returnval
+			return "Next reward in " .. returnval
 		end
 		return returnval .. " left to claim reward"
 	end

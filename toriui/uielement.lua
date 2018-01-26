@@ -537,6 +537,17 @@ do
 		end
 	end
 	
+	function UIElement:runCmd(command, echo)
+		local echo = echo or false
+		if (echo == true) then
+			add_hook("console", "UIManagerSkipEcho", function(s,i)
+					return 1
+				end)
+		end
+		run_cmd(command)
+		remove_hooks("UIManagerSkipEcho")
+	end
+	
 	function textAdapt(str, font, scale, maxWidth)
 		local destStr = {}
 		

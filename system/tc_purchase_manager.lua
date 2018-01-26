@@ -113,7 +113,7 @@ do
 					end
 				end)
 			tcEntry[i]:addMouseHandlers(function() end, function()
-					run_cmd("bi " .. v.itemid)
+					UIElement:runCmd("steam purchase " .. v.itemid, true)
 				end, function() end)
 		end
 		
