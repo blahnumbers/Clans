@@ -16,17 +16,22 @@ DEFTEXTURE = "torishop/icons/defaulticon.tga"
 DEFTEXTCOLOR = DEFTEXTCOLOR or { 1, 1, 1, 1 }
 DEFSHADOWCOLOR = DEFSHADOWCOLOR or { 0, 0, 0, 0.6 }
 
+UICOLORBLACK = {0,0,0,1}
+UICOLORRED = {1,0,0,1}
+UICOLORGREEN = {0,1,0,1}
+UICOLORBLUE = {0,0,1,1}
+
 do
 	UIElementManager = UIElementManager or {}
 	UIVisualManager = UIVisualManager or {}
 	UIMouseHandler = UIMouseHandler or {}
+	UIKeyboardHandler = UIKeyboardHandler or {}
 	
 	if (not UIElement) then 
 		UIElement = {}
 		UIElement.__index = UIElement
 	end
-	
-	
+
 	-- Spawns new UI Element
 	function UIElement:new(o)
 		local elem = {	parent = nil,
@@ -61,6 +66,13 @@ do
 			if (o.bgImage) then 
 				elem:updateImage(o.bgImage)
 			end
+			if (o.textfield) then
+				elem.textfield = o.textfield
+				elem.textfieldstr = o.textfieldstr or ""
+				elem.keyDown = function(key) elem:textfieldKeyDown(key) end
+				elem.keyUp = function(key) elem:textfieldKeyUp(key) end
+				table.insert(UIKeyboardHandler, elem)
+			end
 			if (o.innerShadow) then
 				elem.shadowColor = {} 
 				if (type(o.shadowColor[1]) == "table") then
@@ -94,6 +106,11 @@ do
 				elem.btnHover = function() end
 				table.insert(UIMouseHandler, elem)
 			end
+			if (o.keyboard) then
+				elem.keyDown = function() end
+				elem.keyUp = function() end
+			end
+				
 		end
 		
 		table.insert(UIElementManager, elem)
@@ -110,6 +127,15 @@ do
 		end
 		if (btnHover) then
 			self.btnHover = btnHover
+		end
+	end
+	
+	function UIElement:addKeyboardHandlers(keyDown, keyUp)
+		if (keyDown) then
+			self.keyDown = keyDown
+		end
+		if (keyUp) then
+			self.keyUp = keyUp
 		end
 	end
 	
@@ -245,6 +271,12 @@ do
 				break
 			end
 		end
+		for i,v in pairs(UIKeyboardHandler) do
+			if (self == v) then
+				table.remove(UIKeyboardHandler, i)
+				break
+			end
+		end
 		for i,v in pairs(UIVisualManager) do
 			if (self == v) then
 				table.remove(UIVisualManager, i)
@@ -326,6 +358,9 @@ do
 			if (self.interactive) then
 				table.insert(UIMouseHandler, self)
 			end
+			if (self.keyboard) then
+				table.insert(UIKeyboardHandler, self)
+			end
 		end
 		
 		for i,v in pairs(self.child) do
@@ -351,6 +386,17 @@ do
 				err(UIMouseHandlerEmpty)
 			end
 		end
+		if (self.keyboard) then
+			for i,v in pairs(UIKeyboardHandler) do
+				if (self == v) then
+					num = i
+					break
+				end
+			end
+			if (num) then
+				table.remove(UIKeyboardHandler, num)
+			end
+		end
 		for i,v in pairs(UIVisualManager) do
 			if (self == v) then
 				num = i
@@ -364,8 +410,73 @@ do
 			err(UIElementEmpty)
 		end
 	end
+		
+	function UIElement:textfieldKeyUp(key)
+		return 1
+	end
+	
+	function UIElement:textfieldKeyDown(key)
+		if (key == 8) then
+			self.textfieldstr = self.textfieldstr:sub(1,-2)
+		elseif ((key == string.byte('-')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "_"
+		elseif ((key == string.byte('1')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "!"
+		elseif ((key == string.byte('2')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "@"
+		elseif ((key == string.byte('3')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "#"
+		elseif ((key == string.byte('4')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "$"
+		elseif ((key == string.byte('5')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "%"
+		elseif ((key == string.byte('6')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "^"
+		elseif ((key == string.byte('7')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "&"
+		elseif ((key == string.byte('8')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "*"
+		elseif ((key == string.byte('9')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "("
+		elseif ((key == string.byte('0')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. ")"
+		elseif ((key == string.byte('=')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "+"
+		elseif ((key == string.byte('/')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "?"
+		elseif ((key == string.byte('\'')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. "\""
+		elseif ((key == string.byte(';')) and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. ":"
+		elseif (key >= 97 and key <= 122 and (get_shift_key_state() > 0)) then
+			self.textfieldstr = self.textfieldstr .. string.char(key - 32)
+		else
+			self.textfieldstr = self.textfieldstr .. string.char(key)
+		end
+	end	
+			
+	function UIElement:handleKeyUp(key)
+		for i, v in pairs(tableReverse(UIKeyboardHandler)) do
+			if (v.keyboard == true) then
+				v.keyUp(key)
+				return 1
+			end
+		end
+	end
+	
+	function UIElement:handleKeyDown(key)
+		for i, v in pairs(tableReverse(UIKeyboardHandler)) do
+			if (v.keyboard == true) then
+				v.keyDown(key)
+				return 1
+			end
+		end
+	end
 	
 	function UIElement:handleMouseDn(s, x, y)
+		for i, v in pairs(UIKeyboardHandler) do 
+			v.keyboard = false
+		end
 		for i, v in pairs(tableReverse(UIMouseHandler)) do
 			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h and s < 4) then
 				v.hoverState = BTN_DN
@@ -546,6 +657,15 @@ do
 		end
 		run_cmd(command)
 		remove_hooks("UIManagerSkipEcho")
+	end
+	
+	function UIElement:drawVisuals()
+		for i, v in pairs(UIElementManager) do
+			v:updatePos()
+		end
+		for i, v in pairs(UIVisualManager) do
+			v:display()
+		end
 	end
 	
 	function textAdapt(str, font, scale, maxWidth)
