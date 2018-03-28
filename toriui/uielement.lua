@@ -2,6 +2,9 @@
 
 WIN_W, WIN_H = get_window_size()
 
+KEYBOARDGLOBALIGNORE = KEYBOARDGLOBALIGNORE or false
+LONGKEYPRESSED = { status = false, key = nil, time = nil, repeats = 0 }
+
 SQUARE = 1
 ROUNDED = 2
 
@@ -40,11 +43,7 @@ do
 						shift = { x = nil, y = nil },
 						size = { w = nil, h = nil },
 						bgColor = { 1, 1, 1, 0 },
-						bgImage = nil,
-						shapeType = SQUARE,
-						customDisplayTrue = false,
 						customDisplay = function() end,
-						interactive = false,
 						innerShadow = { 0, 0 },
 						}
 		setmetatable(elem, UIElement)
@@ -67,9 +66,10 @@ do
 				elem:updateImage(o.bgImage)
 			end
 			if (o.textfield) then
+				-- Textfield value is a table to allow proper initiation / use after obj is created
 				elem.textfield = o.textfield
-				elem.textfieldstr = o.textfieldstr or ""
-				elem.keyDown = function(key) elem:textfieldKeyDown(key) end
+				elem.textfieldstr = o.textfieldstr or { "" }
+				elem.keyDown = function(key) elem:textfieldKeyDown(key, o.isNumeric) end
 				elem.keyUp = function(key) elem:textfieldKeyUp(key) end
 				table.insert(UIKeyboardHandler, elem)
 			end
@@ -99,6 +99,10 @@ do
 				elem.scrollEnabled = o.scrollEnabled or nil
 				elem.hoverColor = o.hoverColor or nil
 				elem.pressedColor = o.pressedColor or nil
+				elem.animateColor = {}
+				for i = 1, 4 do
+					elem.animateColor[i] = elem.bgColor[i]
+				end
 				elem.hoverState = false
 				elem.pressedPos = { x = nil, y = nil }
 				elem.btnDown = function() end
@@ -248,16 +252,17 @@ do
 				end
 			end
 		end
-		topBorder:hide()
-		botBorder:hide()
-		topBorder:show()
-		botBorder:show()
+		topBorder:reload()
+		botBorder:reload()
 		return enabled
 	end
 	
-	function UIElement:addCustomDisplay(funcTrue, func)
+	function UIElement:addCustomDisplay(funcTrue, func, drawBefore)
 		self.customDisplayTrue = funcTrue
 		self.customDisplay = func
+		if (drawBefore) then 
+			self.customDisplayBefore = drawBefore
+		end
 	end
 	
 	function UIElement:kill()
@@ -299,6 +304,31 @@ do
 	end
 	
 	function UIElement:display()
+		if (LONGKEYPRESSED.status and LONGKEYPRESSED.time < os.clock() - 0.5 - LONGKEYPRESSED.repeats * 0.04) then
+			for i, v in pairs(tableReverse(UIKeyboardHandler)) do
+				if (v.keyboard == true) then
+					v.keyDown(LONGKEYPRESSED.key)
+					LONGKEYPRESSED.repeats = LONGKEYPRESSED.repeats + 1
+					break
+				end
+			end
+		end
+		if (self.hoverState ~= false and self.hoverColor) then
+			for i = 1, 4 do
+				if ((self.bgColor[i] > self.hoverColor[i] and self.animateColor[i] > self.hoverColor[i]) or (self.bgColor[i] < self.hoverColor[i] and self.animateColor[i] < self.hoverColor[i])) then
+					self.animateColor[i] = self.animateColor[i] - math.floor((self.bgColor[i] - self.hoverColor[i]) * 150) / 1000
+				end
+			end
+		else
+			if (self.animateColor) then
+				for i = 1, 4 do
+					self.animateColor[i] = self.bgColor[i]
+				end
+			end
+		end
+		if (self.customDisplayBefore) then
+			self.customDisplay()
+		end
 		if (not self.customDisplayTrue) then
 			if (self.innerShadow[1] > 0 or self.innerShadow[2] > 0) then
 				set_color(unpack(self.shadowColor[1]))
@@ -319,7 +349,7 @@ do
 				end
 			end
 			if (self.hoverState == BTN_HVR and self.hoverColor) then
-				set_color(unpack(self.hoverColor))
+				set_color(unpack(self.animateColor))
 			elseif (self.hoverState == BTN_DN and self.pressedColor) then
 				set_color(unpack(self.pressedColor))
 			else
@@ -340,7 +370,14 @@ do
 				draw_quad(self.pos.x, self.pos.y, self.size.w, self.size.h, self.bgImage)
 			end
 		end
-		self.customDisplay()
+		if (not self.customDisplayBefore) then
+			self.customDisplay()
+		end
+	end
+	
+	function UIElement:reload()
+		self:hide()
+		self:show()
 	end
 	
 	function UIElement:show()
@@ -412,46 +449,58 @@ do
 	end
 		
 	function UIElement:textfieldKeyUp(key)
-		return 1
+		LONGKEYPRESSED.status = false
+		LONGKEYPRESSED.key = nil
+		LONGKEYPRESSED.time = nil
+		LONGKEYPRESSED.repeats = 0
 	end
 	
-	function UIElement:textfieldKeyDown(key)
+	function UIElement:textfieldKeyDown(key, isNumeric)
+		local isNumeric = isNumeric or false
+		if (LONGKEYPRESSED.status == false) then 
+			LONGKEYPRESSED.status = true
+			LONGKEYPRESSED.key = key
+			LONGKEYPRESSED.time = os.clock()
+		end
+		if (isNumeric and (get_shift_key_state() > 0 or key < 48 or key > 57) and key ~= 8) then
+			return 1
+		end
 		if (key == 8) then
-			self.textfieldstr = self.textfieldstr:sub(1,-2)
+			self.textfieldstr[1] = self.textfieldstr[1]:sub(1,-2)
 		elseif ((key == string.byte('-')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "_"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "_"
 		elseif ((key == string.byte('1')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "!"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "!"
 		elseif ((key == string.byte('2')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "@"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "@"
 		elseif ((key == string.byte('3')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "#"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "#"
 		elseif ((key == string.byte('4')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "$"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "$"
 		elseif ((key == string.byte('5')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "%"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "%"
 		elseif ((key == string.byte('6')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "^"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "^"
 		elseif ((key == string.byte('7')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "&"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "&"
 		elseif ((key == string.byte('8')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "*"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "*"
 		elseif ((key == string.byte('9')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "("
+			self.textfieldstr[1] = self.textfieldstr[1] .. "("
 		elseif ((key == string.byte('0')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. ")"
+			self.textfieldstr[1] = self.textfieldstr[1] .. ")"
 		elseif ((key == string.byte('=')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "+"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "+"
 		elseif ((key == string.byte('/')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "?"
+			self.textfieldstr[1] = self.textfieldstr[1] .. "?"
 		elseif ((key == string.byte('\'')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. "\""
+			self.textfieldstr[1] = self.textfieldstr[1] .. "\""
 		elseif ((key == string.byte(';')) and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. ":"
+			self.textfieldstr[1] = self.textfieldstr[1] .. ":"
 		elseif (key >= 97 and key <= 122 and (get_shift_key_state() > 0)) then
-			self.textfieldstr = self.textfieldstr .. string.char(key - 32)
+			self.textfieldstr[1] = self.textfieldstr[1] .. string.char(key - 32)
 		else
-			self.textfieldstr = self.textfieldstr .. string.char(key)
+			self.textfieldstr[1] = self.textfieldstr[1] .. string.char(key)
 		end
 	end	
 			
@@ -467,6 +516,7 @@ do
 	function UIElement:handleKeyDown(key)
 		for i, v in pairs(tableReverse(UIKeyboardHandler)) do
 			if (v.keyboard == true) then
+				KEYBOARDGLOBALIGNORE = true
 				v.keyDown(key)
 				return 1
 			end
@@ -474,13 +524,19 @@ do
 	end
 	
 	function UIElement:handleMouseDn(s, x, y)
+		enable_camera_movement()
 		for i, v in pairs(UIKeyboardHandler) do 
 			v.keyboard = false
+			KEYBOARDGLOBALIGNORE = false
 		end
 		for i, v in pairs(tableReverse(UIMouseHandler)) do
 			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h and s < 4) then
 				v.hoverState = BTN_DN
 				v.btnDown(s, x, y)
+				if (v.textfield == true) then
+					v.keyboard = true
+					disable_camera_movement()
+				end
 				return
 			elseif (s >= 4 and v.scrollEnabled == true) then
 				v.btnDown(s, x, y)
@@ -491,7 +547,7 @@ do
 	function UIElement:handleMouseUp(s, x, y)
 		for i, v in pairs(tableReverse(UIMouseHandler)) do
 			if (v.hoverState == BTN_DN) then
-				v.hoverState = nil
+				v.hoverState = BTN_HVR
 				v.btnUp(s, x, y)
 				return
 			end
@@ -541,7 +597,7 @@ do
 		end
 	end
 	
-	function UIElement:uiText(str, x, y, font, align, scale, angle, shadow, col1, col2)
+	function UIElement:uiText(str, x, y, font, align, scale, angle, shadow, col1, col2, check)
 		local font = font or FONTS.MEDIUM
 		local x = x or self.pos.x
 		local y = y or self.pos.y
@@ -550,6 +606,7 @@ do
 		local angle = angle or 0
 		local pos = 0
 		local align = align or CENTER
+		local check = check or false
 		if (font == FONTS.BIG) then
 			font_mod = 5
 		elseif (font == 4) then
@@ -558,7 +615,7 @@ do
 			font_mod = 1.5
 		end
 	
-		str = textAdapt(str, font, scale, self.size.w)
+		str = textAdapt(str, font, scale, self.size.w, check)
 		
 		for i = 1, #str do
 			if (align == CENTER) then
@@ -569,13 +626,24 @@ do
 				xPos = x
 			end
 			if (self.size.h > (pos + 1) * font_mod * 10 * scale + font_mod * 10) then
-				draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
+				if (check == false) then
+					draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
+				end
 				pos = pos + 1
 			elseif (i ~= #str) then
+				if (check == true) then 
+					return false
+				end
 				draw_text_new(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
 				break		
 			else
-				draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
+				if (check == false) then
+					draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
+				elseif (self.size.w < get_string_length(str[i], font) * scale) then
+					return false
+				else 
+					return true
+				end
 			end			
 		end
 	end
@@ -584,7 +652,7 @@ do
 		if (self.hoverState == BTN_DN) then
 			return self.pressedColor
 		elseif (self.hoverState == BTN_HVR) then
-			return self.hoverColor
+			return self.animateColor
 		else
 			return self.bgColor
 		end
@@ -628,13 +696,15 @@ do
 			unload_texture(self.bgImage)
 		end
 		local filename
-		if (image:find("^%.%./")) then
+		if (image:find("%.%./", 4)) then
+			filename = image:gsub("%.%./%.%./", "")
+		elseif (image:find("%.%./")) then
 			filename = image:gsub("%.%./", "data/")
 		else 
 			filename = "data/script/" .. image:gsub("^/", "")
 		end
 		local tempicon = io.open(filename, "r", 1)
-		if (tempicon == nil) then
+		if (not tempicon) then
 			self.bgImage = load_texture(default)
 		else
 			local textureid = load_texture(image)
@@ -650,7 +720,7 @@ do
 	
 	function UIElement:runCmd(command, echo)
 		local echo = echo or false
-		if (echo == true) then
+		if (echo == false) then
 			add_hook("console", "UIManagerSkipEcho", function(s,i)
 					return 1
 				end)
@@ -658,43 +728,26 @@ do
 		run_cmd(command)
 		remove_hooks("UIManagerSkipEcho")
 	end
-	
-	function UIElement:drawVisuals()
-		for i, v in pairs(UIElementManager) do
-			v:updatePos()
-		end
-		for i, v in pairs(UIVisualManager) do
-			v:display()
-		end
-	end
-	
+			
 	function textAdapt(str, font, scale, maxWidth)
 		local destStr = {}
-		
-		while ((get_string_length(str, font) * scale) > maxWidth) do
-			local newStr = string.match(str, "[^%s]+[%s]*")
-			str = str:gsub(strEsc(newStr), "")
-			if (str == "") then
+		local newStr = ""
+		-- ensure that str variable is in fact a string
+		local str = str .. ""
+				
+		while (str ~= "") do
+			local word = str:match("^%S+%s*")
+			if (get_string_length(newStr .. word, font) * scale > maxWidth and newStr ~= "") then
 				table.insert(destStr, newStr)
-				return destStr
+				newStr = word
+				str = str:sub(word:len() + 1)
+			else
+				newStr = newStr .. word
+				str = str:sub(word:len() + 1)
 			end
-			str = addWord(destStr, str, newStr, font, scale, maxWidth)
 		end
-		table.insert(destStr, str)
+		table.insert(destStr, newStr)
 		return destStr
-	end
-	
-	function addWord(destStr, str, newStr, font, scale, maxWidth)		
-		local word = string.match(str, "%a+%p*[%a*]*.")
-		if ((get_string_length(newStr .. word, font) * scale) < maxWidth) then
-			str = str:gsub(word, "", 1)
-			newStr = newStr..word
-			str = addWord(destStr, str, newStr, font, scale, maxWidth)
-			return str
-		else
-			table.insert(destStr, newStr)
-			return str
-		end
 	end
 	
 	function draw_text_new(str, xPos, yPos, angle, scale, font, shadow, col1, col2)
@@ -733,10 +786,10 @@ do
 	end
 	
 	function strEsc(str)
-		return (str:gsub('%(', '%%(')
-					:gsub('%)', '%%)')
-					:gsub('%[', '%%[')
-					:gsub('%]', '%%]')
-					:gsub('%-', '%%-'))
+		return (str:gsub('%(', '\(')
+					:gsub('%)', '\)')
+					:gsub('%[', '\[')
+					:gsub('%]', '\]')
+					:gsub('%-', '\-'))
 	end
 end
