@@ -11,6 +11,12 @@ ROUNDED = 2
 LEFT = 0
 CENTER = 1
 RIGHT = 2
+LEFTBOT = 3
+CENTERBOT = 4
+RIGHTBOT = 5
+LEFTMID = 6
+CENTERMID = 7
+RIGHTMID = 8
 
 BTN_DN = 1
 BTN_HVR = 2
@@ -27,6 +33,7 @@ UICOLORBLUE = {0,0,1,1}
 do
 	UIElementManager = UIElementManager or {}
 	UIVisualManager = UIVisualManager or {}
+	UIViewportManager = UIViewportManager or {}
 	UIMouseHandler = UIMouseHandler or {}
 	UIKeyboardHandler = UIKeyboardHandler or {}
 	
@@ -39,9 +46,8 @@ do
 	function UIElement:new(o)
 		local elem = {	parent = nil,
 						child = {},
-						pos = { x = nil, y = nil },
-						shift = { x = nil, y = nil },
-						size = { w = nil, h = nil },
+						pos = {},
+						shift = {},
 						bgColor = { 1, 1, 1, 0 },
 						customDisplay = function() end,
 						innerShadow = { 0, 0 },
@@ -53,15 +59,28 @@ do
 			if (o.parent) then
 				elem.parent = o.parent
 				table.insert(elem.parent.child, elem)
-				elem.shift.x = o.pos[1]
-				elem.shift.y = o.pos[2]
+				if (o.parent.viewport) then
+					elem.pos.x = o.pos[1]
+					elem.pos.y = o.pos[2]
+					elem.pos.z = o.pos[3]
+					elem.rot = { x = o.rot[1], y = o.rot[2], z = o.rot[3] }
+					elem.radius = o.radius
+				else
+					elem.shift.x = o.pos[1]
+					elem.shift.y = o.pos[2]
+					elem.size = { w = o.size[1], h = o.size[2] }
+				end
 			else
 				elem.pos.x = o.pos[1]
 				elem.pos.y = o.pos[2]
+				elem.size = { w = o.size[1], h = o.size[2] }
 			end
-			elem.size.w = o.size[1]
-			elem.size.h = o.size[2]
-			if (o.bgColor) then	elem.bgColor = o.bgColor end
+			if (o.viewport) then
+				elem.viewport = o.viewport
+			end
+			if (o.bgColor) then	
+				elem.bgColor = o.bgColor 
+			end
 			if (o.bgImage) then 
 				elem:updateImage(o.bgImage)
 			end
@@ -114,11 +133,24 @@ do
 				elem.keyDown = function() end
 				elem.keyUp = function() end
 			end
-				
+			if (o.hoverSound) then
+				elem.hoverSound = o.hoverSound
+			end
+			if (o.upSound) then
+				elem.upSound = o.upSound
+			end
+			if (o.downSound) then
+				elem.downSound = o.downSound
+			end
 		end
 		
 		table.insert(UIElementManager, elem)
-		table.insert(UIVisualManager, elem) -- Display is enabled by default, comment this line out to disable
+		if (elem.viewport or (elem.parent and elem.parent.viewport)) then
+			table.insert(UIViewportManager, elem)
+		else	
+			-- Display is enabled by default, comment this line out to disable
+			table.insert(UIVisualManager, elem)
+		end
 		return elem
 	end
 	
@@ -265,9 +297,12 @@ do
 		end
 	end
 	
-	function UIElement:kill()
+	function UIElement:kill(childOnly)
 		for i,v in pairs(self.child) do
 			v:kill()
+		end
+		if (childOnly == true) then
+			return true
 		end
 		if (self.bgImage) then unload_texture(self.bgImage) end
 		for i,v in pairs(UIMouseHandler) do
@@ -294,6 +329,12 @@ do
 				break
 			end
 		end
+		for i,v in pairs(UIViewportManager) do
+			if (self == v) then
+				table.remove(UIViewportManager, i)
+				break
+			end
+		end
 		self = nil
 	end
 	
@@ -303,6 +344,25 @@ do
 		end
 	end
 	
+	function UIElement:displayViewport()
+		if (self.customDisplayBefore) then 
+			self.customDisplay()
+		end
+		if (self.viewport) then
+			set_viewport(self.pos.x, self.pos.y, self.size.w, self.size.h)
+		else 
+			set_color(unpack(self.bgColor))
+			if (self.bgImage) then
+				draw_sphere(self.pos.x, self.pos.y, self.pos.z, self.radius, self.rot.x, self.rot.y, self.rot.z, self.bgImage)
+			else 
+				draw_sphere(self.pos.x, self.pos.y, self.pos.z, self.radius, self.rot.x, self.rot.y, self.rot.z)
+			end
+		end
+		if (not self.customDisplayBefore) then
+			self.customDisplay()
+		end
+	end
+		
 	function UIElement:display()
 		if (LONGKEYPRESSED.status and LONGKEYPRESSED.time < os.clock() - 0.5 - LONGKEYPRESSED.repeats * 0.04) then
 			for i, v in pairs(tableReverse(UIKeyboardHandler)) do
@@ -378,6 +438,51 @@ do
 	function UIElement:reload()
 		self:hide()
 		self:show()
+	end
+	
+	function UIElement:activate()
+		local num = nil
+
+		for i,v in pairs(UIMouseHandler) do
+			if (self == v) then
+				num = i
+				break
+			end
+		end
+		if (self.interactive) then
+			table.insert(UIMouseHandler, self)
+		end
+		if (self.keyboard) then
+			table.insert(UIKeyboardHandler, self)
+		end
+	end
+	
+	function UIElement:deactivate()
+		local num = nil
+		if (self.interactive) then
+			for i,v in pairs(UIMouseHandler) do
+				if (self == v) then
+					num = i
+					break
+				end
+			end
+			if (num) then
+				table.remove(UIMouseHandler, num)
+			else
+				err(UIMouseHandlerEmpty)
+			end
+		end
+		if (self.keyboard) then
+			for i,v in pairs(UIKeyboardHandler) do
+				if (self == v) then
+					num = i
+					break
+				end
+			end
+			if (num) then
+				table.remove(UIKeyboardHandler, num)
+			end
+		end
 	end
 	
 	function UIElement:show()
@@ -531,6 +636,9 @@ do
 		end
 		for i, v in pairs(tableReverse(UIMouseHandler)) do
 			if (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h and s < 4) then
+				if (v.downSound) then
+					play_sound(v.downSound)
+				end
 				v.hoverState = BTN_DN
 				v.btnDown(s, x, y)
 				if (v.textfield == true) then
@@ -547,6 +655,9 @@ do
 	function UIElement:handleMouseUp(s, x, y)
 		for i, v in pairs(tableReverse(UIMouseHandler)) do
 			if (v.hoverState == BTN_DN) then
+				if (v.upSound) then
+					play_sound(v.upSound)
+				end
 				v.hoverState = BTN_HVR
 				v.btnUp(s, x, y)
 				return
@@ -563,6 +674,9 @@ do
 			elseif (disable) then
 				v.hoverState = false
 			elseif (x > v.pos.x and x < v.pos.x + v.size.w and y > v.pos.y and y < v.pos.y + v.size.h) then
+				if (v.hoverState == false and v.hoverSound) then
+					play_sound(v.hoverSound)
+				end
 				if (v.hoverState ~= BTN_DN) then
 					v.hoverState = BTN_HVR
 					disable = true
@@ -585,6 +699,9 @@ do
 	end
 	
 	function UIElement:updateChildPos()
+		if (self.parent.viewport) then
+			return
+		end
 		if (self.shift.x < 0) then
 			self.pos.x = self.parent.pos.x + self.parent.size.w + self.shift.x
 		else
@@ -597,7 +714,11 @@ do
 		end
 	end
 	
-	function UIElement:uiText(str, x, y, font, align, scale, angle, shadow, col1, col2, check)
+	function UIElement:uiText(str, x, y, font, align, scale, angle, shadow, col1, col2, intensity, check)
+		if (not scale and check) then
+			echo("^04UIElement error: ^07uiText cannot take undefined scale argument with check enabled")
+			return true
+		end
 		local font = font or FONTS.MEDIUM
 		local x = x or self.pos.x
 		local y = y or self.pos.y
@@ -607,40 +728,53 @@ do
 		local pos = 0
 		local align = align or CENTER
 		local check = check or false
-		if (font == FONTS.BIG) then
-			font_mod = 5
+		if (font == FONTS.MEDIUM) then
+			font_mod = 2.4
+		elseif (font == FONTS.BIG) then
+			font_mod = 5.4
 		elseif (font == 4) then
 			font_mod = 2.4
 		elseif (font == FONTS.SMALL) then
 			font_mod = 1.5
 		end
 	
-		str = textAdapt(str, font, scale, self.size.w, check)
+		str = textAdapt(str, font, scale, self.size.w)
 		
 		for i = 1, #str do
-			if (align == CENTER) then
-				xPos = x + self.size.w / 2 - get_string_length(str[i], font) * scale / 2 
-			elseif (align == RIGHT) then
+			local xPos = x
+			local yPos = y
+			if (align == CENTER or align == CENTERBOT or align == CENTERMID) then
+				xPos = x + self.size.w / 2 - get_string_length(str[i], font) * scale / 2					
+			elseif (align == RIGHT or align == RIGHTBOT or align == RIGHTMID) then
 				xPos = x + self.size.w - get_string_length(str[i], font) * scale
-			else
-				xPos = x
 			end
-			if (self.size.h > (pos + 1) * font_mod * 10 * scale + font_mod * 10) then
+			if (align == CENTERBOT or align == RIGHTBOT or align == LEFTBOT) then
+				yPos = y + self.size.h - #str * font_mod * 10 * scale
+				while (yPos < y and yPos + font_mod * 10 * scale < y + self.size.h) do
+					yPos = yPos + font_mod * 10 * scale
+				end
+			elseif (align == CENTERMID or align == RIGHTMID or align == LEFTMID) then
+				yPos = y + (self.size.h - #str * font_mod * 10 * scale) / 2
+				while (yPos < y and yPos + font_mod * 10 * scale < y + self.size.h) do
+					yPos = yPos + font_mod * 5 * scale
+				end
+			end
+			if (check == true and self.size.w < get_string_length(str[i], font) * scale) then
+				return false
+			elseif (self.size.h > (pos + 2) * font_mod * 10 * scale) then
 				if (check == false) then
-					draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
+					draw_text_new(str[i], xPos, yPos + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2, intensity)
 				end
 				pos = pos + 1
 			elseif (i ~= #str) then
 				if (check == true) then 
 					return false
 				end
-				draw_text_new(str[i]:gsub(".$", "..."), xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
+				draw_text_new(str[i]:gsub(".$", "..."), xPos, yPos + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2, intensity)
 				break		
 			else
 				if (check == false) then
-					draw_text_new(str[i], xPos, y + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2)
-				elseif (self.size.w < get_string_length(str[i], font) * scale) then
-					return false
+					draw_text_new(str[i], xPos, yPos + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2, intensity)
 				else 
 					return true
 				end
@@ -750,10 +884,11 @@ do
 		return destStr
 	end
 	
-	function draw_text_new(str, xPos, yPos, angle, scale, font, shadow, col1, col2)
+	function draw_text_new(str, xPos, yPos, angle, scale, font, shadow, col1, col2, intensity)
 		local shadow = shadow or nil
 		local col1 = col1 or DEFTEXTCOLOR
 		local col2 = col2 or DEFSHADOWCOLOR
+		local intensity = intensity or col1[4]
 		if (shadow) then
 			set_color(unpack(col2))
 			draw_text_angle_scale(str, xPos - shadow, yPos, angle, scale, font)
@@ -764,7 +899,7 @@ do
 			draw_text_angle_scale(str, xPos + shadow, yPos + shadow, angle, scale, font)
 			draw_text_angle_scale(str, xPos, yPos - shadow, angle, scale, font)
 			draw_text_angle_scale(str, xPos, yPos + shadow, angle, scale, font)
-			set_color(col2[1], col2[2], col2[3], 1)
+			set_color(col2[1], col2[2], col2[3], col2[4] * 2)
 			draw_text_angle_scale(str, xPos + shadow * 2, yPos + shadow * 2, angle, scale, font)
 			draw_text_angle_scale(str, xPos + shadow * 2, yPos + shadow * 2, angle, scale, font)
 		end
@@ -773,6 +908,7 @@ do
 		end
 		draw_text_angle_scale(str, xPos, yPos, angle, scale, font)
 		if (font == FONTS.MEDIUM or font == FONTS.BIG) then
+			set_color(col1[1], col1[2], col1[3], intensity)
 			draw_text_angle_scale(str, xPos, yPos, angle, scale, font)
 		end
 	end
