@@ -1,6 +1,7 @@
 -- UI class
 
 WIN_W, WIN_H = get_window_size()
+FONTS.BIGGER = 9
 
 KEYBOARDGLOBALIGNORE = KEYBOARDGLOBALIGNORE or false
 LONGKEYPRESSED = { status = false, key = nil, time = nil, repeats = 0 }
@@ -22,6 +23,8 @@ BTN_DN = 1
 BTN_HVR = 2
 
 DEFTEXTURE = "torishop/icons/defaulticon.tga"
+TEXTURECACHE = {}
+TEXTUREINDEX = TEXTUREINDEX or 0
 DEFTEXTCOLOR = DEFTEXTCOLOR or { 1, 1, 1, 1 }
 DEFSHADOWCOLOR = DEFSHADOWCOLOR or { 0, 0, 0, 0.6 }
 
@@ -82,7 +85,11 @@ do
 				elem.bgColor = o.bgColor 
 			end
 			if (o.bgImage) then 
-				elem:updateImage(o.bgImage)
+				if (type(o.bgImage) == "table") then
+					elem:updateImage(o.bgImage[1], o.bgImage[2])
+				else
+					elem:updateImage(o.bgImage)
+				end
 			end
 			if (o.textfield) then
 				-- Textfield value is a table to allow proper initiation / use after obj is created
@@ -145,12 +152,16 @@ do
 		end
 		
 		table.insert(UIElementManager, elem)
+		
+		-- Display is enabled by default, comment this out to disable
 		if (elem.viewport or (elem.parent and elem.parent.viewport)) then
 			table.insert(UIViewportManager, elem)
 		else	
-			-- Display is enabled by default, comment this line out to disable
 			table.insert(UIVisualManager, elem)
 		end
+		
+		-- Force update global x/y pos when spawning element
+		elem:updatePos()
 		return elem
 	end
 	
@@ -175,21 +186,36 @@ do
 		end
 	end
 	
-	function UIElement:addScrollFor(list, listElements, topBorder, botBorder, shiftPosList, shiftPosScroll, speed)
-		local shiftPosList = shiftPosList or 0
-		local shiftPosScroll = shiftPosScroll or 0
-		local speed = speed or 1
-		local elHeight = listElements[1].size.h
-		local scrollMin = self.shift.y
-		local scrollMax = self.parent.size.h - scrollMin - self.size.h
-		local minHeight = list.shift.y
-		local maxHeight = #listElements * elHeight
-		local enabled = nil
-		if (shiftPosList ~= 0) then
-			enabled = list:getEnabled(listElements, -shiftPosList + minHeight)
-		else
-			enabled = list:getEnabled(listElements, 0)
+	function UIElement:reloadListElements(listHolder, listElements, toReload, enabled)
+		local listElementHeight = listElements[1].size.h
+		local checkPos = math.abs(math.ceil(-(listHolder.shift.y + self.size.h) / listElementHeight))
+		
+		for i = #enabled, 1, -1 do
+			enabled[i]:hide()
+			table.remove(enabled)
 		end
+		
+		if (checkPos > 0 and checkPos * listElementHeight + listHolder.shift.y + self.size.h > 0) then
+			listElements[checkPos]:show()
+			table.insert(enabled, listElements[checkPos])
+		end
+		while (listHolder.shift.y + self.size.h + checkPos * listElementHeight >= 0 and listHolder.shift.y + checkPos * listElementHeight <= 0 and checkPos < #listElements) do
+			listElements[checkPos + 1]:show()
+			table.insert(enabled, listElements[checkPos + 1])
+			checkPos = checkPos + 1
+		end
+		
+		toReload:reload()
+	end
+	
+	function UIElement:makeScrollBar(listHolder, listElements, toReload, posShift, scrollSpeed)
+		local scrollSpeed = scrollSpeed or 1
+		local posShift = posShift or { 0 }
+		local enabled = {}
+		listHolder.shift.y = listHolder.shift.y == 0 and -listHolder.size.h or listHolder.shift.y
+		self.pressedPos = { x = 0, y = 0 }
+				
+		self:barScroll(listElements, listHolder, toReload, posShift[1], enabled)
 		
 		self:addMouseHandlers(
 			function(s, x, y)
@@ -197,98 +223,60 @@ do
 					self.pressedPos = self:getLocalPos(x,y)
 					self.hoverState = BTN_DN
 				else
-					self:mouseScroll(list, elHeight, scrollMin, scrollMax, minHeight, maxHeight, y * speed)
-					enabled = self:scrollElements(listElements, topBorder, botBorder, enabled)
+					self:mouseScroll(listElements, listHolder, toReload, y * scrollSpeed, enabled)
+					posShift[1] = self.shift.y
 				end
-			end, nil,
+			end, nil, 
 			function(x, y)
 				if (self.hoverState == BTN_DN) then
-					local lPos = self:getLocalPos(x,y)
-					local posY = lPos.y - self.pressedPos.y + self.shift.y
-					
-					self:barScroll(list, elHeight, scrollMin, scrollMax, minHeight, maxHeight, posY)
-					enabled = self:scrollElements(listElements, topBorder, botBorder, enabled)
+					local posY = self:getLocalPos(x,y).y - self.pressedPos.y + self.shift.y
+					self:barScroll(listElements, listHolder, toReload, posY, enabled)
+					posShift[1] = self.shift.y
 				end
 			end)
-		if (shiftPosScroll ~= 0 and shiftPosList ~= 0) then
-			self:moveTo(nil, shiftPosScroll)
-			list:moveTo(nil, shiftPosList)
-		end
 	end
 	
-	function UIElement:getEnabled(elements, shiftPos)
-		local enabled = {}
-		local elHeight = elements[1].size.h
-		for i = 1, #elements do
-			if (i * elHeight - shiftPos > self.size.h or i * elHeight - shiftPos < 0) then
-				elements[i]:hide()
-				enabled[i] = false
-			else 
-				enabled[i] = true
-			end
-		end
-		return enabled
-	end
-	
-	function UIElement:mouseScroll(list, elHeight, scrollMin, scrollMax, minHeight, maxHeight, speed)	
-		if (list.shift.y + speed * elHeight >= minHeight) then
-			self:moveTo(self.shift.x, scrollMin)
-			list:moveTo(list.shift.x, minHeight)
-		elseif (list.shift.y + speed * elHeight <= -maxHeight) then
-			self:moveTo(self.shift.x, scrollMax)
-			list:moveTo(list.shift.x, -maxHeight)
+	function UIElement:mouseScroll(listElements, listHolder, toReload, scroll, enabled)
+		local elementHeight = listElements[1].size.h
+		local listHeight = #listElements * elementHeight
+		if (listHolder.shift.y + scroll * elementHeight > -listHolder.size.h) then
+			self:moveTo(self.shift.x, 0)
+			listHolder:moveTo(listHolder.shift.x, -listHolder.size.h)
+		elseif (listHolder.shift.y + scroll * elementHeight < -listHeight) then
+			self:moveTo(self.shift.x, self.parent.size.h - self.size.h)
+			listHolder:moveTo(listHolder.shift.x, -listHeight)
 		else
-			list:moveTo(list.shift.x, list.shift.y + speed * elHeight)
-			local scrollProgress = -(list.shift.y - minHeight) / (maxHeight + minHeight)
-			self:moveTo(self.shift.x, scrollMin + (self.parent.size.h - self.size.h - scrollMin * 2) * scrollProgress)
+			listHolder:moveTo(listHolder.shift.x, listHolder.shift.y + scroll * elementHeight)
+			local scrollProgress = -(listHolder.size.h + listHolder.shift.y) / (listHeight - listHolder.size.h)
+			self:moveTo(self.shift.x, (self.parent.size.h - self.size.h) * scrollProgress)
 		end	
+		listHolder.parent:reloadListElements(listHolder, listElements, toReload, enabled)
 	end
 	
-	function UIElement:barScroll(list, elHeight, scrollMin, scrollMax, minHeight, maxHeight, posY)
+	function UIElement:barScroll(listElements, listHolder, toReload, posY, enabled)
 		local sizeH = math.floor(self.size.h / 4)
-		local scrollScale = (self.parent.size.h - (scrollMin * 2 + self.size.h)) / maxHeight
+		local listHeight = listElements[1].size.h * #listElements
 		
-		if (posY <= scrollMin) then
+		if (posY <= 0) then
 			if (self.pressedPos.y < sizeH) then
 				self.pressedPos.y = sizeH
 			end
-			
-			self:moveTo(self.shift.x, scrollMin)
-			list:moveTo(list.shift.x, minHeight)
-		elseif (posY >= scrollMax) then
+			self:moveTo(self.shift.x, 0)
+			listHolder:moveTo(listHolder.shift.x, -listHolder.size.h)
+		elseif (posY >= self.parent.size.h - self.size.h) then
 			if (self.pressedPos.y > self.parent.size.h - sizeH) then
 				self.pressedPos.y = self.parent.size.h - sizeH
-			end
-			
-			self:moveTo(self.shift.x, scrollMax)
-			list:moveTo(list.shift.x, -maxHeight)
+			end			
+			self:moveTo(self.shift.x, self.parent.size.h - self.size.h)
+			listHolder:moveTo(listHolder.shift.x, -listHeight)
 		else
 			self:moveTo(self.shift.x, posY)
-			local scrollProgress = (self.shift.y - scrollMin) / (self.parent.size.h - scrollMin * 2 - self.size.h)
-			list:moveTo(list.shift.x, minHeight - (posY - scrollMin) * (1 / scrollScale) + ((list.size.h - elHeight) * scrollProgress))
+			local scrollProgress = self.shift.y / (self.parent.size.h - self.size.h)
+			listHolder:moveTo(listHolder.shift.x, -listHolder.size.h + (listHolder.size.h - listHeight) * scrollProgress)
 		end
+		listHolder.parent:reloadListElements(listHolder, listElements, toReload, enabled)
 	end
-	
-	function UIElement:scrollElements(list, topBorder, botBorder, enabled)
-		for i = 1, #list do
-			lPos = list[i]:getLocalPos(0,0)
-			if (-lPos.y <= topBorder.pos.y or -lPos.y >= botBorder.pos.y) then
-				if (enabled[i] == true) then
-					list[i]:hide()
-					enabled[i] = false
-				end
-			else
-				if (enabled[i] == false) then
-					list[i]:show()
-					enabled[i] = true
-				end
-			end
-		end
-		topBorder:reload()
-		botBorder:reload()
-		return enabled
-	end
-	
+		
 	function UIElement:addCustomDisplay(funcTrue, func, drawBefore)
 		self.customDisplayTrue = funcTrue
 		self.customDisplay = func
@@ -301,10 +289,12 @@ do
 		for i,v in pairs(self.child) do
 			v:kill()
 		end
-		if (childOnly == true) then
+		if (childOnly) then
+			self.child = {}
 			return true
 		end
-		if (self.bgImage) then unload_texture(self.bgImage) end
+		
+		if (self.bgImage) then self:updateImage(nil) end
 		for i,v in pairs(UIMouseHandler) do
 			if (self == v) then
 				table.remove(UIMouseHandler, i)
@@ -485,10 +475,23 @@ do
 		end
 	end
 	
-	function UIElement:show()
+	function UIElement:show(forceReload)
 		local num = nil
-				
+		local viewport = (self.viewport or (self.parent and self.parent.viewport)) and true or false
+		
+		if (self.noreload and not forceReload) then
+			return false
+		elseif (forceReload) then
+			self.noreload = nil
+		end
+		
 		for i,v in pairs(UIVisualManager) do
+			if (self == v) then
+				num = i
+				break
+			end
+		end
+		for i,v in pairs(UIViewportManager) do
 			if (self == v) then
 				num = i
 				break
@@ -496,7 +499,11 @@ do
 		end
 		
 		if (not num) then
-			table.insert(UIVisualManager, self)
+			if (viewport) then
+				table.insert(UIViewportManager, self)
+			else
+				table.insert(UIVisualManager, self)
+			end	
 			if (self.interactive) then
 				table.insert(UIMouseHandler, self)
 			end
@@ -510,11 +517,16 @@ do
 		end
 	end
 	
-	function UIElement:hide()
+	function UIElement:hide(noreload)
 		local num = nil
 		for i,v in pairs(self.child) do
-			v:hide()
+			v:hide(noreload)
 		end
+		
+		if (noreload) then 
+			self.noreload = true
+		end
+		
 		if (self.interactive) then
 			for i,v in pairs(UIMouseHandler) do
 				if (self == v) then
@@ -542,6 +554,12 @@ do
 		for i,v in pairs(UIVisualManager) do
 			if (self == v) then
 				num = i
+				break
+			end
+		end
+		for i,v in pairs(UIViewportManager) do
+			if (self == v) then
+				table.remove(UIViewportManager, i)
 				break
 			end
 		end
@@ -726,16 +744,18 @@ do
 		local scale = scale or 1
 		local angle = angle or 0
 		local pos = 0
-		local align = align or CENTER
+		local align = align or CENTERMID
 		local check = check or false
 		if (font == FONTS.MEDIUM) then
 			font_mod = 2.4
 		elseif (font == FONTS.BIG) then
-			font_mod = 5.4
+			font_mod = 5.6
 		elseif (font == 4) then
 			font_mod = 2.4
 		elseif (font == FONTS.SMALL) then
 			font_mod = 1.5
+		elseif (fonts == FONTS.BIGGER) then
+			font_mod = 10
 		end
 	
 		str = textAdapt(str, font, scale, self.size.w)
@@ -764,6 +784,8 @@ do
 			elseif (self.size.h > (pos + 2) * font_mod * 10 * scale) then
 				if (check == false) then
 					draw_text_new(str[i], xPos, yPos + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2, intensity)
+				elseif (#str == i) then
+					return true
 				end
 				pos = pos + 1
 			elseif (i ~= #str) then
@@ -775,7 +797,7 @@ do
 			else
 				if (check == false) then
 					draw_text_new(str[i], xPos, yPos + (pos * font_mod * 10 * scale), angle, scale, font, shadow, col1, col2, intensity)
-				else 
+				else
 					return true
 				end
 			end			
@@ -820,26 +842,52 @@ do
 	
 	-- Used to update background texture
 	-- Image can be either a string with texture path or a table where image[1] is a path and image[2] is default icon path
-	function UIElement:updateImage(image, default)
+	function UIElement:updateImage(image, default, noreload)
 		local default = default or DEFTEXTURE
-		if (image[2]) then
-			default = image[2]
-			image = image[1]
-		end
-		if (self.bgImage) then
-			unload_texture(self.bgImage)
-		end
 		local filename
-		if (image:find("%.%./", 4)) then
-			filename = image:gsub("%.%./%.%./", "")
-		elseif (image:find("%.%./")) then
-			filename = image:gsub("%.%./", "data/")
-		else 
-			filename = "data/script/" .. image:gsub("^/", "")
+		if (image) then
+			if (image:find("%.%./", 4)) then
+				filename = image:gsub("%.%./%.%./", "")
+			elseif (image:find("%.%./")) then
+				filename = image:gsub("%.%./", "data/")
+			else 
+				filename = "data/script/" .. image:gsub("^/", "")
+			end
 		end
+		
+		if (not noreload and self.bgImage) then
+			local count, id = 0, 0
+			for i,v in pairs(TEXTURECACHE) do
+				if (v == self.bgImage) then
+					count = count + 1
+					id = i
+				end
+			end
+			--echo("entered " .. self.bgImage .. "; count = " .. count)
+			if (count == 1) then
+				--echo("unloading " .. self.bgImage)
+				unload_texture(self.bgImage)
+				TEXTUREINDEX = TEXTUREINDEX - 1
+			else
+				table.remove(TEXTURECACHE, id)
+			end				
+		end
+		
+		if (not image) then
+			return
+		end
+		
+		if (TEXTUREINDEX > 254) then
+			self.bgImage = load_texture(DEFTEXTURE)
+			return false
+		end
+		
 		local tempicon = io.open(filename, "r", 1)
 		if (not tempicon) then
-			self.bgImage = load_texture(default)
+			local textureid = load_texture(default)
+			self.bgImage = textureid
+			TEXTUREINDEX = TEXTUREINDEX > textureid and TEXTUREINDEX or textureid
+			table.insert(TEXTURECACHE, self.bgImage)
 		else
 			local textureid = load_texture(image)
 			if (textureid == -1) then
@@ -848,6 +896,8 @@ do
 			else
 				self.bgImage = textureid
 			end
+			TEXTUREINDEX = TEXTUREINDEX > textureid and TEXTUREINDEX or textureid
+			table.insert(TEXTURECACHE, self.bgImage)
 			io.close(tempicon)
 		end
 	end
@@ -862,22 +912,52 @@ do
 		run_cmd(command)
 		remove_hooks("UIManagerSkipEcho")
 	end
+	
+	function UIElement:qsort(arr, sort, desc)
+		local a = {}
+		local desc = desc and 1 or -1
+		for i, v in pairs(arr) do 
+			table.insert(a, v) 
+		end
+		table.sort(a, function(a,b) 
+				local val1 = a[sort] == 0 and b[sort] - desc or a[sort]
+				local val2 = b[sort] == 0 and a[sort] - desc or b[sort]
+				if (type(val1) == "string" or type(val2) == "string") then
+					val1 = val1:lower()
+					val2 = val2:lower()
+				end
+				if (desc == 1) then 
+					return val1 > val2
+				else 
+					return val1 < val2
+				end
+			end)
+		return a
+	end
 			
 	function textAdapt(str, font, scale, maxWidth)
 		local destStr = {}
 		local newStr = ""
-		-- ensure that str variable is in fact a string
-		local str = str .. ""
-				
+		
+		-- Fix newlines and ensure the string is in fact a string
+		local str = string.gsub(str, "\\n", "\n")
+		
+		local newline = false
 		while (str ~= "") do
 			local word = str:match("^%S+%s*")
-			if (get_string_length(newStr .. word, font) * scale > maxWidth and newStr ~= "") then
+			
+			if ((get_string_length(newStr .. word, font) * scale > maxWidth or newline) and newStr ~= "") then
 				table.insert(destStr, newStr)
+				newline = false
 				newStr = word
 				str = str:sub(word:len() + 1)
 			else
 				newStr = newStr .. word
 				str = str:sub(word:len() + 1)
+			end
+			local nextNewline = word:match("\n") or word:match("\\n")
+			if (nextNewline) then
+				newline = true
 			end
 		end
 		table.insert(destStr, newStr)
@@ -886,6 +966,8 @@ do
 	
 	function draw_text_new(str, xPos, yPos, angle, scale, font, shadow, col1, col2, intensity)
 		local shadow = shadow or nil
+		local xPos = math.floor(xPos)
+		local yPos = math.floor(yPos)
 		local col1 = col1 or DEFTEXTCOLOR
 		local col2 = col2 or DEFSHADOWCOLOR
 		local intensity = intensity or col1[4]
@@ -907,7 +989,7 @@ do
 			set_color(unpack(col1))
 		end
 		draw_text_angle_scale(str, xPos, yPos, angle, scale, font)
-		if (font == FONTS.MEDIUM or font == FONTS.BIG) then
+		if (font == FONTS.MEDIUM or font == FONTS.BIG or font == FONTS.BIGGER) then
 			set_color(col1[1], col1[2], col1[3], intensity)
 			draw_text_angle_scale(str, xPos, yPos, angle, scale, font)
 		end
